@@ -1,0 +1,982 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="STEMMAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Career">
+          <Key>
+            <PropertyRef Name="CareerID" />
+          </Key>
+          <Property Name="CareerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AttendedCollege" Type="bit" />
+          <Property Name="Graduations" Type="bit" />
+          <Property Name="HaveJob" Type="bit" />
+          <Property Name="HadJob" Type="bit" />
+          <Property Name="Accomplishments" Type="bit" />
+          <Property Name="FirstDayOfSchool" Type="bit" />
+          <Property Name="ArmedForces" Type="bit" />
+          <Property Name="Volunteer" Type="bit" />
+          <Property Name="Legacies" Type="bit" />
+          <Property Name="TechSchool" Type="bit" />
+          <Property Name="LicensesCertifications" Type="bit" />
+          <Property Name="FirstJob" Type="bit" />
+          <Property Name="WorstJob" Type="bit" />
+        </EntityType>
+        <EntityType Name="Celebration">
+          <Key>
+            <PropertyRef Name="CelebrationID" />
+          </Key>
+          <Property Name="CelebrationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HolidayRecently" Type="bit" />
+          <Property Name="PartyRecently" Type="bit" />
+          <Property Name="MilestoneRecently" Type="bit" />
+          <Property Name="CelebrateChristmas" Type="bit" />
+          <Property Name="CelebrateNYE" Type="bit" />
+          <Property Name="CelebrateThanksgiving" Type="bit" />
+          <Property Name="CelebrateValentine" Type="bit" />
+          <Property Name="CelebrateEaster" Type="bit" />
+          <Property Name="CelebrateIndependenceDay" Type="bit" />
+          <Property Name="CelebrateHalloween" Type="bit" />
+          <Property Name="CelebrateMemorialDay" Type="bit" />
+          <Property Name="CelebrateLaborDay" Type="bit" />
+          <Property Name="CelebrateMothersDay" Type="bit" />
+          <Property Name="CelebrateFathersDay" Type="bit" />
+          <Property Name="CelebrateChaunakah" Type="bit" />
+          <Property Name="CelebratePassover" Type="bit" />
+          <Property Name="CelebrateRoshHashanah" Type="bit" />
+          <Property Name="CelerateYomKippur" Type="bit" />
+          <Property Name="CelebrateRamadan" Type="bit" />
+          <Property Name="CelebrateEID" Type="bit" />
+          <Property Name="CelebrateSTPat" Type="bit" />
+          <Property Name="CelebrateBirthdays" Type="bit" />
+          <Property Name="CelebrateChineseNewYear" Type="bit" />
+          <Property Name="CelebrateQuinceanera" Type="bit" />
+          <Property Name="CelebrateBarBatMitzvah" Type="bit" />
+          <Property Name="CelebrateDayOfTheDead" Type="bit" />
+          <Property Name="CelebrateVeteransDay" Type="bit" />
+          <Property Name="CelebrateCincoDeMayo" Type="bit" />
+          <Property Name="AnythingElse" Type="bit" />
+        </EntityType>
+        <EntityType Name="EventDate">
+          <Key>
+            <PropertyRef Name="EventDateID" />
+          </Key>
+          <Property Name="EventDateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="int" />
+          <Property Name="Month" Type="nvarchar" MaxLength="12" />
+          <Property Name="Year" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventTable">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateCreated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="EventTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EventDateID" Type="int" Nullable="false" />
+          <Property Name="PeopleInvolved" Type="nvarchar" MaxLength="300" />
+          <Property Name="EventCaption" Type="nvarchar" MaxLength="750" />
+        </EntityType>
+        <EntityType Name="HobbyTable">
+          <Key>
+            <PropertyRef Name="HobbyID" />
+          </Key>
+          <Property Name="HobbyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlaySports" Type="bit" />
+          <Property Name="InAShow" Type="bit" />
+          <Property Name="Travel" Type="bit" />
+          <Property Name="OutdoorPerson" Type="bit" />
+          <Property Name="TravelAbroad" Type="bit" />
+          <Property Name="Passions" Type="bit" />
+          <Property Name="Talents" Type="bit" />
+          <Property Name="Trophies" Type="bit" />
+          <Property Name="Exercise" Type="bit" />
+          <Property Name="FamilyVacation" Type="bit" />
+          <Property Name="ChildhoodVacation" Type="bit" />
+          <Property Name="AnythingElse" Type="bit" />
+        </EntityType>
+        <EntityType Name="Media">
+          <Key>
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="MediaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FilePath" Type="nvarchar(max)" />
+          <Property Name="EventID" Type="int" />
+        </EntityType>
+        <EntityType Name="Memories">
+          <Key>
+            <PropertyRef Name="MemoryID" />
+          </Key>
+          <Property Name="MemoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrokenBones" Type="bit" />
+          <Property Name="OwnHome" Type="bit" />
+          <Property Name="DriversLicense" Type="bit" />
+          <Property Name="FirstTooth" Type="bit" />
+          <Property Name="PersonalNickName" Type="bit" />
+          <Property Name="FamilyNickName" Type="bit" />
+          <Property Name="RideBike" Type="bit" />
+          <Property Name="CommitCrime" Type="bit" />
+          <Property Name="BigMove" Type="bit" />
+          <Property Name="Vote" Type="bit" />
+          <Property Name="FamilyTraditions" Type="bit" />
+          <Property Name="EmbarrassingMoment" Type="bit" />
+          <Property Name="ProudestMoments" Type="bit" />
+          <Property Name="ChildhoodCamp" Type="bit" />
+          <Property Name="MemorializeSomeone" Type="bit" />
+          <Property Name="Concerts" Type="bit" />
+          <Property Name="FamilyPet" Type="bit" />
+          <Property Name="CurrentPet" Type="bit" />
+          <Property Name="HSDance" Type="bit" />
+          <Property Name="AnythingElse" Type="bit" />
+        </EntityType>
+        <EntityType Name="RegisterUser">
+          <Key>
+            <PropertyRef Name="RegisterUserID" />
+          </Key>
+          <Property Name="RegisterUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoginID" Type="int" Nullable="false" />
+          <Property Name="Email" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Relationship">
+          <Key>
+            <PropertyRef Name="RelationshipsID" />
+          </Key>
+          <Property Name="RelationshipsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurrentlyMarried" Type="bit" />
+          <Property Name="InARelationship" Type="bit" />
+          <Property Name="PreviousRomance" Type="bit" />
+          <Property Name="HaveChildren" Type="bit" />
+          <Property Name="HaveGrandchildren" Type="bit" />
+          <Property Name="OtherYoungsters" Type="bit" />
+          <Property Name="HaveParents" Type="bit" />
+          <Property Name="HaveGrandparents" Type="bit" />
+          <Property Name="OtherAdults" Type="bit" />
+          <Property Name="HaveSiblings" Type="bit" />
+          <Property Name="OtherCloseRelatives" Type="bit" />
+          <Property Name="GoodFriendships" Type="bit" />
+          <Property Name="EverythingElse" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserProfileID" />
+          </Key>
+          <Property Name="UserProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Birthdate" Type="datetime" Nullable="false" />
+          <Property Name="RegisterUserID" Type="int" Nullable="false" />
+          <Property Name="RelationshipsID" Type="int" Nullable="false" />
+          <Property Name="CareerID" Type="int" Nullable="false" />
+          <Property Name="CelebrationID" Type="int" Nullable="false" />
+          <Property Name="HobbyID" Type="int" Nullable="false" />
+          <Property Name="MemoryID" Type="int" Nullable="false" />
+          <Property Name="WorldEventID" Type="int" Nullable="false" />
+          <Property Name="EventID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorldEvents">
+          <Key>
+            <PropertyRef Name="WorldEventID" />
+          </Key>
+          <Property Name="WorldEventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="September11" Type="bit" />
+          <Property Name="MoonLanding" Type="bit" />
+          <Property Name="NixonResigns" Type="bit" />
+          <Property Name="ElvisDies" Type="bit" />
+          <Property Name="ChallengerExplodes" Type="bit" />
+          <Property Name="WorldWar2Ends" Type="bit" />
+          <Property Name="KennedyDies" Type="bit" />
+          <Property Name="NotableElection" Type="bit" />
+          <Property Name="MLKAssassination" Type="bit" />
+          <Property Name="Y2K" Type="bit" />
+          <Property Name="BerlinWall" Type="bit" />
+          <Property Name="OJSimpsonCarChase" Type="bit" />
+          <Property Name="EndOfProhibition" Type="bit" />
+          <Property Name="AnythingElse" Type="bit" />
+        </EntityType>
+        <Association Name="FK_EventTable_EventDate">
+          <End Role="EventDate" Type="Self.EventDate" Multiplicity="1" />
+          <End Role="EventTable" Type="Self.EventTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventDate">
+              <PropertyRef Name="EventDateID" />
+            </Principal>
+            <Dependent Role="EventTable">
+              <PropertyRef Name="EventDateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Media_EventTable">
+          <End Role="EventTable" Type="Self.EventTable" Multiplicity="0..1" />
+          <End Role="Media" Type="Self.Media" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventTable">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="Media">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_Career">
+          <End Role="Career" Type="Self.Career" Multiplicity="1" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Career">
+              <PropertyRef Name="CareerID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="CareerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_Celebration">
+          <End Role="Celebration" Type="Self.Celebration" Multiplicity="1" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Celebration">
+              <PropertyRef Name="CelebrationID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="CelebrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_EventTable">
+          <End Role="EventTable" Type="Self.EventTable" Multiplicity="1" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventTable">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_HobbyTable">
+          <End Role="HobbyTable" Type="Self.HobbyTable" Multiplicity="1" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HobbyTable">
+              <PropertyRef Name="HobbyID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="HobbyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_Memories">
+          <End Role="Memories" Type="Self.Memories" Multiplicity="1" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Memories">
+              <PropertyRef Name="MemoryID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="MemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_RegisterUser">
+          <End Role="RegisterUser" Type="Self.RegisterUser" Multiplicity="1" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegisterUser">
+              <PropertyRef Name="RegisterUserID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="RegisterUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_Relationship">
+          <End Role="Relationship" Type="Self.Relationship" Multiplicity="1" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Relationship">
+              <PropertyRef Name="RelationshipsID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="RelationshipsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_WorldEvents">
+          <End Role="WorldEvents" Type="Self.WorldEvents" Multiplicity="1" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorldEvents">
+              <PropertyRef Name="WorldEventID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="WorldEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="STEMMAModelStoreContainer">
+          <EntitySet Name="Career" EntityType="Self.Career" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Celebration" EntityType="Self.Celebration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventDate" EntityType="Self.EventDate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventTable" EntityType="Self.EventTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HobbyTable" EntityType="Self.HobbyTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Media" EntityType="Self.Media" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Memories" EntityType="Self.Memories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegisterUser" EntityType="Self.RegisterUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Relationship" EntityType="Self.Relationship" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorldEvents" EntityType="Self.WorldEvents" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_EventTable_EventDate" Association="Self.FK_EventTable_EventDate">
+            <End Role="EventDate" EntitySet="EventDate" />
+            <End Role="EventTable" EntitySet="EventTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Media_EventTable" Association="Self.FK_Media_EventTable">
+            <End Role="EventTable" EntitySet="EventTable" />
+            <End Role="Media" EntitySet="Media" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_Career" Association="Self.FK_UserProfile_Career">
+            <End Role="Career" EntitySet="Career" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_Celebration" Association="Self.FK_UserProfile_Celebration">
+            <End Role="Celebration" EntitySet="Celebration" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_EventTable" Association="Self.FK_UserProfile_EventTable">
+            <End Role="EventTable" EntitySet="EventTable" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_HobbyTable" Association="Self.FK_UserProfile_HobbyTable">
+            <End Role="HobbyTable" EntitySet="HobbyTable" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_Memories" Association="Self.FK_UserProfile_Memories">
+            <End Role="Memories" EntitySet="Memories" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_RegisterUser" Association="Self.FK_UserProfile_RegisterUser">
+            <End Role="RegisterUser" EntitySet="RegisterUser" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_Relationship" Association="Self.FK_UserProfile_Relationship">
+            <End Role="Relationship" EntitySet="Relationship" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_WorldEvents" Association="Self.FK_UserProfile_WorldEvents">
+            <End Role="WorldEvents" EntitySet="WorldEvents" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="STEMMAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Career">
+          <Key>
+            <PropertyRef Name="CareerID" />
+          </Key>
+          <Property Name="CareerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AttendedCollege" Type="Boolean" />
+          <Property Name="Graduations" Type="Boolean" />
+          <Property Name="HaveJob" Type="Boolean" />
+          <Property Name="HadJob" Type="Boolean" />
+          <Property Name="Accomplishments" Type="Boolean" />
+          <Property Name="FirstDayOfSchool" Type="Boolean" />
+          <Property Name="ArmedForces" Type="Boolean" />
+          <Property Name="Volunteer" Type="Boolean" />
+          <Property Name="Legacies" Type="Boolean" />
+          <Property Name="TechSchool" Type="Boolean" />
+          <Property Name="LicensesCertifications" Type="Boolean" />
+          <Property Name="FirstJob" Type="Boolean" />
+          <Property Name="WorstJob" Type="Boolean" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_Career" FromRole="Career" ToRole="UserProfile" />
+        </EntityType>
+        <EntityType Name="Celebration">
+          <Key>
+            <PropertyRef Name="CelebrationID" />
+          </Key>
+          <Property Name="CelebrationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HolidayRecently" Type="Boolean" />
+          <Property Name="PartyRecently" Type="Boolean" />
+          <Property Name="MilestoneRecently" Type="Boolean" />
+          <Property Name="CelebrateChristmas" Type="Boolean" />
+          <Property Name="CelebrateNYE" Type="Boolean" />
+          <Property Name="CelebrateThanksgiving" Type="Boolean" />
+          <Property Name="CelebrateValentine" Type="Boolean" />
+          <Property Name="CelebrateEaster" Type="Boolean" />
+          <Property Name="CelebrateIndependenceDay" Type="Boolean" />
+          <Property Name="CelebrateHalloween" Type="Boolean" />
+          <Property Name="CelebrateMemorialDay" Type="Boolean" />
+          <Property Name="CelebrateLaborDay" Type="Boolean" />
+          <Property Name="CelebrateMothersDay" Type="Boolean" />
+          <Property Name="CelebrateFathersDay" Type="Boolean" />
+          <Property Name="CelebrateChaunakah" Type="Boolean" />
+          <Property Name="CelebratePassover" Type="Boolean" />
+          <Property Name="CelebrateRoshHashanah" Type="Boolean" />
+          <Property Name="CelerateYomKippur" Type="Boolean" />
+          <Property Name="CelebrateRamadan" Type="Boolean" />
+          <Property Name="CelebrateEID" Type="Boolean" />
+          <Property Name="CelebrateSTPat" Type="Boolean" />
+          <Property Name="CelebrateBirthdays" Type="Boolean" />
+          <Property Name="CelebrateChineseNewYear" Type="Boolean" />
+          <Property Name="CelebrateQuinceanera" Type="Boolean" />
+          <Property Name="CelebrateBarBatMitzvah" Type="Boolean" />
+          <Property Name="CelebrateDayOfTheDead" Type="Boolean" />
+          <Property Name="CelebrateVeteransDay" Type="Boolean" />
+          <Property Name="CelebrateCincoDeMayo" Type="Boolean" />
+          <Property Name="AnythingElse" Type="Boolean" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_Celebration" FromRole="Celebration" ToRole="UserProfile" />
+        </EntityType>
+        <EntityType Name="EventDate">
+          <Key>
+            <PropertyRef Name="EventDateID" />
+          </Key>
+          <Property Name="EventDateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="Int32" />
+          <Property Name="Month" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EventTables" Relationship="Self.FK_EventTable_EventDate" FromRole="EventDate" ToRole="EventTable" />
+        </EntityType>
+        <EntityType Name="EventTable">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="EventTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EventDateID" Type="Int32" Nullable="false" />
+          <Property Name="PeopleInvolved" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="EventCaption" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="EventDate" Relationship="Self.FK_EventTable_EventDate" FromRole="EventTable" ToRole="EventDate" />
+          <NavigationProperty Name="Media" Relationship="Self.FK_Media_EventTable" FromRole="EventTable" ToRole="Media" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_EventTable" FromRole="EventTable" ToRole="UserProfile" />
+        </EntityType>
+        <EntityType Name="HobbyTable">
+          <Key>
+            <PropertyRef Name="HobbyID" />
+          </Key>
+          <Property Name="HobbyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlaySports" Type="Boolean" />
+          <Property Name="InAShow" Type="Boolean" />
+          <Property Name="Travel" Type="Boolean" />
+          <Property Name="OutdoorPerson" Type="Boolean" />
+          <Property Name="TravelAbroad" Type="Boolean" />
+          <Property Name="Passions" Type="Boolean" />
+          <Property Name="Talents" Type="Boolean" />
+          <Property Name="Trophies" Type="Boolean" />
+          <Property Name="Exercise" Type="Boolean" />
+          <Property Name="FamilyVacation" Type="Boolean" />
+          <Property Name="ChildhoodVacation" Type="Boolean" />
+          <Property Name="AnythingElse" Type="Boolean" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_HobbyTable" FromRole="HobbyTable" ToRole="UserProfile" />
+        </EntityType>
+        <EntityType Name="Medium">
+          <Key>
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="MediaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EventID" Type="Int32" />
+          <NavigationProperty Name="EventTable" Relationship="Self.FK_Media_EventTable" FromRole="Media" ToRole="EventTable" />
+        </EntityType>
+        <EntityType Name="Memory">
+          <Key>
+            <PropertyRef Name="MemoryID" />
+          </Key>
+          <Property Name="MemoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrokenBones" Type="Boolean" />
+          <Property Name="OwnHome" Type="Boolean" />
+          <Property Name="DriversLicense" Type="Boolean" />
+          <Property Name="FirstTooth" Type="Boolean" />
+          <Property Name="PersonalNickName" Type="Boolean" />
+          <Property Name="FamilyNickName" Type="Boolean" />
+          <Property Name="RideBike" Type="Boolean" />
+          <Property Name="CommitCrime" Type="Boolean" />
+          <Property Name="BigMove" Type="Boolean" />
+          <Property Name="Vote" Type="Boolean" />
+          <Property Name="FamilyTraditions" Type="Boolean" />
+          <Property Name="EmbarrassingMoment" Type="Boolean" />
+          <Property Name="ProudestMoments" Type="Boolean" />
+          <Property Name="ChildhoodCamp" Type="Boolean" />
+          <Property Name="MemorializeSomeone" Type="Boolean" />
+          <Property Name="Concerts" Type="Boolean" />
+          <Property Name="FamilyPet" Type="Boolean" />
+          <Property Name="CurrentPet" Type="Boolean" />
+          <Property Name="HSDance" Type="Boolean" />
+          <Property Name="AnythingElse" Type="Boolean" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_Memories" FromRole="Memory" ToRole="UserProfile" />
+        </EntityType>
+        <EntityType Name="RegisterUser">
+          <Key>
+            <PropertyRef Name="RegisterUserID" />
+          </Key>
+          <Property Name="RegisterUserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginID" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_RegisterUser" FromRole="RegisterUser" ToRole="UserProfile" />
+        </EntityType>
+        <EntityType Name="WorldEvent">
+          <Key>
+            <PropertyRef Name="WorldEventID" />
+          </Key>
+          <Property Name="WorldEventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="September11" Type="Boolean" />
+          <Property Name="MoonLanding" Type="Boolean" />
+          <Property Name="NixonResigns" Type="Boolean" />
+          <Property Name="ElvisDies" Type="Boolean" />
+          <Property Name="ChallengerExplodes" Type="Boolean" />
+          <Property Name="WorldWar2Ends" Type="Boolean" />
+          <Property Name="KennedyDies" Type="Boolean" />
+          <Property Name="NotableElection" Type="Boolean" />
+          <Property Name="MLKAssassination" Type="Boolean" />
+          <Property Name="Y2K" Type="Boolean" />
+          <Property Name="BerlinWall" Type="Boolean" />
+          <Property Name="OJSimpsonCarChase" Type="Boolean" />
+          <Property Name="EndOfProhibition" Type="Boolean" />
+          <Property Name="AnythingElse" Type="Boolean" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_WorldEvents" FromRole="WorldEvent" ToRole="UserProfile" />
+        </EntityType>
+        <Association Name="FK_EventTable_EventDate">
+          <End Role="EventDate" Type="Self.EventDate" Multiplicity="1" />
+          <End Role="EventTable" Type="Self.EventTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventDate">
+              <PropertyRef Name="EventDateID" />
+            </Principal>
+            <Dependent Role="EventTable">
+              <PropertyRef Name="EventDateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Media_EventTable">
+          <End Role="EventTable" Type="Self.EventTable" Multiplicity="0..1" />
+          <End Role="Media" Type="Self.Medium" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventTable">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="Media">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="STEMMAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Careers" EntityType="Self.Career" />
+          <EntitySet Name="Celebrations" EntityType="Self.Celebration" />
+          <EntitySet Name="EventDates" EntityType="Self.EventDate" />
+          <EntitySet Name="EventTables" EntityType="Self.EventTable" />
+          <EntitySet Name="HobbyTables" EntityType="Self.HobbyTable" />
+          <EntitySet Name="Media" EntityType="Self.Medium" />
+          <EntitySet Name="Memories" EntityType="Self.Memory" />
+          <EntitySet Name="RegisterUsers" EntityType="Self.RegisterUser" />
+          <EntitySet Name="WorldEvents" EntityType="Self.WorldEvent" />
+          <AssociationSet Name="FK_EventTable_EventDate" Association="Self.FK_EventTable_EventDate">
+            <End Role="EventDate" EntitySet="EventDates" />
+            <End Role="EventTable" EntitySet="EventTables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Media_EventTable" Association="Self.FK_Media_EventTable">
+            <End Role="EventTable" EntitySet="EventTables" />
+            <End Role="Media" EntitySet="Media" />
+          </AssociationSet>
+          <EntitySet Name="Relationships" EntityType="STEMMAModel.Relationship" />
+          <EntitySet Name="UserProfiles" EntityType="STEMMAModel.UserProfile" />
+          <AssociationSet Name="FK_UserProfile_Career" Association="STEMMAModel.FK_UserProfile_Career">
+            <End Role="Career" EntitySet="Careers" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_Celebration" Association="STEMMAModel.FK_UserProfile_Celebration">
+            <End Role="Celebration" EntitySet="Celebrations" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_EventTable" Association="STEMMAModel.FK_UserProfile_EventTable">
+            <End Role="EventTable" EntitySet="EventTables" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_HobbyTable" Association="STEMMAModel.FK_UserProfile_HobbyTable">
+            <End Role="HobbyTable" EntitySet="HobbyTables" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_Memories" Association="STEMMAModel.FK_UserProfile_Memories">
+            <End Role="Memory" EntitySet="Memories" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_RegisterUser" Association="STEMMAModel.FK_UserProfile_RegisterUser">
+            <End Role="RegisterUser" EntitySet="RegisterUsers" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_Relationship" Association="STEMMAModel.FK_UserProfile_Relationship">
+            <End Role="Relationship" EntitySet="Relationships" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_WorldEvents" Association="STEMMAModel.FK_UserProfile_WorldEvents">
+            <End Role="WorldEvent" EntitySet="WorldEvents" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Relationship">
+          <Key>
+            <PropertyRef Name="RelationshipsID" />
+          </Key>
+          <Property Name="RelationshipsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrentlyMarried" Type="Boolean" />
+          <Property Name="InARelationship" Type="Boolean" />
+          <Property Name="PreviousRomance" Type="Boolean" />
+          <Property Name="HaveChildren" Type="Boolean" />
+          <Property Name="HaveGrandchildren" Type="Boolean" />
+          <Property Name="OtherYoungsters" Type="Boolean" />
+          <Property Name="HaveParents" Type="Boolean" />
+          <Property Name="HaveGrandparents" Type="Boolean" />
+          <Property Name="OtherAdults" Type="Boolean" />
+          <Property Name="HaveSiblings" Type="Boolean" />
+          <Property Name="OtherCloseRelatives" Type="Boolean" />
+          <Property Name="GoodFriendships" Type="Boolean" />
+          <Property Name="EverythingElse" Type="Boolean" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_Relationship" FromRole="Relationship" ToRole="UserProfile" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserProfileID" />
+          </Key>
+          <Property Name="UserProfileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Birthdate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RegisterUserID" Type="Int32" Nullable="false" />
+          <Property Name="RelationshipsID" Type="Int32" Nullable="false" />
+          <Property Name="CareerID" Type="Int32" Nullable="false" />
+          <Property Name="CelebrationID" Type="Int32" Nullable="false" />
+          <Property Name="HobbyID" Type="Int32" Nullable="false" />
+          <Property Name="MemoryID" Type="Int32" Nullable="false" />
+          <Property Name="WorldEventID" Type="Int32" Nullable="false" />
+          <Property Name="EventID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Career" Relationship="STEMMAModel.FK_UserProfile_Career" FromRole="UserProfile" ToRole="Career" />
+          <NavigationProperty Name="Celebration" Relationship="STEMMAModel.FK_UserProfile_Celebration" FromRole="UserProfile" ToRole="Celebration" />
+          <NavigationProperty Name="EventTable" Relationship="STEMMAModel.FK_UserProfile_EventTable" FromRole="UserProfile" ToRole="EventTable" />
+          <NavigationProperty Name="HobbyTable" Relationship="STEMMAModel.FK_UserProfile_HobbyTable" FromRole="UserProfile" ToRole="HobbyTable" />
+          <NavigationProperty Name="Memory" Relationship="STEMMAModel.FK_UserProfile_Memories" FromRole="UserProfile" ToRole="Memory" />
+          <NavigationProperty Name="RegisterUser" Relationship="STEMMAModel.FK_UserProfile_RegisterUser" FromRole="UserProfile" ToRole="RegisterUser" />
+          <NavigationProperty Name="Relationship" Relationship="STEMMAModel.FK_UserProfile_Relationship" FromRole="UserProfile" ToRole="Relationship" />
+          <NavigationProperty Name="WorldEvent" Relationship="STEMMAModel.FK_UserProfile_WorldEvents" FromRole="UserProfile" ToRole="WorldEvent" />
+        </EntityType>
+        <Association Name="FK_UserProfile_Career">
+          <End Type="STEMMAModel.Career" Role="Career" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Career">
+              <PropertyRef Name="CareerID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="CareerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_Celebration">
+          <End Type="STEMMAModel.Celebration" Role="Celebration" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Celebration">
+              <PropertyRef Name="CelebrationID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="CelebrationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_EventTable">
+          <End Type="STEMMAModel.EventTable" Role="EventTable" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventTable">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_HobbyTable">
+          <End Type="STEMMAModel.HobbyTable" Role="HobbyTable" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HobbyTable">
+              <PropertyRef Name="HobbyID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="HobbyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_Memories">
+          <End Type="STEMMAModel.Memory" Role="Memory" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Memory">
+              <PropertyRef Name="MemoryID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="MemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_RegisterUser">
+          <End Type="STEMMAModel.RegisterUser" Role="RegisterUser" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RegisterUser">
+              <PropertyRef Name="RegisterUserID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="RegisterUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_Relationship">
+          <End Type="STEMMAModel.Relationship" Role="Relationship" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Relationship">
+              <PropertyRef Name="RelationshipsID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="RelationshipsID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_WorldEvents">
+          <End Type="STEMMAModel.WorldEvent" Role="WorldEvent" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorldEvent">
+              <PropertyRef Name="WorldEventID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="WorldEventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="STEMMAModelStoreContainer" CdmEntityContainer="STEMMAEntities">
+          <EntitySetMapping Name="Careers">
+            <EntityTypeMapping TypeName="STEMMAModel.Career">
+              <MappingFragment StoreEntitySet="Career">
+                <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+                <ScalarProperty Name="AttendedCollege" ColumnName="AttendedCollege" />
+                <ScalarProperty Name="Graduations" ColumnName="Graduations" />
+                <ScalarProperty Name="HaveJob" ColumnName="HaveJob" />
+                <ScalarProperty Name="HadJob" ColumnName="HadJob" />
+                <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
+                <ScalarProperty Name="FirstDayOfSchool" ColumnName="FirstDayOfSchool" />
+                <ScalarProperty Name="ArmedForces" ColumnName="ArmedForces" />
+                <ScalarProperty Name="Volunteer" ColumnName="Volunteer" />
+                <ScalarProperty Name="Legacies" ColumnName="Legacies" />
+                <ScalarProperty Name="TechSchool" ColumnName="TechSchool" />
+                <ScalarProperty Name="LicensesCertifications" ColumnName="LicensesCertifications" />
+                <ScalarProperty Name="FirstJob" ColumnName="FirstJob" />
+                <ScalarProperty Name="WorstJob" ColumnName="WorstJob" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Celebrations">
+            <EntityTypeMapping TypeName="STEMMAModel.Celebration">
+              <MappingFragment StoreEntitySet="Celebration">
+                <ScalarProperty Name="CelebrationID" ColumnName="CelebrationID" />
+                <ScalarProperty Name="HolidayRecently" ColumnName="HolidayRecently" />
+                <ScalarProperty Name="PartyRecently" ColumnName="PartyRecently" />
+                <ScalarProperty Name="MilestoneRecently" ColumnName="MilestoneRecently" />
+                <ScalarProperty Name="CelebrateChristmas" ColumnName="CelebrateChristmas" />
+                <ScalarProperty Name="CelebrateNYE" ColumnName="CelebrateNYE" />
+                <ScalarProperty Name="CelebrateThanksgiving" ColumnName="CelebrateThanksgiving" />
+                <ScalarProperty Name="CelebrateValentine" ColumnName="CelebrateValentine" />
+                <ScalarProperty Name="CelebrateEaster" ColumnName="CelebrateEaster" />
+                <ScalarProperty Name="CelebrateIndependenceDay" ColumnName="CelebrateIndependenceDay" />
+                <ScalarProperty Name="CelebrateHalloween" ColumnName="CelebrateHalloween" />
+                <ScalarProperty Name="CelebrateMemorialDay" ColumnName="CelebrateMemorialDay" />
+                <ScalarProperty Name="CelebrateLaborDay" ColumnName="CelebrateLaborDay" />
+                <ScalarProperty Name="CelebrateMothersDay" ColumnName="CelebrateMothersDay" />
+                <ScalarProperty Name="CelebrateFathersDay" ColumnName="CelebrateFathersDay" />
+                <ScalarProperty Name="CelebrateChaunakah" ColumnName="CelebrateChaunakah" />
+                <ScalarProperty Name="CelebratePassover" ColumnName="CelebratePassover" />
+                <ScalarProperty Name="CelebrateRoshHashanah" ColumnName="CelebrateRoshHashanah" />
+                <ScalarProperty Name="CelerateYomKippur" ColumnName="CelerateYomKippur" />
+                <ScalarProperty Name="CelebrateRamadan" ColumnName="CelebrateRamadan" />
+                <ScalarProperty Name="CelebrateEID" ColumnName="CelebrateEID" />
+                <ScalarProperty Name="CelebrateSTPat" ColumnName="CelebrateSTPat" />
+                <ScalarProperty Name="CelebrateBirthdays" ColumnName="CelebrateBirthdays" />
+                <ScalarProperty Name="CelebrateChineseNewYear" ColumnName="CelebrateChineseNewYear" />
+                <ScalarProperty Name="CelebrateQuinceanera" ColumnName="CelebrateQuinceanera" />
+                <ScalarProperty Name="CelebrateBarBatMitzvah" ColumnName="CelebrateBarBatMitzvah" />
+                <ScalarProperty Name="CelebrateDayOfTheDead" ColumnName="CelebrateDayOfTheDead" />
+                <ScalarProperty Name="CelebrateVeteransDay" ColumnName="CelebrateVeteransDay" />
+                <ScalarProperty Name="CelebrateCincoDeMayo" ColumnName="CelebrateCincoDeMayo" />
+                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventDates">
+            <EntityTypeMapping TypeName="STEMMAModel.EventDate">
+              <MappingFragment StoreEntitySet="EventDate">
+                <ScalarProperty Name="EventDateID" ColumnName="EventDateID" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventTables">
+            <EntityTypeMapping TypeName="STEMMAModel.EventTable">
+              <MappingFragment StoreEntitySet="EventTable">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
+                <ScalarProperty Name="EventDateID" ColumnName="EventDateID" />
+                <ScalarProperty Name="PeopleInvolved" ColumnName="PeopleInvolved" />
+                <ScalarProperty Name="EventCaption" ColumnName="EventCaption" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HobbyTables">
+            <EntityTypeMapping TypeName="STEMMAModel.HobbyTable">
+              <MappingFragment StoreEntitySet="HobbyTable">
+                <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
+                <ScalarProperty Name="PlaySports" ColumnName="PlaySports" />
+                <ScalarProperty Name="InAShow" ColumnName="InAShow" />
+                <ScalarProperty Name="Travel" ColumnName="Travel" />
+                <ScalarProperty Name="OutdoorPerson" ColumnName="OutdoorPerson" />
+                <ScalarProperty Name="TravelAbroad" ColumnName="TravelAbroad" />
+                <ScalarProperty Name="Passions" ColumnName="Passions" />
+                <ScalarProperty Name="Talents" ColumnName="Talents" />
+                <ScalarProperty Name="Trophies" ColumnName="Trophies" />
+                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+                <ScalarProperty Name="FamilyVacation" ColumnName="FamilyVacation" />
+                <ScalarProperty Name="ChildhoodVacation" ColumnName="ChildhoodVacation" />
+                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Media">
+            <EntityTypeMapping TypeName="STEMMAModel.Medium">
+              <MappingFragment StoreEntitySet="Media">
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Memories">
+            <EntityTypeMapping TypeName="STEMMAModel.Memory">
+              <MappingFragment StoreEntitySet="Memories">
+                <ScalarProperty Name="MemoryID" ColumnName="MemoryID" />
+                <ScalarProperty Name="BrokenBones" ColumnName="BrokenBones" />
+                <ScalarProperty Name="OwnHome" ColumnName="OwnHome" />
+                <ScalarProperty Name="DriversLicense" ColumnName="DriversLicense" />
+                <ScalarProperty Name="FirstTooth" ColumnName="FirstTooth" />
+                <ScalarProperty Name="PersonalNickName" ColumnName="PersonalNickName" />
+                <ScalarProperty Name="FamilyNickName" ColumnName="FamilyNickName" />
+                <ScalarProperty Name="RideBike" ColumnName="RideBike" />
+                <ScalarProperty Name="CommitCrime" ColumnName="CommitCrime" />
+                <ScalarProperty Name="BigMove" ColumnName="BigMove" />
+                <ScalarProperty Name="Vote" ColumnName="Vote" />
+                <ScalarProperty Name="FamilyTraditions" ColumnName="FamilyTraditions" />
+                <ScalarProperty Name="EmbarrassingMoment" ColumnName="EmbarrassingMoment" />
+                <ScalarProperty Name="ProudestMoments" ColumnName="ProudestMoments" />
+                <ScalarProperty Name="ChildhoodCamp" ColumnName="ChildhoodCamp" />
+                <ScalarProperty Name="MemorializeSomeone" ColumnName="MemorializeSomeone" />
+                <ScalarProperty Name="Concerts" ColumnName="Concerts" />
+                <ScalarProperty Name="FamilyPet" ColumnName="FamilyPet" />
+                <ScalarProperty Name="CurrentPet" ColumnName="CurrentPet" />
+                <ScalarProperty Name="HSDance" ColumnName="HSDance" />
+                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegisterUsers">
+            <EntityTypeMapping TypeName="STEMMAModel.RegisterUser">
+              <MappingFragment StoreEntitySet="RegisterUser">
+                <ScalarProperty Name="RegisterUserID" ColumnName="RegisterUserID" />
+                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorldEvents">
+            <EntityTypeMapping TypeName="STEMMAModel.WorldEvent">
+              <MappingFragment StoreEntitySet="WorldEvents">
+                <ScalarProperty Name="WorldEventID" ColumnName="WorldEventID" />
+                <ScalarProperty Name="September11" ColumnName="September11" />
+                <ScalarProperty Name="MoonLanding" ColumnName="MoonLanding" />
+                <ScalarProperty Name="NixonResigns" ColumnName="NixonResigns" />
+                <ScalarProperty Name="ElvisDies" ColumnName="ElvisDies" />
+                <ScalarProperty Name="ChallengerExplodes" ColumnName="ChallengerExplodes" />
+                <ScalarProperty Name="WorldWar2Ends" ColumnName="WorldWar2Ends" />
+                <ScalarProperty Name="KennedyDies" ColumnName="KennedyDies" />
+                <ScalarProperty Name="NotableElection" ColumnName="NotableElection" />
+                <ScalarProperty Name="MLKAssassination" ColumnName="MLKAssassination" />
+                <ScalarProperty Name="Y2K" ColumnName="Y2K" />
+                <ScalarProperty Name="BerlinWall" ColumnName="BerlinWall" />
+                <ScalarProperty Name="OJSimpsonCarChase" ColumnName="OJSimpsonCarChase" />
+                <ScalarProperty Name="EndOfProhibition" ColumnName="EndOfProhibition" />
+                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Relationships">
+            <EntityTypeMapping TypeName="STEMMAModel.Relationship">
+              <MappingFragment StoreEntitySet="Relationship">
+                <ScalarProperty Name="EverythingElse" ColumnName="EverythingElse" />
+                <ScalarProperty Name="GoodFriendships" ColumnName="GoodFriendships" />
+                <ScalarProperty Name="OtherCloseRelatives" ColumnName="OtherCloseRelatives" />
+                <ScalarProperty Name="HaveSiblings" ColumnName="HaveSiblings" />
+                <ScalarProperty Name="OtherAdults" ColumnName="OtherAdults" />
+                <ScalarProperty Name="HaveGrandparents" ColumnName="HaveGrandparents" />
+                <ScalarProperty Name="HaveParents" ColumnName="HaveParents" />
+                <ScalarProperty Name="OtherYoungsters" ColumnName="OtherYoungsters" />
+                <ScalarProperty Name="HaveGrandchildren" ColumnName="HaveGrandchildren" />
+                <ScalarProperty Name="HaveChildren" ColumnName="HaveChildren" />
+                <ScalarProperty Name="PreviousRomance" ColumnName="PreviousRomance" />
+                <ScalarProperty Name="InARelationship" ColumnName="InARelationship" />
+                <ScalarProperty Name="CurrentlyMarried" ColumnName="CurrentlyMarried" />
+                <ScalarProperty Name="RelationshipsID" ColumnName="RelationshipsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProfiles">
+            <EntityTypeMapping TypeName="STEMMAModel.UserProfile">
+              <MappingFragment StoreEntitySet="UserProfile">
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="WorldEventID" ColumnName="WorldEventID" />
+                <ScalarProperty Name="MemoryID" ColumnName="MemoryID" />
+                <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
+                <ScalarProperty Name="CelebrationID" ColumnName="CelebrationID" />
+                <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+                <ScalarProperty Name="RelationshipsID" ColumnName="RelationshipsID" />
+                <ScalarProperty Name="RegisterUserID" ColumnName="RegisterUserID" />
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="UserProfileID" ColumnName="UserProfileID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
