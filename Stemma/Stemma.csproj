@@ -296,6 +296,7 @@
       <DependentUpon>StemmaModel.edmx</DependentUpon>
       <LastGenOutput>StemmaModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Relationships Questions.txt" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="ApplicationInsights.config">

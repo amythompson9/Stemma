@@ -1,0 +1,59 @@
+﻿Created by Gabrielle.
+THIS FILE CAN BE DELETED AFTER QUESTIONS ARE ADDED TO DB AND CONTROLLERS
+
+SPOUSE/ROMANCE
+Are you currently married?
+(yes = triggers prompt and next question)
+(no = next question)
+
+Have you had have other romantic relationships you'd want to remember?
+    (yes = triggers prompt, end of this branch)
+    (no = end of this branch)
+
+**hmm, I don't see much need for followup questions, unless we start asking things like:
+spouses name, children's names, dates of birth.
+but those might be better in the event table/page, not here.
+
+YOUNGSTERS
+Do you have children?
+(yes = triggers prompt, and next question)
+    How many? [NOT SURE THIS IS NEEDED or TOO COMPLICATED]
+    [ESPECIALLY BECAUSE MY NEXT Q IS OPEN ENDED.
+    (triggers prompt(s), next question)
+(no = next question)
+
+Are there other youngsters in your life you'd like to remember?
+(yes = triggers prompt, end of branch)
+(no = end of branch)
+
+
+
+ELDERS
+
+Would you like to add your parents to your stem?
+(no = next question)
+(yes = maybe a check-all: mom dad stepmom stepdad other(s), triggers prompt(s), next question)
+
+Would you like to add grandparents to your stem?
+(no = next question)
+(yes = maybe a check-all: maternal g, maternal p, etc... others(s). triggers prompt, next question)
+
+Are there other meaningful adults in your life you'd like to add?
+(no = end this branch)
+(yes = check-all: other family members, teachers, coaches, neighbors, caregivers. triggers prompts, ends branch)
+
+PEERS
+
+Do you have siblings?
+(yes = handle the same ways as kids re number. triggers prompt, next question)
+(no = next question)
+
+Would you like to add cousins or other relatives to your stem?
+(yes = triggers prompt, next question)
+(no = next question)
+
+Would you like to add a few close friends to the stem?
+(yes = triggers prompt, end of branch)
+(no = end of branch)
+
+THIS LINE ADDED TUES 5:40 PM
