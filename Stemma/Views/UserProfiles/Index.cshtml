@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Stemma.Models.UserProfile>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Birthdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Career.CareerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Celebration.CelebrationID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventTable.EventTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HobbyTable.HobbyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Memory.MemoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegisterUser.RegisterUserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Relationship.RelationshipsID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorldEvent.WorldEventID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Birthdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Career.CareerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Celebration.CelebrationID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventTable.EventTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HobbyTable.HobbyID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memory.MemoryID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegisterUser.RegisterUserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Relationship.RelationshipsID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorldEvent.WorldEventID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UserProfileID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UserProfileID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserProfileID })
+        </td>
+    </tr>
+}
+
+</table>

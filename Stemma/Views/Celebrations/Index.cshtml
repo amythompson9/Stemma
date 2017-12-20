@@ -1,0 +1,201 @@
+﻿@model IEnumerable<Stemma.Models.Celebration>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HolidayRecently)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartyRecently)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MilestoneRecently)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateChristmas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateNYE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateThanksgiving)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateValentine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateEaster)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateIndependenceDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateHalloween)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateMemorialDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateLaborDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateMothersDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateFathersDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateChaunakah)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebratePassover)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateRoshHashanah)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelerateYomKippur)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateRamadan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateEID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateSTPat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateBirthdays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateChineseNewYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateQuinceanera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateBarBatMitzvah)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateDayOfTheDead)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateVeteransDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CelebrateCincoDeMayo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnythingElse)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HolidayRecently)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartyRecently)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MilestoneRecently)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateChristmas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateNYE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateThanksgiving)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateValentine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateEaster)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateIndependenceDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateHalloween)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateMemorialDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateLaborDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateMothersDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateFathersDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateChaunakah)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebratePassover)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateRoshHashanah)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelerateYomKippur)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateRamadan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateEID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateSTPat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateBirthdays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateChineseNewYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateQuinceanera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateBarBatMitzvah)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateDayOfTheDead)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateVeteransDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CelebrateCincoDeMayo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnythingElse)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CelebrationID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CelebrationID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CelebrationID })
+        </td>
+    </tr>
+}
+
+</table>

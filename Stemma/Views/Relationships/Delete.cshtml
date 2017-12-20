@@ -1,0 +1,128 @@
+﻿@model Stemma.Models.Relationship
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Relationship</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentlyMarried)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentlyMarried)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InARelationship)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InARelationship)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousRomance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousRomance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveChildren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveChildren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveGrandchildren)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveGrandchildren)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherYoungsters)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherYoungsters)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveParents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveParents)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveGrandparents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveGrandparents)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherAdults)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherAdults)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveSiblings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveSiblings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherCloseRelatives)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherCloseRelatives)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoodFriendships)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoodFriendships)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EverythingElse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EverythingElse)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
