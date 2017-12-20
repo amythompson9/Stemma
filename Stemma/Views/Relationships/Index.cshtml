@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Stemma.Models.Relationship>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentlyMarried)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InARelationship)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreviousRomance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HaveChildren)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HaveGrandchildren)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherYoungsters)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HaveParents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HaveGrandparents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherAdults)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HaveSiblings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherCloseRelatives)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GoodFriendships)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EverythingElse)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentlyMarried)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InARelationship)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreviousRomance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HaveChildren)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HaveGrandchildren)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherYoungsters)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HaveParents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HaveGrandparents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherAdults)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HaveSiblings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherCloseRelatives)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GoodFriendships)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EverythingElse)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RelationshipsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RelationshipsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RelationshipsID })
+        </td>
+    </tr>
+}
+
+</table>
