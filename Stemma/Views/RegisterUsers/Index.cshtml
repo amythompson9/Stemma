@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Stemma.Models.RegisterUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RegisterUserID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RegisterUserID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RegisterUserID })
+        </td>
+    </tr>
+}
+
+</table>

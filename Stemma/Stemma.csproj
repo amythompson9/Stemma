@@ -49,11 +49,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -218,8 +218,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CareersController.cs" />
+    <Compile Include="Controllers\CelebrationsController.cs" />
+    <Compile Include="Controllers\EventDatesController.cs" />
+    <Compile Include="Controllers\EventTablesController.cs" />
+    <Compile Include="Controllers\HobbyTablesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Controllers\MemoriesController.cs" />
+    <Compile Include="Controllers\RegisterUsersController.cs" />
+    <Compile Include="Controllers\RelationshipsController.cs" />
+    <Compile Include="Controllers\UserProfilesController.cs" />
+    <Compile Include="Controllers\WorldEventsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -369,6 +380,61 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Careers\Create.cshtml" />
+    <Content Include="Views\Careers\Delete.cshtml" />
+    <Content Include="Views\Careers\Details.cshtml" />
+    <Content Include="Views\Careers\Edit.cshtml" />
+    <Content Include="Views\Careers\Index.cshtml" />
+    <Content Include="Views\Celebrations\Create.cshtml" />
+    <Content Include="Views\Celebrations\Delete.cshtml" />
+    <Content Include="Views\Celebrations\Details.cshtml" />
+    <Content Include="Views\Celebrations\Edit.cshtml" />
+    <Content Include="Views\Celebrations\Index.cshtml" />
+    <Content Include="Views\EventDates\Create.cshtml" />
+    <Content Include="Views\EventDates\Delete.cshtml" />
+    <Content Include="Views\EventDates\Details.cshtml" />
+    <Content Include="Views\EventDates\Edit.cshtml" />
+    <Content Include="Views\EventDates\Index.cshtml" />
+    <Content Include="Views\EventTables\Create.cshtml" />
+    <Content Include="Views\EventTables\Delete.cshtml" />
+    <Content Include="Views\EventTables\Details.cshtml" />
+    <Content Include="Views\EventTables\Edit.cshtml" />
+    <Content Include="Views\EventTables\Index.cshtml" />
+    <Content Include="Views\HobbyTables\Create.cshtml" />
+    <Content Include="Views\HobbyTables\Delete.cshtml" />
+    <Content Include="Views\HobbyTables\Details.cshtml" />
+    <Content Include="Views\HobbyTables\Edit.cshtml" />
+    <Content Include="Views\HobbyTables\Index.cshtml" />
+    <Content Include="Views\Media\Create.cshtml" />
+    <Content Include="Views\Media\Delete.cshtml" />
+    <Content Include="Views\Media\Details.cshtml" />
+    <Content Include="Views\Media\Edit.cshtml" />
+    <Content Include="Views\Media\Index.cshtml" />
+    <Content Include="Views\Memories\Create.cshtml" />
+    <Content Include="Views\Memories\Delete.cshtml" />
+    <Content Include="Views\Memories\Details.cshtml" />
+    <Content Include="Views\Memories\Edit.cshtml" />
+    <Content Include="Views\Memories\Index.cshtml" />
+    <Content Include="Views\Relationships\Create.cshtml" />
+    <Content Include="Views\Relationships\Delete.cshtml" />
+    <Content Include="Views\Relationships\Details.cshtml" />
+    <Content Include="Views\Relationships\Edit.cshtml" />
+    <Content Include="Views\Relationships\Index.cshtml" />
+    <Content Include="Views\UserProfiles\Create.cshtml" />
+    <Content Include="Views\UserProfiles\Delete.cshtml" />
+    <Content Include="Views\UserProfiles\Details.cshtml" />
+    <Content Include="Views\UserProfiles\Edit.cshtml" />
+    <Content Include="Views\UserProfiles\Index.cshtml" />
+    <Content Include="Views\WorldEvents\Create.cshtml" />
+    <Content Include="Views\WorldEvents\Delete.cshtml" />
+    <Content Include="Views\WorldEvents\Details.cshtml" />
+    <Content Include="Views\WorldEvents\Edit.cshtml" />
+    <Content Include="Views\WorldEvents\Index.cshtml" />
+    <Content Include="Views\RegisterUsers\Create.cshtml" />
+    <Content Include="Views\RegisterUsers\Delete.cshtml" />
+    <Content Include="Views\RegisterUsers\Details.cshtml" />
+    <Content Include="Views\RegisterUsers\Edit.cshtml" />
+    <Content Include="Views\RegisterUsers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
