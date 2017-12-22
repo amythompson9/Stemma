@@ -1,0 +1,122 @@
+﻿@model Stemma.Models.Career
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Career</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendedCollege)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttendedCollege)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Graduations)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Graduations)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveJob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HaveJob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HadJob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HadJob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Accomplishments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Accomplishments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstDayOfSchool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstDayOfSchool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArmedForces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArmedForces)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Volunteer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Volunteer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Legacies)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Legacies)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TechSchool)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TechSchool)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LicensesCertifications)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LicensesCertifications)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstJob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstJob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorstJob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorstJob)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CareerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

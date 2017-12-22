@@ -1,0 +1,147 @@
+﻿@model IEnumerable<Stemma.Models.Memory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BrokenBones)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OwnHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriversLicense)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstTooth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonalNickName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilyNickName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RideBike)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommitCrime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BigMove)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilyTraditions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmbarrassingMoment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProudestMoments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChildhoodCamp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MemorializeSomeone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Concerts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilyPet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentPet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HSDance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnythingElse)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrokenBones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriversLicense)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstTooth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonalNickName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilyNickName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RideBike)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommitCrime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BigMove)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilyTraditions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmbarrassingMoment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProudestMoments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChildhoodCamp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MemorializeSomeone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Concerts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilyPet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentPet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HSDance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnythingElse)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MemoryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MemoryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MemoryID })
+        </td>
+    </tr>
+}
+
+</table>
