@@ -18,13 +18,19 @@
             @Html.DisplayNameFor(model => model.EventTitle)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.EventDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventYear)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.PeopleInvolved)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.EventCaption)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EventDate.Month)
         </th>
         <th></th>
     </tr>
@@ -38,13 +44,19 @@
             @Html.DisplayFor(modelItem => item.EventTitle)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.EventDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventYear)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.PeopleInvolved)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EventCaption)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EventDate.Month)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EventID }) |
