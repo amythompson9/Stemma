@@ -59,15 +59,6 @@
           <Property Name="CelebrateCincoDeMayo" Type="bit" />
           <Property Name="AnythingElse" Type="bit" />
         </EntityType>
-        <EntityType Name="EventDate">
-          <Key>
-            <PropertyRef Name="EventDateID" />
-          </Key>
-          <Property Name="EventDateID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Date" Type="int" />
-          <Property Name="Month" Type="nvarchar" MaxLength="12" />
-          <Property Name="Year" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="EventTable">
           <Key>
             <PropertyRef Name="EventID" />
@@ -75,7 +66,9 @@
           <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DateCreated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
           <Property Name="EventTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="EventDateID" Type="int" Nullable="false" />
+          <Property Name="EventDay" Type="int" />
+          <Property Name="EventMonth" Type="nvarchar" MaxLength="12" />
+          <Property Name="EventYear" Type="int" Nullable="false" />
           <Property Name="PeopleInvolved" Type="nvarchar" MaxLength="300" />
           <Property Name="EventCaption" Type="nvarchar" MaxLength="750" />
         </EntityType>
@@ -193,18 +186,6 @@
           <Property Name="EndOfProhibition" Type="bit" />
           <Property Name="AnythingElse" Type="bit" />
         </EntityType>
-        <Association Name="FK_EventTable_EventDate">
-          <End Role="EventDate" Type="Self.EventDate" Multiplicity="1" />
-          <End Role="EventTable" Type="Self.EventTable" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EventDate">
-              <PropertyRef Name="EventDateID" />
-            </Principal>
-            <Dependent Role="EventTable">
-              <PropertyRef Name="EventDateID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Media_EventTable">
           <End Role="EventTable" Type="Self.EventTable" Multiplicity="0..1" />
           <End Role="Media" Type="Self.Media" Multiplicity="*" />
@@ -316,7 +297,6 @@
         <EntityContainer Name="STEMMAModelStoreContainer">
           <EntitySet Name="Career" EntityType="Self.Career" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Celebration" EntityType="Self.Celebration" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="EventDate" EntityType="Self.EventDate" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EventTable" EntityType="Self.EventTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HobbyTable" EntityType="Self.HobbyTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Media" EntityType="Self.Media" Schema="dbo" store:Type="Tables" />
@@ -325,10 +305,6 @@
           <EntitySet Name="Relationship" EntityType="Self.Relationship" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WorldEvents" EntityType="Self.WorldEvents" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_EventTable_EventDate" Association="Self.FK_EventTable_EventDate">
-            <End Role="EventDate" EntitySet="EventDate" />
-            <End Role="EventTable" EntitySet="EventTable" />
-          </AssociationSet>
           <AssociationSet Name="FK_Media_EventTable" Association="Self.FK_Media_EventTable">
             <End Role="EventTable" EntitySet="EventTable" />
             <End Role="Media" EntitySet="Media" />
@@ -426,30 +402,6 @@
           <Property Name="AnythingElse" Type="Boolean" />
           <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_Celebration" FromRole="Celebration" ToRole="UserProfile" />
         </EntityType>
-        <EntityType Name="EventDate">
-          <Key>
-            <PropertyRef Name="EventDateID" />
-          </Key>
-          <Property Name="EventDateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Date" Type="Int32" />
-          <Property Name="Month" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-          <Property Name="Year" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="EventTables" Relationship="Self.FK_EventTable_EventDate" FromRole="EventDate" ToRole="EventTable" />
-        </EntityType>
-        <EntityType Name="EventTable">
-          <Key>
-            <PropertyRef Name="EventID" />
-          </Key>
-          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DateCreated" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="EventTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="EventDateID" Type="Int32" Nullable="false" />
-          <Property Name="PeopleInvolved" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="EventCaption" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="EventDate" Relationship="Self.FK_EventTable_EventDate" FromRole="EventTable" ToRole="EventDate" />
-          <NavigationProperty Name="Media" Relationship="Self.FK_Media_EventTable" FromRole="EventTable" ToRole="Media" />
-          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_EventTable" FromRole="EventTable" ToRole="UserProfile" />
-        </EntityType>
         <EntityType Name="HobbyTable">
           <Key>
             <PropertyRef Name="HobbyID" />
@@ -476,7 +428,7 @@
           <Property Name="MediaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="EventID" Type="Int32" />
-          <NavigationProperty Name="EventTable" Relationship="Self.FK_Media_EventTable" FromRole="Media" ToRole="EventTable" />
+          <NavigationProperty Name="EventTable" Relationship="STEMMAModel.FK_Media_EventTable" FromRole="Medium" ToRole="EventTable" />
         </EntityType>
         <EntityType Name="Memory">
           <Key>
@@ -535,48 +487,14 @@
           <Property Name="AnythingElse" Type="Boolean" />
           <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_WorldEvents" FromRole="WorldEvent" ToRole="UserProfile" />
         </EntityType>
-        <Association Name="FK_EventTable_EventDate">
-          <End Role="EventDate" Type="Self.EventDate" Multiplicity="1" />
-          <End Role="EventTable" Type="Self.EventTable" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EventDate">
-              <PropertyRef Name="EventDateID" />
-            </Principal>
-            <Dependent Role="EventTable">
-              <PropertyRef Name="EventDateID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Media_EventTable">
-          <End Role="EventTable" Type="Self.EventTable" Multiplicity="0..1" />
-          <End Role="Media" Type="Self.Medium" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EventTable">
-              <PropertyRef Name="EventID" />
-            </Principal>
-            <Dependent Role="Media">
-              <PropertyRef Name="EventID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="STEMMAEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Careers" EntityType="Self.Career" />
           <EntitySet Name="Celebrations" EntityType="Self.Celebration" />
-          <EntitySet Name="EventDates" EntityType="Self.EventDate" />
-          <EntitySet Name="EventTables" EntityType="Self.EventTable" />
           <EntitySet Name="HobbyTables" EntityType="Self.HobbyTable" />
           <EntitySet Name="Media" EntityType="Self.Medium" />
           <EntitySet Name="Memories" EntityType="Self.Memory" />
           <EntitySet Name="RegisterUsers" EntityType="Self.RegisterUser" />
           <EntitySet Name="WorldEvents" EntityType="Self.WorldEvent" />
-          <AssociationSet Name="FK_EventTable_EventDate" Association="Self.FK_EventTable_EventDate">
-            <End Role="EventDate" EntitySet="EventDates" />
-            <End Role="EventTable" EntitySet="EventTables" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Media_EventTable" Association="Self.FK_Media_EventTable">
-            <End Role="EventTable" EntitySet="EventTables" />
-            <End Role="Media" EntitySet="Media" />
-          </AssociationSet>
           <EntitySet Name="Relationships" EntityType="STEMMAModel.Relationship" />
           <EntitySet Name="UserProfiles" EntityType="STEMMAModel.UserProfile" />
           <AssociationSet Name="FK_UserProfile_Career" Association="STEMMAModel.FK_UserProfile_Career">
@@ -585,10 +503,6 @@
           </AssociationSet>
           <AssociationSet Name="FK_UserProfile_Celebration" Association="STEMMAModel.FK_UserProfile_Celebration">
             <End Role="Celebration" EntitySet="Celebrations" />
-            <End Role="UserProfile" EntitySet="UserProfiles" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserProfile_EventTable" Association="STEMMAModel.FK_UserProfile_EventTable">
-            <End Role="EventTable" EntitySet="EventTables" />
             <End Role="UserProfile" EntitySet="UserProfiles" />
           </AssociationSet>
           <AssociationSet Name="FK_UserProfile_HobbyTable" Association="STEMMAModel.FK_UserProfile_HobbyTable">
@@ -611,7 +525,16 @@
             <End Role="WorldEvent" EntitySet="WorldEvents" />
             <End Role="UserProfile" EntitySet="UserProfiles" />
           </AssociationSet>
-        </EntityContainer>
+          <EntitySet Name="EventTables" EntityType="STEMMAModel.EventTable" />
+          <AssociationSet Name="FK_Media_EventTable" Association="STEMMAModel.FK_Media_EventTable">
+            <End Role="EventTable" EntitySet="EventTables" />
+            <End Role="Medium" EntitySet="Media" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserProfile_EventTable" Association="STEMMAModel.FK_UserProfile_EventTable">
+            <End Role="EventTable" EntitySet="EventTables" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+          </EntityContainer>
         <EntityType Name="Relationship">
           <Key>
             <PropertyRef Name="RelationshipsID" />
@@ -648,12 +571,12 @@
           <Property Name="EventID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Career" Relationship="STEMMAModel.FK_UserProfile_Career" FromRole="UserProfile" ToRole="Career" />
           <NavigationProperty Name="Celebration" Relationship="STEMMAModel.FK_UserProfile_Celebration" FromRole="UserProfile" ToRole="Celebration" />
-          <NavigationProperty Name="EventTable" Relationship="STEMMAModel.FK_UserProfile_EventTable" FromRole="UserProfile" ToRole="EventTable" />
           <NavigationProperty Name="HobbyTable" Relationship="STEMMAModel.FK_UserProfile_HobbyTable" FromRole="UserProfile" ToRole="HobbyTable" />
           <NavigationProperty Name="Memory" Relationship="STEMMAModel.FK_UserProfile_Memories" FromRole="UserProfile" ToRole="Memory" />
           <NavigationProperty Name="RegisterUser" Relationship="STEMMAModel.FK_UserProfile_RegisterUser" FromRole="UserProfile" ToRole="RegisterUser" />
           <NavigationProperty Name="Relationship" Relationship="STEMMAModel.FK_UserProfile_Relationship" FromRole="UserProfile" ToRole="Relationship" />
           <NavigationProperty Name="WorldEvent" Relationship="STEMMAModel.FK_UserProfile_WorldEvents" FromRole="UserProfile" ToRole="WorldEvent" />
+          <NavigationProperty Name="EventTable" Relationship="STEMMAModel.FK_UserProfile_EventTable" FromRole="UserProfile" ToRole="EventTable" />
         </EntityType>
         <Association Name="FK_UserProfile_Career">
           <End Type="STEMMAModel.Career" Role="Career" Multiplicity="1" />
@@ -676,18 +599,6 @@
             </Principal>
             <Dependent Role="UserProfile">
               <PropertyRef Name="CelebrationID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserProfile_EventTable">
-          <End Type="STEMMAModel.EventTable" Role="EventTable" Multiplicity="1" />
-          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EventTable">
-              <PropertyRef Name="EventID" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="EventID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -751,7 +662,46 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <EntityType Name="EventTable">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="EventTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EventDay" Type="Int32" />
+          <Property Name="EventMonth" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="EventYear" Type="Int32" Nullable="false" />
+          <Property Name="PeopleInvolved" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="EventCaption" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Media" Relationship="STEMMAModel.FK_Media_EventTable" FromRole="EventTable" ToRole="Medium" />
+          <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_EventTable" FromRole="EventTable" ToRole="UserProfile" />
+        </EntityType>
+        <Association Name="FK_Media_EventTable">
+          <End Type="STEMMAModel.EventTable" Role="EventTable" Multiplicity="0..1" />
+          <End Type="STEMMAModel.Medium" Role="Medium" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventTable">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="Medium">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserProfile_EventTable">
+          <End Type="STEMMAModel.EventTable" Role="EventTable" Multiplicity="1" />
+          <End Type="STEMMAModel.UserProfile" Role="UserProfile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventTable">
+              <PropertyRef Name="EventID" />
+            </Principal>
+            <Dependent Role="UserProfile">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -810,28 +760,6 @@
                 <ScalarProperty Name="CelebrateVeteransDay" ColumnName="CelebrateVeteransDay" />
                 <ScalarProperty Name="CelebrateCincoDeMayo" ColumnName="CelebrateCincoDeMayo" />
                 <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EventDates">
-            <EntityTypeMapping TypeName="STEMMAModel.EventDate">
-              <MappingFragment StoreEntitySet="EventDate">
-                <ScalarProperty Name="EventDateID" ColumnName="EventDateID" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Month" ColumnName="Month" />
-                <ScalarProperty Name="Year" ColumnName="Year" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EventTables">
-            <EntityTypeMapping TypeName="STEMMAModel.EventTable">
-              <MappingFragment StoreEntitySet="EventTable">
-                <ScalarProperty Name="EventID" ColumnName="EventID" />
-                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
-                <ScalarProperty Name="EventDateID" ColumnName="EventDateID" />
-                <ScalarProperty Name="PeopleInvolved" ColumnName="PeopleInvolved" />
-                <ScalarProperty Name="EventCaption" ColumnName="EventCaption" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -953,6 +881,20 @@
                 <ScalarProperty Name="RegisterUserID" ColumnName="RegisterUserID" />
                 <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
                 <ScalarProperty Name="UserProfileID" ColumnName="UserProfileID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventTables">
+            <EntityTypeMapping TypeName="STEMMAModel.EventTable">
+              <MappingFragment StoreEntitySet="EventTable">
+                <ScalarProperty Name="EventCaption" ColumnName="EventCaption" />
+                <ScalarProperty Name="PeopleInvolved" ColumnName="PeopleInvolved" />
+                <ScalarProperty Name="EventYear" ColumnName="EventYear" />
+                <ScalarProperty Name="EventMonth" ColumnName="EventMonth" />
+                <ScalarProperty Name="EventDay" ColumnName="EventDay" />
+                <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

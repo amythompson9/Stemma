@@ -220,7 +220,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CareersController.cs" />
     <Compile Include="Controllers\CelebrationsController.cs" />
-    <Compile Include="Controllers\EventDatesController.cs" />
     <Compile Include="Controllers\EventTablesController.cs" />
     <Compile Include="Controllers\HobbyTablesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -239,9 +238,6 @@
       <DependentUpon>StemmaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Celebration.cs">
-      <DependentUpon>StemmaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EventDate.cs">
       <DependentUpon>StemmaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EventTable.cs">
@@ -391,16 +387,6 @@
     <Content Include="Views\Celebrations\Details.cshtml" />
     <Content Include="Views\Celebrations\Edit.cshtml" />
     <Content Include="Views\Celebrations\Index.cshtml" />
-    <Content Include="Views\EventDates\Create.cshtml" />
-    <Content Include="Views\EventDates\Delete.cshtml" />
-    <Content Include="Views\EventDates\Details.cshtml" />
-    <Content Include="Views\EventDates\Edit.cshtml" />
-    <Content Include="Views\EventDates\Index.cshtml" />
-    <Content Include="Views\EventTables\Create.cshtml" />
-    <Content Include="Views\EventTables\Delete.cshtml" />
-    <Content Include="Views\EventTables\Details.cshtml" />
-    <Content Include="Views\EventTables\Edit.cshtml" />
-    <Content Include="Views\EventTables\Index.cshtml" />
     <Content Include="Views\HobbyTables\Create.cshtml" />
     <Content Include="Views\HobbyTables\Delete.cshtml" />
     <Content Include="Views\HobbyTables\Details.cshtml" />
@@ -436,6 +422,11 @@
     <Content Include="Views\RegisterUsers\Details.cshtml" />
     <Content Include="Views\RegisterUsers\Edit.cshtml" />
     <Content Include="Views\RegisterUsers\Index.cshtml" />
+    <Content Include="Views\EventTables\Create.cshtml" />
+    <Content Include="Views\EventTables\Delete.cshtml" />
+    <Content Include="Views\EventTables\Details.cshtml" />
+    <Content Include="Views\EventTables\Edit.cshtml" />
+    <Content Include="Views\EventTables\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
