@@ -27,11 +27,11 @@ namespace Stemma.Models
     
         public virtual Career Career { get; set; }
         public virtual Celebration Celebration { get; set; }
-        public virtual EventTable EventTable { get; set; }
         public virtual HobbyTable HobbyTable { get; set; }
         public virtual Memory Memory { get; set; }
         public virtual RegisterUser RegisterUser { get; set; }
         public virtual Relationship Relationship { get; set; }
         public virtual WorldEvent WorldEvent { get; set; }
+        public virtual EventTable EventTable { get; set; }
     }
 }
