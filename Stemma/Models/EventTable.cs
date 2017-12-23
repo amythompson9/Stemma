@@ -24,11 +24,12 @@ namespace Stemma.Models
         public int EventID { get; set; }
         public byte[] DateCreated { get; set; }
         public string EventTitle { get; set; }
-        public int EventDateID { get; set; }
+        public Nullable<int> EventDay { get; set; }
+        public string EventMonth { get; set; }
+        public int EventYear { get; set; }
         public string PeopleInvolved { get; set; }
         public string EventCaption { get; set; }
     
-        public virtual EventDate EventDate { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Medium> Media { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

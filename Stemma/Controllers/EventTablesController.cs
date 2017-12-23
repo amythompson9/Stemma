@@ -17,8 +17,7 @@ namespace Stemma.Controllers
         // GET: EventTables
         public ActionResult Index()
         {
-            var eventTables = db.EventTables.Include(e => e.EventDate);
-            return View(eventTables.ToList());
+            return View(db.EventTables.ToList());
         }
 
         // GET: EventTables/Details/5
@@ -39,7 +38,6 @@ namespace Stemma.Controllers
         // GET: EventTables/Create
         public ActionResult Create()
         {
-            ViewBag.EventDateID = new SelectList(db.EventDates, "EventDateID", "Month");
             return View();
         }
 
@@ -48,7 +46,7 @@ namespace Stemma.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventID,DateCreated,EventTitle,EventDateID,PeopleInvolved,EventCaption")] EventTable eventTable)
+        public ActionResult Create([Bind(Include = "EventID,DateCreated,EventTitle,EventDay,EventMonth,EventYear,PeopleInvolved,EventCaption")] EventTable eventTable)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +55,6 @@ namespace Stemma.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.EventDateID = new SelectList(db.EventDates, "EventDateID", "Month", eventTable.EventDateID);
             return View(eventTable);
         }
 
@@ -73,7 +70,6 @@ namespace Stemma.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.EventDateID = new SelectList(db.EventDates, "EventDateID", "Month", eventTable.EventDateID);
             return View(eventTable);
         }
 
@@ -82,7 +78,7 @@ namespace Stemma.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventID,DateCreated,EventTitle,EventDateID,PeopleInvolved,EventCaption")] EventTable eventTable)
+        public ActionResult Edit([Bind(Include = "EventID,DateCreated,EventTitle,EventDay,EventMonth,EventYear,PeopleInvolved,EventCaption")] EventTable eventTable)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +86,6 @@ namespace Stemma.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.EventDateID = new SelectList(db.EventDates, "EventDateID", "Month", eventTable.EventDateID);
             return View(eventTable);
         }
 
