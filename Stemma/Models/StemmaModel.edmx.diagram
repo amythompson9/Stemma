@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2443929633e54e62966fad1fd3d3df58" Name="Diagram1">
+      <Diagram DiagramId="2443929633e54e62966fad1fd3d3df58" Name="Diagram1" ZoomLevel="85">
         <EntityTypeShape EntityType="STEMMAModel.Career" Width="1.5" PointX="0.5" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="STEMMAModel.Celebration" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="STEMMAModel.HobbyTable" Width="1.5" PointX="4" PointY="7.125" IsExpanded="true" />
