@@ -50,9 +50,9 @@ namespace Stemma
             //    clientId: "",
             //    clientSecret: "");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(
+               consumerKey: "",
+               consumerSecret: "");
 
             app.UseFacebookAuthentication(
                appId: "1895902947392548",
