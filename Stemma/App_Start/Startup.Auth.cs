@@ -54,15 +54,16 @@ namespace Stemma
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1895902947392548",
+               appSecret: "00e114a6ec621314886ab2dff9d109d7");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "608497831504-3qgqi56kojfauplbpfvk25700c87qhas.apps.googleusercontent.com",
+                ClientSecret = "IePJ2cZE05AVzGIoukjre7zd"
+            });
         }
     }
 }
