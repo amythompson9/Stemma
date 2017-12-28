@@ -30,10 +30,9 @@ namespace Stemma.Models
         public virtual DbSet<HobbyTable> HobbyTables { get; set; }
         public virtual DbSet<Medium> Media { get; set; }
         public virtual DbSet<Memory> Memories { get; set; }
-        public virtual DbSet<RegisterUser> RegisterUsers { get; set; }
         public virtual DbSet<WorldEvent> WorldEvents { get; set; }
         public virtual DbSet<Relationship> Relationships { get; set; }
-        public virtual DbSet<UserProfile> UserProfiles { get; set; }
         public virtual DbSet<EventTable> EventTables { get; set; }
+        public virtual DbSet<UserProfile> UserProfiles { get; set; }
     }
 }
