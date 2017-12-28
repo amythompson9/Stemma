@@ -534,7 +534,7 @@
             <End Role="EventTable" EntitySet="EventTables" />
             <End Role="UserProfile" EntitySet="UserProfiles" />
           </AssociationSet>
-          </EntityContainer>
+        </EntityContainer>
         <EntityType Name="Relationship">
           <Key>
             <PropertyRef Name="RelationshipsID" />
@@ -701,7 +701,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>

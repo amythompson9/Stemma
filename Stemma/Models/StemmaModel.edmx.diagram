@@ -21,7 +21,7 @@
         <AssociationConnector Association="STEMMAModel.FK_UserProfile_RegisterUser" />
         <AssociationConnector Association="STEMMAModel.FK_UserProfile_Relationship" />
         <AssociationConnector Association="STEMMAModel.FK_UserProfile_WorldEvents" />
-        <EntityTypeShape EntityType="STEMMAModel.EventTable" Width="1.5" PointX="8" PointY="2.875" />
+        <EntityTypeShape EntityType="STEMMAModel.EventTable" Width="1.5" PointX="2.25" PointY="2.75" />
         <AssociationConnector Association="STEMMAModel.FK_Media_EventTable" />
         <AssociationConnector Association="STEMMAModel.FK_UserProfile_EventTable" />
       </Diagram>
