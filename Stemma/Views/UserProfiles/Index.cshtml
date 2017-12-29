@@ -21,9 +21,6 @@
             @Html.DisplayNameFor(model => model.Celebration.CelebrationID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EventTable.EventTitle)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.HobbyTable.HobbyID)
         </th>
         <th>
@@ -37,6 +34,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.WorldEvent.WorldEventID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventTable.EventTitle)
         </th>
         <th></th>
     </tr>
@@ -53,9 +53,6 @@
             @Html.DisplayFor(modelItem => item.Celebration.CelebrationID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.EventTable.EventTitle)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.HobbyTable.HobbyID)
         </td>
         <td>
@@ -69,6 +66,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.WorldEvent.WorldEventID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventTable.EventTitle)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.UserProfileID }) |

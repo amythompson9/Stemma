@@ -35,6 +35,7 @@ namespace Stemma.Models
         public Nullable<bool> OJSimpsonCarChase { get; set; }
         public Nullable<bool> EndOfProhibition { get; set; }
         public Nullable<bool> AnythingElse { get; set; }
+        public Nullable<bool> VietnamWar { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserProfile> UserProfiles { get; set; }

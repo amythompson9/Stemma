@@ -10,20 +10,18 @@
         <EntityTypeShape EntityType="STEMMAModel.HobbyTable" Width="1.5" PointX="4" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="STEMMAModel.Medium" Width="1.5" PointX="9" PointY="10.25" IsExpanded="true" />
         <EntityTypeShape EntityType="STEMMAModel.Memory" Width="1.5" PointX="3.75" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="STEMMAModel.RegisterUser" Width="1.5" PointX="4.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="STEMMAModel.WorldEvent" Width="1.5" PointX="2" PointY="11.125" IsExpanded="true" />
         <EntityTypeShape EntityType="STEMMAModel.Relationship" Width="1.5" PointX="2.25" PointY="7.125" />
-        <EntityTypeShape EntityType="STEMMAModel.UserProfile" Width="1.5" PointX="4.5" PointY="2.5" />
-        <AssociationConnector Association="STEMMAModel.FK_UserProfile_Career" />
-        <AssociationConnector Association="STEMMAModel.FK_UserProfile_Celebration" />
-        <AssociationConnector Association="STEMMAModel.FK_UserProfile_HobbyTable" />
-        <AssociationConnector Association="STEMMAModel.FK_UserProfile_Memories" />
-        <AssociationConnector Association="STEMMAModel.FK_UserProfile_RegisterUser" />
-        <AssociationConnector Association="STEMMAModel.FK_UserProfile_Relationship" />
-        <AssociationConnector Association="STEMMAModel.FK_UserProfile_WorldEvents" />
         <EntityTypeShape EntityType="STEMMAModel.EventTable" Width="1.5" PointX="2.25" PointY="2.75" />
         <AssociationConnector Association="STEMMAModel.FK_Media_EventTable" />
+        <EntityTypeShape EntityType="STEMMAModel.UserProfile" Width="1.5" PointX="5.875" PointY="0.75" />
+        <AssociationConnector Association="STEMMAModel.FK_UserProfile_Career" />
+        <AssociationConnector Association="STEMMAModel.FK_UserProfile_Celebration" />
         <AssociationConnector Association="STEMMAModel.FK_UserProfile_EventTable" />
+        <AssociationConnector Association="STEMMAModel.FK_UserProfile_HobbyTable" />
+        <AssociationConnector Association="STEMMAModel.FK_UserProfile_Memories" />
+        <AssociationConnector Association="STEMMAModel.FK_UserProfile_Relationship" />
+        <AssociationConnector Association="STEMMAModel.FK_UserProfile_WorldEvents" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -226,7 +226,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MediaController.cs" />
     <Compile Include="Controllers\MemoriesController.cs" />
-    <Compile Include="Controllers\RegisterUsersController.cs" />
     <Compile Include="Controllers\RelationshipsController.cs" />
     <Compile Include="Controllers\UserProfilesController.cs" />
     <Compile Include="Controllers\WorldEventsController.cs" />
@@ -252,9 +251,6 @@
       <DependentUpon>StemmaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Memory.cs">
-      <DependentUpon>StemmaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RegisterUser.cs">
       <DependentUpon>StemmaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Relationship.cs">
@@ -417,11 +413,6 @@
     <Content Include="Views\WorldEvents\Details.cshtml" />
     <Content Include="Views\WorldEvents\Edit.cshtml" />
     <Content Include="Views\WorldEvents\Index.cshtml" />
-    <Content Include="Views\RegisterUsers\Create.cshtml" />
-    <Content Include="Views\RegisterUsers\Delete.cshtml" />
-    <Content Include="Views\RegisterUsers\Details.cshtml" />
-    <Content Include="Views\RegisterUsers\Edit.cshtml" />
-    <Content Include="Views\RegisterUsers\Index.cshtml" />
     <Content Include="Views\EventTables\Create.cshtml" />
     <Content Include="Views\EventTables\Delete.cshtml" />
     <Content Include="Views\EventTables\Details.cshtml" />
