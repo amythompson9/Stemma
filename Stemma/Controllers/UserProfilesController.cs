@@ -17,7 +17,7 @@ namespace Stemma.Controllers
         // GET: UserProfiles
         public ActionResult Index()
         {
-            var userProfiles = db.UserProfiles.Include(u => u.Career).Include(u => u.Celebration).Include(u => u.EventTable).Include(u => u.HobbyTable).Include(u => u.Memory).Include(u => u.RegisterUser).Include(u => u.Relationship).Include(u => u.WorldEvent);
+            var userProfiles = db.UserProfiles.Include(u => u.Career).Include(u => u.Celebration).Include(u => u.HobbyTable).Include(u => u.Memory).Include(u => u.Relationship).Include(u => u.WorldEvent).Include(u => u.EventTable);
             return View(userProfiles.ToList());
         }
 
@@ -41,12 +41,11 @@ namespace Stemma.Controllers
         {
             ViewBag.CareerID = new SelectList(db.Careers, "CareerID", "CareerID");
             ViewBag.CelebrationID = new SelectList(db.Celebrations, "CelebrationID", "CelebrationID");
-            ViewBag.EventID = new SelectList(db.EventTables, "EventID", "EventTitle");
             ViewBag.HobbyID = new SelectList(db.HobbyTables, "HobbyID", "HobbyID");
             ViewBag.MemoryID = new SelectList(db.Memories, "MemoryID", "MemoryID");
-            ViewBag.RegisterUserID = new SelectList(db.RegisterUsers, "RegisterUserID", "RegisterUserID");
             ViewBag.RelationshipsID = new SelectList(db.Relationships, "RelationshipsID", "RelationshipsID");
             ViewBag.WorldEventID = new SelectList(db.WorldEvents, "WorldEventID", "WorldEventID");
+            ViewBag.EventID = new SelectList(db.EventTables, "EventID", "EventTitle");
             return View();
         }
 
@@ -66,12 +65,11 @@ namespace Stemma.Controllers
 
             ViewBag.CareerID = new SelectList(db.Careers, "CareerID", "CareerID", userProfile.CareerID);
             ViewBag.CelebrationID = new SelectList(db.Celebrations, "CelebrationID", "CelebrationID", userProfile.CelebrationID);
-            ViewBag.EventID = new SelectList(db.EventTables, "EventID", "EventTitle", userProfile.EventID);
             ViewBag.HobbyID = new SelectList(db.HobbyTables, "HobbyID", "HobbyID", userProfile.HobbyID);
             ViewBag.MemoryID = new SelectList(db.Memories, "MemoryID", "MemoryID", userProfile.MemoryID);
-            ViewBag.RegisterUserID = new SelectList(db.RegisterUsers, "RegisterUserID", "RegisterUserID", userProfile.RegisterUserID);
             ViewBag.RelationshipsID = new SelectList(db.Relationships, "RelationshipsID", "RelationshipsID", userProfile.RelationshipsID);
             ViewBag.WorldEventID = new SelectList(db.WorldEvents, "WorldEventID", "WorldEventID", userProfile.WorldEventID);
+            ViewBag.EventID = new SelectList(db.EventTables, "EventID", "EventTitle", userProfile.EventID);
             return View(userProfile);
         }
 
@@ -89,12 +87,11 @@ namespace Stemma.Controllers
             }
             ViewBag.CareerID = new SelectList(db.Careers, "CareerID", "CareerID", userProfile.CareerID);
             ViewBag.CelebrationID = new SelectList(db.Celebrations, "CelebrationID", "CelebrationID", userProfile.CelebrationID);
-            ViewBag.EventID = new SelectList(db.EventTables, "EventID", "EventTitle", userProfile.EventID);
             ViewBag.HobbyID = new SelectList(db.HobbyTables, "HobbyID", "HobbyID", userProfile.HobbyID);
             ViewBag.MemoryID = new SelectList(db.Memories, "MemoryID", "MemoryID", userProfile.MemoryID);
-            ViewBag.RegisterUserID = new SelectList(db.RegisterUsers, "RegisterUserID", "RegisterUserID", userProfile.RegisterUserID);
             ViewBag.RelationshipsID = new SelectList(db.Relationships, "RelationshipsID", "RelationshipsID", userProfile.RelationshipsID);
             ViewBag.WorldEventID = new SelectList(db.WorldEvents, "WorldEventID", "WorldEventID", userProfile.WorldEventID);
+            ViewBag.EventID = new SelectList(db.EventTables, "EventID", "EventTitle", userProfile.EventID);
             return View(userProfile);
         }
 
@@ -113,12 +110,11 @@ namespace Stemma.Controllers
             }
             ViewBag.CareerID = new SelectList(db.Careers, "CareerID", "CareerID", userProfile.CareerID);
             ViewBag.CelebrationID = new SelectList(db.Celebrations, "CelebrationID", "CelebrationID", userProfile.CelebrationID);
-            ViewBag.EventID = new SelectList(db.EventTables, "EventID", "EventTitle", userProfile.EventID);
             ViewBag.HobbyID = new SelectList(db.HobbyTables, "HobbyID", "HobbyID", userProfile.HobbyID);
             ViewBag.MemoryID = new SelectList(db.Memories, "MemoryID", "MemoryID", userProfile.MemoryID);
-            ViewBag.RegisterUserID = new SelectList(db.RegisterUsers, "RegisterUserID", "RegisterUserID", userProfile.RegisterUserID);
             ViewBag.RelationshipsID = new SelectList(db.Relationships, "RelationshipsID", "RelationshipsID", userProfile.RelationshipsID);
             ViewBag.WorldEventID = new SelectList(db.WorldEvents, "WorldEventID", "WorldEventID", userProfile.WorldEventID);
+            ViewBag.EventID = new SelectList(db.EventTables, "EventID", "EventTitle", userProfile.EventID);
             return View(userProfile);
         }
 
