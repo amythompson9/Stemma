@@ -253,6 +253,7 @@
     <Compile Include="Models\Memory.cs">
       <DependentUpon>StemmaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MetaData.cs" />
     <Compile Include="Models\Relationship.cs">
       <DependentUpon>StemmaModel.tt</DependentUpon>
     </Compile>
