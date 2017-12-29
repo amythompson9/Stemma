@@ -50,19 +50,20 @@ namespace Stemma
             //    clientId: "",
             //    clientSecret: "");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(
+               consumerKey: "3AjbOs46JC3DFqwQgTat1GNSg",
+               consumerSecret: "KyHqDdWkQOa7li3NLF1dhQtLOJtDheABJLXlVKG1LcGQ9FRKhL");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1962107060688792",
+               appSecret: "7c853759cc524ac164c76fcdfce20750");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "608497831504-3qgqi56kojfauplbpfvk25700c87qhas.apps.googleusercontent.com",
+                ClientSecret = "IePJ2cZE05AVzGIoukjre7zd"
+            });
         }
     }
 }
