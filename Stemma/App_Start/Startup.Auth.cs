@@ -51,12 +51,12 @@ namespace Stemma
             //    clientSecret: "");
 
             app.UseTwitterAuthentication(
-               consumerKey: "",
-               consumerSecret: "");
+               consumerKey: "3AjbOs46JC3DFqwQgTat1GNSg",
+               consumerSecret: "KyHqDdWkQOa7li3NLF1dhQtLOJtDheABJLXlVKG1LcGQ9FRKhL");
 
             app.UseFacebookAuthentication(
-               appId: "1895902947392548",
-               appSecret: "00e114a6ec621314886ab2dff9d109d7");
+               appId: "1962107060688792",
+               appSecret: "7c853759cc524ac164c76fcdfce20750");
 
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
