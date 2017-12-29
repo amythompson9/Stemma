@@ -34,6 +34,7 @@ namespace Stemma.Models
         public Nullable<bool> LicensesCertifications { get; set; }
         public Nullable<bool> FirstJob { get; set; }
         public Nullable<bool> WorstJob { get; set; }
+        public Nullable<bool> AnythingElse { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserProfile> UserProfiles { get; set; }
