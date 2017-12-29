@@ -9,6 +9,8 @@ using System.Web;
 //not sure if you have to repeat the namespace line each time
 //but it doesn't hurt.
 
+//STILL NEEDED: Media Page!!!
+
 namespace Stemma.Models
 {
     [MetadataType(typeof(Relationship.MetaData))]
@@ -51,9 +53,272 @@ namespace Stemma.Models
         }
     }
 }
-//next try adding profile, events and media metaclasses here
-//actually, you skipped media because you're not sure how that's going to look 
-//or what's needed.
+
+
+namespace Stemma.Models
+{
+    [MetadataType(typeof(Career.MetaData))]
+
+    public partial class Career
+    {
+        public class MetaData
+        {
+            //stuff goes here.
+            //copied from Career.cs (ie, the base model, hidden under tt file)
+
+            public int CareerID { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> AttendedCollege { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Graduations { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> HaveJob { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> HadJob { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Accomplishments { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> FirstDayOfSchool { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> ArmedForces { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Volunteer { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Legacies { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> TechSchool { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> LicensesCertifications { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> FirstJob { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> WorstJob { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> AnythingElse { get; set; }
+
+        }
+    }
+}
+
+namespace Stemma.Models
+{
+    [MetadataType(typeof(Celebration.MetaData))]
+
+    public partial class Celebration
+    {
+        public class MetaData
+        {
+            //stuff goes here.
+            //copied from Celebration.cs (ie, the base model, hidden under tt file)
+
+            public int CelebrationID { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> HolidayRecently { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> PartyRecently { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> MilestoneRecently { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateChristmas { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateNYE { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateThanksgiving { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateValentine { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateEaster { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateIndependenceDay { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateHalloween { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateMemorialDay { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateLaborDay { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateMothersDay { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateFathersDay { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateChaunakah { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebratePassover { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateRoshHashanah { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelerateYomKippur { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateRamadan { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateEID { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateSTPat { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateBirthdays { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateChineseNewYear { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateQuinceanera { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateBarBatMitzvah { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateDayOfTheDead { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateVeteransDay { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CelebrateCincoDeMayo { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> AnythingElse { get; set; }
+
+        }
+    }
+}
+
+namespace Stemma.Models
+{
+    [MetadataType(typeof(HobbyTable.MetaData))]
+
+    public partial class HobbyTable
+    {
+        public class MetaData
+        {
+            //stuff goes here.
+            //copied from HobbyTable.cs (ie, the base model, hidden under tt file)
+
+            public int HobbyID { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> PlaySports { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> InAShow { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Travel { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> OutdoorPerson { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> TravelAbroad { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Passions { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Talents { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Trophies { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Exercise { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> FamilyVacation { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> ChildhoodVacation { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> AnythingElse { get; set; }
+
+        }
+    }
+}
+
+namespace Stemma.Models
+{
+    [MetadataType(typeof(Memory.MetaData))]
+
+    public partial class Memory
+    {
+        public class MetaData
+        {
+            //stuff goes here.
+            //copied from Memory.cs (ie, the base model, hidden under tt file)
+
+            public int MemoryID { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> BrokenBones { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> OwnHome { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> DriversLicense { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> FirstTooth { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> PersonalNickName { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> FamilyNickName { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> RideBike { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CommitCrime { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> BigMove { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Vote { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> FamilyTraditions { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> EmbarrassingMoment { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> ProudestMoments { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> ChildhoodCamp { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> MemorializeSomeone { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Concerts { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> FamilyPet { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> CurrentPet { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> HSDance { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> AnythingElse { get; set; }
+
+        }
+    }
+}
+
+namespace Stemma.Models
+{
+    [MetadataType(typeof(WorldEvent.MetaData))]
+
+    public partial class WorldEvent
+    {
+        public class MetaData
+        {
+            //stuff goes here.
+            //copied from WorldEvent.cs (ie, the base model, hidden under tt file)
+
+            public int WorldEventID { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> September11 { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> MoonLanding { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> NixonResigns { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> ElvisDies { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> ChallengerExplodes { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> WorldWar2Ends { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> KennedyDies { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> NotableElection { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> MLKAssassination { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> Y2K { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> BerlinWall { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> OJSimpsonCarChase { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> EndOfProhibition { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> AnythingElse { get; set; }
+            [Display(Name = "")]
+            public Nullable<bool> VietnamWar { get; set; }
+
+        }
+    }
+}
 
 namespace Stemma.Models
 {
@@ -98,8 +363,8 @@ namespace Stemma.Models
             //stuff goes here.
             //copied from UserProfile.cs (ie, the base model, hidden under tt file)
 
-            //this one might take more work, because it's got all of the FKs in it.
-            //check how you did Wardrobe -- you coded stuff out
+            //not sure if you need to edit anything about the six profiles pages here
+            //they SHOULD be updated in their own sections
 
             public int UserProfileID { get; set; }
 
@@ -115,20 +380,6 @@ namespace Stemma.Models
             public int WorldEventID { get; set; }
             public int EventID { get; set; }
 
-            //        //the following was copied from the main model
-            //        //but you get red squiggles
-            //        //I think the solution is just to delete or code out here.
-
-            //        //public virtual Career Career { get; set; }
-            //        //public virtual Celebration Celebration { get; set; }
-            //        //public virtual HobbyTable HobbyTable { get; set; }
-            //        //public virtual Memory Memory { get; set; }
-            //        //public virtual RegisterUser RegisterUser { get; set; }
-            //        //public virtual Relationship Relationship { get; set; }
-            //        //public virtual WorldEvent WorldEvent { get; set; }
-            //        //public virtual EventTable EventTable { get; set; }
-
-            //    }
         }
     }
 }
