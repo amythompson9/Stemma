@@ -19,7 +19,9 @@
             @Html.LabelFor(model => model.AttendedCollege, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.AttendedCollege)
+                    @*you will replace the EditorFor line with two RadioButtonFor lines*@
+                    @Html.RadioButtonFor(model => model.AttendedCollege, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.AttendedCollege, "False", false) No
                     @Html.ValidationMessageFor(model => model.AttendedCollege, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -29,7 +31,8 @@
             @Html.LabelFor(model => model.Graduations, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.Graduations)
+                    @Html.RadioButtonFor(model => model.Graduations, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.Graduations, "False", false) No
                     @Html.ValidationMessageFor(model => model.Graduations, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -39,7 +42,8 @@
             @Html.LabelFor(model => model.HaveJob, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.HaveJob)
+                    @Html.RadioButtonFor(model => model.HaveJob, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.HaveJob, "False", false) No
                     @Html.ValidationMessageFor(model => model.HaveJob, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -49,7 +53,8 @@
             @Html.LabelFor(model => model.HadJob, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.HadJob)
+                    @Html.RadioButtonFor(model => model.HadJob, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.HadJob, "False", false) No
                     @Html.ValidationMessageFor(model => model.HadJob, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -59,7 +64,8 @@
             @Html.LabelFor(model => model.Accomplishments, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.Accomplishments)
+                    @Html.RadioButtonFor(model => model.Accomplishments, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.Accomplishments, "False", false) No
                     @Html.ValidationMessageFor(model => model.Accomplishments, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -69,7 +75,8 @@
             @Html.LabelFor(model => model.FirstDayOfSchool, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.FirstDayOfSchool)
+                    @Html.RadioButtonFor(model => model.FirstDayOfSchool, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.FirstDayOfSchool, "False", false) No
                     @Html.ValidationMessageFor(model => model.FirstDayOfSchool, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -79,7 +86,8 @@
             @Html.LabelFor(model => model.ArmedForces, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.ArmedForces)
+                    @Html.RadioButtonFor(model => model.ArmedForces, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.ArmedForces, "False", false) No
                     @Html.ValidationMessageFor(model => model.ArmedForces, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -89,7 +97,8 @@
             @Html.LabelFor(model => model.Volunteer, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.Volunteer)
+                    @Html.RadioButtonFor(model => model.Volunteer, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.Volunteer, "False", false) No
                     @Html.ValidationMessageFor(model => model.Volunteer, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -99,7 +108,8 @@
             @Html.LabelFor(model => model.Legacies, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.Legacies)
+                    @Html.RadioButtonFor(model => model.Legacies, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.Legacies, "False", false) No
                     @Html.ValidationMessageFor(model => model.Legacies, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -109,7 +119,8 @@
             @Html.LabelFor(model => model.TechSchool, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.TechSchool)
+                    @Html.RadioButtonFor(model => model.TechSchool, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.TechSchool, "False", false) No
                     @Html.ValidationMessageFor(model => model.TechSchool, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -119,7 +130,8 @@
             @Html.LabelFor(model => model.LicensesCertifications, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.LicensesCertifications)
+                    @Html.RadioButtonFor(model => model.LicensesCertifications, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.LicensesCertifications, "False", false) No
                     @Html.ValidationMessageFor(model => model.LicensesCertifications, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -129,7 +141,8 @@
             @Html.LabelFor(model => model.FirstJob, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.FirstJob)
+                    @Html.RadioButtonFor(model => model.FirstJob, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.FirstJob, "False", false) No
                     @Html.ValidationMessageFor(model => model.FirstJob, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -139,7 +152,8 @@
             @Html.LabelFor(model => model.WorstJob, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.WorstJob)
+                    @Html.RadioButtonFor(model => model.WorstJob, "True", true) Yes
+                    @Html.RadioButtonFor(model => model.WorstJob, "False", false) No
                     @Html.ValidationMessageFor(model => model.WorstJob, "", new { @class = "text-danger" })
                 </div>
             </div>

@@ -16,8 +16,8 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.CurrentlyMarried, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CurrentlyMarried, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.CurrentlyMarried)
                     @Html.ValidationMessageFor(model => model.CurrentlyMarried, "", new { @class = "text-danger" })
