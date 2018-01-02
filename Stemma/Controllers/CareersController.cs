@@ -8,6 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using Stemma.Models;
 
+//something isn't working when you try to create/save the profile
+//so you're gonna tinker with the name... might have something to do with plurals??
+//update: no, the problem seems to be some of the categories are missing from the SQL DB
+
 namespace Stemma.Controllers
 {
     public class CareersController : Controller

@@ -1,10 +1,10 @@
 ﻿@model Stemma.Models.Celebration
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Celebrations Profile Questions";
 }
 
-<h2>Create</h2>
+<h2>Celebrations</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,12 +12,12 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Celebration</h4>
+        <h4>Answer these questions to help build your Stemma.</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.HolidayRecently, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.HolidayRecently, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @*you are experimenting*@
                     @*code out the next line (it is the default line)*@
@@ -34,8 +34,8 @@
         @*below, you've replaced the standard EditorFor line with two RadioButtonFor lines*@
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PartyRecently, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.PartyRecently, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.PartyRecently, "True", true) Yes
                     @Html.RadioButtonFor(model => model.PartyRecently, "False", false) No
@@ -45,8 +45,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.MilestoneRecently, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.MilestoneRecently, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.MilestoneRecently, "True", true) Yes
                     @Html.RadioButtonFor(model => model.MilestoneRecently, "False", false) No
@@ -56,8 +56,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateChristmas, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateChristmas, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateChristmas, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateChristmas, "False", false) No
@@ -67,8 +67,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateNYE, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateNYE, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateNYE, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateNYE, "False", false) No
@@ -78,8 +78,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateThanksgiving, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateThanksgiving, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateThanksgiving, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateThanksgiving, "False", false) No
@@ -89,8 +89,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateValentine, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateValentine, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateValentine, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateValentine, "False", false) No
@@ -100,8 +100,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateEaster, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateEaster, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateEaster, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateEaster, "False", false) No
@@ -111,8 +111,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateIndependenceDay, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateIndependenceDay, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateIndependenceDay, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateIndependenceDay, "False", false) No
@@ -122,8 +122,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateHalloween, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateHalloween, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateHalloween, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateHalloween, "False", false) No
@@ -133,8 +133,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateMemorialDay, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateMemorialDay, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateMemorialDay, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateMemorialDay, "False", false) No
@@ -144,8 +144,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateLaborDay, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateLaborDay, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateLaborDay, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateLaborDay, "False", false) No
@@ -155,8 +155,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateMothersDay, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateMothersDay, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateMothersDay, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateMothersDay, "False", false) No
@@ -166,8 +166,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateFathersDay, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateFathersDay, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateFathersDay, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateFathersDay, "False", false) No
@@ -177,8 +177,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateChaunakah, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateChaunakah, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateChaunakah, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateChaunakah, "False", false) No
@@ -188,8 +188,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebratePassover, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebratePassover, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebratePassover, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebratePassover, "False", false) No
@@ -199,8 +199,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateRoshHashanah, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateRoshHashanah, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateRoshHashanah, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateRoshHashanah, "False", false) No
@@ -210,8 +210,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelerateYomKippur, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelerateYomKippur, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelerateYomKippur, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelerateYomKippur, "False", false) No
@@ -221,8 +221,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateRamadan, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateRamadan, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateRamadan, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateRamadan, "False", false) No
@@ -232,8 +232,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateEID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateEID, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateEID, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateEID, "False", false) No
@@ -243,8 +243,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateSTPat, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateSTPat, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateSTPat, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateSTPat, "False", false) No
@@ -254,8 +254,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateBirthdays, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateBirthdays, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateBirthdays, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateBirthdays, "False", false) No
@@ -265,8 +265,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateChineseNewYear, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateChineseNewYear, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateChineseNewYear, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateChineseNewYear, "False", false) No
@@ -276,8 +276,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateQuinceanera, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateQuinceanera, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateQuinceanera, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateQuinceanera, "False", false) No
@@ -287,8 +287,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateBarBatMitzvah, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateBarBatMitzvah, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateBarBatMitzvah, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateBarBatMitzvah, "False", false) No
@@ -298,8 +298,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateDayOfTheDead, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateDayOfTheDead, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateDayOfTheDead, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateDayOfTheDead, "False", false) No
@@ -309,8 +309,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateVeteransDay, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateVeteransDay, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateVeteransDay, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateVeteransDay, "False", false) No
@@ -320,8 +320,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CelebrateCincoDeMayo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CelebrateCincoDeMayo, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.CelebrateCincoDeMayo, "True", true) Yes
                     @Html.RadioButtonFor(model => model.CelebrateCincoDeMayo, "False", false) No
@@ -331,8 +331,8 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.AnythingElse, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.AnythingElse, htmlAttributes: new { @class = "control-label col-md-6" })
+            <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.AnythingElse, "True", true) Yes
                     @Html.RadioButtonFor(model => model.AnythingElse, "False", false) No
@@ -342,8 +342,8 @@
         </div>
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="col-md-offset-6 col-md-6">
+                <input type="submit" value="Save Your Answers" class="btn btn-default" />
             </div>
         </div>
     </div>
