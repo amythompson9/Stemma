@@ -14,6 +14,20 @@ namespace Stemma.Controllers
     {
         private STEMMAEntities db = new STEMMAEntities();
 
+        public bool CurrentlyMarried { get; private set; }
+        public bool InARelationship { get; private set; }
+        public bool PreviousRomance { get; private set; }
+        public bool HaveChildren { get; private set; }
+        public bool HaveGrandchildren { get; private set; }
+        public bool OtherYoungsters { get; private set; }
+        public bool HaveParents { get; private set; }
+        public bool HaveGrandparents { get; private set; }
+        public bool OtherAdults { get; private set; }
+        public bool HaveSiblings { get; private set; }
+        public bool OtherCloseRelatives { get; private set; }
+        public bool GoodFriendships { get; private set; }
+        public bool EverythingElse { get; private set; }
+
         // GET: Relationships
         public ActionResult Index()
         {

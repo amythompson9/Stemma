@@ -4,102 +4,185 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Your Relationship and Family Status</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CurrentlyMarried)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.InARelationship)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PreviousRomance)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HaveChildren)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HaveGrandchildren)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OtherYoungsters)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HaveParents)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HaveGrandparents)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OtherAdults)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HaveSiblings)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OtherCloseRelatives)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GoodFriendships)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EverythingElse)
-        </th>
-        <th></th>
-    </tr>
+</p>*@
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CurrentlyMarried)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.InARelationship)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PreviousRomance)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HaveChildren)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HaveGrandchildren)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OtherYoungsters)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HaveParents)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HaveGrandparents)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OtherAdults)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HaveSiblings)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OtherCloseRelatives)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GoodFriendships)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EverythingElse)
-        </td>
-        <td>
+            @*@Html.DisplayFor(modelItem => item.CurrentlyMarried)*@
+            if (item.CurrentlyMarried == true)
+            {
+                <p>
+                    You are currently married.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You are not currently married.
+                </p>  
+            }
+            @*@Html.DisplayFor(modelItem => item.InARelationship)*@
+            if (item.InARelationship == true)
+            {
+                <p>
+                    You are currently in a romantic relationship.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You are not currently in a romantic relationship.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.PreviousRomance)*@
+            if (item.PreviousRomance == true)
+            {
+                <p>
+                    You would like to remember a previous romance.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You would not like to remember/do not have a previous romance.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.HaveChildren)*@
+            if (item.HaveChildren == true)
+            {
+                <p>
+                    You have children.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have children.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.HaveGrandchildren)*@
+            if (item.HaveGrandchildren == true)
+            {
+                <p>
+                    You have grandchildren.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have grandchildren.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.OtherYoungsters)*@
+            if (item.OtherYoungsters == true)
+            {
+                <p>
+                    You have other children you would like to remember.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have other children you would like to remember.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.HaveParents)*@
+            if (item.HaveParents == true)
+            {
+                <p>
+                    You have parents.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have parents you would like to remember.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.HaveGrandparents)*@
+            if (item.HaveGrandparents == true)
+            {
+                <p>
+                    You have grandparents.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have grandparents you would like to remember.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.OtherAdults)*@
+            if (item.OtherAdults == true)
+            {
+                <p>
+                    You have other adults you would like to remember.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have other adults you would like to remember.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.HaveSiblings)*@
+            if (item.HaveSiblings == true)
+            {
+                <p>
+                    You have siblings.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have siblings.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.OtherCloseRelatives)*@
+            if (item.OtherCloseRelatives == true)
+            {
+                <p>
+                    You have other close relatives.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have other close relatives.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.GoodFriendships)*@
+            if (item.GoodFriendships == true)
+            {
+                <p>
+                    You have good friendships you would like to remember.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have good friendships to remember.
+                </p>
+            }
+            @*@Html.DisplayFor(modelItem => item.EverythingElse)*@
+            if (item.EverythingElse == true)
+            {
+                <p>
+                    You have other people you would like to record.
+                </p>
+            }
+            else
+            {
+                <p>
+                    You do not have other people you would like to record.
+                </p>
+            }
+    <p>
             @Html.ActionLink("Edit", "Edit", new { id=item.RelationshipsID }) |
             @Html.ActionLink("Details", "Details", new { id=item.RelationshipsID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.RelationshipsID })
-        </td>
-    </tr>
+    </p>
 }
-
-</table>
