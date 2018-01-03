@@ -1,128 +1,252 @@
 ﻿@model Stemma.Models.WorldEvent
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Suggestions for World Events Stems";
 }
 
-<h2>Details</h2>
+<h2>World Events</h2>
 
 <div>
-    <h4>WorldEvent</h4>
+    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.September11)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.September11)
-        </dd>
+    @if (Model.September11 == true)
+    {
+    <p>
+        Where you were on September 11, 2001.
+    </p>
+    <p>
+        A tribute to someone or something you lost on September 11, 2001.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MoonLanding)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.MoonLanding)
+        </td>*@
+    @if (Model.MoonLanding == true)
+    {
+    <p>
+        Your memories of humans landing on the moon.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.MoonLanding)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.NixonResigns)
+        </td>*@
+    @if (Model.NixonResigns == true)
+    {
+    <p>
+        Where you were when you heard that President Nixon resigned.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NixonResigns)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.ElvisDies)
+        </td>*@
+    @if (Model.ElvisDies == true)
+    {
+    <p>
+        Where you were when you learned that Elvis Presley had died.
+    </p>
+    <p>
+        A an audio or video clip of your favorite Elvis song.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.NixonResigns)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.ChallengerExplodes)
+        </td>*@
+    @if (Model.ChallengerExplodes == true)
+    {
+    <p>
+        Where you were when you learned the space shuttle Challenger had exploded.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ElvisDies)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.WorldWar2Ends)
+        </td>*@
+    @if (Model.WorldWar2Ends == true)
+    {
+    <p>
+        Your memories of the end of World War II.
+    </p>
+    <p>
+        How your life changed because of or after the War.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.ElvisDies)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.KennedyDies)
+        </td>*@
+    @if (Model.KennedyDies == true)
+    {
+    <p>
+        Where you were when you learned that President Kennedy had been assassinated.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ChallengerExplodes)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.NotableElection)
+        </td>*@
+    @if (Model.NotableElection == true)
+    {
+    <p>
+        Your memories of an important election.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.ChallengerExplodes)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.MLKAssassination)
+        </td>*@
+    @if (Model.MLKAssassination == true)
+    {
+    <p>
+        Where you were when you learned that Martin Luther King, Jr. had been assassinated.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.WorldWar2Ends)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Y2K)
+        </td>*@
+    @if (Model.Y2K == true)
+    {
+    <p>
+        Your memories of partying on the night of December 31, 1999.
+    </p>
+    <p>
+        Steps you might have taken to prevent the "Y2K" computer disaster.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.WorldWar2Ends)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.BerlinWall)
+        </td>*@
+    @if (Model.BerlinWall == true)
+    {
+    <p>
+        Where you were when you learned the Berlin Wall was torn down.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.KennedyDies)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.OJSimpsonCarChase)
+        </td>*@
+    @if (Model.OJSimpsonCarChase == true)
+    {
+    <p>
+        Where you were when you heard about O.J. Simpson's slow-motion car chase.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.KennedyDies)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.EndOfProhibition)
+        </td>*@
+    @if (Model.EndOfProhibition == true)
+    {
+    <p>
+        Your memories of Prohibition, and its end.
+    </p>
+    <p>
+       Your first legal drink after Prohibition ended.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NotableElection)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.AnythingElse)
+        </td>*@
+    @if (Model.AnythingElse == true)
+    {
+    <p>
+        Any other memories of world events.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember September 11, 2001.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.NotableElection)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MLKAssassination)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MLKAssassination)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Y2K)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Y2K)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BerlinWall)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BerlinWall)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.OJSimpsonCarChase)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.OJSimpsonCarChase)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EndOfProhibition)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EndOfProhibition)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AnythingElse)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AnythingElse)
-        </dd>
-
-    </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.WorldEventID }) |

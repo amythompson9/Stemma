@@ -1,120 +1,233 @@
 ﻿@model Stemma.Models.Relationship
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Suggestions for Relationship Stems";
 }
 
-<h2>Details</h2>
+<h2>Family and Relationships</h2>
 
 <div>
-    <h4>Relationship</h4>
+    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentlyMarried)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CurrentlyMarried)
-        </dd>
+    @if (Model.CurrentlyMarried == true)
+    {
+    <p>
+        When and how you met your spouse.
+    </p>
+    <p>
+        Your wedding day.
+    </p>
+    <p>
+        Your honeymoon.
+    </p>
+    <p>
+        Aniversary celebrations.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You are not currently married.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.InARelationship)*@
+    @if (Model.InARelationship == true)
+    {
+    <p>
+        When and how you met your current significant other.
+    </p>
+    <p>
+        Memorable dates.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You are not currently in a romantic relationship.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.PreviousRomance)*@
+    @if (Model.PreviousRomance == true)
+    {
+    <p>
+        A previous romantic relationship that you remember fondly.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You would not like to remember/do not have a previous romance.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.HaveChildren)*@
+    @if (Model.HaveChildren == true)
+    {
+    <p>
+        The birth of a child.
+    </p>
+    <p>
+        Your child's milestones.
+    </p>
+    <p>
+        Your child's accomplishments.
+    </p>
+    <p>
+        Amusing stories about your child.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have children.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.HaveGrandchildren)*@
+    @if (Model.HaveGrandchildren == true)
+    {
+    <p>
+        The birth of a grandchild.
+    </p>
+    <p>
+        Memories and stories of a grandchild.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have grandchildren.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.OtherYoungsters)*@
+    @if (Model.OtherYoungsters == true)
+    {
+    <p>
+        Memories and stories of other young people in your family.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have other children you would like to remember.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.HaveParents)*@
+    @if (Model.HaveParents == true)
+    {
+    <p>
+        When and how your parents met.
+    </p>
+    <p>
+        When (if) your parents married.
+    </p>
+    <p>
+        Memories of your parents.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have parents you would like to remember.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.HaveGrandparents)*@
+    @if (Model.HaveGrandparents == true)
+    {
+    <p>
+        When and how your grandparents met.
+    </p>
+    <p>
+        When (if) your grandparents married.
+    </p>
+    <p>
+        Memories of your grandparents.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have grandparents you would like to remember.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.OtherAdults)*@
+    @if (Model.OtherAdults == true)
+    {
+    <p>
+        Memories of other important adult family members.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have other adults you would like to remember.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.HaveSiblings)*@
+    @if (Model.HaveSiblings == true)
+    {
+    <p>
+        When a sibling was born.
+    </p>
+    <p>
+        A time you helped your sibling, or your sibling helped you.
+    </p>
+    <p>
+        Memories and stories about a sibling.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have siblings.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.OtherCloseRelatives)*@
+    @if (Model.OtherCloseRelatives == true)
+    {
+    <p>
+        Memories and stories about another relative.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have other close relatives.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.GoodFriendships)*@
+    @if (Model.GoodFriendships == true)
+    {
+    <p>
+        When and how you met your best friends.
+    </p>
+    <p>
+        Things you've done with your best friends.
+    </p>
+    <p>
+        Memories and stories of other friends.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have good friendships to remember.
+    </p>
+    }*@
+    @*@Html.DisplayFor(modelItem => item.EverythingElse)*@
+    @if (Model.EverythingElse == true)
+    {
+    <p>
+        Memories and stories of other people you'd like to remember.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not have other people you would like to record.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.InARelationship)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.InARelationship)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PreviousRomance)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PreviousRomance)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HaveChildren)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HaveChildren)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HaveGrandchildren)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HaveGrandchildren)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.OtherYoungsters)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.OtherYoungsters)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HaveParents)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HaveParents)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HaveGrandparents)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HaveGrandparents)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.OtherAdults)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.OtherAdults)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HaveSiblings)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HaveSiblings)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.OtherCloseRelatives)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.OtherCloseRelatives)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GoodFriendships)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GoodFriendships)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EverythingElse)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EverythingElse)
-        </dd>
-
-    </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.RelationshipsID }) |
