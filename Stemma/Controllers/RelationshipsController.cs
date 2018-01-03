@@ -66,7 +66,8 @@ namespace Stemma.Controllers
             {
                 db.Relationships.Add(relationship);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changed from Index to Details with ID
+                return RedirectToAction("Details", new { id = relationship.RelationshipsID });
             }
 
             return View(relationship);
@@ -98,7 +99,8 @@ namespace Stemma.Controllers
             {
                 db.Entry(relationship).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changed from Index to Details with ID
+                return RedirectToAction("Details", new { id = relationship.RelationshipsID });
             }
             return View(relationship);
         }
@@ -126,7 +128,8 @@ namespace Stemma.Controllers
             Relationship relationship = db.Relationships.Find(id);
             db.Relationships.Remove(relationship);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //next line changed from Index to Create
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)

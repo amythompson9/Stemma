@@ -52,7 +52,8 @@ namespace Stemma.Controllers
             {
                 db.Celebrations.Add(celebration);
                 db.SaveChanges();
-                return RedirectToAction("Details");
+                //changed Index to Details/id on next line
+                return RedirectToAction("Details", new { id = celebration.CelebrationID });
             }
 
             return View(celebration);
@@ -84,7 +85,8 @@ namespace Stemma.Controllers
             {
                 db.Entry(celebration).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //changed Index to Details/id on next line
+                return RedirectToAction("Details", new { id = celebration.CelebrationID });
             }
             return View(celebration);
         }
@@ -112,7 +114,8 @@ namespace Stemma.Controllers
             Celebration celebration = db.Celebrations.Find(id);
             db.Celebrations.Remove(celebration);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //changed Index to Create on next line.
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)

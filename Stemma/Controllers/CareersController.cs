@@ -8,10 +8,6 @@ using System.Web;
 using System.Web.Mvc;
 using Stemma.Models;
 
-//something isn't working when you try to create/save the profile
-//so you're gonna tinker with the name... might have something to do with plurals??
-//update: no, the problem seems to be some of the categories are missing from the SQL DB
-
 namespace Stemma.Controllers
 {
     public class CareersController : Controller
@@ -90,7 +86,8 @@ namespace Stemma.Controllers
             {
                 db.Entry(career).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Details");
+                //you changed this next line to Details/id. Hopefully it takes you to the right screen.
+                return RedirectToAction("Details", new { id = career.CareerID });
             }
             return View(career);
         }
@@ -118,7 +115,9 @@ namespace Stemma.Controllers
             Career career = db.Careers.Find(id);
             db.Careers.Remove(career);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //you changed Index to Create in the line below
+            //but a better outcome will be to not let people delete it in the first place
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)

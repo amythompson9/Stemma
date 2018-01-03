@@ -1,12 +1,12 @@
 ﻿@model Stemma.Models.Celebration
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Suggestions for Celebration Stems";
 }
 
 <h2>Celebrations & Holidays</h2>
 
-<h4>Based on how you answered your questionaire, here are some events you might be able to add to your timeline.</h4>
+<h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
 
 @*logic is added. text needs to be updated.*@
 
@@ -16,472 +16,497 @@
     <table class="table">*@
 
 
-        @*<tr>*@
-        @*<td>
-            @Html.DisplayFor(modelItem => item.HolidayRecently)
-        </td>*@
+@*<tr>*@
+@*<td>
+        @Html.DisplayFor(modelItem => item.HolidayRecently)
+    </td>*@
 
-        @if (Model.HolidayRecently == true)
-        {
-            <p>
-            You recently celebrated a holiday.
-            </p>
-        }
-        @*else
+@if (Model.HolidayRecently == true)
+{
+    <p>
+        A recent holiday.
+    </p>
+}
+    @*else
         {
             <p>
             You have not recently celebrated a holiday.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.PartyRecently)
         </td>*@
-        @if (Model.PartyRecently == true)
-        {
-            <p>
-            You recently attended a party.
-            </p>
-        }
-        @*else
+    @if (Model.PartyRecently == true)
+    {
+        <p>
+            A recent party.
+        </p>
+    }
+    @*else
         {
             <p>
             You have not recently attended a party.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.MilestoneRecently)
         </td>*@
-        @if (Model.MilestoneRecently == true)
-        {
-            <p>
-            You recently celebrated a milestone.
-            </p>
-        }
-        @*else
+    @if (Model.MilestoneRecently == true)
+    {
+        <p>
+            A recent milestone.
+        </p>
+    }
+    @*else
         {
             <p>
             You have not celebrated any milestones recently.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateChristmas)
         </td>*@
-        @if (Model.CelebrateChristmas == true)
-        {
-            <p>
-            You celebrate Christmas.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateChristmas == true)
+    {
+        <p>
+            A favorite Christmas memory.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Christmas.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateNYE)
         </td>*@
-        @if (Model.CelebrateNYE == true)
-        {
-            <p>
-            You celebrate New Year's Eve.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateNYE == true)
+    {
+        <p>
+            A New Year's Eve celebration.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate New Year's Eve.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateThanksgiving)
         </td>*@
-        @if (Model.CelebrateThanksgiving == true)
-        {
-            <p>
-            You celebrate Thanksgiving.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateThanksgiving == true)
+    {
+        <p>
+            A Thanksgiving story.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Thanksgiving.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateValentine)
         </td>*@
-        @if (Model.CelebrateValentine == true)
-        {
-            <p>
-            You celebrate Valentine's Day.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateValentine == true)
+    {
+        <p>
+            A special Valentine's Day memory.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Valentine's Day.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateEaster)
         </td>*@
-        @if (Model.CelebrateEaster == true)
-        {
-            <p>
-            You celebrate Easter.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateEaster == true)
+    {
+        <p>
+            An Easter memory.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Easter.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateIndependenceDay)
         </td>*@
-        @if (Model.CelebrateIndependenceDay == true)
-        {
-            <p>
-            You celebrate Independence Day.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateIndependenceDay == true)
+    {
+        <p>
+            An Independence Day parade.
+        </p>
+        <p>
+            An Independence Day fireworks show.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Independence Day.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateHalloween)
         </td>*@
-        @if (Model.CelebrateHalloween == true)
-        {
-            <p>
-            You celebrate Halloween.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateHalloween == true)
+    {
+        <p>
+            Some spooky Halloween photos.
+        </p>
+        <p>
+            Your favorite Halloween costumes and decorations.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Halloween.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateMemorialDay)
         </td>*@
-        @if (Model.CelebrateMemorialDay == true)
-        {
-            <p>
-            You celebrate Memorial Day.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateMemorialDay == true)
+    {
+        <p>
+            A Memorial Day tribute.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Memorial Day.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateLaborDay)
         </td>*@
-        @if (Model.CelebrateLaborDay == true)
-        {
-            <p>
-            You celebrate Labor Day.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateLaborDay == true)
+    {
+        <p>
+            A story from a Labor Day barbeque.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Labor Day.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateMothersDay)
         </td>*@
-        @if (Model.CelebrateMothersDay == true)
-        {
-            <p>
-            You celebrate Mother's Day.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateMothersDay == true)
+    {
+        <p>
+            A post to honor your mother.
+        </p>
+
+    }
+    @*else
         {
             <p>
             You do not celebrate Mother's Day.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateFathersDay)
         </td>*@
-        @if (Model.CelebrateFathersDay == true)
-        {
-            <p>
-            You celebrate Father's  Day.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateFathersDay == true)
+    {
+        <p>
+            A post to honor your father.
+        </p>
+    }
+
+@*will this work?*@
+    @if(Model.CelebrateFathersDay == true || Model.CelebrateMothersDay == true)
+    {
+        <p>
+            Something nice your children did for you.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Father's Day.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateChaunakah)
         </td>*@
-        @if (Model.CelebrateChaunakah == true)
-        {
-            <p>
-            You celebrate Chaunakah.
-            </p>
-        }
-        @*else
+
+@*START HERE, then delete this comment*@
+
+    @if (Model.CelebrateChaunakah == true)
+    {
+        <p>
+            A Chaunakah memory.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Chaunakah.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebratePassover)
         </td>*@
-        @if (Model.CelebratePassover == true)
-        {
-            <p>
-            You celebrate Passover.
-            </p>
-        }
-        @*else
+    @if (Model.CelebratePassover == true)
+    {
+        <p>
+            Memories of a Passover Seder.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Passover.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateRoshHashanah)
         </td>*@
-        @if (Model.CelebrateRoshHashanah == true)
-        {
-            <p>
-            You celebrate Rosh Hashanah.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateRoshHashanah == true)
+    {
+        <p>
+            A Rosh Hashanah celebration.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Rosh Hashanah.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelerateYomKippur)
         </td>*@
-        @if (Model.CelerateYomKippur == true)
-        {
-            <p>
-            You celebrate Yom Kippur.
-            </p>
-        }
-        @*else
+    @if (Model.CelerateYomKippur == true)
+    {
+        <p>
+            Yom Kippur observances.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Yom Kippur.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateRamadan)
         </td>*@
-        @if (Model.CelebrateRamadan == true)
-        {
-            <p>
-            You celebrate Ramadan.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateRamadan == true)
+    {
+        <p>
+            Memories of fasting during Ramadan.
+        </p>
+        <p>
+            Celebrating the end of Ramadan.
+        </p>
+        <p>
+            Memories of an Eid al-Adha feast.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Yom Kippur.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateEID)
         </td>*@
-        @if (Model.CelebrateEID == true)
-        {
-            <p>
-            You celebrate Eid.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateEID == true)
+    {
+        <p>
+            An Eid al-Fitr celebration.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Eid.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateSTPat)
         </td>*@
-        @if (Model.CelebrateSTPat == true)
-        {
-            <p>
-            You celebrate St. Patrick's Day.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateSTPat == true)
+    {
+        <p>
+            A St. Patrick's Day parade.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate St. Patrick's Day.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateBirthdays)
         </td>*@
-        @if (Model.CelebrateBirthdays == true)
-        {
-            <p>
-            You celebrate birthdays.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateBirthdays == true)
+    {
+        <p>
+            A great birthday party.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate birthdays.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateChineseNewYear)
         </td>*@
-        @if (Model.CelebrateChineseNewYear == true)
-        {
-            <p>
-            You celebrate Chinese New Year.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateChineseNewYear == true)
+    {
+        <p>
+            Chinese New Year celebrations.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Chinese New Year.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateQuinceanera)
         </td>*@
-        @if (Model.CelebrateQuinceanera == true)
-        {
-            <p>
-            You celebrate Quinceaneras.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateQuinceanera == true)
+    {
+        <p>
+            Your or a loved one's Quinceañera.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Quinceanera.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateBarBatMitzvah)
         </td>*@
-        @if (Model.CelebrateBarBatMitzvah == true)
-        {
-            <p>
-            You celebrate Bar/Bat Mitzvahs.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateBarBatMitzvah == true)
+    {
+        <p>
+            Your or a loved one's Bar or Bat Mitzvah.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Bar/Bat Mitzvahs.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateDayOfTheDead)
         </td>*@
-        @if (Model.CelebrateDayOfTheDead == true)
-        {
-            <p>
-            You celebrate Day Of The Dead.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateDayOfTheDead == true)
+    {
+        <p>
+            A Day Of The Dead celebration.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Day Of The Dead.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateVeteransDay)
         </td>*@
-        @if (Model.CelebrateVeteransDay == true)
-        {
-            <p>
-            You celebrate Veteran's Day.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateVeteransDay == true)
+    {
+        <p>
+            A tribute to or memory of a veteran.
+        </p>
+
+    }
+    @*else
         {
             <p>
             You do not celebrate Veteran's Day.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.CelebrateCincoDeMayo)
         </td>*@
-        @if (Model.CelebrateCincoDeMayo == true)
-        {
-            <p>
-            You celebrate Cinco De Mayo.
-            </p>
-        }
-        @*else
+    @if (Model.CelebrateCincoDeMayo == true)
+    {
+        <p>
+            A Cinco De Mayo celebration.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not celebrate Cinco De Mayo.
             </p>
         }*@
 
-        @*<td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.AnythingElse)
         </td>*@
-        @if (Model.AnythingElse == true)
-        {
-            <p>
-            You have another holiday or celebration you would like to recognize.
-            </p>
-        }
-        @*else
+    @if (Model.AnythingElse == true)
+    {
+        <p>
+            A memory of another celebration or holiday not listed above.
+        </p>
+    }
+    @*else
         {
             <p>
             You do not another holiday or celebration you would like to recognize..
             </p>
         }*@
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CelebrationID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CelebrationID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

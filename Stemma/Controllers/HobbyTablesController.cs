@@ -52,7 +52,8 @@ namespace Stemma.Controllers
             {
                 db.HobbyTables.Add(hobbyTable);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changed from Index to Details and id added
+                return RedirectToAction("Details", new { id = hobbyTable.HobbyID });
             }
 
             return View(hobbyTable);
@@ -84,7 +85,8 @@ namespace Stemma.Controllers
             {
                 db.Entry(hobbyTable).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changed from Index to Details, and id
+                return RedirectToAction("Details", new { id = hobbyTable.HobbyID });
             }
             return View(hobbyTable);
         }
@@ -112,7 +114,8 @@ namespace Stemma.Controllers
             HobbyTable hobbyTable = db.HobbyTables.Find(id);
             db.HobbyTables.Remove(hobbyTable);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //changed Index to Create on next line
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)

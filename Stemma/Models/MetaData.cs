@@ -159,8 +159,7 @@ namespace Stemma.Models
             public Nullable<bool> CelebrateBirthdays { get; set; }
             [Display(Name = "Do you celebrate the Chinese New Year?")]
             public Nullable<bool> CelebrateChineseNewYear { get; set; }
-            [Display(Name = "Do you celebrate Quinceanera?")]
-            //figure out how to get the en-yay symbol in there
+            [Display(Name = "Do you celebrate Quinceañera?")]
             public Nullable<bool> CelebrateQuinceanera { get; set; }
             [Display(Name = "Would you like to remember a bar or bat mitzvah?")]
             public Nullable<bool> CelebrateBarBatMitzvah { get; set; }
