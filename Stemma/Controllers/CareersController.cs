@@ -56,7 +56,9 @@ namespace Stemma.Controllers
             {
                 db.Careers.Add(career);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //change next line from Index to Details, to skip the Index page
+                //don't forget to change the Edit part the same way
+                return RedirectToAction("Details", new { id = career.CareerID });
             }
 
             return View(career);
@@ -88,7 +90,7 @@ namespace Stemma.Controllers
             {
                 db.Entry(career).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details");
             }
             return View(career);
         }

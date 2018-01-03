@@ -17,6 +17,7 @@ namespace Stemma.Controllers
         // GET: WorldEvents
         public ActionResult Index()
         {
+            //we're gonna switch this from showing
             return View(db.WorldEvents.ToList());
         }
 
@@ -52,7 +53,10 @@ namespace Stemma.Controllers
             {
                 db.WorldEvents.Add(worldEvent);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //you changed the following instructions from "Index" to "Details"
+                //Kyle recommends we delete the Index Action from this page
+                //and delete the Index files too
+                return RedirectToAction("Details");
             }
 
             return View(worldEvent);
