@@ -4,41 +4,319 @@
     ViewBag.Title = "Career Profile";
 }
 
-<h2>Index</h2>
+<h2>Your Career</h2>
+<h3>Based on your answers, here are some ideas to add to your Stemma:</h3>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+
+</p>*@
+@*<table class="table">*@
+
 @foreach (var item in Model) {
-    
+    @*<tr>*@
+        @*<td>
             @Html.DisplayFor(modelItem => item.AttendedCollege)
-        
+        </td>*@
+    if (item.AttendedCollege == true)
+    {
+        <p>
+            High school graduation.
+        </p>
+    }
+    if (item.AttendedCollege == true)
+    {
+        <p>
+            Being dropped off at college.
+        </p>
+    }
+    if (item.AttendedCollege == true)
+    {
+        <p>
+            Your first frat party.
+        </p>
+    }
+    if (item.AttendedCollege == true)
+    {
+        <p>
+            Memories from a big game.
+        </p>
+    }
+    if (item.AttendedCollege == true)
+    {
+        <p>
+            A story about your thesis.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.Graduations)
-        
-            @Html.DisplayFor(modelItem => item.HaveJob)
-        
-            @Html.DisplayFor(modelItem => item.HadJob)
-        
-            @Html.DisplayFor(modelItem => item.Accomplishments)
-        
-            @Html.DisplayFor(modelItem => item.FirstDayOfSchool)
-        
-            @Html.DisplayFor(modelItem => item.ArmedForces)
-        
-            @Html.DisplayFor(modelItem => item.Volunteer)
-        
-            @Html.DisplayFor(modelItem => item.Legacies)
-        
-            @Html.DisplayFor(modelItem => item.TechSchool)
-        
-            @Html.DisplayFor(modelItem => item.LicensesCertifications)
-        
-            @Html.DisplayFor(modelItem => item.FirstJob)
-        
-            @Html.DisplayFor(modelItem => item.WorstJob)
+        </td>*@
+    if (item.Graduations == true)
+    {
+        <p>
+            Your college graduation.
+        </p>
+    }
+    if (item.AttendedCollege == true)
+    {
+        <p>
+            Stories about post-graduation education.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.HadJob)
+    </td>*@
+
+if (item.HadJob == true)
+{
     <p>
+        Your best day at work.
+    </p>
+    }
+    if (item.HadJob == true)
+    {
+        <p>
+            The first time you quit a job (or got fired!).
+        </p>
+    }
+    @*else
+    {
+        <p>
+            Words.
+        </p>
+    }*@
+
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.HaveJob)
+        </td>*@
+    if (item.HaveJob == true)
+    {
+        <p>
+            Your current job.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Accomplishments)
+        </td>*@
+    if (item.Accomplishments == true)
+    {
+        <p>
+            A career highlight.
+        </p>
+}
+if (item.Accomplishments == true)
+{
+    <p>
+        Your favorite boss or colleague.
+    </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.FirstDayOfSchool)
+        </td>*@
+    if (item.FirstDayOfSchool == true)
+    {
+        <p>
+            Your first day of school.
+        </p>
+}
+if (item.FirstDayOfSchool == true)
+{
+    <p>
+        Your favorite class.
+    </p>
+    }
+    if (item.FirstDayOfSchool == true)
+    {
+        <p>
+            Your favorite teacher.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ArmedForces)
+        </td>*@
+    if (item.ArmedForces == true)
+    {
+        <p>
+            Experiences in the armed forces.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Volunteer)
+        </td>*@
+    if (item.Volunteer == true)
+    {
+        <p>
+            A favorite volunteer activity.
+        </p>
+    }
+    if (item.Volunteer == true)
+    {
+        <p>
+            A person or organization you served.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Legacies)
+        </td>*@
+    if (item.Legacies == true)
+    {
+        <p>
+            Involvement in the community.
+        </p>
+    }
+    if (item.Legacies == true)
+    {
+        <p>
+            A time you were a groundbreaker.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.TechSchool)
+        </td>*@
+    if (item.TechSchool == true)
+    {
+        <p>
+            Your experience at your technical/trade school.
+        </p>
+    }
+    if (item.TechSchool == true)
+    {
+        <p>
+            A project you completed at your technical/trade school.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.LicensesCertifications)
+        </td>*@
+    if (item.LicensesCertifications == true)
+    {
+        <p>
+            Taking or passing an important professional exam.
+        </p>
+    }
+    if (item.LicensesCertifications == true)
+    {
+        <p>
+            Obtaining a professional license or certification.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.FirstJob)
+        </td>*@
+    if (item.FirstJob == true)
+    {
+        <p>
+            Your first job.
+        </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.WorstJob)
+        </td>*@
+    if (item.WorstJob == true)
+    {
+        <p>
+            Your worst job.
+        </p>
+}
+if (item.WorstJob == true)
+{
+    <p>
+        A funny story from work.
+    </p>
+    }
+    @*else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }*@
+
+        <p>
             @Html.ActionLink("Edit", "Edit", new { id=item.CareerID }) |
             @Html.ActionLink("Details", "Details", new { id=item.CareerID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.CareerID })
-    </p>
+        </p>
+    @*</tr>*@
 }
+
+@*</table>*@
+
