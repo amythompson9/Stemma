@@ -52,7 +52,7 @@ namespace Stemma.Controllers
             {
                 db.Celebrations.Add(celebration);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details");
             }
 
             return View(celebration);
