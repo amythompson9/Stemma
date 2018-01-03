@@ -52,7 +52,8 @@ namespace Stemma.Controllers
             {
                 db.Memories.Add(memory);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changes Index to Details and id .
+                return RedirectToAction("Details", new { id = memory.MemoryID });
             }
 
             return View(memory);
@@ -84,7 +85,8 @@ namespace Stemma.Controllers
             {
                 db.Entry(memory).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changed Index to Details and id
+                return RedirectToAction("Details", new { id = memory.MemoryID });
             }
             return View(memory);
         }
@@ -112,7 +114,8 @@ namespace Stemma.Controllers
             Memory memory = db.Memories.Find(id);
             db.Memories.Remove(memory);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //next line changed Index to Create
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)
