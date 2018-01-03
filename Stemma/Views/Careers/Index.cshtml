@@ -9,97 +9,36 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AttendedCollege)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Graduations)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HaveJob)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HadJob)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Accomplishments)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstDayOfSchool)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArmedForces)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Volunteer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Legacies)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TechSchool)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LicensesCertifications)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstJob)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WorstJob)
-        </th>
-        <th></th>
-    </tr>
-
 @foreach (var item in Model) {
-    <tr>
-        <td>
+    
             @Html.DisplayFor(modelItem => item.AttendedCollege)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.Graduations)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.HaveJob)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.HadJob)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.Accomplishments)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.FirstDayOfSchool)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.ArmedForces)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.Volunteer)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.Legacies)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.TechSchool)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.LicensesCertifications)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.FirstJob)
-        </td>
-        <td>
+        
             @Html.DisplayFor(modelItem => item.WorstJob)
-        </td>
-        <td>
+    <p>
             @Html.ActionLink("Edit", "Edit", new { id=item.CareerID }) |
             @Html.ActionLink("Details", "Details", new { id=item.CareerID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.CareerID })
-        </td>
-    </tr>
+    </p>
 }
-
-</table>
