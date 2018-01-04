@@ -233,13 +233,13 @@ namespace Stemma.Models
             public Nullable<bool> BrokenBones { get; set; }
             [Display(Name = "Do you have a home you consider your 'first home'?")]
             public Nullable<bool> OwnHome { get; set; }
-            [Display(Name = "Did you get your driver's licence?")]
+            [Display(Name = "Did you get your driver's license?")]
             public Nullable<bool> DriversLicense { get; set; }
-            [Display(Name = "Do you have a story about a first tooth -- yours or another's?")]
+            [Display(Name = "Do you have a story about losing a first tooth -- yours or another's?")]
             public Nullable<bool> FirstTooth { get; set; }
             [Display(Name = "If you have a nickname your friends gave you, do you have a story about that?")]
             public Nullable<bool> PersonalNickName { get; set; }
-            [Display(Name = "If your family gave you a nickname, do you have a story about that?")]
+            [Display(Name = "Does a family member or friend have nickname and do you have a story about that?")]
             public Nullable<bool> FamilyNickName { get; set; }
             [Display(Name = "Can you ride a bike?")]
             public Nullable<bool> RideBike { get; set; }
@@ -247,7 +247,7 @@ namespace Stemma.Models
             public Nullable<bool> CommitCrime { get; set; }
             [Display(Name = "Have you made any dramatic changes in your life?")]
             public Nullable<bool> BigMove { get; set; }
-            [Display(Name = "Did you ever vote?")]
+            [Display(Name = "Have you ever voted?")]
             public Nullable<bool> Vote { get; set; }
             [Display(Name = "Do you have any family traditions you would like to record?")]
             public Nullable<bool> FamilyTraditions { get; set; }
