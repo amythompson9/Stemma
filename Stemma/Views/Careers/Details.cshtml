@@ -1,120 +1,163 @@
 ﻿@model Stemma.Models.Career
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Suggestions for Career Stems";
 }
 
-<h2>Details</h2>
+<h2>Your Career</h2>
 
 <div>
-    <h4>Career</h4>
+    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
+    @*<dl class="dl-horizontal">*@
+    @*<dt>
             @Html.DisplayNameFor(model => model.AttendedCollege)
-        </dt>
+        </dt>*@
 
-        <dd>
+    @*<dd>
             @Html.DisplayFor(model => model.AttendedCollege)
-        </dd>
+        </dd>*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Graduations)
-        </dt>
+    @*when you cut and paste: Make sure Model is capitalized.*@
+    @*everything should look like the AttendedCollege example*@
 
-        <dd>
-            @Html.DisplayFor(model => model.Graduations)
-        </dd>
+    @if (Model.AttendedCollege == true)
+    {
+        <p>
+            High school graduation.
+        </p>
+        <p>
+            Being dropped off at college.
+        </p>
+        <p>
+            Your first frat party.
+        </p>
+        <p>
+            Memories from a big game.
+        </p>
+        <p>
+            A story about your thesis.
+        </p>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HaveJob)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.HaveJob)
-        </dd>
+    @if (Model.Graduations == true)
+    {
+        <p>
+            Your college graduation.
+        </p>
+        <p>
+            Stories about post-graduation education.
+        </p>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.HadJob)
-        </dt>
+    @if (Model.HadJob == true)
+    {
+        <p>
+            Your best day at work.
+        </p>
+        <p>
+            The first time you quit a job (or got fired!).
+        </p>
+        <p>
+            Your current job.
+        </p>
+        <p>
+            A funny story from work.
+        </p>
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.HadJob)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Accomplishments)
-        </dt>
+    @if (Model.Accomplishments == true)
+    {
+        <p>
+            A career highlight.
+        </p>
+        <p>
+            Your favorite boss or colleague.
+        </p>
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.Accomplishments)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstDayOfSchool)
-        </dt>
+    @if (Model.FirstDayOfSchool == true)
+    {
+        <p>
+            Your first day of school.
+        </p>
+        <p>
+            Your favorite class.
+        </p>
+        <p>
+            Your favorite teacher.
+        </p>
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstDayOfSchool)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ArmedForces)
-        </dt>
+    @if (Model.ArmedForces == true)
+    {
+        <p>
+            Experiences in the armed forces.
+        </p>
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.ArmedForces)
-        </dd>
+    @if (Model.Volunteer == true)
+    {
+        <p>
+            A favorite volunteer activity.
+        </p>
+        <p>
+            A person or organization you served.
+        </p>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Volunteer)
-        </dt>
+    @if (Model.Legacies == true)
+    {
+        <p>
+            Involvement in the community.
+        </p>
+        <p>
+            A time you were a groundbreaker.
+        </p>
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.Volunteer)
-        </dd>
+    @if (Model.TechSchool == true)
+    {
+        <p>
+            Your experience at your technical/trade school.
+        </p>
+        <p>
+            A project you completed at your technical/trade school.
+        </p>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Legacies)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Legacies)
-        </dd>
+    @if (Model.LicensesCertifications == true)
+    {
+    <p>
+        Taking or passing an important professional exam.
+    </p>
+    <p>
+        Obtaining a professional license or certification.
+    </p>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TechSchool)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TechSchool)
-        </dd>
+    @if (Model.FirstJob == true)
+    {
+    <p>
+        Your first job.
+    </p>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.LicensesCertifications)
-        </dt>
+    @if (Model.WorstJob == true)
+    {
+    <p>
+        Your worst job.
+    </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.LicensesCertifications)
-        </dd>
+    }
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstJob)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FirstJob)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.WorstJob)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.WorstJob)
-        </dd>
-
-    </dl>
+    
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.CareerID }) |

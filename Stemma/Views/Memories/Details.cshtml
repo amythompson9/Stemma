@@ -1,176 +1,366 @@
 ﻿@model Stemma.Models.Memory
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Suggestions for Memories Stems";
 }
 
-<h2>Details</h2>
+<h2>Memories</h2>
 
 <div>
-    <h4>Memory</h4>
+    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BrokenBones)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BrokenBones)
-        </dd>
+    @if (Model.BrokenBones == true)
+    {
+    <p>
+        Your first broken bone.
+    </p>
+    <p>
+        Your hospital stay or surgery.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnHome)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.OwnHome)
+        </td>*@
+    @if (Model.OwnHome == true)
+    {
+    <p>
+        Your current home.
+    </p>
+    <p>
+        Your previous home(s).
+    </p>
+    <p>
+        The time you moved out of your parents' house.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.OwnHome)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.DriversLicense)
+        </td>*@
+    @if (Model.DriversLicense == true)
+    {
+    <p>
+        Getting your driver's license.
+    </p>
+    <p>
+        Road trip!
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.DriversLicense)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.FirstTooth)
+        </td>*@
+    @if (Model.FirstTooth == true)
+    {
+    <p>
+        A story about your first tooth. Or your last tooth. Or anything in between.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.DriversLicense)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.PersonalNickName)
+        </td>*@
+    @if (Model.PersonalNickName == true)
+    {
+    <p>
+        How your friends gave you your nickname.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstTooth)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.FamilyNickName)
+        </td>*@
+    @if (Model.FamilyNickName == true)
+    {
+    <p>
+        How your family gave you your nickname.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstTooth)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.RideBike)
+        </td>*@
+    @if (Model.RideBike == true)
+    {
+    <p>
+        Learning to ride a bike.
+    </p>
+    <p>
+        Your first successful bike ride.
+    </p>
+    <p>
+        A favorite bike trip.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PersonalNickName)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CommitCrime)
+        </td>*@
+    @if (Model.CommitCrime == true)
+    {
+    <p>
+        That time you committed a minor crime. (Don't worry, you're outside the statute of limitations!)
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.PersonalNickName)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.BigMove)
+        </td>*@
+    @if (Model.BigMove == true)
+    {
+    <p>
+        A time you drastically changed your life.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FamilyNickName)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Vote)
+        </td>*@
+    @if (Model.Vote == true)
+    {
+    <p>
+        The first time you voted.
+    </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.FamilyNickName)
-        </dd>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RideBike)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.FamilyTraditions)
+        </td>*@
+    @if (Model.FamilyTraditions == true)
+    {
+    <p>
+        A family tradition.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.RideBike)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.EmbarrassingMoment)
+        </td>*@
+    @if (Model.EmbarrassingMoment == true)
+    {
+    <p>
+        Your most embarrassing moment. (Come on, you know it will be funny!)
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CommitCrime)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.ProudestMoments)
+        </td>*@
+    @if (Model.ProudestMoments == true)
+    {
+    <p>
+        Something you did that makes you very proud.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.CommitCrime)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.ChildhoodCamp)
+        </td>*@
+    @if (Model.ChildhoodCamp == true)
+    {
+    <p>
+        A memory of childhood camp.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BigMove)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.MemorializeSomeone)
+        </td>*@
+    @if (Model.MemorializeSomeone == true)
+    {
+    <p>
+        A tribute to someone you've lost, and want to remember.
+    </p>
+    <p>
+        A tribute to someone who is still around, and you'd like to honor.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.BigMove)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Concerts)
+        </td>*@
+    @if (Model.Concerts == true)
+    {
+    <p>
+        Your first concert.
+    </p>
+    <p>
+        Your favorite concert.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Vote)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.FamilyPet)
+        </td>*@
+    @if (Model.FamilyPet == true)
+    {
+    <p>
+        Your childhood pet(s).
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.Vote)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CurrentPet)
+        </td>*@
+    @if (Model.CurrentPet == true)
+    {
+    <p>
+        Your current pet(s).
+    </p>
+    <p>
+        Your favorite pet(s).
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FamilyTraditions)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.HSDance)
+        </td>*@
+    @if (Model.HSDance == true)
+    {
+    <p>
+        Your first high school dance.
+    </p>
+    <p>
+        Your favorite high school dance.
+    </p>
+    <p>
+        A fun high school date.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.FamilyTraditions)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.AnythingElse)
+        </td>*@
+    @if (Model.AnythingElse == true)
+    {
+    <p>
+        Other favorite or important memories.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EmbarrassingMoment)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmbarrassingMoment)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ProudestMoments)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProudestMoments)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ChildhoodCamp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ChildhoodCamp)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MemorializeSomeone)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MemorializeSomeone)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Concerts)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Concerts)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FamilyPet)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FamilyPet)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CurrentPet)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CurrentPet)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.HSDance)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.HSDance)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AnythingElse)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AnythingElse)
-        </dd>
-
-    </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.MemoryID }) |

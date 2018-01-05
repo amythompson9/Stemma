@@ -1,112 +1,241 @@
 ﻿@model Stemma.Models.HobbyTable
 
+@*note to self and Amy: We need to decide what to do with redirect to Index links at bottom of profile results*@
+@*because we don't want to take anyone to the index page. either delete or change the option.*@
+
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Suggestions for Hobby Stems";
 }
 
-<h2>Details</h2>
+<h2>Hobbies and Interests</h2>
 
 <div>
-    <h4>HobbyTable</h4>
+    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PlaySports)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PlaySports)
-        </dd>
+    @if (Model.PlaySports == true)
+    {
+    <p>
+        Sports you play.
+    </p>
+    <p>
+        Important games you played or competitions you entered.
+    </p>
+    <p>
+        Games you attended.
+    </p>
+    <p>
+        Memorable days for teams you love.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.InAShow)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.InAShow)
+        </td>*@
+    @if (Model.InAShow == true)
+    {
+    <p>
+        Shows you've been in.
+    </p>
+    <p>
+        Shows you've attended.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.InAShow)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Travel)
+        </td>*@
+    @if (Model.Travel == true)
+    {
+    <p>
+        Travel stories and photos.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Travel)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.OutdoorPerson)
+        </td>*@
+    @if (Model.OutdoorPerson == true)
+    {
+    <p>
+        Memories of outdoor adventures.
+    </p>
+    <p>
+        Nature hikes.
+    </p>
+    <p>
+        Trips to the beach.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.Travel)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.TravelAbroad)
+        </td>*@
+    @if (Model.TravelAbroad == true)
+    {
+    <p>
+        Cultural discoveries while traveling abroad.
+    </p>
+    <p>
+        Favorite foods from a foreign country.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OutdoorPerson)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Passions)
+        </td>*@
+    @if (Model.Passions == true)
+    {
+    <p>
+        The time you discovered a new passion.
+    </p>
+    <p>
+        Events you've attended celebrating your passion.
+    </p>
+    <p>
+        Trips or fairs or conventions.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.OutdoorPerson)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Talents)
+        </td>*@
+    @if (Model.Talents == true)
+    {
+    <p>
+        How you learned your talent(s).
+    </p>
+    <p>
+        Times you got to show off your talent(s).
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TravelAbroad)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Trophies)
+        </td>*@
+    @if (Model.Trophies == true)
+    {
+    <p>
+        Trophies or awards or great reviews.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.TravelAbroad)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.Exercise)
+        </td>*@
+    @if (Model.Exercise == true)
+    {
+    <p>
+        Your favorite place to exercise.
+    </p>
+    <p>
+        The time you achieved a physical fitness milestone.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Passions)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.FamilyVacation)
+        </td>*@
+    @if (Model.FamilyVacation == true)
+    {
+    <p>
+        Memories and photos of a family vacation.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.Passions)
-        </dd>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.ChildhoodVacation)
+        </td>*@
+    @if (Model.ChildhoodVacation == true)
+    {
+    <p>
+        Memories and photos of a vacation from your childhood.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Talents)
-        </dt>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.AnythingElse)
+        </td>*@
+    @if (Model.AnythingElse == true)
+    {
+    <p>
+        Any other activities, hobbies, interests or enthusiasms you'd like to remember.
+    </p>
+    }
+    @*else
+    {
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+    }*@
 
-        <dd>
-            @Html.DisplayFor(model => model.Talents)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Trophies)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Trophies)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Exercise)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Exercise)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FamilyVacation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FamilyVacation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ChildhoodVacation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ChildhoodVacation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AnythingElse)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AnythingElse)
-        </dd>
-
-    </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.HobbyID }) |

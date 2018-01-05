@@ -14,6 +14,20 @@ namespace Stemma.Controllers
     {
         private STEMMAEntities db = new STEMMAEntities();
 
+        public bool CurrentlyMarried { get; private set; }
+        public bool InARelationship { get; private set; }
+        public bool PreviousRomance { get; private set; }
+        public bool HaveChildren { get; private set; }
+        public bool HaveGrandchildren { get; private set; }
+        public bool OtherYoungsters { get; private set; }
+        public bool HaveParents { get; private set; }
+        public bool HaveGrandparents { get; private set; }
+        public bool OtherAdults { get; private set; }
+        public bool HaveSiblings { get; private set; }
+        public bool OtherCloseRelatives { get; private set; }
+        public bool GoodFriendships { get; private set; }
+        public bool EverythingElse { get; private set; }
+
         // GET: Relationships
         public ActionResult Index()
         {
@@ -52,7 +66,8 @@ namespace Stemma.Controllers
             {
                 db.Relationships.Add(relationship);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changed from Index to Details with ID
+                return RedirectToAction("Details", new { id = relationship.RelationshipsID });
             }
 
             return View(relationship);
@@ -84,7 +99,8 @@ namespace Stemma.Controllers
             {
                 db.Entry(relationship).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changed from Index to Details with ID
+                return RedirectToAction("Details", new { id = relationship.RelationshipsID });
             }
             return View(relationship);
         }
@@ -112,7 +128,8 @@ namespace Stemma.Controllers
             Relationship relationship = db.Relationships.Find(id);
             db.Relationships.Remove(relationship);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //next line changed from Index to Create
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)
