@@ -17,6 +17,7 @@ namespace Stemma.Controllers
         // GET: WorldEvents
         public ActionResult Index()
         {
+            //we're gonna switch this from showing
             return View(db.WorldEvents.ToList());
         }
 
@@ -52,7 +53,10 @@ namespace Stemma.Controllers
             {
                 db.WorldEvents.Add(worldEvent);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //you changed the following instructions from "Index" to "Details"
+                //Kyle recommends we delete the Index Action from this page
+                //and delete the Index files too
+                return RedirectToAction("Details", new { id = worldEvent.WorldEventID });
             }
 
             return View(worldEvent);
@@ -84,7 +88,8 @@ namespace Stemma.Controllers
             {
                 db.Entry(worldEvent).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //next line changed from Index to Details with ID
+                return RedirectToAction("Details", new { id = worldEvent.WorldEventID });
             }
             return View(worldEvent);
         }
@@ -112,7 +117,8 @@ namespace Stemma.Controllers
             WorldEvent worldEvent = db.WorldEvents.Find(id);
             db.WorldEvents.Remove(worldEvent);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //next line changed from Index to Create
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)

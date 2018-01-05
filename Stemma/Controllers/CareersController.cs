@@ -52,7 +52,9 @@ namespace Stemma.Controllers
             {
                 db.Careers.Add(career);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //change next line from Index to Details, to skip the Index page
+                //don't forget to change the Edit part the same way
+                return RedirectToAction("Details", new { id = career.CareerID });
             }
 
             return View(career);
@@ -84,7 +86,8 @@ namespace Stemma.Controllers
             {
                 db.Entry(career).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //you changed this next line to Details/id. Hopefully it takes you to the right screen.
+                return RedirectToAction("Details", new { id = career.CareerID });
             }
             return View(career);
         }
@@ -112,7 +115,9 @@ namespace Stemma.Controllers
             Career career = db.Careers.Find(id);
             db.Careers.Remove(career);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //you changed Index to Create in the line below
+            //but a better outcome will be to not let people delete it in the first place
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)

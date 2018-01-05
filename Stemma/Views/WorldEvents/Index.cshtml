@@ -1,111 +1,249 @@
 ﻿@model IEnumerable<Stemma.Models.WorldEvent>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "World Events Profile";
 }
 
-<h2>Index</h2>
+@*need to update text. code logic is updated.*@
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.September11)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MoonLanding)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NixonResigns)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ElvisDies)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ChallengerExplodes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WorldWar2Ends)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.KennedyDies)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NotableElection)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MLKAssassination)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Y2K)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BerlinWall)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OJSimpsonCarChase)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndOfProhibition)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AnythingElse)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
+<h2>Your Experience of World Events</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+@foreach (var item in Model)
+{
+    @*<td>
             @Html.DisplayFor(modelItem => item.September11)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MoonLanding)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NixonResigns)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ElvisDies)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ChallengerExplodes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.WorldWar2Ends)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.KennedyDies)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NotableElection)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MLKAssassination)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Y2K)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BerlinWall)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OJSimpsonCarChase)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndOfProhibition)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AnythingElse)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.WorldEventID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.WorldEventID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.WorldEventID })
-        </td>
-    </tr>
+        </td>*@
+if (item.September11 == true)
+{
+    <p>
+        You remember September 11, 2001.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember September 11, 2001.
+    </p>
 }
 
-</table>
+    @*<td>
+            @Html.DisplayFor(modelItem => item.MoonLanding)
+        </td>*@
+if (item.MoonLanding == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.NixonResigns)
+    </td>*@
+    if (item.NixonResigns == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.ElvisDies)
+    </td>*@
+    if (item.ElvisDies == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.ChallengerExplodes)
+    </td>*@
+    if (item.ChallengerExplodes == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.WorldWar2Ends)
+    </td>*@
+    if (item.WorldWar2Ends == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.KennedyDies)
+    </td>*@
+    if (item.KennedyDies == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.NotableElection)
+    </td>*@        
+    if (item.NotableElection == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.MLKAssassination)
+    </td>*@
+    if (item.MLKAssassination == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.Y2K)
+    </td>*@
+    if (item.Y2K == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.BerlinWall)
+    </td>*@
+    if (item.BerlinWall == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.OJSimpsonCarChase)
+    </td>*@
+    if (item.OJSimpsonCarChase == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.EndOfProhibition)
+    </td>*@
+    if (item.EndOfProhibition == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    @*<td>
+        @Html.DisplayFor(modelItem => item.AnythingElse)
+    </td>*@
+    if (item.AnythingElse == true)
+    {
+        <p>
+            You remember September 11, 2001.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember September 11, 2001.
+        </p>
+    }
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = item.WorldEventID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.WorldEventID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.WorldEventID })
+    </p>
+}
+

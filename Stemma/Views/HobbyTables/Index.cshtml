@@ -1,99 +1,218 @@
 ﻿@model IEnumerable<Stemma.Models.HobbyTable>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Hobby Profile";
 }
 
-<h2>Index</h2>
+@*logic is complete. text needs to be edited.*@
 
-<p>
+<h2>Your Hobbies and Interests</h2>
+
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PlaySports)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.InAShow)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Travel)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OutdoorPerson)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TravelAbroad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Passions)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Talents)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Trophies)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Exercise)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FamilyVacation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ChildhoodVacation)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AnythingElse)
-        </th>
-        <th></th>
-    </tr>
+</p>*@
+@*<table class="table">*@
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
+    @*<tr>*@
+        @*<td>
             @Html.DisplayFor(modelItem => item.PlaySports)
-        </td>
-        <td>
+        </td>*@
+    if (item.PlaySports == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.InAShow)
-        </td>
-        <td>
+        </td>*@
+    if (item.InAShow == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.Travel)
-        </td>
-        <td>
+        </td>*@
+    if (item.Travel == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.OutdoorPerson)
-        </td>
-        <td>
+        </td>*@
+    if (item.OutdoorPerson == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.TravelAbroad)
-        </td>
-        <td>
+        </td>*@
+    if (item.TravelAbroad == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.Passions)
-        </td>
-        <td>
+        </td>*@
+    if (item.Passions == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.Talents)
-        </td>
-        <td>
+        </td>*@
+    if (item.Talents == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.Trophies)
-        </td>
-        <td>
+        </td>*@
+    if (item.Trophies == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.Exercise)
-        </td>
-        <td>
+        </td>*@
+    if (item.Exercise == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.FamilyVacation)
-        </td>
-        <td>
+        </td>*@
+    if (item.FamilyVacation == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.ChildhoodVacation)
-        </td>
-        <td>
+        </td>*@
+    if (item.ChildhoodVacation == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        @*<td>
             @Html.DisplayFor(modelItem => item.AnythingElse)
-        </td>
-        <td>
+        </td>*@
+    if (item.AnythingElse == true)
+    {
+        <p>
+            You remember when humans landed on the moon.
+        </p>
+    }
+    else
+    {
+        <p>
+            You do not remember when humans landed on the moon.
+        </p>
+    }
+
+        <p>
             @Html.ActionLink("Edit", "Edit", new { id=item.HobbyID }) |
             @Html.ActionLink("Details", "Details", new { id=item.HobbyID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.HobbyID })
-        </td>
-    </tr>
+        </p>
+    @*</tr>*@
 }
 
-</table>
+@*</table>*@
