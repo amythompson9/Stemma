@@ -5,28 +5,30 @@
 }
 
 <h2>Celebrations & Holidays</h2>
+<div>
+    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
+    <hr/>
+    @*logic is added. text needs to be updated.*@
 
-<h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
-
-@*logic is added. text needs to be updated.*@
-
-@*<p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">*@
+    @*<p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">*@
 
 
-@*<tr>*@
-@*<td>
-        @Html.DisplayFor(modelItem => item.HolidayRecently)
-    </td>*@
+    @*<tr>*@
+    @*<td>
+            @Html.DisplayFor(modelItem => item.HolidayRecently)
+        </td>*@
 
-@if (Model.HolidayRecently == true)
-{
-    <p>
-        A recent holiday.
-    </p>
-}
+    @if (Model.HolidayRecently == true)
+    {
+        <h4>You've recently celebrated a holiday.</h4>
+        <p>
+            Post a picture.
+        </p>
+    }
+    <br />
     @*else
         {
             <p>
@@ -39,10 +41,18 @@
         </td>*@
     @if (Model.PartyRecently == true)
     {
+        <h4>You recently attended a party.</h4>
         <p>
-            A recent party.
+            Who did you go with?
+        </p>
+        <p>
+            Was the food any good?
+        </p>
+        <p>
+            Was it for another orgnaization or company?
         </p>
     }
+    <br />
     @*else
         {
             <p>
@@ -55,10 +65,18 @@
         </td>*@
     @if (Model.MilestoneRecently == true)
     {
+        <h4>You recently celebrated a milstone. Talk about...</h4>
         <p>
-            A recent milestone.
+            how hard it was to accomplish.
+        </p>
+        <p>
+            the lessons you learned along the way.
+        </p>
+        <p>
+            what would you do differently?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -71,10 +89,21 @@
         </td>*@
     @if (Model.CelebrateChristmas == true)
     {
+        <h4>You celebrate Christmas. Do you...</h4>
         <p>
-            A favorite Christmas memory.
+            have any Christmas traditions?
+        </p>
+        <p>
+            have a favorite Christmas cookie?
+        </p>
+        <p>
+            have a favorite gift you've ever received?
+        </p>
+        <p>
+            have a gift-giving story?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -87,10 +116,21 @@
         </td>*@
     @if (Model.CelebrateNYE == true)
     {
+        <h4>You celebrate New Year's Eve. Do you...</h4>
         <p>
-            A New Year's Eve celebration.
+            always watch the ball drop?
+        </p>
+        <p>
+            go out for a special dinner?
+        </p>
+        <p>
+            have any NYE stories of a night gone wrong?
+        </p>
+        <p>
+            dance the night away?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -103,10 +143,18 @@
         </td>*@
     @if (Model.CelebrateThanksgiving == true)
     {
+        <h4>You celebrate Thanksgiving. What...</h4>
         <p>
-            A Thanksgiving story.
+            is your traditional meal.
+        </p>
+        <p>
+            about a time things didn't go as planned?
+        </p>
+        <p>
+            was the best Thanksgiving?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -119,10 +167,18 @@
         </td>*@
     @if (Model.CelebrateValentine == true)
     {
+        <h4>You celebrate Valentine's Day. Do you...</h4>
         <p>
-            A special Valentine's Day memory.
+            go out to a special dinner?
+        </p>
+        <p>
+            celebrate in a unique way?
+        </p>
+        <p>
+            have a memory of the best Valentine's Day?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -135,10 +191,18 @@
         </td>*@
     @if (Model.CelebrateEaster == true)
     {
+        <h4>You celebrate Easter. Do you...</h4>
         <p>
-            An Easter memory.
+            color Easter eggs?
+        </p>
+        <p>
+            have any special traditions?
+        </p>
+        <p>
+            have a special Easter dinner?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -151,13 +215,18 @@
         </td>*@
     @if (Model.CelebrateIndependenceDay == true)
     {
+        <h4>You celebrate Independence Day. Do you...</h4>
         <p>
-            An Independence Day parade.
+            go to Independence Day parades?
         </p>
         <p>
-            An Independence Day fireworks show.
+            like fireworks?
+        </p>
+        <p>
+            barbeque?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -170,13 +239,24 @@
         </td>*@
     @if (Model.CelebrateHalloween == true)
     {
+        <h4>You celebrate Halloween. What was...</h4>
         <p>
-            Some spooky Halloween photos.
+            your best costume.
         </p>
         <p>
-            Your favorite Halloween costumes and decorations.
+           scariest Halloween moment. 
+        </p>
+        <p>
+            the best party you went to?
+        </p>
+        <p>
+            the worst costume you ever wore?
+        </p>
+        <p>
+            your trick-or-treat tradition.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -189,10 +269,12 @@
         </td>*@
     @if (Model.CelebrateMemorialDay == true)
     {
+        <h4>You celebrate Memorial Day. Do you...</h4>
         <p>
-            A Memorial Day tribute.
+            have someone you would like to make a tribute to?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -205,10 +287,15 @@
         </td>*@
     @if (Model.CelebrateLaborDay == true)
     {
+        <h4>You celebrate Labor Day. Do you...</h4>
         <p>
-            A story from a Labor Day barbeque.
+            have a story from a barbeque?
+        </p>
+        <p>
+            like to take a trip out of town?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -221,11 +308,16 @@
         </td>*@
     @if (Model.CelebrateMothersDay == true)
     {
+        <h4>You celebrate Mother's Day. Do you...</h4>
         <p>
-            A post to honor your mother.
+            have a tradition with your mom?
+        </p>
+        <p>
+            have a memory of your mom to share?
         </p>
 
     }
+    <br/>
     @*else
         {
             <p>
@@ -238,18 +330,16 @@
         </td>*@
     @if (Model.CelebrateFathersDay == true)
     {
+        <h4>You celebrate Father's Day. Do you...</h4>
         <p>
-            A post to honor your father.
+            have a tradition with your dad?
         </p>
-    }
+        <p>
+            have a memory of your dad to share?
+        </p>
 
-@*will this work?*@
-    @if(Model.CelebrateFathersDay == true || Model.CelebrateMothersDay == true)
-    {
-        <p>
-            Something nice your children did for you.
-        </p>
     }
+    <br />
     @*else
         {
             <p>
@@ -261,14 +351,19 @@
             @Html.DisplayFor(modelItem => item.CelebrateChaunakah)
         </td>*@
 
-@*START HERE, then delete this comment*@
+    @*START HERE, then delete this comment*@
 
     @if (Model.CelebrateChaunakah == true)
     {
+        <h4>You celebrate Chaunakah. Do you...</h4>
         <p>
-            A Chaunakah memory.
+            have a special Chaunakah memory.
+        </p>
+        <p>
+            have any unique Chaunakah traditions?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -281,10 +376,18 @@
         </td>*@
     @if (Model.CelebratePassover == true)
     {
+        <h4>You celebrate Passover. What is...</h4>
         <p>
-            Memories of a Passover Seder.
+            your favorite part of a Passover Seder.
+        </p>
+        <p>
+            a cherished Passover memory.
+        </p>
+        <p>
+            a unique Passover tradition.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -297,10 +400,15 @@
         </td>*@
     @if (Model.CelebrateRoshHashanah == true)
     {
+        <h4>You celebrate Rosh Hashanah. What are..</h4>
         <p>
-            A Rosh Hashanah celebration.
+            your unique traditions.
+        </p>
+        <p>
+            your favorite memories of Rosh Hashanah?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -313,10 +421,12 @@
         </td>*@
     @if (Model.CelerateYomKippur == true)
     {
+        <h4>You celebrate Yom Kippur. Do you...</h4>
         <p>
-            Yom Kippur observances.
+            have any unique traditions.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -329,16 +439,18 @@
         </td>*@
     @if (Model.CelebrateRamadan == true)
     {
+        <h4>You celebrate Ramadan. Do you...</h4>
         <p>
-            Memories of fasting during Ramadan.
+            have memories of fasting during Ramadan.
         </p>
         <p>
-            Celebrating the end of Ramadan.
+            celebrate the end of Ramadan.
         </p>
         <p>
-            Memories of an Eid al-Adha feast.
+            have memories of an Eid al-Adha feast.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -351,10 +463,15 @@
         </td>*@
     @if (Model.CelebrateEID == true)
     {
+        <h4>You celebrate Eid. What is...</h4>
         <p>
-            An Eid al-Fitr celebration.
+            your favorite tradition.
+        </p>
+        <p>
+            the part you most look forward to?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -367,10 +484,18 @@
         </td>*@
     @if (Model.CelebrateSTPat == true)
     {
+        <h4>You celebrate St. Patrick's Day. Do you...</h4>
         <p>
-            A St. Patrick's Day parade.
+            attend a St. Patrick's Day parade.
+        </p>
+        <p>
+            have any yearly traditions.
+        </p>
+        <p>
+            meet your friends at a favorite bar.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -383,10 +508,24 @@
         </td>*@
     @if (Model.CelebrateBirthdays == true)
     {
+        <h4>You celebrate birthdays. Do you...</h4>
         <p>
-            A great birthday party.
+            remember the best present you ever received.
+        </p>
+        <p>
+            always throw a party?
+        </p>
+        <p>
+            have advice to give to younger self?
+        </p>
+        <p>
+            take a trip?
+        </p>
+        <p>
+            have something to add to a bucket list?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -399,10 +538,15 @@
         </td>*@
     @if (Model.CelebrateChineseNewYear == true)
     {
+        <h4>You celebrate Chinese New Year. Do you...</h4>
         <p>
-            Chinese New Year celebrations.
+            have any special traditions.
+        </p>
+        <p>
+            have a favorite food?
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -415,10 +559,12 @@
         </td>*@
     @if (Model.CelebrateQuinceanera == true)
     {
+        <h4>You have celebrated a Quinceañera. Make an event for...</h4>
         <p>
-            Your or a loved one's Quinceañera.
+            your or a loved one's Quinceañera.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -431,10 +577,12 @@
         </td>*@
     @if (Model.CelebrateBarBatMitzvah == true)
     {
+        <h4>You have celebrated a Bar/Bat Mitzvah. Make an event for...</h4>
         <p>
-            Your or a loved one's Bar or Bat Mitzvah.
+            your or a loved one's Bar or Bat Mitzvah.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -447,10 +595,18 @@
         </td>*@
     @if (Model.CelebrateDayOfTheDead == true)
     {
+        <h4>You celebrate Dia de los Muertos. Do you...</h4>
         <p>
-            A Day Of The Dead celebration.
+            commemorate those who have passed.
+        </p>
+        <p>
+            have any unique traditions
+        </p>
+        <p>
+            look forward to any special foods.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -463,11 +619,13 @@
         </td>*@
     @if (Model.CelebrateVeteransDay == true)
     {
+        <h4>You celebrate Verteran's Day. Would you...</h4>
         <p>
-            A tribute to or memory of a veteran.
+            like to post a tribute to or memory of a veteran.
         </p>
 
     }
+    <br/>
     @*else
         {
             <p>
@@ -480,10 +638,12 @@
         </td>*@
     @if (Model.CelebrateCincoDeMayo == true)
     {
+        <h4>You celebrate Cinco De Mayo. What is...</h4>
         <p>
-            A Cinco De Mayo celebration.
+            one of your traditions.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
@@ -496,16 +656,19 @@
         </td>*@
     @if (Model.AnythingElse == true)
     {
+        <h4>There's a celebration we may have missed.</h4>
         <p>
-            A memory of another celebration or holiday not listed above.
+            Make a post about an important celebration in your life.
         </p>
     }
+    <br/>
     @*else
         {
             <p>
             You do not another holiday or celebration you would like to recognize..
             </p>
         }*@
+</div>
     <p>
         @Html.ActionLink("Edit", "Edit", new { id = Model.CelebrationID }) |
         @Html.ActionLink("Back to List", "Index")
