@@ -19,34 +19,41 @@ namespace Stemma.Controllers
         {
             //you are trying to add a sorting feature :(
 
+
             var queryWholeTimeline = from EventTable in db.EventTables
-            orderby
-              EventTable.EventYear,
-              EventTable.EventMonth,
-              EventTable.EventDay descending
-            select new
-            {
-                EventID = EventTable.EventID,
-                DateCreated = EventTable.DateCreated,
-                EventTitle = EventTable.EventTitle,
-                EventDay = EventTable.EventDay,
-                EventMonth = EventTable.EventMonth,
-                EventYear = EventTable.EventYear,
-                PeopleInvolved = EventTable.PeopleInvolved,
-                EventCaption = EventTable.EventCaption
-            };
+                                     orderby
+                                       EventTable.EventYear,
+                                       EventTable.EventMonth,
+                                       EventTable.EventDay descending
+                                     select EventTable;
+
+            //select new
+            //{
+            //    EventID = EventTable.EventID,
+            //    DateCreated = EventTable.DateCreated,
+            //    EventTitle = EventTable.EventTitle,
+            //    EventDay = EventTable.EventDay,
+            //    EventMonth = EventTable.EventMonth,
+            //    EventYear = EventTable.EventYear,
+            //    PeopleInvolved = EventTable.PeopleInvolved,
+            //    EventCaption = EventTable.EventCaption
+            //};
+
+            //try this instead:
+            //select EventTable;
+            //apparently, nope.
 
             //foreach (var timePoint in queryWholeTimeline)
             //{
-                //something
+            //something
             //}
 
             //this was the only original line in this code:
-            return View(db.EventTables.ToList());
+            //return View(db.EventTables.ToList());
 
             //try changing it to:
             //return View(queryWholeTimeline.ToList());
-            //return View(queryWholeTimeline);
+            return View(queryWholeTimeline);
             //or not lol
 
 
