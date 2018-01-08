@@ -1,68 +1,98 @@
 ﻿@model Stemma.Models.UserProfile
 
+
 @{
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Create Your Profile</h2>
 
 
 @using (Html.BeginForm())
+
 {
     @Html.AntiForgeryToken()
 
-    <h4>UserProfile</h4>
+    <h4>Complete a simple questionaire in each of six categories to help build your Stemma.</h4>
         <hr />
+        <div row="birthdateRow">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Birthdate, htmlAttributes: new { @class = "control-label col-md-6" })
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.Birthdate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Birthdate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div row="CategoryRow1">
             <div class="col-md-4">
-                <img src="~/Content/Images/IMGPlaceholder.jpg" />
+                <div class="icon-wrapper">
+                    <i class="fa fa-users fa-5x custom-icon">
+                        <span class="fix-editor">&nbsp;</span>
+                    </i>
+                </div>
                 <h4>@Html.ActionLink("Relationships & Family", "Create", "Relationships")</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper fermentum luctus.
-                    Nulla facilisi. Aliquam erat volutpat. Aliquam vel aliquet augue.
+                    Your friends, loves, children, parents, and others we meet along the way are the people who shape who you are. Who are they, and how did they change you?
                 </p>
             </div>
             <div class="col-md-4">
-                <img src="~/Content/Images/IMGPlaceholder.jpg" />
+                <div class="icon-wrapper">
+                    <i class="fa fa-graduation-cap fa-5x custom-icon">
+                        <span class="fix-editor">&nbsp;</span>
+                    </i>
+                </div>
                 <h4>@Html.ActionLink("Career & Education", "Create", "Careers")</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper fermentum luctus.
-                    Nulla facilisi. Aliquam erat volutpat. Aliquam vel aliquet augue.
+                    Schools, training, experience, and service define a large part of our lives. Where did you go? What did you see? Who did you meet? What did you learn?
                 </p>
             </div>
             <div class="col-md-4">
-                <img src="~/Content/Images/IMGPlaceholder.jpg" />
+                <div class="icon-wrapper">
+                    <i class="fa fa-book fa-5x custom-icon">
+                        <span class="fix-editor">&nbsp;</span>
+                    </i>
+                </div>
                 <h4>@Html.ActionLink("Memories & Stories", "Create", "Memories")</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper fermentum luctus.
-                    Nulla facilisi. Aliquam erat volutpat. Aliquam vel aliquet augue. Aliquam vel aliquet augue.
+                    Ancedotes, inside jokes, nicknames, big moves, life changes, advice, life lessons - all the big and little things that make us unique.
                 </p>
             </div>
         </div>
         <div row="CategoryRow2">
             <div class="col-md-4">
-                <img src="~/Content/Images/IMGPlaceholder.jpg" />
+                <div class="icon-wrapper">
+                    <i class="fa fa-lightbulb-o fa-5x custom-icon">
+                        <span class="fix-editor">&nbsp;</span>
+                    </i>
+                </div>
                 <h4>@Html.ActionLink("Hobbies & Interests", "Create", "HobbyTables")</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper fermentum luctus.
-                    Nulla facilisi. Aliquam erat volutpat. Aliquam vel aliquet augue.
+                    "What do you do?" can mean a lot of different things. What drives you? What do you do when you're not sleeping?
                 </p>
             </div>
             <div class="col-md-4">
-                <img src="~/Content/Images/IMGPlaceholder.jpg" />
+                <div class="icon-wrapper">
+                    <i class="fa fa-gift fa-5x custom-icon">
+                        <span class="fix-editor">&nbsp;</span>
+                    </i>
+                </div>
                 <h4>@Html.ActionLink("Celebrations & Holidays", "Create", "Celebrations")</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper fermentum luctus.
-                    Nulla facilisi. Aliquam erat volutpat. Aliquam vel aliquet augue.
+                    You're the life of the party - but what do you celebrate, where, when, and how? 
                 </p>
             </div>
             <div class="col-md-4">
-                <img src="~/Content/Images/IMGPlaceholder.jpg" />
+                <div class="icon-wrapper">
+                    <i class="fa fa-globe fa-5x custom-icon">
+                        <span class="fix-editor">&nbsp;</span>
+                    </i>
+                </div>
                 <h4>@Html.ActionLink("Where Were You When...", "Create", "WorldEvents")</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper fermentum luctus.
-                    Nulla facilisi. Aliquam erat volutpat. Aliquam vel aliquet augue.
+                    You only live once - and you have a unique perspective. How do you remember these event that changed the world, and how did these events change your world?
                 </p>
             </div>
         </div>
@@ -157,4 +187,7 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-}
+    
+<link href="~/Content/fonawesomecss.css" rel="stylesheet" />
+<link href="~/Content/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+      }
