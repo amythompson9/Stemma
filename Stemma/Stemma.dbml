@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Stemma" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Career" Member="Career">
+    <Type Name="Career">
+      <Column Name="CareerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AttendedCollege" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Graduations" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HaveJob" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HadJob" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Accomplishments" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FirstDayOfSchool" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ArmedForces" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Volunteer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Legacies" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TechSchool" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LicensesCertifications" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FirstJob" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WorstJob" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AnythingElse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FK_UserProfile_Career" Member="UserProfile" ThisKey="CareerID" OtherKey="CareerID" Type="UserProfile" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Celebration" Member="Celebration">
+    <Type Name="Celebration">
+      <Column Name="CelebrationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HolidayRecently" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PartyRecently" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MilestoneRecently" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateChristmas" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateNYE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateThanksgiving" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateValentine" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateEaster" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateIndependenceDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateHalloween" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateMemorialDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateLaborDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateMothersDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateFathersDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateChaunakah" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebratePassover" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateRoshHashanah" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelerateYomKippur" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateRamadan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateEID" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateSTPat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateBirthdays" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateChineseNewYear" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateQuinceanera" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateBarBatMitzvah" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateDayOfTheDead" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateVeteransDay" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CelebrateCincoDeMayo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AnythingElse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FK_UserProfile_Celebration" Member="UserProfile" ThisKey="CelebrationID" OtherKey="CelebrationID" Type="UserProfile" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventTable" Member="EventTable">
+    <Type Name="EventTable">
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+      <Column Name="EventTitle" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EventDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EventMonth" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="EventYear" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PeopleInvolved" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="EventCaption" Type="System.String" DbType="NVarChar(750)" CanBeNull="true" />
+      <Association Name="FK_Media_EventTable" Member="Media" ThisKey="EventID" OtherKey="EventID" Type="Media" DeleteRule="NO ACTION" />
+      <Association Name="FK_UserProfile_EventTable" Member="UserProfile" ThisKey="EventID" OtherKey="EventID" Type="UserProfile" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HobbyTable" Member="HobbyTable">
+    <Type Name="HobbyTable">
+      <Column Name="HobbyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlaySports" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InAShow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Travel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OutdoorPerson" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TravelAbroad" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Passions" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Talents" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Trophies" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Exercise" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FamilyVacation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChildhoodVacation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AnythingElse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FK_UserProfile_HobbyTable" Member="UserProfile" ThisKey="HobbyID" OtherKey="HobbyID" Type="UserProfile" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Media" Member="Media">
+    <Type Name="Media">
+      <Column Name="MediaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EventID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FK_Media_EventTable" Member="EventTable" ThisKey="EventID" OtherKey="EventID" Type="EventTable" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Memories" Member="Memories">
+    <Type Name="Memories">
+      <Column Name="MemoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BrokenBones" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OwnHome" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DriversLicense" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FirstTooth" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PersonalNickName" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FamilyNickName" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RideBike" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CommitCrime" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BigMove" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Vote" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FamilyTraditions" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EmbarrassingMoment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProudestMoments" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChildhoodCamp" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MemorializeSomeone" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Concerts" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FamilyPet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CurrentPet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HSDance" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AnythingElse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FK_UserProfile_Memories" Member="UserProfile" ThisKey="MemoryID" OtherKey="MemoryID" Type="UserProfile" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RegisterUser" Member="RegisterUser">
+    <Type Name="RegisterUser">
+      <Column Name="RegisterUserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoginID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Relationship" Member="Relationship">
+    <Type Name="Relationship">
+      <Column Name="RelationshipsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CurrentlyMarried" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InARelationship" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PreviousRomance" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HaveChildren" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HaveGrandchildren" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OtherYoungsters" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HaveParents" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HaveGrandparents" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OtherAdults" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HaveSiblings" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OtherCloseRelatives" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GoodFriendships" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EverythingElse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FK_UserProfile_Relationship" Member="UserProfile" ThisKey="RelationshipsID" OtherKey="RelationshipsID" Type="UserProfile" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserProfile" Member="UserProfile">
+    <Type Name="UserProfile">
+      <Column Name="UserProfileID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Birthdate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RelationshipsID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CareerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CelebrationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HobbyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MemoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WorldEventID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="FK_UserProfile_Career" Member="Career" ThisKey="CareerID" OtherKey="CareerID" Type="Career" IsForeignKey="true" />
+      <Association Name="FK_UserProfile_Celebration" Member="Celebration" ThisKey="CelebrationID" OtherKey="CelebrationID" Type="Celebration" IsForeignKey="true" />
+      <Association Name="FK_UserProfile_EventTable" Member="EventTable" ThisKey="EventID" OtherKey="EventID" Type="EventTable" IsForeignKey="true" />
+      <Association Name="FK_UserProfile_HobbyTable" Member="HobbyTable" ThisKey="HobbyID" OtherKey="HobbyID" Type="HobbyTable" IsForeignKey="true" />
+      <Association Name="FK_UserProfile_Memories" Member="Memories" ThisKey="MemoryID" OtherKey="MemoryID" Type="Memories" IsForeignKey="true" />
+      <Association Name="FK_UserProfile_Relationship" Member="Relationship" ThisKey="RelationshipsID" OtherKey="RelationshipsID" Type="Relationship" IsForeignKey="true" />
+      <Association Name="FK_UserProfile_WorldEvents" Member="WorldEvents" ThisKey="WorldEventID" OtherKey="WorldEventID" Type="WorldEvents" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WorldEvents" Member="WorldEvents">
+    <Type Name="WorldEvents">
+      <Column Name="WorldEventID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="September11" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MoonLanding" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NixonResigns" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ElvisDies" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChallengerExplodes" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="WorldWar2Ends" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="KennedyDies" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NotableElection" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MLKAssassination" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Y2K" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BerlinWall" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OJSimpsonCarChase" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EndOfProhibition" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VietnamWar" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AnythingElse" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="FK_UserProfile_WorldEvents" Member="UserProfile" ThisKey="WorldEventID" OtherKey="WorldEventID" Type="UserProfile" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+</Database>

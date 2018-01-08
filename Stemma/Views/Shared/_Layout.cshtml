@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Stemma</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -23,8 +23,8 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Profile", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Create Event", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
+                    <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
 
@@ -38,7 +38,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Stemma</p>
         </footer>
     </div>
 

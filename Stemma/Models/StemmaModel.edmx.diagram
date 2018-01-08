@@ -22,6 +22,15 @@
         <AssociationConnector Association="STEMMAModel.FK_UserProfile_Memories" />
         <AssociationConnector Association="STEMMAModel.FK_UserProfile_Relationship" />
         <AssociationConnector Association="STEMMAModel.FK_UserProfile_WorldEvents" />
+        <EntityTypeShape EntityType="STEMMAModel.C__MigrationHistory" Width="1.5" PointX="10" PointY="6.25" />
+        <EntityTypeShape EntityType="STEMMAModel.AspNetRole" Width="1.5" PointX="10" PointY="2" />
+        <EntityTypeShape EntityType="STEMMAModel.AspNetUserClaim" Width="1.5" PointX="14.5" PointY="0.5" />
+        <EntityTypeShape EntityType="STEMMAModel.AspNetUserLogin" Width="1.5" PointX="14.5" PointY="3.25" />
+        <EntityTypeShape EntityType="STEMMAModel.AspNetUser" Width="1.5" PointX="12.25" PointY="0.875" />
+        <EntityTypeShape EntityType="STEMMAModel.RegisterUser" Width="1.5" PointX="12" PointY="6.25" />
+        <AssociationConnector Association="STEMMAModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="STEMMAModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="STEMMAModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

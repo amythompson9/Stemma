@@ -4,7 +4,7 @@
     ViewBag.Title = "Suggestions for Memories Stems";
 }
 
-<h2>Memories</h2>
+<h2>Memories & Stories</h2>
 
 <div>
     <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
@@ -12,13 +12,15 @@
 
     @if (Model.BrokenBones == true)
     {
+        <h4>You've had a broken bone or similar injury. What is the story of...</h4>
     <p>
-        Your first broken bone.
+        your first broken bone.
     </p>
     <p>
-        Your hospital stay or surgery.
+        a hospital stay or surgery.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -31,16 +33,21 @@
         </td>*@
     @if (Model.OwnHome == true)
     {
+        <h4>You are a home owner. Post about...</h4>
     <p>
-        Your current home.
+        your current home.
     </p>
     <p>
-        Your previous home(s).
+        a previous home(s).
     </p>
     <p>
-        The time you moved out of your parents' house.
+        when you moved out of your parents' house.
+    </p>
+    <p>
+        an important lesson you learned about home ownership.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -53,13 +60,18 @@
         </td>*@
     @if (Model.DriversLicense == true)
     {
+        <h4>You can drive a car. Remember when...</h4>
     <p>
-        Getting your driver's license.
+        you got your driver's license.
     </p>
     <p>
-        Road trip!
+        you took your first road trip.
+    </p>
+    <p>
+        you bought your first car.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -72,10 +84,18 @@
         </td>*@
     @if (Model.FirstTooth == true)
     {
+        <h4>You have a story about losing a tooth. Is it...</h4>
     <p>
-        A story about your first tooth. Or your last tooth. Or anything in between.
+        a story about your first tooth... 
+    </p>
+    <p>
+        or your last tooth...
+    </p>
+    <p>
+        or anything in between.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -88,10 +108,12 @@
         </td>*@
     @if (Model.PersonalNickName == true)
     {
+        <h4>You have a nickname. What is...</h4>
     <p>
-        How your friends gave you your nickname.
+        the story behind your nickname.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -104,10 +126,15 @@
         </td>*@
     @if (Model.FamilyNickName == true)
     {
+        <h4>Someone in your life has a nickname. Post about...</h4>
     <p>
-        How your family gave you your nickname.
+        how that person earned this nickname.
+    </p>
+    <p>
+        if they like this nickname.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -120,16 +147,18 @@
         </td>*@
     @if (Model.RideBike == true)
     {
+        <h4>You can ride a bike. Did you...</h4>
     <p>
-        Learning to ride a bike.
+        have anyone teach you.
     </p>
     <p>
-        Your first successful bike ride.
+        earn any scars from learning to ride.
     </p>
     <p>
-        A favorite bike trip.
+        have a favorite bike trip.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -142,10 +171,15 @@
         </td>*@
     @if (Model.CommitCrime == true)
     {
+        <h4>You committed a crime. Was there...</h4>
     <p>
-        That time you committed a minor crime. (Don't worry, you're outside the statute of limitations!)
+        a funny story or misunderstanding.
+    </p>
+    <p>
+        an important lesson you learned.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -158,10 +192,15 @@
         </td>*@
     @if (Model.BigMove == true)
     {
+        <h4>You've made a big change in your life. Was it...</h4>
     <p>
-        A time you drastically changed your life.
+        a positive or negative change.
+    </p>
+    <p>
+        a big move? divorce? a new relationship
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -174,11 +213,15 @@
         </td>*@
     @if (Model.Vote == true)
     {
+        <h4>You excercise your right to vote. When was...</h4>
     <p>
-        The first time you voted.
+        the first time you voted.
     </p>
-
+    <p>
+        there an election that was important to you.
+    </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -191,10 +234,15 @@
         </td>*@
     @if (Model.FamilyTraditions == true)
     {
+        <h4>You have family traditions that are important to you. Do these...</h4>
     <p>
-        A family tradition.
+        traditions have an origin story.
+    </p>
+    <p>
+        happen annually or are connected to another event.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -207,10 +255,12 @@
         </td>*@
     @if (Model.EmbarrassingMoment == true)
     {
+        <h4>You want to share an embarrassing moment. What...</h4>
     <p>
-        Your most embarrassing moment. (Come on, you know it will be funny!)
+        made it so embarrassing.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -223,10 +273,18 @@
         </td>*@
     @if (Model.ProudestMoments == true)
     {
+        <h4>You are very proud of something. Post about...</h4>
     <p>
-        Something you did that makes you very proud.
+        something you did that makes you very proud.
+    </p>
+    <p>
+        your journey to this accomplishment.
+    </p>
+    <p>
+        what you learned along the way.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -239,10 +297,18 @@
         </td>*@
     @if (Model.ChildhoodCamp == true)
     {
+        <h4>You went to camp in your childhood. Did you...</h4>
     <p>
-        A memory of childhood camp.
+        meet any life-long friends.
+    </p>
+    <p>
+        go every year.
+    </p>
+    <p>
+        learn anything cool.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -255,13 +321,15 @@
         </td>*@
     @if (Model.MemorializeSomeone == true)
     {
+        <h4>You would like to commemorate someone in your life. Will this be...</h4>
     <p>
-        A tribute to someone you've lost, and want to remember.
+        a tribute to someone you've lost, and want to remember.
     </p>
     <p>
-        A tribute to someone who is still around, and you'd like to honor.
+        a tribute to someone who is still around, and you'd like to honor.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -274,13 +342,18 @@
         </td>*@
     @if (Model.Concerts == true)
     {
+        <h4>You go to concerts. What was...</h4>
     <p>
-        Your first concert.
+        your first concert.
     </p>
     <p>
-        Your favorite concert.
+        your favorite concert.
+    </p>
+    <p>
+        the worst concert you went to.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -293,10 +366,18 @@
         </td>*@
     @if (Model.FamilyPet == true)
     {
+        <h4>You had a childhood pet. Post about...</h4>
     <p>
-        Your childhood pet(s).
+        stories and adventures with your pet(s).
+    </p>
+    <p>
+        your favorite pet.
+    </p>
+    <p>
+        how you named your pet.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -309,13 +390,18 @@
         </td>*@
     @if (Model.CurrentPet == true)
     {
+        <h4>You have a pet! Post about...</h4>
     <p>
-        Your current pet(s).
+        the day you got your pet.
     </p>
     <p>
-        Your favorite pet(s).
+        your favorite pet(s).
+    </p>
+    <p>
+        what you decided to name your pet.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -328,16 +414,18 @@
         </td>*@
     @if (Model.HSDance == true)
     {
+        <h4>You went to dances in high school. Make a post about...</h4>
     <p>
-        Your first high school dance.
+        your first high school dance.
     </p>
     <p>
-        Your favorite high school dance.
+        your favorite high school dance.
     </p>
     <p>
-        A fun high school date.
+        a fun high school date.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
@@ -350,10 +438,18 @@
         </td>*@
     @if (Model.AnythingElse == true)
     {
+        <h4>We missed something important to you. Post...</h4>
     <p>
-        Other favorite or important memories.
+        other favorite or important memories.
+    </p>
+    <p>
+        inside jokes.
+    </p>
+    <p>
+        how you met someone important to you.
     </p>
     }
+    <br/>
     @*else
     {
     <p>
