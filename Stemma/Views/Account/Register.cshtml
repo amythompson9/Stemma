@@ -2,51 +2,162 @@
 @{
     ViewBag.Title = "Register";
 }
-<link href="~/Content/RegisterTable.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <title></title>
 
+    <!-- Stylesheets -->
+    <link href="~/Content/RegisterStyle.css" rel="stylesheet" />
+   
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
+</head>
+<body>
     @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-
-    <div id="imageBox" class="col-lg-8">
-
-        <img src="~/Content/Images/IMGPlaceholder.jpg" />
-
-    </div>
-    <div id="table" class="col-lg-4">
-        <div class="box">
-        @Html.ValidationSummary("", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+    <div id="main-wrapper" class="hidden">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 left-side">
+                    <header>
+                        <span>Register</span>
+                        <h3>Stemma</h3>
+                        <h2>Capturing the best moments in your special life.</h2>
+                    </header>
+                </div>
+                <div class="col-md-6 right-side">
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+                    <span class="input input--hoshi">
+                        <input class="input__field input__field--hoshi" type="text" id="name">
+                        <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="name">
+                            <span class="input__label-content input__label-content--hoshi">Name</span>
+                        </label>
+                    </span>
+                    <span class="input input--hoshi">
+                        <input class="input__field input__field--hoshi" type="text" id="email">
+                        <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="email">
+                            <span class="input__label-content input__label-content--hoshi">E-mail</span>
+                        </label>
+                    </span>
+                    <span class="input input--hoshi">
+                        <input class="input__field input__field--hoshi" type="password" id="password">
+                        <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password">
+                            <span class="input__label-content input__label-content--hoshi" >Password</span>
+                        </label>
+                    </span>
+                    <span class="input input--hoshi">
+                        <input class="input__field input__field--hoshi" type="password" id="password1">
+                        <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password1">
+                            <span class="input__label-content input__label-content--hoshi">Confirm Passowrd</span>
+                        </label>
+                    </span>
+                    @*<div>
+                        <ul class="social list-inline">
+                            <li><a href="#" class="glyphicon-facebook">Facebook</a></li>
+                            <li><a href="#" class="glyphicon-twitter">Twitter</a></li>
+                            <li><a href="#" class="glyphicon-linkedin">Linkedin</a></li>
+                        </ul>
+                    </div>*@
+                    <div class="cta">
+                        <input type="submit" class="btn btn-default" value="Register" />
+                        <a style="float:right;" href="~/Account/Login.cshtml">I am already a member </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-            <div class="col-md-10">
-                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" class="btn btn-default" value="Register" />
-            </div>
-        </div>
-            </div>
-    </div>
-}
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    </div> <!-- end #main-wrapper -->
+    <!-- Scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/classie.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div.hidden').fadeIn(6000).removeClass('hidden');
+            
+        });
+  (function() {
+    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+    if (!String.prototype.trim) {
+      (function() {
+        // Make sure we trim BOM and NBSP
+        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+        String.prototype.trim = function() {
+          return this.replace(rtrim, '');
+        };
+      })();
+    }
+
+    [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+      // in case the input is already filled..
+      if( inputEl.value.trim() !== '' ) {
+        classie.add( inputEl.parentNode, 'input--filled' );
+      }
+
+      // events:
+      inputEl.addEventListener( 'focus', onInputFocus );
+      inputEl.addEventListener( 'blur', onInputBlur );
+    } );
+
+    function onInputFocus( ev ) {
+      classie.add( ev.target.parentNode, 'input--filled' );
+    }
+
+    function onInputBlur( ev ) {
+      if( ev.target.value.trim() === '' ) {
+        classie.remove( ev.target.parentNode, 'input--filled' );
+      }
+    }
+  })();
+ 
+    </script>
+</body>
+
+    @*<div class="w3-main w3-padding-large" style="margin-left:40%">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+                    <div class="bgimg"></div>
+                </nav>
+
+                <div id="table" class="col-lg-6">
+                    <div class="box">
+                       
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" class="btn btn-default" value="Register" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>*@
+
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
