@@ -13,6 +13,7 @@
   text-align: center;
   vertical-align: inherit;
   width: 150px;
+  margin-top: 20px;
 }
 .custom-icon:hover {
   background: rgba(0, 0, 0, 0.6);

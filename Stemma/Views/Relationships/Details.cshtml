@@ -9,307 +9,553 @@
 <div>
     <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
     <hr />
+    <div class="rowDetails">
+        @if (Model.CurrentlyMarried == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You are married. Post about...</h4>
+                    <p>
+                        when and how you met your spouse.
+                    </p>
+                    <p>
+                        your engagement.
+                    </p>
+                    <p>
+                        your wedding day.
+                    </p>
+                    <p>
+                        your honeymoon.
+                    </p>
+                    <p>
+                        aniversary celebrations.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (Model.InARelationship == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You are in a relationship. Do you remember...</h4>
+                    <p>
+                        when and how you met your partner.
+                    </p>
+                    <p>
+                        special dates.
+                    </p>
+                    <p>
+                        significant events and trips.
+                    </p>
+                    <p>
+                        meeting their family.
+                    </p>
+                    <p>
+                        how an inside joke began.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+        @if (Model.PreviousRomance == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You've been in a relationship before. Do you...</h4>
+                    <p>
+                        remember how you met them.
+                    </p>
+                    <p>
+                        how long you were together.
+                    </p>
+                    <p>
+                        learn anything about yourself.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+        @if (Model.HaveChildren == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have a child/children. Remember when...</h4>
+                    <p>
+                        they were born.
+                    </p>
+                    <p>
+                        they had significant milestones in their life.
+                    </p>
+                    <p>
+                        they accomlished something.
+                    </p>
+                    <p>
+                        they did something weird or funny.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+        @if (Model.HaveGrandchildren == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have a grandchild/grandchildren. Post about...</h4>
+                    <p>
+                        the birth of a grandchild.
+                    </p>
+                    <p>
+                        memories and stories of a grandchild.
+                    </p>
+                    <p>
+                        important advice you wish to give them.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
 
-    @if (Model.CurrentlyMarried == true)
-    {
-        <h4>You are married. Post about...</h4>
-    <p>
-        when and how you met your spouse.
-    </p>
-    <p>
-        your engagement.
-    </p>
-    <p>
-        your wedding day.
-    </p>
-    <p>
-        your honeymoon.
-    </p>
-    <p>
-        aniversary celebrations.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You are not currently married.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.InARelationship)*@
-    @if (Model.InARelationship == true)
-    {
-        <h4>You are in a relationship. Do you remember...</h4>
-    <p>
-        when and how you met your partner.
-    </p>
-    <p>
-        special dates.
-    </p>
-    <p>
-        significant events and trips.
-    </p>
-    <p>
-        meeting their family.
-    </p>
-    <p>
-        how an inside joke began.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You are not currently in a romantic relationship.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.PreviousRomance)*@
-    @if (Model.PreviousRomance == true)
-    {
-        <h4>You've been in a relationship before. Do you...</h4>
-    <p>
-        remember how you met them.
-    </p>
-    <p>
-        how long you were together.
-    </p>
-    <p>
-        learn anything about yourself.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You would not like to remember/do not have a previous romance.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.HaveChildren)*@
-    @if (Model.HaveChildren == true)
-    {
-        <h4>You have a child/children. Remember when...</h4>
-    <p>
-        they were born.
-    </p>
-    <p>
-        significant milestones in their life.
-    </p>
-    <p>
-        they accomlished something.
-    </p>
-    <p>
-        they did something weird or funny.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have children.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.HaveGrandchildren)*@
-    @if (Model.HaveGrandchildren == true)
-    {
-        <h4>You have a grandchild/grandchildren. Post about...</h4>
-    <p>
-        the birth of a grandchild.
-    </p>
-    <p>
-        memories and stories of a grandchild.
-    </p>
-    <p>
-        important advice you wish to give them.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have grandchildren.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.OtherYoungsters)*@
-    @if (Model.OtherYoungsters == true)
-    {
-        <h4>You have other significant young people in your life. Do you...</h4>
-    <p>
-        have memories and stories of them you can share.
-    </p>
-    <p>
-        remember when they came into your life.
-    </p>
-    <p>
-        advice you can leave for them.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have other children you would like to remember.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.HaveParents)*@
-    @if (Model.HaveParents == true)
-    {
-        <h4>You have parents. Do you know...</h4>
-    <p>
-        when and how your parents met.
-    </p>
-    <p>
-        when (if) your parents married.
-    </p>
-    <p>
-        of any funny stories to share.
-    </p>
-    <p>
-        the most important lesson you learned from them.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have parents you would like to remember.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.HaveGrandparents)*@
-    @if (Model.HaveGrandparents == true)
-    {
-        <h4>You have grandparents. Post about...</h4>
-    <p>
-        when and how your grandparents met.
-    </p>
-    <p>
-        when (if) your grandparents married.
-    </p>
-    <p>
-        memories of your grandparents.
-    </p>
-    <p>
-        something you learned from them.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have grandparents you would like to remember.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.OtherAdults)*@
-    @if (Model.OtherAdults == true)
-    {
-        <h4>You have other adults in your life. Do you...</h4>
-    <p>
-        know why they are importantto you.
-    </p>
-    <p>
-        their birthday?
-    </p>
-    <p>
-        treasure something they gave you.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have other adults you would like to remember.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.HaveSiblings)*@
-    @if (Model.HaveSiblings == true)
-    {
-        <h4>You have silings. Post about...</h4>
-    <p>
-        when a sibling was born.
-    </p>
-    <p>
-        a time you helped your sibling, or your sibling helped you.
-    </p>
-    <p>
-        an inside joke.
-    </p>
-    <p>
-        something you tease/taunted them for.
-    </p>
-    <p>
-        why they are important to you.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have siblings.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.OtherCloseRelatives)*@
-    @if (Model.OtherCloseRelatives == true)
-    {
-        <h4>You have other importnat relatives. Do you know...</h4>
-    <p>
-        when they were born.
-    </p>
-    <p>
-        something important they taught you.
-    </p>
-    <p>
-        any trips you might have taken together.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have other close relatives.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.GoodFriendships)*@
-    @if (Model.GoodFriendships == true)
-    {
-        <h4>You have a made great friendships in your life. Is there...</h4>
-    <p>
-        a moment you remember meeting.
-    </p>
-    <p>
-        something speical you share.
-    </p>
-    <p>
-        a time were you fought a lot?
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have good friendships to remember.
-    </p>
-    }*@
-    @*@Html.DisplayFor(modelItem => item.EverythingElse)*@
-    @if (Model.EverythingElse == true)
-    {
-        <h4>We missed someone special in your life. Write about...</h4>
-    <p>
-        someone who you impacted.
-    </p>
-    <p>
-        someone who changed you.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not have other people you would like to record.
-    </p>
-    }*@
+        @*else
+            {
+            <p>
+                You do not have grandchildren.
+            </p>
+            }*@
+        @*@Html.DisplayFor(modelItem => item.OtherYoungsters)*@
+        @if (Model.OtherYoungsters == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have other significant young people in your life. Do you...</h4>
+                    <p>
+                        have memories and stories of them you can share.
+                    </p>
+                    <p>
+                        remember when they came into your life.
+                    </p>
+                    <p>
+                        advice you can leave for them.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+
+        @*else
+            {
+            <p>
+                You do not have other children you would like to remember.
+            </p>
+            }*@
+        @*@Html.DisplayFor(modelItem => item.HaveParents)*@
+        @if (Model.HaveParents == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have parents. Do you know...</h4>
+                    <p>
+                        when and how your parents met.
+                    </p>
+                    <p>
+                        when (if) your parents married.
+                    </p>
+                    <p>
+                        of any funny stories to share.
+                    </p>
+                    <p>
+                        the most important lesson you learned from them.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+
+        @*else
+            {
+            <p>
+                You do not have parents you would like to remember.
+            </p>
+            }*@
+        @*@Html.DisplayFor(modelItem => item.HaveGrandparents)*@
+        @if (Model.HaveGrandparents == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have grandparents. Post about...</h4>
+                    <p>
+                        when and how your grandparents met.
+                    </p>
+                    <p>
+                        when (if) your grandparents married.
+                    </p>
+                    <p>
+                        memories of your grandparents.
+                    </p>
+                    <p>
+                        something you learned from them.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+
+        @*else
+            {
+            <p>
+                You do not have grandparents you would like to remember.
+            </p>
+            }*@
+        @*@Html.DisplayFor(modelItem => item.OtherAdults)*@
+        @if (Model.OtherAdults == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have other adults in your life. Do you...</h4>
+                    <p>
+                        know why they are importantto you.
+                    </p>
+                    <p>
+                        their birthday?
+                    </p>
+                    <p>
+                        treasure something they gave you.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+
+        @*else
+            {
+            <p>
+                You do not have other adults you would like to remember.
+            </p>
+            }*@
+        @*@Html.DisplayFor(modelItem => item.HaveSiblings)*@
+        @if (Model.HaveSiblings == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have siblings. Post about...</h4>
+                    <p>
+                        when a sibling was born.
+                    </p>
+                    <p>
+                        a time you helped your sibling, or your sibling helped you.
+                    </p>
+                    <p>
+                        an inside joke.
+                    </p>
+                    <p>
+                        something you tease/taunted them for.
+                    </p>
+                    <p>
+                        why they are important to you.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+
+        @*else
+            {
+            <p>
+                You do not have siblings.
+            </p>
+            }*@
+        @*@Html.DisplayFor(modelItem => item.OtherCloseRelatives)*@
+        @if (Model.OtherCloseRelatives == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have other important relatives. Do you know...</h4>
+                    <p>
+                        when they were born.
+                    </p>
+                    <p>
+                        something important they taught you.
+                    </p>
+                    <p>
+                        any trips you might have taken together.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+
+        @*else
+            {
+            <p>
+                You do not have other close relatives.
+            </p>
+            }*@
+        @*@Html.DisplayFor(modelItem => item.GoodFriendships)*@
+        @if (Model.GoodFriendships == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have a made great friendships in your life. Is there...</h4>
+                    <p>
+                        a moment you remember meeting.
+                    </p>
+                    <p>
+                        something speical you share.
+                    </p>
+                    <p>
+                        a time were you fought a lot?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                    </div>
+            </div>
+        }
+
+        @*else
+            {
+            <p>
+                You do not have good friendships to remember.
+            </p>
+            }*@
+        @*@Html.DisplayFor(modelItem => item.EverythingElse)*@
+        @if (Model.EverythingElse == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>We missed someone special in your life. Write about...</h4>
+                    <p>
+                        someone who you impacted.
+                    </p>
+                    <p>
+                        someone who changed you.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                        </div>
+                    </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not have other people you would like to record.
+            </p>
+            }*@
 
 
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.RelationshipsID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.RelationshipsID }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+            <link href="~/Content/detailsCSS.css" rel="stylesheet" />

@@ -1,0 +1,19 @@
+﻿.rowDetails .thumbnail{
+    height: 400px;
+    padding:15px;
+}
+.thumbnail h4 {
+    font-weight:bold;
+    font-size: 24px;
+}
+p {
+    font-size: 19px;
+}
+.btn {
+    margin-left: 200px;
+    padding-bottom: 3px;
+}
+.EntryButton {
+    position: absolute;
+    bottom: 35px
+}
