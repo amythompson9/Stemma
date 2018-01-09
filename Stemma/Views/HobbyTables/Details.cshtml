@@ -1,5 +1,5 @@
 ﻿@model Stemma.Models.HobbyTable
-
+<link href="~/Content/detailsCSS.css" rel="stylesheet" />
 @*note to self and Amy: We need to decide what to do with redirect to Index links at bottom of profile results*@
 @*because we don't want to take anyone to the index page. either delete or change the option.*@
 
@@ -12,304 +12,412 @@
 <div>
     <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
     <hr />
+    <div class="rowDetails">
+        @if (Model.PlaySports == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You play sports. Make a post for...</h4>
+                    <p>
+                        teams you played on in high school or college.
+                    </p>
+                    <p>
+                        important games you played or competitions you entered.
+                    </p>
+                    <p>
+                        something that you have recently accomplished.
+                    </p>
+                    <p>
+                        memorable days for teams you love.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
-    @if (Model.PlaySports == true)
-    {
-        <h4>You play sports. Make a post for...</h4>
-    <p>
-        teams you played on in high school or college.
-    </p>
-    <p>
-        important games you played or competitions you entered.
-    </p>
-    <p>
-        something that you have recently accomplished.
-    </p>
-    <p>
-        memorable days for teams you love.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.InAShow)
+            </td>*@
+        @if (Model.InAShow == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You've been in a show. Make a post about...</h4>
+                    <p>
+                        shows you've been in.
+                    </p>
+                    <p>
+                        shows you've attended.
+                    </p>
+                    <p>
+                        something that did not go as planned.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.InAShow)
-        </td>*@
-    @if (Model.InAShow == true)
-    {
-        <h4>You've been in a show. Make a post about...</h4>
-    <p>
-        shows you've been in.
-    </p>
-    <p>
-        shows you've attended.
-    </p>
-    <p>
-        something that did not go as planned.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.Travel)
-        </td>*@
-    @if (Model.Travel == true)
-    {
-        <h4>You like to travel. Post about...</h4>
-    <p>
-        your travel stories and photos.
-    </p>
-    <p>
-        your favorite trip.
-    </p>
-    <p>
-        the worst experience you had traveling.
-    </p>
-    <p>
-        what you learned on your latest trip.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.Travel)
+            </td>*@
+        @if (Model.Travel == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You like to travel. Post about...</h4>
+                    <p>
+                        your travel stories and photos.
+                    </p>
+                    <p>
+                        your favorite trip.
+                    </p>
+                    <p>
+                        the worst experience you had traveling.
+                    </p>
+                    <p>
+                        what you learned on your latest trip.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.OutdoorPerson)
-        </td>*@
-    @if (Model.OutdoorPerson == true)
-    {
-        <h4>You love the great outdoors. Do you...</h4>
-    <p>
-        have memories of outdoor adventures.
-    </p>
-    <p>
-        have a favorite hike or activity.
-    </p>
-    <p>
-        take trips to the beach.
-    </p>
-    <p>
-        have a bucket list destination.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.TravelAbroad)
-        </td>*@
-    @if (Model.TravelAbroad == true)
-    {
-        <h4>You have traveled abroad. Post about...</h4>
-    <p>
-        your cultural discoveries while traveling abroad.
-    </p>
-    <p>
-        favorite foods from a foreign country.
-    </p>
-    <p>
-        advice you have for new travelers.
-    </p>
-    <p>
-        the best and worst experience you've had.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.OutdoorPerson)
+            </td>*@
+        @if (Model.OutdoorPerson == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You love the great outdoors. Do you...</h4>
+                    <p>
+                        have memories of outdoor adventures.
+                    </p>
+                    <p>
+                        have a favorite hike or activity.
+                    </p>
+                    <p>
+                        take trips to the beach.
+                    </p>
+                    <p>
+                        have a bucket list destination.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.Passions)
-        </td>*@
-    @if (Model.Passions == true)
-    {
-        <h4>You have additional passions. Did you...</h4>
-    <p>
-        do something to discover or uncover it.
-    </p>
-    <p>
-        attend any events.
-    </p>
-    <p>
-        take trips to fair or conventions.
-    </p>
-    <p>
-        take any lessons to courses to improve.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.Talents)
-        </td>*@
-    @if (Model.Talents == true)
-    {
-        <h4>You have talents. Post about...</h4>
-    <p>
-        how you learned your talent(s).
-    </p>
-    <p>
-        a time you got to show off your talent(s).
-    </p>
-    <p>
-        your goals and ambitions.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.TravelAbroad)
+            </td>*@
+        @if (Model.TravelAbroad == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have traveled abroad. Post about...</h4>
+                    <p>
+                        your cultural discoveries while traveling abroad.
+                    </p>
+                    <p>
+                        favorite foods from a foreign country.
+                    </p>
+                    <p>
+                        advice you have for new travelers.
+                    </p>
+                    <p>
+                        the best and worst experience you've had.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.Trophies)
-        </td>*@
-    @if (Model.Trophies == true)
-    {
-        <h4>You've won a trophy or award. Do you...</h4>
-    <p>
-        have a story about how you earned this award.
-    </p>
-    <p>
-        have any advice for someone trying to attain this award.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.Exercise)
-        </td>*@
-    @if (Model.Exercise == true)
-    {
-        <h4>You like to work out. Do you...</h4>
-    <p>
-        have a  favorite place to exercise.
-    </p>
-    <p>
-        have a time you achieved a physical fitness milestone.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.Passions)
+            </td>*@
+        @if (Model.Passions == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You have additional passions. Did you...</h4>
+                    <p>
+                        do something to discover or uncover it.
+                    </p>
+                    <p>
+                        attend any events.
+                    </p>
+                    <p>
+                        take trips to fair or conventions.
+                    </p>
+                    <p>
+                        take any lessons to courses to improve.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.FamilyVacation)
-        </td>*@
-    @if (Model.FamilyVacation == true)
-    {
-        <h4>You take family vacations.  Do you have...</h4>
-    <p>
-        memories and photos of a family vacation.
-    </p>
-    <p>
-        a favorite vacation you took.
-    </p>
-    <p>
-        a funny story to share.
-    </p>
-    <p>
-        a memory of a bad trip.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.Talents)
+            </td>*@
+        @if (Model.Talents == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.ChildhoodVacation)
-        </td>*@
-    @if (Model.ChildhoodVacation == true)
-    {
-        <h4>You took vacations when you were younger. Do you...</h4>
-    <p>
-        have memories and photos of a vacation from your childhood.
-    </p>
-    <p>
-        a favorite vacation you took.
-    </p>
-    <p>
-        a funny story to share.
-    </p>
-    <p>
-        a memory of a bad trip.
-    </p>
-    }
-    <br />
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+                    <h4>You have talents. Post about...</h4>
+                    <p>
+                        how you learned your talent(s).
+                    </p>
+                    <p>
+                        a time you got to show off your talent(s).
+                    </p>
+                    <p>
+                        your goals and ambitions.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.AnythingElse)
-        </td>*@
-    @if (Model.AnythingElse == true)
-    {
-        <h4>We missed something that's important to you.</h4>
-    <p>
-        Make an entry for other activities, hobbies, interests or enthusiasms you'd like to remember.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.Trophies)
+            </td>*@
+        @if (Model.Trophies == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You've won a trophy or award. Do you...</h4>
+                    <p>
+                        have a story about how you earned this award.
+                    </p>
+                    <p>
+                        have any advice for someone trying to attain this award.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
+
+        @*<td>
+                @Html.DisplayFor(modelItem => item.Exercise)
+            </td>*@
+        @if (Model.Exercise == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You like to work out. Do you...</h4>
+                    <p>
+                        have a  favorite place to exercise.
+                    </p>
+                    <p>
+                        have a time you achieved a physical fitness milestone.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
+
+        @*<td>
+                @Html.DisplayFor(modelItem => item.FamilyVacation)
+            </td>*@
+        @if (Model.FamilyVacation == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You take family vacations.  Do you have...</h4>
+                    <p>
+                        memories and photos of a family vacation.
+                    </p>
+                    <p>
+                        a favorite vacation you took.
+                    </p>
+                    <p>
+                        a funny story to share.
+                    </p>
+                    <p>
+                        a memory of a bad trip.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
+
+        @*<td>
+                @Html.DisplayFor(modelItem => item.ChildhoodVacation)
+            </td>*@
+        @if (Model.ChildhoodVacation == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You took vacations when you were younger. Do you...</h4>
+                    <p>
+                        have memories and photos of a vacation from your childhood.
+                    </p>
+                    <p>
+                        a favorite vacation you took.
+                    </p>
+                    <p>
+                        a funny story to share.
+                    </p>
+                    <p>
+                        a memory of a bad trip.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
+
+        @*<td>
+                @Html.DisplayFor(modelItem => item.AnythingElse)
+            </td>*@
+        @if (Model.AnythingElse == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>We missed something that's important to you.</h4>
+                    <p>
+                        Make an entry for other activities, hobbies, interests or enthusiasms you'd like to remember.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        }
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
 
+    </div>
+            </div>
+<div class="container">
+    <div class="row">
+        <p>
+            @Html.ActionLink("Update Your Hobbies & Interests", "Edit", new { id = Model.HobbyID }) |
+            @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
+        </p>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.HobbyID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
