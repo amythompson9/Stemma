@@ -7,669 +7,664 @@
 <h2>Celebrations & Holidays</h2>
 <div>
     <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
-    <hr/>
-    @*logic is added. text needs to be updated.*@
+    <hr />
+    <div class="rowDetails">
 
-    @*<p>
-            @Html.ActionLink("Create New", "Create")
-        </p>
-        <table class="table">*@
+        @if (Model.HolidayRecently == true)
 
-
-    @*<tr>*@
-    @*<td>
-            @Html.DisplayFor(modelItem => item.HolidayRecently)
-        </td>*@
-
-    @if (Model.HolidayRecently == true)
-    {
-        <h4>You've recently celebrated a holiday.</h4>
-        <p>
-            Post a picture.
-        </p>
-    }
-    <br />
-    @*else
         {
-            <p>
-            You have not recently celebrated a holiday.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You've recently celebrated a holiday.</h4>
+                    <p>
+                        Post a picture.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.PartyRecently)
-        </td>*@
-    @if (Model.PartyRecently == true)
-    {
-        <h4>You recently attended a party.</h4>
-        <p>
-            Who did you go with?
-        </p>
-        <p>
-            Was the food any good?
-        </p>
-        <p>
-            Was it for another orgnaization or company?
-        </p>
-    }
-    <br />
-    @*else
+
+        @if (Model.PartyRecently == true)
         {
-            <p>
-            You have not recently attended a party.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.MilestoneRecently)
-        </td>*@
-    @if (Model.MilestoneRecently == true)
-    {
-        <h4>You recently celebrated a milstone. Talk about...</h4>
-        <p>
-            how hard it was to accomplish.
-        </p>
-        <p>
-            the lessons you learned along the way.
-        </p>
-        <p>
-            what would you do differently?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You recently attended a party.</h4>
+                    <p>
+                        Who did you go with?
+                    </p>
+                    <p>
+                        Was the food any good?
+                    </p>
+                    <p>
+                        Was it for another orgnaization or company?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.MilestoneRecently == true)
         {
-            <p>
-            You have not celebrated any milestones recently.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You recently celebrated a milestone. Talk about...</h4>
+                    <p>
+                        how hard it was to accomplish.
+                    </p>
+                    <p>
+                        the lessons you learned along the way.
+                    </p>
+                    <p>
+                        what you would do differently.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateChristmas)
-        </td>*@
-    @if (Model.CelebrateChristmas == true)
-    {
-        <h4>You celebrate Christmas. Do you...</h4>
-        <p>
-            have any Christmas traditions?
-        </p>
-        <p>
-            have a favorite Christmas cookie?
-        </p>
-        <p>
-            have a favorite gift you've ever received?
-        </p>
-        <p>
-            have a gift-giving story?
-        </p>
-    }
-    <br/>
-    @*else
+        @if (Model.CelebrateChristmas == true)
         {
-            <p>
-            You do not celebrate Christmas.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You celebrate Christmas. Do you...</h4>
+                    <p>
+                        have any Christmas traditions?
+                    </p>
+                    <p>
+                        have a favorite Christmas cookie?
+                    </p>
+                    <p>
+                        have a favorite gift you've ever received?
+                    </p>
+                    <p>
+                        have a gift-giving story?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateNYE)
-        </td>*@
-    @if (Model.CelebrateNYE == true)
-    {
-        <h4>You celebrate New Year's Eve. Do you...</h4>
-        <p>
-            always watch the ball drop?
-        </p>
-        <p>
-            go out for a special dinner?
-        </p>
-        <p>
-            have any NYE stories of a night gone wrong?
-        </p>
-        <p>
-            dance the night away?
-        </p>
-    }
-    <br/>
-    @*else
+        @if (Model.CelebrateNYE == true)
         {
-            <p>
-            You do not celebrate New Year's Eve.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateThanksgiving)
-        </td>*@
-    @if (Model.CelebrateThanksgiving == true)
-    {
-        <h4>You celebrate Thanksgiving. What...</h4>
-        <p>
-            is your traditional meal.
-        </p>
-        <p>
-            about a time things didn't go as planned?
-        </p>
-        <p>
-            was the best Thanksgiving?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate New Year's Eve. Do you...</h4>
+                    <p>
+                        always watch the ball drop?
+                    </p>
+                    <p>
+                        go out for a special dinner?
+                    </p>
+                    <p>
+                        have any NYE stories of a night gone wrong?
+                    </p>
+                    <p>
+                        dance the night away?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateThanksgiving == true)
         {
-            <p>
-            You do not celebrate Thanksgiving.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You celebrate Thanksgiving. What...</h4>
+                    <p>
+                        is your traditional meal?
+                    </p>
+                    <p>
+                        about a time things didn't go as planned?
+                    </p>
+                    <p>
+                        was the best Thanksgiving?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateValentine)
-        </td>*@
-    @if (Model.CelebrateValentine == true)
-    {
-        <h4>You celebrate Valentine's Day. Do you...</h4>
-        <p>
-            go out to a special dinner?
-        </p>
-        <p>
-            celebrate in a unique way?
-        </p>
-        <p>
-            have a memory of the best Valentine's Day?
-        </p>
-    }
-    <br/>
-    @*else
+        @if (Model.CelebrateValentine == true)
         {
-            <p>
-            You do not celebrate Valentine's Day.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateEaster)
-        </td>*@
-    @if (Model.CelebrateEaster == true)
-    {
-        <h4>You celebrate Easter. Do you...</h4>
-        <p>
-            color Easter eggs?
-        </p>
-        <p>
-            have any special traditions?
-        </p>
-        <p>
-            have a special Easter dinner?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Valentine's Day. Do you...</h4>
+                    <p>
+                        go out to a special dinner?
+                    </p>
+                    <p>
+                        celebrate in a unique way?
+                    </p>
+                    <p>
+                        have a memory of the best Valentine's Day?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateEaster == true)
         {
-            <p>
-            You do not celebrate Easter.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateIndependenceDay)
-        </td>*@
-    @if (Model.CelebrateIndependenceDay == true)
-    {
-        <h4>You celebrate Independence Day. Do you...</h4>
-        <p>
-            go to Independence Day parades?
-        </p>
-        <p>
-            like fireworks?
-        </p>
-        <p>
-            barbeque?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Easter. Do you...</h4>
+                    <p>
+                        color Easter eggs?
+                    </p>
+                    <p>
+                        have any special traditions?
+                    </p>
+                    <p>
+                        have a special Easter dinner?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateIndependenceDay == true)
         {
-            <p>
-            You do not celebrate Independence Day.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateHalloween)
-        </td>*@
-    @if (Model.CelebrateHalloween == true)
-    {
-        <h4>You celebrate Halloween. What was...</h4>
-        <p>
-            your best costume.
-        </p>
-        <p>
-           scariest Halloween moment. 
-        </p>
-        <p>
-            the best party you went to?
-        </p>
-        <p>
-            the worst costume you ever wore?
-        </p>
-        <p>
-            your trick-or-treat tradition.
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Independence Day. Do you...</h4>
+                    <p>
+                        go to Independence Day parades?
+                    </p>
+                    <p>
+                        like fireworks?
+                    </p>
+                    <p>
+                        barbeque?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateHalloween == true)
         {
-            <p>
-            You do not celebrate Halloween.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateMemorialDay)
-        </td>*@
-    @if (Model.CelebrateMemorialDay == true)
-    {
-        <h4>You celebrate Memorial Day. Do you...</h4>
-        <p>
-            have someone you would like to make a tribute to?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Halloween. What was...</h4>
+                    <p>
+                        your best costume?
+                    </p>
+                    <p>
+                        scariest Halloween moment?
+                    </p>
+                    <p>
+                        the best party you went to?
+                    </p>
+                    <p>
+                        the worst costume you ever wore?
+                    </p>
+                    <p>
+                        your trick-or-treat tradition?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateMemorialDay == true)
         {
-            <p>
-            You do not celebrate Memorial Day.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateLaborDay)
-        </td>*@
-    @if (Model.CelebrateLaborDay == true)
-    {
-        <h4>You celebrate Labor Day. Do you...</h4>
-        <p>
-            have a story from a barbeque?
-        </p>
-        <p>
-            like to take a trip out of town?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Memorial Day. Do you...</h4>
+                    <p>
+                        have someone you would like to make a tribute to?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateLaborDay == true)
         {
-            <p>
-            You do not celebrate Labor Day.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateMothersDay)
-        </td>*@
-    @if (Model.CelebrateMothersDay == true)
-    {
-        <h4>You celebrate Mother's Day. Do you...</h4>
-        <p>
-            have a tradition with your mom?
-        </p>
-        <p>
-            have a memory of your mom to share?
-        </p>
+                    <h4>You celebrate Labor Day. Do you...</h4>
+                    <p>
+                        have a story from a barbeque?
+                    </p>
+                    <p>
+                        like to take a trip out of town?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    }
-    <br/>
-    @*else
+        @if (Model.CelebrateMothersDay == true)
         {
-            <p>
-            You do not celebrate Mother's Day.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateFathersDay)
-        </td>*@
-    @if (Model.CelebrateFathersDay == true)
-    {
-        <h4>You celebrate Father's Day. Do you...</h4>
-        <p>
-            have a tradition with your dad?
-        </p>
-        <p>
-            have a memory of your dad to share?
-        </p>
+                    <h4>You celebrate Mother's Day. Do you...</h4>
+                    <p>
+                        have a tradition with your mom?
+                    </p>
+                    <p>
+                        have a memory of your mom to share?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    }
-    <br />
-    @*else
+        }
+
+        @if (Model.CelebrateFathersDay == true)
         {
-            <p>
-            You do not celebrate Father's Day.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateChaunakah)
-        </td>*@
+                    <h4>You celebrate Father's Day. Do you...</h4>
+                    <p>
+                        have a tradition with your dad?
+                    </p>
+                    <p>
+                        have a memory of your dad to share?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    @*START HERE, then delete this comment*@
+        }
 
-    @if (Model.CelebrateChaunakah == true)
-    {
-        <h4>You celebrate Chaunakah. Do you...</h4>
-        <p>
-            have a special Chaunakah memory.
-        </p>
-        <p>
-            have any unique Chaunakah traditions?
-        </p>
-    }
-    <br/>
-    @*else
+
+        @if (Model.CelebrateChaunakah == true)
         {
-            <p>
-            You do not celebrate Chaunakah.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebratePassover)
-        </td>*@
-    @if (Model.CelebratePassover == true)
-    {
-        <h4>You celebrate Passover. What is...</h4>
-        <p>
-            your favorite part of a Passover Seder.
-        </p>
-        <p>
-            a cherished Passover memory.
-        </p>
-        <p>
-            a unique Passover tradition.
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Chaunakah. Do you...</h4>
+                    <p>
+                        have a special Chaunakah memory?
+                    </p>
+                    <p>
+                        have any unique Chaunakah traditions?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebratePassover == true)
         {
-            <p>
-            You do not celebrate Passover.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateRoshHashanah)
-        </td>*@
-    @if (Model.CelebrateRoshHashanah == true)
-    {
-        <h4>You celebrate Rosh Hashanah. What are..</h4>
-        <p>
-            your unique traditions.
-        </p>
-        <p>
-            your favorite memories of Rosh Hashanah?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Passover. What is...</h4>
+                    <p>
+                        your favorite part of a Passover Seder?
+                    </p>
+                    <p>
+                        a cherished Passover memory?
+                    </p>
+                    <p>
+                        a unique Passover tradition?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateRoshHashanah == true)
         {
-            <p>
-            You do not celebrate Rosh Hashanah.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelerateYomKippur)
-        </td>*@
-    @if (Model.CelerateYomKippur == true)
-    {
-        <h4>You celebrate Yom Kippur. Do you...</h4>
-        <p>
-            have any unique traditions.
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Rosh Hashanah. What are..</h4>
+                    <p>
+                        your unique traditions?
+                    </p>
+                    <p>
+                        your favorite memories of Rosh Hashanah?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelerateYomKippur == true)
         {
-            <p>
-            You do not celebrate Yom Kippur.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateRamadan)
-        </td>*@
-    @if (Model.CelebrateRamadan == true)
-    {
-        <h4>You celebrate Ramadan. Do you...</h4>
-        <p>
-            have memories of fasting during Ramadan.
-        </p>
-        <p>
-            celebrate the end of Ramadan.
-        </p>
-        <p>
-            have memories of an Eid al-Adha feast.
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Yom Kippur. Do you...</h4>
+                    <p>
+                        have any unique traditions?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateRamadan == true)
         {
-            <p>
-            You do not celebrate Yom Kippur.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateEID)
-        </td>*@
-    @if (Model.CelebrateEID == true)
-    {
-        <h4>You celebrate Eid. What is...</h4>
-        <p>
-            your favorite tradition.
-        </p>
-        <p>
-            the part you most look forward to?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Ramadan. Do you...</h4>
+                    <p>
+                        have memories of fasting during Ramadan?
+                    </p>
+                    <p>
+                        celebrate the end of Ramadan?
+                    </p>
+                    <p>
+                        have memories of an Eid al-Adha feast?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateEID == true)
         {
-            <p>
-            You do not celebrate Eid.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateSTPat)
-        </td>*@
-    @if (Model.CelebrateSTPat == true)
-    {
-        <h4>You celebrate St. Patrick's Day. Do you...</h4>
-        <p>
-            attend a St. Patrick's Day parade.
-        </p>
-        <p>
-            have any yearly traditions.
-        </p>
-        <p>
-            meet your friends at a favorite bar.
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Eid al-Adha. What is...</h4>
+                    <p>
+                        your favorite tradition?
+                    </p>
+                    <p>
+                        the part you most look forward to?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateSTPat == true)
         {
-            <p>
-            You do not celebrate St. Patrick's Day.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateBirthdays)
-        </td>*@
-    @if (Model.CelebrateBirthdays == true)
-    {
-        <h4>You celebrate birthdays. Do you...</h4>
-        <p>
-            remember the best present you ever received.
-        </p>
-        <p>
-            always throw a party?
-        </p>
-        <p>
-            have advice to give to younger self?
-        </p>
-        <p>
-            take a trip?
-        </p>
-        <p>
-            have something to add to a bucket list?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate St. Patrick's Day. Do you...</h4>
+                    <p>
+                        attend a St. Patrick's Day parade?
+                    </p>
+                    <p>
+                        have any yearly traditions?
+                    </p>
+                    <p>
+                        meet your friends at a favorite bar?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateBirthdays == true)
         {
-            <p>
-            You do not celebrate birthdays.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateChineseNewYear)
-        </td>*@
-    @if (Model.CelebrateChineseNewYear == true)
-    {
-        <h4>You celebrate Chinese New Year. Do you...</h4>
-        <p>
-            have any special traditions.
-        </p>
-        <p>
-            have a favorite food?
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate birthdays. Do you...</h4>
+                    <p>
+                        remember the best present you ever received?
+                    </p>
+                    <p>
+                        always throw a party?
+                    </p>
+                    <p>
+                        have advice to give to younger self?
+                    </p>
+                    <p>
+                        take a trip?
+                    </p>
+                    <p>
+                        have something to add to a bucket list?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateChineseNewYear == true)
         {
-            <p>
-            You do not celebrate Chinese New Year.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateQuinceanera)
-        </td>*@
-    @if (Model.CelebrateQuinceanera == true)
-    {
-        <h4>You have celebrated a Quinceañera. Make an event for...</h4>
-        <p>
-            your or a loved one's Quinceañera.
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You celebrate Chinese New Year. Do you...</h4>
+                    <p>
+                        have any special traditions?
+                    </p>
+                    <p>
+                        have a favorite food?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateQuinceanera == true)
         {
-            <p>
-            You do not celebrate Quinceanera.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateBarBatMitzvah)
-        </td>*@
-    @if (Model.CelebrateBarBatMitzvah == true)
-    {
-        <h4>You have celebrated a Bar/Bat Mitzvah. Make an event for...</h4>
-        <p>
-            your or a loved one's Bar or Bat Mitzvah.
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You have celebrated a Quinceañera. Make an event for...</h4>
+                    <p>
+                        your or a loved one's Quinceañera.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateBarBatMitzvah == true)
         {
-            <p>
-            You do not celebrate Bar/Bat Mitzvahs.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateDayOfTheDead)
-        </td>*@
-    @if (Model.CelebrateDayOfTheDead == true)
-    {
-        <h4>You celebrate Dia de los Muertos. Do you...</h4>
-        <p>
-            commemorate those who have passed.
-        </p>
-        <p>
-            have any unique traditions
-        </p>
-        <p>
-            look forward to any special foods.
-        </p>
-    }
-    <br/>
-    @*else
+                    <h4>You have celebrated a Bar/Bat Mitzvah. Make an event for...</h4>
+                    <p>
+                        your or a loved one's Bar or Bat Mitzvah.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.CelebrateDayOfTheDead == true)
         {
-            <p>
-            You do not celebrate Day Of The Dead.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateVeteransDay)
-        </td>*@
-    @if (Model.CelebrateVeteransDay == true)
-    {
-        <h4>You celebrate Verteran's Day. Would you...</h4>
-        <p>
-            like to post a tribute to or memory of a veteran.
-        </p>
+                    <h4>You celebrate Dia de los Muertos. Do you...</h4>
+                    <p>
+                        commemorate those who have passed?
+                    </p>
+                    <p>
+                        have any unique traditions?
+                    </p>
+                    <p>
+                        look forward to any special foods?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    }
-    <br/>
-    @*else
+        @if (Model.CelebrateVeteransDay == true)
         {
-            <p>
-            You do not celebrate Veteran's Day.
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.CelebrateCincoDeMayo)
-        </td>*@
-    @if (Model.CelebrateCincoDeMayo == true)
-    {
-        <h4>You celebrate Cinco De Mayo. What is...</h4>
-        <p>
-            one of your traditions.
-        </p>
-    }
-    <br/>
-    @*else
-        {
-            <p>
-            You do not celebrate Cinco De Mayo.
-            </p>
-        }*@
+                    <h4>You celebrate Verteran's Day. Why not...</h4>
+                    <p>
+                        post a tribute to or memory of a veteran.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.AnythingElse)
-        </td>*@
-    @if (Model.AnythingElse == true)
-    {
-        <h4>There's a celebration we may have missed.</h4>
-        <p>
-            Make a post about an important celebration in your life.
-        </p>
-    }
-    <br/>
-    @*else
+        }
+
+        @if (Model.CelebrateCincoDeMayo == true)
         {
-            <p>
-            You do not another holiday or celebration you would like to recognize..
-            </p>
-        }*@
+            <div class="col-md-4">
+                <div class="thumbnail">
+
+                    <h4>You celebrate Cinco De Mayo. What is...</h4>
+                    <p>
+                        one of your traditions?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (Model.AnythingElse == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+
+                    <h4>There's a celebration we may have missed.</h4>
+                    <p>
+                        Make a post about an important celebration in your life.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
 </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.CelebrationID }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+<br />
+<div class="container">
+    <div class="row">
+        <p>
+            @Html.ActionLink("Update Your Celebrations & Holidays", "Edit", new { id = Model.CelebrationID }) |
+            @Html.ActionLink("Return to Your Profile", "Index")
+        </p>
+    </div>
+</div>
