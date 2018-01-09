@@ -2754,11 +2754,11 @@ hr {
 /* SHORTCODES */
 /* WRAPPER */
 .left-side {
-  position: relative;
-  min-height: 100vh;
-  text-align: center;
-  background: #000 url(../Images/pexels-photo-365638.jpeg) no-repeat center;
-  background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+    background: #000 url('../Content/Images/pexels-photo-92733.jpeg') no-repeat center;
+    background-size: cover;
 }
 .left-side header {
   position: relative;
@@ -2802,7 +2802,7 @@ hr {
   border: none;
   color: white;
   display: inline-block;
-  background-color: lawngreen ;
+  background-color: darkgreen ;
   font-family: 'lato', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
@@ -2813,7 +2813,7 @@ hr {
   -webkit-transition: 0.2s ease-in;
   -o-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
-  background: #ff3f00;
+  background: green;
 }
 .right-side .cta span {
   margin-top: 10px;
@@ -3042,15 +3042,15 @@ hr {
 }
 
 .input__label--hoshi-color-1::after {
-	border-color: hsl(102, 100%, 50%);
+	border-color: hsl(119, 86%, 12%);
 }
 
 .input__label--hoshi-color-2::after {
-	border-color: hsl(102, 100%, 50%);
+	border-color: hsl(119, 86%, 12%);
 }
 
 .input__label--hoshi-color-3::after {
-	border-color: hsl(102, 100%, 50%);
+	border-color: hsl(119, 86%, 12%);
 }
 
 .input__field--hoshi:focus + .input__label--hoshi::after,
@@ -3732,7 +3732,7 @@ hr {
 	-webkit-transform: scale3d(1, 1, 1); /* Needed for Chrome bug */
 	transform: scale3d(1, 1, 1);
 	-webkit-transform-origin: 0% 50%;
-	transform-origin: 0% 50%;
+	transform-origin: 0% 50 
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 }

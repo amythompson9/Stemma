@@ -9,6 +9,8 @@
 
 </head>
 <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -27,10 +29,9 @@
                     <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
-
             </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="@Url.Content("~/js/bootstrap.js")"></script>
+        </div>
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
