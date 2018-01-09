@@ -1,10 +1,10 @@
 ﻿@model Stemma.Models.Relationship
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Relationships Questions";
 }
 
-<h2>Relationships and Family</h2>
+<h2>Edit Your Family & Relationships Profile</h2>
 
 
 @using (Html.BeginForm())
@@ -79,8 +79,8 @@
             <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.OtherYoungsters, "True", true) Yes
-                    @Html.RadioButtonFor(model => model.InARelationship, "False", false) No
-                    @Html.ValidationMessageFor(model => model.InARelationship, "", new { @class = "text-danger" })
+                    @Html.RadioButtonFor(model => model.OtherYoungsters, "False", false) No
+                    @Html.ValidationMessageFor(model => model.OtherYoungsters, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -172,7 +172,7 @@
 }
 
 <div>
-    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
+    @Html.ActionLink("Return to Your Profile", "Create", "UserProfiles")
 </div>
 
 @section Scripts {
