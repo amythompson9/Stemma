@@ -1,5 +1,5 @@
 ﻿@model Stemma.Models.Relationship
-
+<link href="~/Content/detailsCSS.css" rel="stylesheet" />
 @{
     ViewBag.Title = "Suggestions for Relationship Stems";
 }
@@ -245,7 +245,7 @@
                 <div class="thumbnail">
                     <h4>You have other adults in your life. Do you...</h4>
                     <p>
-                        know why they are importantto you.
+                        know why they are important to you.
                     </p>
                     <p>
                         their birthday?
@@ -393,169 +393,13 @@
 
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-            <p>
-                @Html.ActionLink("Edit", "Edit", new { id = Model.RelationshipsID }) |
-                @Html.ActionLink("Back to List", "Index")
-            </p>
-            <link href="~/Content/detailsCSS.css" rel="stylesheet" />
+</div>
+<br/>
+<div class="container">
+    <div class="row">
+        <p>
+            @Html.ActionLink("Update Your Family & Relationships", "Edit", new { id = Model.RelationshipsID }) |
+            @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
+        </p>
+    </div>
+</div>
