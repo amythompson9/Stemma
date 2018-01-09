@@ -1,7 +1,41 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "About Stemma";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@*<h3>@ViewBag.Message</h3>*@
 
-<p>Use this area to provide additional information.</p>
+<p>Overwhelmed by gigs of data from capturing every special moment? 
+   Or do you forget to take photos and commemorate major life events? 
+   Want to share stories of your life and leave advice for future generations, but don't know how? 
+    Our guided system will help you build a profile and create a curated timeline you can slowly build overtime, 
+    little by little and bit by byte. Capturing the moments, people, places, and everything in between that makes 
+    your life special is made easy with Stemma.</p>
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Timeline", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
+                <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; @DateTime.Now.Year - Stemma</p>
+</footer>
