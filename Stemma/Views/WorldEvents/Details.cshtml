@@ -1,5 +1,5 @@
 ﻿@model Stemma.Models.WorldEvent
-
+<link href="~/Content/detailsCSS.css" rel="stylesheet" />
 @{
     ViewBag.Title = "Suggestions for World Events Stems";
 }
@@ -9,316 +9,472 @@
 <div>
     <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
     <hr />
+    <div class="rowDetails">
+        @if (Model.September11 == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember September 11, 2001. Do you...</h4>
+                    <p>
+                        remember where you were when you heard the news.
+                    </p>
+                    <p>
+                        have tribute to someone or something you lost on September 11, 2001.
+                    </p>
+                    <p>
+                        remember how things changed after 9-11.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @if (Model.September11 == true)
-    {
-        <h4>You remember September 11, 2001. Do you...</h4>
-    <p>
-        remember where you were when you heard the news.
-    </p>
-    <p>
-        have tribute to someone or something you lost on September 11, 2001.
-    </p>
-    <p>
-        remember how things changed after 9-11.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.MoonLanding)
+            </td>*@
+        @if (Model.MoonLanding == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember the Apollo 11 moon landings. Post about...</h4>
+                    <p>
+                        the Space Race.
+                    </p>
+                    <p>
+                        watching the Moon Landing.
+                    </p>
+                    <p>
+                        the way things changed after the Moon Landing.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember when humans landed on the moon.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.MoonLanding)
-        </td>*@
-    @if (Model.MoonLanding == true)
-    {
-        <h4>You remember the Apollo 11 moon landings. Post about...</h4>
-    <p>
-        the Space Race.
-    </p>
-    <p>
-        watching the Moon Landing.
-    </p>
-    <p>
-        the way things changed after the Moon Landing.
-    </p>
-    }
-    <br />
-    @*else
-    {
-    <p>
-        You do not remember when humans landed on the moon.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.NixonResigns)
+            </td>*@
+        @if (Model.NixonResigns == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember when Richard Nixon resigned. Post about...</h4>
+                    <p>
+                        where you were when you heard that President Nixon resigned.
+                    </p>
+                    <p>
+                        the atmosphere leading up to his resignation.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.NixonResigns)
-        </td>*@
-    @if (Model.NixonResigns == true)
-    {
-        <h4>You remember when Richard Nixon resigned. Post about...</h4>
-    <p>
-        where you were when you heard that President Nixon resigned.
-    </p>
-    <p>
-        the atmosphere leading up to his resignation.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.ElvisDies)
+            </td>*@
+        @if (Model.ElvisDies == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember the death of Elvis Presley. Do you...</h4>
+                    <p>
+                        remember when you learned that Elvis Presley had died.
+                    </p>
+                    <p>
+                        have audio or video clip of your favorite Elvis song.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.ElvisDies)
-        </td>*@
-    @if (Model.ElvisDies == true)
-    {
-        <h4>You remember the death of Elvis Presley. Do you...</h4>
-    <p>
-        remember when you learned that Elvis Presley had died.
-    </p>
-    <p>
-        have audio or video clip of your favorite Elvis song.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.ChallengerExplodes)
+            </td>*@
+        @if (Model.ChallengerExplodes == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember when the Challenger Space Shuttle exploded. Make a post about...</h4>
+                    <p>
+                        how you learned about this event.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.ChallengerExplodes)
-        </td>*@
-    @if (Model.ChallengerExplodes == true)
-    {
-        <h4>You remember when the Challenger Space Shuttle exploded. Make a post about...</h4>
-    <p>
-        how you learned about this event.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.WorldWar2Ends)
+            </td>*@
+        @if (Model.WorldWar2Ends == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember the events of World War II. Do you...</h4>
+                    <p>
+                        have memories of the end of World War II.
+                    </p>
+                    <p>
+                        know how your life changed because of or after the War.
+                    </p>
+                    <p>
+                        know someone who served in the Armed Forces.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.WorldWar2Ends)
-        </td>*@
-    @if (Model.WorldWar2Ends == true)
-    {
-        <h4>You remember the events of World War II. Do you...</h4>
-    <p>
-        have memories of the end of World War II.
-    </p>
-    <p>
-        know how your life changed because of or after the War.
-    </p>
-    <p>
-        know someone who served in the Armed Forces.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.KennedyDies)
+            </td>*@
+        @if (Model.KennedyDies == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember the assassinated of John Kennedy. Post about...</h4>
+                    <p>
+                        where you were when you learned that President Kennedy had been assassinated.
+                    </p>
+                    <p>
+                        the reaction to this event accross the nation.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.KennedyDies)
-        </td>*@
-    @if (Model.KennedyDies == true)
-    {
-        <h4>You remember the assassinated of John Kennedy. Post about...</h4>
-    <p>
-        where you were when you learned that President Kennedy had been assassinated.
-    </p>
-    <p>
-        the reaction to this event accross the nation.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.NotableElection)
+            </td>*@
+        @if (Model.NotableElection == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember an important election. Post about...</h4>
+                    <p>
+                        the event leading up to the election.
+                    </p>
+                    <p>
+                        why this was an important election.
+                    </p>
+                    <p>
+                        the effects of the outcome.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.NotableElection)
-        </td>*@
-    @if (Model.NotableElection == true)
-    {
-        <h4>You remember an important election. Post about...</h4>
-    <p>
-        the event leading up to the election.
-    </p>
-    <p>
-        why this was an important election.
-    </p>
-    <p>
-        the effects of the outcome.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.MLKAssassination)
+            </td>*@
+        @if (Model.MLKAssassination == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember the assassination of Martin Luther King Jr. Do you remember...</h4>
+                    <p>
+                        where you were when you learned that he had been assassinated.
+                    </p>
+                    <p>
+                        how it affected the country.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.MLKAssassination)
-        </td>*@
-    @if (Model.MLKAssassination == true)
-    {
-        <h4>You remember the assassination of Martin Luther King Jr. Do you remember...</h4>
-    <p>
-        where you were when you learned that he had been assassinated.
-    </p>
-    <p>
-        how it affected the country.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.Y2K)
+            </td>*@
+        @if (Model.Y2K == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember Y2K. Did you...</h4>
+                    <p>
+                        party like it was 1999.
+                    </p>
+                    <p>
+                        take steps to prevent the "Y2K" computer disaster.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.Y2K)
-        </td>*@
-    @if (Model.Y2K == true)
-    {
-        <h4>You remember Y2K. Did you...</h4>
-    <p>
-        party like it was 1999.
-    </p>
-    <p>
-        take steps to prevent the "Y2K" computer disaster.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.BerlinWall)
+            </td>*@
+        @if (Model.BerlinWall == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember the Berlin Wall. Make a post for...</h4>
+                    <p>
+                        where you were when you learned the Berlin Wall was torn down.
+                    </p>
+                    <p>
+                        life during the Cold War.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.BerlinWall)
-        </td>*@
-    @if (Model.BerlinWall == true)
-    {
-        <h4>You remember the Berlin Wall. Make a post for...</h4>
-    <p>
-        where you were when you learned the Berlin Wall was torn down.
-    </p>
-    <p>
-        life during the Cold War.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.OJSimpsonCarChase)
+            </td>*@
+        @if (Model.OJSimpsonCarChase == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember the OJ Simpson car chase. Do you...</h4>
+                    <p>
+                        know where you were when you heard about it.
+                    </p>
+                    <p>
+                        remember the verdict.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.OJSimpsonCarChase)
-        </td>*@
-    @if (Model.OJSimpsonCarChase == true)
-    {
-        <h4>You remember the OJ Simpson car chase. Do you...</h4>
-    <p>
-        know where you were when you heard about it.
-    </p>
-    <p>
-        remember the verdict.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.EndOfProhibition)
+            </td>*@
+        @if (Model.EndOfProhibition == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember the Prohibition Era. Do you have stories...</h4>
+                    <p>
+                        of Prohibition, and its end.
+                    </p>
+                    <p>
+                        about your first legal drink after Prohibition ended.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.EndOfProhibition)
-        </td>*@
-    @if (Model.EndOfProhibition == true)
-    {
-        <h4>You remember the Prohibition Era. Do you have stories...</h4>
-    <p>
-        of Prohibition, and its end.
-    </p>
-    <p>
-       about your first legal drink after Prohibition ended.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
-
-    @*<td>
-            @Html.DisplayFor(modelItem => item.AnythingElse)
-        </td>*@
-    @if (Model.AnythingElse == true)
-    {
-        <h4>We missed something that was important to you. Post about...</h4>
-    <p>
-        any other memories of world events.
-    </p>
-    <p>
-        the last episode of Seinfeld.
-    </p>
-    <p>
-        life during the Vietnam War.
-    </p>
-    <p>
-        wardrobe malfunctions.
-    </p>
-    }
-    <br/>
-    @*else
-    {
-    <p>
-        You do not remember September 11, 2001.
-    </p>
-    }*@
+        @*<td>
+                @Html.DisplayFor(modelItem => item.AnythingElse)
+            </td>*@
+        @if (Model.AnythingElse == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>We missed something that was important to you. Post about...</h4>
+                    <p>
+                        any other memories of world events.
+                    </p>
+                    <p>
+                        the last episode of Seinfeld.
+                    </p>
+                    <p>
+                        life during the Vietnam War.
+                    </p>
+                    <p>
+                        wardrobe malfunctions.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        @*else
+            {
+            <p>
+                You do not remember September 11, 2001.
+            </p>
+            }*@
 
 
+    </div>
 </div>
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.WorldEventID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Update Your World Events Page", "Edit", new { id = Model.WorldEventID }) |
+    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
 </p>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @Html.ActionLink("Timeline", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>*@
+                <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
+                <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+            </ul>
+
+        </div>
+    </div>
+</div>

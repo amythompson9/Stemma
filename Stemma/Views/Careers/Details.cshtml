@@ -1,4 +1,5 @@
 ﻿@model Stemma.Models.Career
+<link href="~/Content/detailsCSS.css" rel="stylesheet" />
 
 @{
     ViewBag.Title = "Suggestions for Career Stems";
@@ -7,181 +8,312 @@
 <h2>Your Career & Education</h2>
 
 <div>
-    <h4>Based on your answers, here are some ideas to add events and memories to your Stemma.</h4>
+    <h4>Based on your answers, here are some ideas to add to your Stemma.</h4>
     <hr />
-    @*<dl class="dl-horizontal">*@
-    @*<dt>
-            @Html.DisplayNameFor(model => model.AttendedCollege)
-        </dt>*@
+    <div class="rowDetails">
 
-    @*<dd>
-            @Html.DisplayFor(model => model.AttendedCollege)
-        </dd>*@
+        @if (Model.AttendedCollege == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You attended college. Do you remember...</h4>
+                    <p>
+                        high school graduation?
+                    </p>
+                    <p>
+                        being dropped off at college?
+                    </p>
+                    <p>
+                        you first frat party?
+                    </p>
+                    <p>
+                        going to a big game?
+                    </p>
+                    <p>
+                        your thesis?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @*when you cut and paste: Make sure Model is capitalized.*@
-    @*everything should look like the AttendedCollege example*@
+        @if (Model.Graduations == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember a graduation. Do you remember...</h4>
+                    <p>
+                        an early graduation like kindergarten?
+                    </p>
+                    <p>
+                        your high school graduation?
+                    </p>
+                    <p>
+                        your college graduation?
+                    </p>
+                    <p>
+                        what life was like after graduation?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @if (Model.AttendedCollege == true)
-    {
-        <h4>You attended college. Do you remember...</h4>
-        <p>
-            high school graduation.
-        </p>
-        <p>
-            being dropped off at college.
-        </p>
-        <p>
-            you first frat party.
-        </p>
-        <p>
-            going to a big game.
-        </p>
-        <p>
-            your thesis.
-        </p>
-    }
-    <br/>
+        @if (Model.HadJob == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You've been in the workforce awhile. What about...</h4>
+                    <p>
+                        your best day at work.
+                    </p>
+                    <p>
+                        the first time you quit a job (or got fired!).
+                    </p>
+                    <p>
+                        your current job.
+                    </p>
+                    <p>
+                        a funny story from work.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @if (Model.Graduations == true)
-    {
-        <h4>You remember a graduation. Do you remember...</h4>
-        <p>
-            an early graduation like kindergarten or elementary?
-        </p>
-        <p>
-            your high school graduation.
-        </p>
-        <p>
-            your college graduation.
-        </p>
-        <p>
-            what was life like after graduation?
-        </p>
-    }
-    <br/>
+        @if (Model.Accomplishments == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You're proud of something you've done professionally. Talk about...</h4>
+                    <p>
+                        a career highlight.
+                    </p>
+                    <p>
+                        your favorite boss or colleague.
+                    </p>
+                    <p>
+                        making a friend at work.
+                    </p>
+                    <p>
+                        the most difficult lesson you had to learn.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @if (Model.HadJob == true)
-    {
-        <h4>You've been in the workforce awhile. What about...</h4>
-        <p>
-            your best day at work.
-        </p>
-        <p>
-            the first time you quit a job (or got fired!).
-        </p>
-        <p>
-            your current job.
-        </p>
-        <p>
-            a funny story from work.
-        </p>
-    }
-    <br/>
+        @if (Model.FirstDayOfSchool == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember a first day of school. What about...</h4>
+                    <p>
+                        your first day of school.
+                    </p>
+                    <p>
+                        your favorite class.
+                    </p>
+                    <p>
+                        your favorite teacher.
+                    </p>
+                    <p>
+                        your least favorite teacher.
+                    </p>
+                    <p>
+                        your favorite thing at the playground.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
+        @if (Model.ArmedForces == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Thank you for your service in the Armed Forces.</h4>
+                    <p>
+                        Why did you decide to enlist?
+                    </p>
+                    <p>
+                        In what branch did you serve?
+                    </p>
+                    <p>
+                        Where were you stationed?
+                    </p>
+                    <p>
+                        What was the biggest lesson you learned?
+                    </p>
+                    <p>
+                        Who was your best friend?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @if (Model.Accomplishments == true)
-    {
-        <h4>You're proud of something you've done professionally. Talk about...</h4>
-        <p>
-            a career highlight.
-        </p>
-        <p>
-            your favorite boss or colleague.
-        </p>
-        <p>
-            making a friend at work.
-        </p>
-        <p>
-            the most difficult lesson you had to learn?
-        </p>
-    }
-    <br/>
+        @if (Model.Volunteer == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You've spent some time as a volunteer. Did you...</h4>
+                    <p>
+                        have a favorite volunteer organization?
+                    </p>
+                    <p>
+                        join the Peace Corps or AmericaCorps?
+                    </p>
+                    <p>
+                        change or learn through this service?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
+        @if (Model.Legacies == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You seem to be involved in your community. Post about...</h4>
+                    <p>
+                        your involvement in the community.
+                    </p>
+                    <p>
+                        a time you were a groundbreaker.
+                    </p>
+                    <p>
+                        the biggest impact you have had.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @if (Model.FirstDayOfSchool == true)
-    {
-        <h4>You remember a first day of school. What about...</h4>
-        <p>
-            your first day of school.
-        </p>
-        <p>
-            your favorite class.
-        </p>
-        <p>
-            your favorite teacher.
-        </p>
-        <p>
-            your least favorite teacher.
-        </p>
-        <p>
-            your favorite thing at the playground.
-        </p>
-    }
-    <br/>
+        @if (Model.TechSchool == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You've attended a tech or trade school. Do you remember...</h4>
+                    <p>
+                        why you chose to enroll in school?
+                    </p>
+                    <p>
+                        your experience at this school?
+                    </p>
+                    <p>
+                        a project you completed?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
+        @if (Model.LicensesCertifications == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You're an accomplished licensed professional. Make a memory...</h4>
+                    <p>
+                        about taking or passing an important professional exam.
+                    </p>
+                    <p>
+                        about obtaining a professional license or certification.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @if (Model.ArmedForces == true)
-    {
-        <h4>Thank you for your service in the Armed Forces.</h4>
-        <p>
-            Why did you decide to enlist.
-        </p>
-        <p>
-            What branch did you serve?
-        </p>
-        <p>
-            Where were you stationed?
-        </p>
-        <p>
-            What was the biggest lesson you learned?
-        </p>
-        <p>
-            Who was your best friend?
-        </p>
-    }
-    <br/>
+        @if (Model.FirstJob == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>You remember your first job. Talk about...</h4>
+                    <p>
+                        an important lesson you learned.
+                    </p>
+                    <p>
+                        how you long worked there.
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @if (Model.Volunteer == true)
-    {
-        <h4>You've spent some time as a volunteer. Did you...</h4>
-        <p>
-            have a favorite volunteer organization.
-        </p>
-        <p>
-            join the Peace Corps or AmericaCorps.
-        </p>
-        <p>
-            change or learn through this service?
-        </p>
-    }
-    <br/>
+        @if (Model.WorstJob == true)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>Everyone has a worst job. What..</h4>
+                    <p>
+                        made it the worst job?
+                    </p>
+                    <p>
+                        was the most important thing you learned?
+                    </p>
+                    <div class="EntryButton">
+                        <a href='@Url.Action("Create", "EventTables")'>
+                            <input type='button' value='Make An Entry' class="btn btn-default" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
 
-    @if (Model.Legacies == true)
-    {
-        <h4>You seem to be involved in your community. Post about...</h4>
+    </div>
+</div>
+<br/>
+<div class="container">
+    <div class="row">
         <p>
-            your involvement in the community.
-        </p>
-        <p>
-            a time you were a groundbreaker.
-        </p>
-        <p>
-            the biggest impact you have had.
-        </p>
-    }
-    <br/>
-
-    @if (Model.TechSchool == true)
-    {
-        <h4>You've attended a tech or trade school. Do you remember...</h4>
-        <p>
-            why you chose to enroll in school.
-        </p>
-        <p>
-            your experience at this school.
-        </p>
-        <p>
-            a project you completed.
+            @Html.ActionLink("Update Your Career & Education", "Edit", new { id = Model.CareerID }) |
+            @Html.ActionLink("Return to Your Profile", "Index")
         </p>
     }
     <br/>
@@ -229,3 +361,45 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.CareerID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @Html.ActionLink("Timeline", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>*@
+                <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
+                <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+            </ul>
+
+        </div>
+    </div>
+</div>

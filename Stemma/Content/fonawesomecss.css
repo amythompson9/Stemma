@@ -1,0 +1,24 @@
+﻿
+.custom-icon {
+  background: #666;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  color: #fff;
+  display: table-cell;
+  font-size: x-large;
+  height: 150px;
+  padding: 35px;
+  text-align: center;
+  vertical-align: inherit;
+  width: 150px;
+  margin-top: 20px;
+}
+.custom-icon:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.fix-editor {
+  display: none;
+}
+
