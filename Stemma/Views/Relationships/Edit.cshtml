@@ -1,17 +1,18 @@
 ﻿@model Stemma.Models.Relationship
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit Relationships Questions";
 }
 
-<h2>Relationships and Family</h2>
+<h2>Edit Your Family & Relationships Profile</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
-    <h4>Update and change your relationships and family</h4>
+    <div class="form-horizontal">
+        <h4>Answer these questions to help build your Stemma.</h4>
+        <h4>Your answers will be used to direct how you curate your timeline.</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
@@ -78,8 +79,8 @@
             <div class="col-md-6">
                 <div class="checkbox">
                     @Html.RadioButtonFor(model => model.OtherYoungsters, "True", true) Yes
-                    @Html.RadioButtonFor(model => model.InARelationship, "False", false) No
-                    @Html.ValidationMessageFor(model => model.InARelationship, "", new { @class = "text-danger" })
+                    @Html.RadioButtonFor(model => model.OtherYoungsters, "False", false) No
+                    @Html.ValidationMessageFor(model => model.OtherYoungsters, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -163,14 +164,15 @@
 
 
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="col-md-offset-6 col-md-6">
+                <input type="submit" value="Save Your Answers" class="btn btn-default" />
             </div>
         </div>
+    </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Return to Your Profile", "Create", "UserProfiles")
 </div>
 
 @section Scripts {

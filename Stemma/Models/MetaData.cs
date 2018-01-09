@@ -335,18 +335,20 @@ namespace Stemma.Models
             public int EventID { get; set; }
             public byte[] DateCreated { get; set; }
 
-            [Display(Name = "Name this event:")]
+            [Display(Name = "Title")]
             public string EventTitle { get; set; }
-            [Display(Name = "When did it happen?")]
+            [Display(Name = "Day")]
             //might need to play around in the view
             //so that question applies to m/d/y
             public Nullable<int> EventDay { get; set; }
+            [Display(Name = "Month")]
             public string EventMonth { get; set; }
+            [Display(Name = "Year")]
             public int EventYear { get; set; }
-            [Display(Name = "Who would you like to identify at the event?")]
+            [Display(Name = "Who was with you?")]
             //hmm -- do we still want this option??
             public string PeopleInvolved { get; set; }
-            [Display(Name = "Describe what happened (750 character limit).")]
+            [Display(Name = "Caption (750 character limit).")]
             public string EventCaption { get; set; }
 
         }
@@ -369,10 +371,9 @@ namespace Stemma.Models
 
             public int UserProfileID { get; set; }
 
-            [Display(Name = "What's your birthday? This will start your timeline, so be honest!")]
+            [Display(Name = "Your Birthday is")]
             //might want to add something to format the date, too
-            public System.DateTime Birthdate { get; set; }
-            public int RegisterUserID { get; set; }
+            public DateTime Birthdate { get; set; }
             public int RelationshipsID { get; set; }
             public int CareerID { get; set; }
             public int CelebrationID { get; set; }
