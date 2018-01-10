@@ -322,6 +322,7 @@
       <DependentUpon>StemmaModel.edmx</DependentUpon>
       <LastGenOutput>StemmaModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\StemmaModel.edmx.sql" />
     <Content Include="Models\StemmaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StemmaModel.edmx</DependentUpon>
