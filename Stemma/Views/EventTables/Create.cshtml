@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Event Creation";
 }
+<script src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script src="~/Scripts/fileUploader.js"></script>
 
 <h2>Create an Event for your Timeline</h2>
 
@@ -66,8 +68,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.UploadMedia, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UploadMedia, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UploadMedia, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.UploadMedia)
+            </div>
+            <!----This is where the Image is viewed through its ID---->
+            <div class="container-fluid">
+                <div id="itemImg">
+                </div>
             </div>
         </div>
 
@@ -75,7 +81,11 @@
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
-        </div>
+            <!--filestack Button-->
+            <div class="text-center  col-md-offset-2 col-md-12">
+                <input class="btn btn-default" type="BUTTON" value="Upload" id="fileStack" onclick="upload()">
+            </div>
+        </div>  
     </div>
 }
 
