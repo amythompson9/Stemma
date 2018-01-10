@@ -29,6 +29,7 @@ namespace Stemma.Models
         public int EventYear { get; set; }
         public string PeopleInvolved { get; set; }
         public string EventCaption { get; set; }
+        public string UploadMedia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Medium> Media { get; set; }
