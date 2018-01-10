@@ -89,7 +89,7 @@ namespace Stemma.Controllers
                 db.Entry(worldEvent).State = EntityState.Modified;
                 db.SaveChanges();
                 //next line changed from Index to Details with ID
-                return RedirectToAction("Details" /*, new { id = worldEvent.WorldEventID }*/);
+                return RedirectToAction("Details", new { id = worldEvent.WorldEventID });
             }
             return View(worldEvent);
         }
