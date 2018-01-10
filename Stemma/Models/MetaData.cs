@@ -338,18 +338,23 @@ namespace Stemma.Models
             [Display(Name = "Title")]
             public string EventTitle { get; set; }
             [Display(Name = "Day")]
+            [Range(1, 31)]
             //might need to play around in the view
             //so that question applies to m/d/y
             public Nullable<int> EventDay { get; set; }
             [Display(Name = "Month")]
+            [Range(1, 12)]
             public string EventMonth { get; set; }
-            [Display(Name = "Year")]
+            [Display(Name = "Year (required)")]
+            [Range(1800, 2050)]
             public int EventYear { get; set; }
             [Display(Name = "Who was with you?")]
             //hmm -- do we still want this option??
             public string PeopleInvolved { get; set; }
             [Display(Name = "Caption (750 character limit).")]
             public string EventCaption { get; set; }
+            [Display(Name = "Upload a file here")]
+            public string UploadMedia { get; set; }
 
         }
     }
