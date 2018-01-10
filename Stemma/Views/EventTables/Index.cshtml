@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Index";
 }
+<script src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script src="~/Scripts/fileUploader.js"></script>
 
 <h2>Index</h2>
 
@@ -19,13 +21,9 @@
                 <div>
                     <h1><b>@Html.DisplayFor(modelItem => item.EventTitle)</b></h1>
 
-                    <img src="~/Content/Images/puppy2.jpg" alt="DanaPic" id="itemImg" />
-                    <img src="@item.UploadMedia" alt="DanaPic" id="itemImg" />
 
+                    <img class="uploadedImage" src="@item.UploadMedia" alt="DanaPic" id="itemImg" />                  
 
-
-                    <img src="~/Content/Images/puppy2.jpg" alt="DanaPic" id="itemImg" />
-                    <img src="@item.UploadMedia" alt="DanaPic" id="itemImg" />
 
                     <time>@Html.DisplayFor(modelItem => item.EventYear)</time>
                     <p>@Html.DisplayFor(modelItem => item.EventCaption)</p>
@@ -34,7 +32,7 @@
 
 
                     @Html.ActionLink("Edit", "Edit", new { id = item.EventID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.EventID }) |
+                    @*@Html.ActionLink("Details", "Details", new { id = item.EventID }) |*@
                     @Html.ActionLink("Delete", "Delete", new { id = item.EventID })
                 </div>
             </li>
