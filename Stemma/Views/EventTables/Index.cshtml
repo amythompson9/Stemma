@@ -18,7 +18,7 @@
             <li>
                 <div>
                     <h1><b>@Html.DisplayFor(modelItem => item.EventTitle)</b></h1>
-                    <img src="~/Content/Images/puppy2.jpg" alt="DanaPic" id="itemImg" />
+                    <img src="@item.UploadMedia" alt="DanaPic" id="itemImg" />
                     <time>@Html.DisplayFor(modelItem => item.EventYear)</time>
                     <p>@Html.DisplayFor(modelItem => item.EventCaption)</p>
 
