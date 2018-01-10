@@ -85,7 +85,7 @@ namespace Stemma.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "EventID,DateCreated,EventTitle,EventDay,EventMonth,EventYear,PeopleInvolved,EventCaption")] EventTable eventTable)
+        public ActionResult Create([Bind(Include = "EventID,DateCreated,EventTitle,EventDay,EventMonth,EventYear,PeopleInvolved,EventCaption,UploadMedia")] EventTable eventTable)
         {
             if (ModelState.IsValid)
             {
@@ -117,7 +117,7 @@ namespace Stemma.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EventID,DateCreated,EventTitle,EventDay,EventMonth,EventYear,PeopleInvolved,EventCaption")] EventTable eventTable)
+        public ActionResult Edit([Bind(Include = "EventID,DateCreated,EventTitle,EventDay,EventMonth,EventYear,PeopleInvolved,EventCaption,UploadMedia")] EventTable eventTable)
         {
             if (ModelState.IsValid)
             {
