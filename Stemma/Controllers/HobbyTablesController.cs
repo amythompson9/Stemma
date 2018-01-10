@@ -86,7 +86,7 @@ namespace Stemma.Controllers
                 db.Entry(hobbyTable).State = EntityState.Modified;
                 db.SaveChanges();
                 //next line changed from Index to Details, and id
-                return RedirectToAction("Details", hobbyTable.HobbyID);
+                return RedirectToAction("Details", new { id = hobbyTable.HobbyID });
             }
             return View(hobbyTable);
         }
