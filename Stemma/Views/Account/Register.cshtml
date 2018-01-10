@@ -38,21 +38,21 @@
                         </label>
                     </span>
                     <span class="input input--hoshi">
-                        <input class="input__field input__field--hoshi"  @Html.TextBoxFor(m => m.Email) />
+                        <input class="input__field input__field--hoshi" type="email" id="email">
                         <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="email">
                             <span class="input__label-content input__label-content--hoshi">E-mail</span>
                         </label>
                     </span>
                     <span class="input input--hoshi">
-                        <input class="input__field input__field--hoshi"  @Html.LabelFor(m => m.Password) />
+                        <input class="input__field input__field--hoshi" type="password" id="password">
                         <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password">
                             <span class="input__label-content input__label-content--hoshi" >Password</span>
                         </label>
                     </span>
                     <span class="input input--hoshi">
-                        <input class="input__field input__field--hoshi" @Html.PasswordFor(m => m.ConfirmPassword)/>
+                        <input class="input__field input__field--hoshi" type="password" id="password1">
                         <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="password1">
-                            <span class="input__label-content input__label-content--hoshi">Conform Password</span>
+                            <span class="input__label-content input__label-content--hoshi">Confirm Password</span>
                         </label>
                     </span>
                     @*<div>
