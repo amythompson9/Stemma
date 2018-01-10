@@ -20,7 +20,11 @@
             <li>
                 <div>
                     <h1><b>@Html.DisplayFor(modelItem => item.EventTitle)</b></h1>
+
+
                     <img class="uploadedImage" src="@item.UploadMedia" alt="DanaPic" id="itemImg" />                  
+
+
                     <time>@Html.DisplayFor(modelItem => item.EventYear)</time>
                     <p>@Html.DisplayFor(modelItem => item.EventCaption)</p>
 
@@ -28,7 +32,7 @@
 
 
                     @Html.ActionLink("Edit", "Edit", new { id = item.EventID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.EventID }) |
+                    @*@Html.ActionLink("Details", "Details", new { id = item.EventID }) |*@
                     @Html.ActionLink("Delete", "Delete", new { id = item.EventID })
                 </div>
             </li>
@@ -81,7 +85,7 @@
                 <span class="icon-bar"></span>
             </button>
             @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-            @Html.ActionLink("Timeline", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
