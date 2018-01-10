@@ -193,6 +193,7 @@ th {
   margin-left: 0px;
   padding-left: 15px;
   padding-right: 15px;
+  max-width:100%;
 }
 @media (min-width: 768px) {
   .container {
@@ -2778,12 +2779,12 @@ hr {
   font-family: 'lato', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
-  color: white;
+  color: forestgreen;
   letter-spacing: 0.12em;
 }
 .left-side header h3 {
   margin: 0;
-  font-family: 'Playfair Display', serif;
+ font-family: 'Allura', cursive; /*for STEMMA only*/
   font-size: 54px;
   font-weight: 400;
   line-height: 72px;
@@ -3740,7 +3741,7 @@ hr {
 	-webkit-transform: scale3d(1, 1, 1); /* Needed for Chrome bug */
 	transform: scale3d(1, 1, 1);
 	-webkit-transform-origin: 0% 50%;
-	transform-origin: 0% 50 
+	transform-origin: 0% 50% ;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 }
