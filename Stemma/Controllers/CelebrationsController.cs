@@ -86,7 +86,7 @@ namespace Stemma.Controllers
                 db.Entry(celebration).State = EntityState.Modified;
                 db.SaveChanges();
                 //changed Index to Details/id on next line
-                return RedirectToAction("Details" /*, new { id = celebration.CelebrationID }*/);
+                return RedirectToAction("Details", new { id = celebration.CelebrationID });
             }
             return View(celebration);
         }

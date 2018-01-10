@@ -133,6 +133,7 @@
           <Property Name="EventYear" Type="int" Nullable="false" />
           <Property Name="PeopleInvolved" Type="nvarchar" MaxLength="300" />
           <Property Name="EventCaption" Type="nvarchar" MaxLength="750" />
+          <Property Name="UploadMedia" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="HobbyTable">
           <Key>
@@ -699,6 +700,7 @@
           <Property Name="EventCaption" Type="String" MaxLength="750" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Media" Relationship="STEMMAModel.FK_Media_EventTable" FromRole="EventTable" ToRole="Medium" />
           <NavigationProperty Name="UserProfiles" Relationship="STEMMAModel.FK_UserProfile_EventTable" FromRole="EventTable" ToRole="UserProfile" />
+          <Property Name="UploadMedia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Media_EventTable">
           <End Type="STEMMAModel.EventTable" Role="EventTable" Multiplicity="0..1" />
@@ -1079,6 +1081,7 @@
           <EntitySetMapping Name="EventTables">
             <EntityTypeMapping TypeName="STEMMAModel.EventTable">
               <MappingFragment StoreEntitySet="EventTable">
+                <ScalarProperty Name="UploadMedia" ColumnName="UploadMedia" />
                 <ScalarProperty Name="EventCaption" ColumnName="EventCaption" />
                 <ScalarProperty Name="PeopleInvolved" ColumnName="PeopleInvolved" />
                 <ScalarProperty Name="EventYear" ColumnName="EventYear" />
