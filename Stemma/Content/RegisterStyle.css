@@ -1,13 +1,21 @@
 ﻿div .hidden{
     display:none;
+    
+    
 }
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  height: 100%;
+  margin:0px;
+
 }
 body {
-  margin: 0;
+  margin: 0px;
+  height: 100%;
+  
+
 }
 article,
 aside,
@@ -181,31 +189,31 @@ th {
   padding: 0;
 }
 .container {
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 0px;
+  margin-left: 0px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 100%;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 100%;
   }
 }
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0%;
+  padding-right: 0%;
 }
 .row {
   margin-left: -15px;
@@ -2757,7 +2765,7 @@ hr {
     position: relative;
     min-height: 100vh;
     text-align: center;
-    background: #000 url('../Content/Images/pexels-photo-92733.jpeg') no-repeat center;
+    background: #000 url('../Content/Images/pexels-photo-365638.jpeg') no-repeat center;
     background-size: cover;
 }
 .left-side header {
