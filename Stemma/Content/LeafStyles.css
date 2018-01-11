@@ -1,0 +1,319 @@
+﻿body {
+    font-size: 2.5rem;
+    background-repeat: no-repeat;
+    font-family: Roboto;
+}
+
+#logo {
+    color: green;
+    text-shadow: 1px 1px 1px rgba(225,255,125,.6);
+}
+/*NAVBAR*/
+.navbar {
+    color: rgb(100,0,0) !important;
+    padding: 1vh 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: rgba(255,255,255,.6);
+    border-bottom: 1px solid rgba(195, 255, 5,.5);
+}
+.navbar .active {
+    background-color: rgba(20,15,100,.6);
+}
+
+.navbar-brand {
+    margin: 1vh 5vw 0 0;
+    font-family: Allura;
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgba(225,255,125,.6);
+}
+
+/*LANDING PAGE*/
+#landing-page-text-boxes {
+    background: linear-gradient( rgba(195, 255, 15,.1), 
+                                 rgba(255, 255, 255,.7), 
+                                 rgba(255, 215, 105,.1));
+    margin: 3vh 0 10vh 2.2vw;
+    padding: 0 1vw;
+    color: rgb(0, 60, 0);
+    text-shadow: 1px 1px rgba(255,255,255,.2);
+    width: 94vw;
+}
+
+.leaf-landing-page {
+    /*background-image: url('Large-Devions-photo-365638.jpg');*/
+    background-image: url('Devions-60-photo-365638.jpg');
+    background-repeat: no-repeat;
+}
+
+.leaf-btn {
+    margin: 1vh 0;
+    color: rgba(220, 255, 35,1);
+    background-color: green;
+    border: 1px rgb(195,255,15) solid;
+    box-shadow: 2px 2px 6px rgba(118,15,60,1);
+    font-family: Roboto;
+    font-size: 2rem;
+}
+
+    .leaf-btn:hover {
+        color: rgb(0,65,0);
+        background-color: rgba(220,255,35,.5);
+        border: 1px rgb(1,105,0) solid;
+        box-shadow: 3px 3px 8px rgb(100,5,30);
+    }
+
+.jumbotron {
+    max-height: 60vh;
+    font-family: Roboto;
+    color:  rgb(128,15,60);
+    text-align: center;
+    background-color: rgb(230,230,230);
+    border: 1px solid rgb(118, 15, 30);
+    box-shadow: 5px 5px 70px rgb(128,15,60);
+    background: linear-gradient( rgba(195, 255, 5,.8), rgba(255, 255, 255,.8), rgba(255, 215, 105,.6));
+}
+.jumbotron h1 {
+    line-height: .6;
+    padding:4vh 0;
+    font-family: Allura;
+    font-size: 15rem;
+    color: green;
+    text-shadow: 1px 1px 1px rgba(225,255,125,.6);
+}
+.jumbotron h2 {
+    padding:0 0 2vh 0;
+    margin: 0;
+    line-height: 1;
+}
+footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40vh;
+}
+
+h5 {
+    color: rgb(224, 207, 170);
+    color: rgb(166,150,125);
+    color: rgb(136,122,90);
+    color: rgb(80,73,62);
+    color: rgb(177, 198, 77);
+    color: rgb(80,110,40);
+    color: rgb(88,15,60);
+    color: rgb(77,83,125);
+    color: rgb(20,18,60);
+}
+
+/*PROFILE PAGE*/
+#profile-page {
+}
+article {
+    height: 50vh;
+    color: rgb(108,15,60);
+    background-color: rgba(255, 255, 200, .6);
+    box-shadow: 5PX 3px 4px rgba(108,15,60,.9);
+    padding: 2vh 2vw;
+    margin: 12vh 0;
+    border-radius: 5%;
+}
+
+article h2 {
+    color: rgb(20,18,100);
+}
+
+article btn {
+    position: absolute;
+    bottom: 1vh;
+}
+.profile-btn {
+    margin: 1vh 0;
+    color: rgba(220, 255, 35,1);
+    background-color: green;
+    border: 1px rgb(195,255,15) solid;
+    box-shadow: 2px 2px 6px rgba(118,15,60,1);
+    font-family: Roboto;
+    font-size: 2rem;
+}
+
+.profile-btn:hover {
+    color: rgb(0,65,0);
+    background-color: rgba(220,255,35,.5);
+    border: 1px rgb(1,105,0) solid;
+    box-shadow: 3px 3px 8px rgb(100,5,30);
+}
+
+/*TIMELINE*/
+#leaf-timeline-page {
+    background-image: url('Large-Devions-photo-365638.jpg');
+    /*background-image: url('../images/full-sized-leaf-131063 (1).jpg');*/
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb(232,255,136);
+    overflow-x: hidden;
+}
+/* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.intro {
+    padding: 9vh 0 0 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+.timeline {
+    background: linear-gradient( rgba(195, 255, 15,.3), 
+                                 rgba(255, 255, 255,.4), 
+                                 rgba(195, 255, 15,.5));
+    margin: 0 5vw;
+}
+.timeline ul {
+    padding: 50px 0;
+}
+
+    .timeline ul li {
+        list-style-type: none;
+        position: relative;
+        width: 6px;
+        margin: 0 auto;
+        padding-top: 0px;
+        background-color: rgb(218,255,107);
+    }
+
+        .timeline ul li::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: inherit;
+        }
+
+        .timeline ul li div {
+            align-items: center;
+            position: relative;
+            bottom: 0;
+            width: 400px;
+            padding: 15px;
+            background: rgba(50,0,55,.9);
+            border-radius: 3%;
+            box-shadow: 4px 4px 8px rgba(17,0,50,.6);
+        }
+
+            .timeline ul li div::before {
+                content: "";
+                position: absolute;
+                bottom: 6px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+            }
+
+        .timeline ul li:nth-child(odd) div {
+            left: 45px;
+        }
+
+            .timeline ul li:nth-child(odd) div::before {
+                left: -15px;
+                border-width: 13px 20px 13px 0;
+                border-color: transparent rgb(50,0,55) transparent transparent;
+            }
+
+        .timeline ul li:nth-child(even) div {
+            left: -439px;
+        }
+
+            .timeline ul li:nth-child(even) div::before {
+                right: -15px;
+                border-width: 8px 0 8px 16px;
+                border-color: transparent transparent transparent rgb(50,0,55);
+            }
+
+time {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+    transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+    background: rgb(244,70,95);
+}
+
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+.timeline img {
+    border-radius: 5%;
+    width: 99%;
+}
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 250px;
+    }
+
+    .timeline ul li:nth-child(even) div {
+        left: -289px;
+        /*250+45-6*/
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline ul li {
+        margin-left: 20px;
+    }
+
+        .timeline ul li div {
+            width: calc(100vw - 91px);
+        }
+
+        .timeline ul li:nth-child(even) div {
+            left: 45px;
+        }
+
+            .timeline ul li:nth-child(even) div::before {
+                left: -15px;
+                border-width: 14px 21px 14px 0;
+                border-color: transparent rgb(50,0,55) transparent transparent;
+            }
+}
