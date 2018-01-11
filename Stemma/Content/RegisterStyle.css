@@ -3,6 +3,9 @@
     
     
 }
+input, select, textarea {
+    text-align: center;
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

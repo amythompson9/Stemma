@@ -312,6 +312,7 @@
     <Content Include="Content\Images\IMGPlaceholder.jpg" />
     <Content Include="Content\Images\pexels-photo-365638.jpeg" />
     <Content Include="Content\LeafStyles.css" />
+    <Content Include="Content\LoginStyle.css" />
     <Content Include="Content\RegisterStyle.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
