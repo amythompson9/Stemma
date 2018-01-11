@@ -22,9 +22,10 @@ namespace Stemma.Controllers
 
             var queryWholeTimeline = from EventTable in db.EventTables
                                      orderby
-                                       EventTable.EventYear,
-                                       EventTable.EventMonth,
-                                       EventTable.EventDay descending
+                                     //you changed one "descending" to 3 "ascending"
+                                       EventTable.EventYear ascending,
+                                       EventTable.EventMonth ascending,
+                                       EventTable.EventDay ascending
                                      select EventTable;
 
             //select new
