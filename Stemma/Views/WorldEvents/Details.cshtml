@@ -15,15 +15,17 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember September 11, 2001. Do you...</h4>
-                    <p>
-                        remember where you were when you heard the news.
-                    </p>
-                    <p>
-                        have tribute to someone or something you lost on September 11, 2001.
-                    </p>
-                    <p>
-                        remember how things changed after 9-11.
-                    </p>
+                    <ul>
+                        <li><i class="fa fa-envira" style="font-size:15px"></i>
+                            remember where you were when you heard the news.
+                        </li>
+                        <li>
+                            have tribute to someone or something you lost on September 11, 2001.
+                        </li>
+                        <li>
+                            remember how things changed after 9-11.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -32,16 +34,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.MoonLanding)
-            </td>*@
         @if (Model.MoonLanding == true)
         {
             <div class="col-md-4">
@@ -64,16 +56,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.NixonResigns)
-            </td>*@
         @if (Model.NixonResigns == true)
         {
             <div class="col-md-4">
@@ -93,16 +75,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.ElvisDies)
-            </td>*@
         @if (Model.ElvisDies == true)
         {
             <div class="col-md-4">
@@ -122,16 +94,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.ChallengerExplodes)
-            </td>*@
         @if (Model.ChallengerExplodes == true)
         {
             <div class="col-md-4">
@@ -148,16 +110,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.WorldWar2Ends)
-            </td>*@
         @if (Model.WorldWar2Ends == true)
         {
             <div class="col-md-4">
@@ -180,16 +132,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.KennedyDies)
-            </td>*@
         @if (Model.KennedyDies == true)
         {
             <div class="col-md-4">
@@ -209,16 +151,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.NotableElection)
-            </td>*@
         @if (Model.NotableElection == true)
         {
             <div class="col-md-4">
@@ -241,16 +173,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.MLKAssassination)
-            </td>*@
         @if (Model.MLKAssassination == true)
         {
             <div class="col-md-4">
@@ -270,16 +192,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.Y2K)
-            </td>*@
         @if (Model.Y2K == true)
         {
             <div class="col-md-4">
@@ -299,16 +211,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.BerlinWall)
-            </td>*@
         @if (Model.BerlinWall == true)
         {
             <div class="col-md-4">
@@ -328,16 +230,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.OJSimpsonCarChase)
-            </td>*@
         @if (Model.OJSimpsonCarChase == true)
         {
             <div class="col-md-4">
@@ -357,16 +249,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.EndOfProhibition)
-            </td>*@
         @if (Model.EndOfProhibition == true)
         {
             <div class="col-md-4">
@@ -386,16 +268,6 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
-
-        @*<td>
-                @Html.DisplayFor(modelItem => item.AnythingElse)
-            </td>*@
         @if (Model.AnythingElse == true)
         {
             <div class="col-md-4">
@@ -420,22 +292,26 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <h4>
+                        @Html.ActionLink("Change Your Suggestions", "Edit", new { id = Model.WorldEventID })
+                    </h4>
+                    <h4>
+                    @*I'd love to insert that leaf here!!*@
+                    </h4>
+                    <h4>
+                        @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
+                    </h4>
+                </div>
+            </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember September 11, 2001.
-            </p>
-            }*@
 
 
     </div>
 </div>
 
-<p>
-    @Html.ActionLink("Update Your World Events Page", "Edit", new { id = Model.WorldEventID }) |
-    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
-</p>
+
 
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
