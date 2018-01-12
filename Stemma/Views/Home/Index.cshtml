@@ -43,7 +43,7 @@
     </div>
 </div>
 @*Put navbar onto media page and make the timeline go to the index of the event table*@
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top" id="navaay">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -51,20 +51,24 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             @*@Html.ActionLink("Timeline", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
-                    <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
+            <ul class="nav navbar-nav navbar-left">
+                <li>@Html.ActionLink("Stemma", "Index", "Home")</li>
+                
             </ul>
-            @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
+                    <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>*@
+                    <li>@Html.Partial("_LoginPartial")</li> 
+            </ul>
+            </div>
         </div>
-    </div>
 </div>
     <footer>
         <p>&copy; @DateTime.Now.Year - Stemma</p>
