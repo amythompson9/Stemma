@@ -9,6 +9,7 @@
     <h1>World Events</h1>
     <h3>Based on your answers, here are some ideas to add to your Stemma:</h3>
 </div>
+
 <div>
     <div class="rowDetails">
         @if (Model.September11 == true)
@@ -18,7 +19,6 @@
                     <h4>You remember September 11, 2001. Do you...</h4>
                     <ul>
                         <li class="fa fa-envira">
-                            @*<i class="fa fa-envira" aria-hidden="true"></i>*@
                             remember where you were when you heard the news.
                         </li>
                         <li class="fa fa-envira">
@@ -38,20 +38,21 @@
         }
         @if (Model.MoonLanding == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
-                    <h4>You remember the Apollo 11 moon landings. Post about...</h4>
+                    <h4>You remember the Apollo 11 Moon Landing. Post about...</h4>
                     <ul>
                         <li class="fa fa-envira">
                             the Space Race.
-                            </li>
+                        </li>
                         <li class="fa fa-envira">
                             watching the Moon Landing.
                         </li>
+                        @*are the last two lines still showing on one row??*@
                         <li class="fa fa-envira">
                             the way things changed after the Moon Landing.
                         </li>
-</ul>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -62,7 +63,7 @@
         }
         @if (Model.NixonResigns == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You remember when Richard Nixon resigned. Post about...</h4>
                     <ul>
@@ -91,7 +92,7 @@
                             remember when you learned that Elvis Presley had died.
                         </li>
                         <li class="fa fa-envira">
-                            have audio or video clip of your favorite Elvis song.
+                            have an audio or video clip of your favorite Elvis song.
                         </li>
                     </ul>
                     <div class="EntryButton">
@@ -107,7 +108,7 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember when the Challenger Space Shuttle exploded. Make a post about...</h4>
-                    
+
                     <ul>
                         <li class="fa fa-envira">
                             how you learned about this event.
@@ -150,7 +151,7 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the assassinated of John Kennedy. Post about...</h4>
-                    
+
                     <ul>
                         <li class="fa fa-envira">
                             where you were when you learned that President Kennedy had been assassinated.
@@ -196,7 +197,7 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the assassination of Martin Luther King Jr. Do you remember...</h4>
-                    
+
                     <ul>
                         <li class="fa fa-envira">
                             where you were when you learned that he had been assassinated.
@@ -281,7 +282,7 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the Prohibition Era. Do you have stories...</h4>
-                    
+
                     <ul>
                         <li class="fa fa-envira">
                             of Prohibition, and its end.
@@ -330,7 +331,7 @@
                         @Html.ActionLink("Change Your Suggestions", "Edit", new { id = Model.WorldEventID })
                     </h4>
                     <h4>
-                    @*I'd love to insert that leaf here!!*@
+                        @*I'd love to insert that leaf here!!*@
                     </h4>
                     <h4>
                         @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
@@ -338,8 +339,6 @@
                 </div>
             </div>
         }
-
-
     </div>
 </div>
 
