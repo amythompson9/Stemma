@@ -1,16 +1,19 @@
 ﻿@import url('fonawesomecss.css');
 @import url('LeafStyles.css');
 
-body {
+body, html {
     background-image: url('../Content/Images/pexels-photo-365638.jpeg');
     margin: 0px;
     background-size: cover;
-    /*why doesn't that cover the whole page?'*/
+
 }
-.detailsHeading{
-    margin-top: 120px;
+.detailsHeading {
+    padding: 0 30px 0 30px;
+    font-size: 120%;
+    margin-top: 30px;
     color: rgba(50,0,55,.9);
     font-weight: bold;
+
 }
 
 .detailsHeading h1{
@@ -33,7 +36,7 @@ body {
         /*border-width: 13px 20px 13px 0;
         border-color: transparent rgb(50,0,55) transparent transparent;*/
         box-shadow: 4px 4px 8px rgba(17,0,50,.6);
-        /*those border things copies from holly's timeline style*/
+        /*those border things copied from holly's timeline style*/
         /*margin: 0, -20px, 10px, -20px;*/
     }
 
@@ -70,12 +73,15 @@ body {
 p {
     font-size: 19px;
 }
-.btn {
+
+/*this next stuff was already on the page*/
+/*.btn {
     margin-left: 200px;
     padding-bottom: 3px;
     border: 2px;
     border-color: 
-}
+}*/
+
 .EntryButton {
     position: absolute;
     bottom: 35px;
@@ -83,3 +89,24 @@ p {
     /*background-color: green;*/
 }
 
+/*you copied this from registerstyle.css*/
+.btn {
+    padding: 13px 25px;
+    border: 1px;
+    border-color: lightgray;
+    color: lightgray;
+    /*display: inline-block;*/
+    background-color: green;
+    font-family: 'lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    border-radius: 24px;
+}
+
+    .btn:hover {
+        -webkit-transition: 0.1s ease-in;
+        -o-transition: 0.1s ease-in;
+        transition: 0.1s ease-in;
+        background: lightgray;
+    }
