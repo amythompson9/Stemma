@@ -3,6 +3,8 @@
     background-image: url('Images/Devions-60-photo-365638.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Roboto;
+    margin-top: 70px;
 }
 
 #logo {

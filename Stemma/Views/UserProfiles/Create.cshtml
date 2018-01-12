@@ -29,18 +29,21 @@
         <div row="CategoryRow1">
             <div class="col-md-4">
                 <div class="icon-wrapper">
-                    <i class="fa fa-users fa-5x custom-icon">
+                    <i class="fa fa-users fa-4x custom-icon"> 
+                        @*<button onclick="window.location.href='Relationships/Create'"></button>*@
                         <span class="fix-editor">&nbsp;</span>
                     </i>
                 </div>
-                <h4>@Html.ActionLink("Relationships & Family", "Create", "Relationships")</h4>
-                <p>
+                <div class="navigation">
+                    <h4>@Html.ActionLink("Relationships & Family", "Create", "Relationships")</h4>
+                </div>
+                    <p>
                     Your friends, loves, children, parents, and others we meet along the way are the people who shape who you are. Who are they, and how did they change you?
                 </p>
             </div>
             <div class="col-md-4">
                 <div class="icon-wrapper">
-                    <i class="fa fa-graduation-cap fa-5x custom-icon">
+                    <i class="fa fa-graduation-cap fa-4x custom-icon">
                         <span class="fix-editor">&nbsp;</span>
                     </i>
                 </div>
@@ -51,7 +54,7 @@
             </div>
             <div class="col-md-4">
                 <div class="icon-wrapper">
-                    <i class="fa fa-book fa-5x custom-icon">
+                    <i class="fa fa-book fa-4x custom-icon">
                         <span class="fix-editor">&nbsp;</span>
                     </i>
                 </div>
@@ -187,7 +190,7 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-    <link href="~/Content/fonawesomecss.css" rel="stylesheet" />
+    <link href="~/Content/UserProfileCreate.css" rel="stylesheet" />
     <link href="~/Content/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
 }
 

@@ -310,10 +310,13 @@
     <Content Include="Content\fontawesome\css\font-awesome.min.css" />
     <Content Include="Content\fontawesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\Devions-60-photo-365638.jpg" />
+    <Content Include="Content\Family-RelationshipStyle.css" />
     <Content Include="Content\Images\IMGPlaceholder.jpg" />
     <Content Include="Content\Images\pexels-photo-365638.jpeg" />
+    <Content Include="Content\Images\testing-365638.jpg" />
     <Content Include="Content\LeafStyles.css" />
     <Content Include="Content\RegisterStyle.css" />
+    <Content Include="Content\UserProfileCreate.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
