@@ -3,9 +3,11 @@
 @{
     ViewBag.Title = "Hobby Profile Questions";
 }
+<link href="~/Content/Family-RelationshipStyle.css" rel="stylesheet" />
 
-<h2>Hobbies & Interests</h2>
-
+<div class="PageHeader">
+    <h2>Hobbies & Interests</h2>
+</div>
 
 @using (Html.BeginForm()) 
 {
@@ -157,7 +159,7 @@
     </div>
 }
 
-<div>
+<div class="Profile">
     @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
 </div>
 
