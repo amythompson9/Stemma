@@ -165,7 +165,7 @@
     @Scripts.Render("~/bundles/jqueryval")
 }
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div id="navaay" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -178,9 +178,10 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-                <li>Stemma</li>
+                <li class="active"><a href="#">STEMMA</a></li>
+                @*<li class="active">Stemma</li>*@
             </ul>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-center">
                 @*<li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>*@
@@ -194,7 +195,7 @@
         </div>
     </div>
 </div>
-<div class="navbar navbar-inverse navbar-fixed-bottom">
+<div id="navaay" class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
