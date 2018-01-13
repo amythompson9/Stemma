@@ -1,5 +1,6 @@
 ﻿body {
     padding-bottom: 20px;
+    font-family: "Roboto";
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -23,7 +24,7 @@ textarea {
 
 /*Start of CSS for timeline, if anything breaks reasearch below this line!*/
 
-*,
+/**,
 *::before,
 *::after {
   margin: 0;
@@ -37,11 +38,11 @@ body {
   color: #fff;
   overflow-x: hidden;
   padding-bottom: 50px;
-} /* INTRO SECTION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+} INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
 
 .intro {
-  background: #f45b69;
+  /*background: #f45b69;
   padding: 100px 0;
 }
 
@@ -57,7 +58,7 @@ h1 {
 }
 
 /* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
 
 .timeline ul {
   background: #456990;
@@ -110,6 +111,7 @@ h1 {
   left: -15px;
   border-width: 8px 16px 8px 0;
   border-color: transparent #f45b69 transparent transparent;
+  /might want to re-code that back in for effect, change color, though
 }
 
 .timeline ul li:nth-child(even) div {
@@ -120,6 +122,8 @@ h1 {
   right: -15px;
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent #f45b69;
+    might want to re-code that back in for effect, change color, though
+
 }
 
 time {
@@ -129,8 +133,8 @@ time {
   margin-bottom: 8px;
 }
 
-/* EFFECTS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
 
 .timeline ul li::after {
   transition: background 0.5s ease-in-out;
@@ -160,8 +164,8 @@ time {
   opacity: 1;
 }
 
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
 
 @media screen and (max-width: 900px) {
   .timeline ul li div {
@@ -169,7 +173,7 @@ time {
   }
   .timeline ul li:nth-child(even) div {
     left: -289px;
-    /*250+45-6*/
+    250+45-6
   }
 }
 
@@ -187,7 +191,8 @@ time {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent #f45b69 transparent transparent;
+      might want to re-code that back in for effect, change color, though
   }
-
-
 }
+THE END OF TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */

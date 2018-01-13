@@ -1,26 +1,32 @@
 ﻿@model Stemma.Models.Memory
 <link href="~/Content/detailsCSS.css" rel="stylesheet" />
+<link href="~/Content/LeafStyles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 @{
     ViewBag.Title = "Suggestions for Memories Stems";
 }
 
-<h2>Memories & Stories</h2>
+<div class="detailsHeading">
+    <h2>Memories & Stories</h2>
+    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
+</div>
 
 <div>
-    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
-    <hr />
     <div class="rowDetails">
         @if (Model.BrokenBones == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You've had a broken bone or similar injury. What is the story of...</h4>
-                    <p>
-                        your first broken bone.
-                    </p>
-                    <p>
-                        a hospital stay or surgery.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your first broken bone.&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            a hospital stay or surgery.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -29,33 +35,26 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.OwnHome)
-            </td>*@
         @if (Model.OwnHome == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You are a home owner. Post about...</h4>
-                    <p>
-                        your current home.
-                    </p>
-                    <p>
-                        a previous home(s).
-                    </p>
-                    <p>
-                        when you moved out of your parents' house.
-                    </p>
-                    <p>
-                        an important lesson you learned about home ownership.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your current home.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            a previous home(s).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            when you moved out of your parents' house.
+                        </li>
+                        <li class="fa fa-envira">
+                            an important lesson you learned about home ownership.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -64,30 +63,23 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.DriversLicense)
-            </td>*@
         @if (Model.DriversLicense == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You can drive a car. Remember when...</h4>
-                    <p>
-                        you got your driver's license.
-                    </p>
-                    <p>
-                        you took your first road trip.
-                    </p>
-                    <p>
-                        you bought your first car.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            you got your driver's license.
+                        </li>
+                        <li class="fa fa-envira">
+                            you took your first road trip.
+                        </li>
+                        <li class="fa fa-envira">
+                            you bought your first car.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -96,56 +88,42 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.FirstTooth)
-            </td>*@
         @if (Model.FirstTooth == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You have a story about losing a tooth. Is it...</h4>
-                    <p>
-                        a story about your first tooth...
-                    </p>
-                    <p>
-                        or your last tooth...
-                    </p>
-                    <p>
-                        or anything in between.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            a story about your first tooth...
+                        </li>
+                        <li class="fa fa-envira">
+                            or your last tooth...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            or any tooth in between.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
                         </a>
                     </div>
                 </div>
-            </div>        
+            </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.PersonalNickName)
-            </td>*@
         @if (Model.PersonalNickName == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You have a nickname. What is...</h4>
-                    <p>
-                        the story behind your nickname.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            the story behind your nickname.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -154,59 +132,45 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.FamilyNickName)
-            </td>*@
         @if (Model.FamilyNickName == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>Someone in your life has a nickname. Post about...</h4>
-                    <p>
-                        how that person earned this nickname.
-                    </p>
-                    <p>
-                        if they like this nickname.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            how that person earned this nickname.
+                        </li>
+                        <li class="fa fa-envira">
+                            if they like this nickname.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
                         </a>
                     </div>
                 </div>
-            </div>        
+            </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.RideBike)
-            </td>*@
         @if (Model.RideBike == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You can ride a bike. Did you...</h4>
-                    <p>
-                        have anyone teach you.
-                    </p>
-                    <p>
-                        earn any scars from learning to ride.
-                    </p>
-                    <p>
-                        have a favorite bike trip.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have anyone teach you.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            earn any scars from learning to ride.
+                        </li>
+                        <li class="fa fa-envira">
+                            have a favorite bike trip.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -215,27 +179,20 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.CommitCrime)
-            </td>*@
         @if (Model.CommitCrime == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You committed a crime. Was there...</h4>
-                    <p>
-                        a funny story or misunderstanding.
-                    </p>
-                    <p>
-                        an important lesson you learned.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            a funny story or misunderstanding.
+                        </li>
+                        <li class="fa fa-envira">
+                            an important lesson you learned.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -244,27 +201,20 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.BigMove)
-            </td>*@
         @if (Model.BigMove == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You've made a big change in your life. Was it...</h4>
-                    <p>
-                        a positive or negative change.
-                    </p>
-                    <p>
-                        a big move? divorce? a new relationship
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            a positive or negative change.
+                        </li>
+                        <li class="fa fa-envira">
+                            a big move? divorce? a new relationship?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -273,27 +223,20 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.Vote)
-            </td>*@
         @if (Model.Vote == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You excercise your right to vote. When was...</h4>
-                    <p>
-                        the first time you voted.
-                    </p>
-                    <p>
-                        there an election that was important to you.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            the first time you voted.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            there an election that was important to you.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -302,27 +245,20 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.FamilyTraditions)
-            </td>*@
         @if (Model.FamilyTraditions == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You have family traditions that are important to you. Do these...</h4>
-                    <p>
-                        traditions have an origin story.
-                    </p>
-                    <p>
-                        happen annually or are connected to another event.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            traditions have an origin story.
+                        </li>
+                        <li class="fa fa-envira">
+                            happen annually or are connected to another event.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -331,24 +267,17 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.EmbarrassingMoment)
-            </td>*@
         @if (Model.EmbarrassingMoment == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You want to share an embarrassing moment. What...</h4>
-                    <p>
-                        made it so embarrassing.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            made it so embarrassing.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -357,30 +286,23 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.ProudestMoments)
-            </td>*@
         @if (Model.ProudestMoments == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You are very proud of something. Post about...</h4>
-                    <p>
-                        something you did that makes you very proud.
-                    </p>
-                    <p>
-                        your journey to this accomplishment.
-                    </p>
-                    <p>
-                        what you learned along the way.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            something you did that makes you very proud.
+                        </li>
+                        <li class="fa fa-envira">
+                            your journey to this accomplishment.
+                        </li>
+                        <li>
+                            what you learned along the way.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -389,30 +311,23 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.ChildhoodCamp)
-            </td>*@
         @if (Model.ChildhoodCamp == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You went to camp in your childhood. Did you...</h4>
-                    <p>
-                        meet any life-long friends.
-                    </p>
-                    <p>
-                        go every year.
-                    </p>
-                    <p>
-                        learn anything cool.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            meet any life-long friends.&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            go every year.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            learn anything cool.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -421,27 +336,20 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.MemorializeSomeone)
-            </td>*@
         @if (Model.MemorializeSomeone == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You would like to commemorate someone in your life. Will this be...</h4>
-                    <p>
-                        a tribute to someone you've lost, and want to remember.
-                    </p>
-                    <p>
-                        a tribute to someone who is still around, and you'd like to honor.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            a tribute to someone you've lost, and want to remember.
+                        </li>
+                        <li class="fa fa-envira">
+                            a tribute to someone who is still around, and you'd like to honor.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -450,30 +358,23 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.Concerts)
-            </td>*@
         @if (Model.Concerts == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You go to concerts. What was...</h4>
-                    <p>
-                        your first concert.
-                    </p>
-                    <p>
-                        your favorite concert.
-                    </p>
-                    <p>
-                        the worst concert you went to.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your first concert.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            your favorite concert.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            the worst concert you went to.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -482,30 +383,23 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.FamilyPet)
-            </td>*@
         @if (Model.FamilyPet == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You had a childhood pet. Post about...</h4>
-                    <p>
-                        stories and adventures with your pet(s).
-                    </p>
-                    <p>
-                        your favorite pet.
-                    </p>
-                    <p>
-                        how you named your pet.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            stories and adventures with your pet(s).
+                        </li>
+                        <li class="fa fa-envira">
+                            your favorite pet.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            how you named your pet.&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -514,30 +408,23 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.CurrentPet)
-            </td>*@
         @if (Model.CurrentPet == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You have a pet! Post about...</h4>
-                    <p>
-                        the day you got your pet.
-                    </p>
-                    <p>
-                        your favorite pet(s).
-                    </p>
-                    <p>
-                        what you decided to name your pet.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            the day you got your pet.&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            your favorite pet(s).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            what you decided to name your pet.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -546,30 +433,23 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.HSDance)
-            </td>*@
         @if (Model.HSDance == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You went to dances in high school. Make a post about...</h4>
-                    <p>
-                        your first high school dance.
-                    </p>
-                    <p>
-                        your favorite high school dance.
-                    </p>
-                    <p>
-                        a fun high school date.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your first high school dance.
+                        </li>
+                        <li class="fa fa-envira">
+                            your favorite high school dance.
+                        </li>
+                        <li class="fa fa-envira">
+                            a fun high school date.&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -578,30 +458,23 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
-        @*<td>
-                @Html.DisplayFor(modelItem => item.AnythingElse)
-            </td>*@
         @if (Model.AnythingElse == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>We missed something important to you. Post...</h4>
-                    <p>
-                        other favorite or important memories.
-                    </p>
-                    <p>
-                        inside jokes.
-                    </p>
-                    <p>
-                        how you met someone important to you.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            other favorite or important memories.
+                        </li>
+                        <li class="fa fa-envira">
+                            inside jokes.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            how you met someone important to you.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -610,19 +483,19 @@
                 </div>
             </div>
         }
-        @*else
-            {
-            <p>
-                You do not remember when humans landed on the moon.
-            </p>
-            }*@
 
+        <div class="col-md-4 resultBox">
+            <div class="thumbnail">
+                <h4>
+                    @Html.ActionLink("Change Your Suggestions", "Edit", new { id = Model.MemoryID })
+                </h4>
+                <h4>
+                    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
+                </h4>
+            </div>
+        </div>
     </div>
 </div>
-<p>
-    @Html.ActionLink("Update Your Memories & Stories", "Edit", new { id = Model.MemoryID }) |
-    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
-</p>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">

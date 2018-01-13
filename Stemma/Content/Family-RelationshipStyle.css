@@ -1,0 +1,27 @@
+﻿body {
+    background-image: url('../Content/Images/pexels-photo-365638.jpeg');
+    margin:0px;
+    background-size:cover;
+
+
+}
+
+.PageHeader{
+    margin-top: 80px;
+    font-family: sans-serif;
+    color:rgb(0,77,0);
+    
+}
+
+.form-horizontal{
+    font-family: sans-serif;
+    color:darkgreen;
+    background: linear-gradient( rgba(195, 255, 15,.05),
+                                rgba(255, 255, 255,.1),
+                                rgba(195, 215, 105,.2));
+                                
+}
+
+.Profile{
+    margin-bottom: 60px;
+}

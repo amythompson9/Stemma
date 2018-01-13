@@ -3,9 +3,11 @@
 @{
     ViewBag.Title = "Career Profile Questions";
 }
+<link href="~/Content/Family-RelationshipStyle.css" rel="stylesheet" />
 
-<h2>Career & Education</h2>
-
+<div class="PageHeader">
+    <h2>Career & Education</h2>
+</div>
 
 @using (Html.BeginForm()) 
 {
@@ -168,7 +170,7 @@
     </div>
 }
 
-<div>
+<div class="Profile">
     @Html.ActionLink("Return to Your Profile", "Create", "UserProfile")
 </div>
 
