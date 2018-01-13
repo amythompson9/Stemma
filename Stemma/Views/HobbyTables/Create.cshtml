@@ -167,7 +167,7 @@
     @Scripts.Render("~/bundles/jqueryval")
 }
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div id="navaay" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -176,21 +176,28 @@
                 <span class="icon-bar"></span>
             </button>
             @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-            @Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })*@
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="#">STEMMA</a></li>
+                @*<li class="active">Stemma</li>*@
+            </ul>
+            <ul class="nav navbar-nav navbar-center">
                 @*<li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>*@
+                <li>@Html.ActionLink("Timeline", "Index", "EventTables")</li>
                 <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
                 <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
             </ul>
+            <ul class="nav navbar nav navbar-right">
             @Html.Partial("_LoginPartial")
+            </ul>
         </div>
     </div>
 </div>
-<div class="navbar navbar-inverse navbar-fixed-bottom">
+<div id="navaay" class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

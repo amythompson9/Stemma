@@ -313,6 +313,7 @@
     <Content Include="Content\Family-RelationshipStyle.css" />
     <Content Include="Content\Images\IMGPlaceholder.jpg" />
     <Content Include="Content\Images\pexels-photo-365638.jpeg" />
+    <Content Include="Content\navbar.css" />
     <Content Include="Content\Images\testing-365638.jpg" />
     <Content Include="Content\LeafStyles.css" />
     <Content Include="Content\RegisterStyle.css" />
