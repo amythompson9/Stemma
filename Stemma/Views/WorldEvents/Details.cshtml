@@ -48,7 +48,7 @@
                         <li class="fa fa-envira">
                             the Space Race. &nbsp;&nbsp;
                         </li>
-                        
+
                         <li class="fa fa-envira">
                             watching the Moon Landing.
                         </li>
@@ -329,18 +329,17 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-4 resultBox">
-                <div class="thumbnail">
-                    <h4>
-                        @Html.ActionLink("Change Your Suggestions", "Edit", new { id = Model.WorldEventID })
-                    </h4>
-                    <h4>
-                        @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
-                    </h4>
-                </div>
-            </div>
         }
+        <div class="col-md-4 resultBox">
+            <div class="thumbnail">
+                <h4>
+                    @Html.ActionLink("Change Your Suggestions", "Edit", new { id = Model.WorldEventID })
+                </h4>
+                <h4>
+                    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
+                </h4>
+            </div>
+        </div>
     </div>
 </div>
 
