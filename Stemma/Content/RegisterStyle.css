@@ -1,9 +1,5 @@
 ﻿div .hidden{
-    display:none;
-    
-}
-input, select, textarea {
-    text-align: center;
+    display:none;  
 }
 html {
   font-family: sans-serif;
@@ -15,8 +11,7 @@ html {
 }
 body {
   margin: 0px;
-  height: 100%;
-  
+  height: 100%; 
 
 }
 article,
@@ -2812,10 +2807,9 @@ hr {
 .right-side .input input {
   font-size: 14px;
 }
-.right-side .cta {
-  margin-top: 40px;
+.right-side .cta .btn {
+  margin-top: 30px;
 }
-
 .btn {
   padding: 13px 25px;
   border: none;
@@ -3018,6 +3012,7 @@ hr {
 	width: 100%;
 	background: transparent;
 	color: #595F6E;
+    text-align:center;
 }
 
 .input__label--hoshi {

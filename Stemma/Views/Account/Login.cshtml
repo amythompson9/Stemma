@@ -24,7 +24,10 @@
                 </a></span>
                 <h3 style="color:forestgreen">Stemma</h3>
             </div>
-
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+{
+    @Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new { @class = "text-danger" })
             <div class="container">
                 <span class="input input--hoshi">
                     @Html.TextBoxFor(m => m.Email, new { @class = "input__field input__field--hoshi" })
@@ -40,19 +43,22 @@
                 </span>
                 <div class="cta2">
                     <input type="submit" class="btn btn-default" value="Log in" />
-                    <input type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-default" value="Cancel" />
+                    <a class="btn btn-success" href="/">
+                        <i class="fa fa-envira" style="font-size:15px"></i> Home
+                    </a>
                 </div>
                 <label>
                     @Html.CheckBoxFor(m => m.RememberMe)
                     @Html.LabelFor(m => m.RememberMe)
                 </label>            
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <section id="socialLoginForm">
                             @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
                         </section>
                         <span class="psw">Forgot <a href="#">password?</a></span>
                     </div>
             </div>
+}
         </form>
     </div>
 </body>
