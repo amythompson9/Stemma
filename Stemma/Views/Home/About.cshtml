@@ -1,17 +1,220 @@
 ﻿@{
     ViewBag.Title = "About Stemma";
 }
-<h2>@ViewBag.Title.</h2>
 @*<h3>@ViewBag.Message</h3>*@
 
-<p>Overwhelmed by gigs of data from capturing every special moment? 
-   Or do you forget to take photos and commemorate major life events? 
-   Want to share stories of your life and leave advice for future generations, but don't know how? 
-    Our guided system will help you build a profile and create a curated timeline you can slowly build overtime, 
-    little by little and bit by byte. Capturing the moments, people, places, and everything in between that makes 
-    your life special is made easy with Stemma.</p>
+<div class="jumbotron">
+    <h2>@ViewBag.Title</h2>
+        <p>Overwhelmed by gigs of data from capturing every special moment? 
+        Or do you forget to take photos and commemorate major life events? 
+        Want to share stories of your life and leave advice for future generations, but don't know how? 
+        Our guided system will help you build a profile and create a curated timeline you can slowly build overtime, 
+        little by little and bit by byte. Capturing the moments, people, places, and everything in between that makes 
+        your life special is made easy with Stemma.</p>
+</div>
 
 
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken()
+
+    <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="CategoryRow1">
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="icon-wrapper">
+                        <i class="custom-icon-stacey">
+                            @*<button onclick="window.location.href='Relationships/Create'"></button>*@
+                            <span class="fix-editor">&nbsp;</span>
+                        </i>
+                    </div>
+                    <h4>
+                        <a href="https://www.linkedin.com/in/staceyspikes">Stacey Spikes</a>
+                    </h4>
+                    <p>
+                        Your friends, loves, children, parents, and others we meet along the way are the people who shape who you are. Who are they, and how did they change you?
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="icon-wrapper">
+                        <i class="custom-icon-gabrielle">
+                            <span class="fix-editor">&nbsp;</span>
+                        </i>
+                    </div>
+                    <h4>
+                        <a href="https://www.linkedin.com/in/gabriellesudik/">Gabrielle Sudik</a>
+                    </h4>
+                    <p>
+                        Schools, training, experience, and service define a large part of our lives. Where did you go? What did you see? Who did you meet? What did you learn?
+                    </p>
+                    </div>
+                </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="icon-wrapper">
+                        <i class="custom-icon-devion">
+                            <span class="fix-editor">&nbsp;</span>
+                        </i>
+                    </div>
+                    <h4>
+                        <a href="https://www.linkedin.com/in/devionfothergill/">Devion Fothergill</a>
+                    </h4>
+                    <p>
+                        Ancedotes, inside jokes, nicknames, big moves, life changes, advice, life lessons - all the big and little things that make us unique.
+                    </p>
+                    </div>
+                </div>
+        </div>
+        <div class="CategoryRow2">
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="icon-wrapper">
+                        <i class="custom-icon-holly">
+                            <span class="fix-editor">&nbsp;</span>
+                        </i>
+                    </div>
+                    <h4>
+                        <a href="https://www.linkedin.com/in/hollynlittle/">Holly Little</a>
+                    </h4>
+                    <p>
+                        "What do you do?" can mean a lot of different things. What drives you? What do you do when you're not sleeping?
+                    </p>
+                </div>
+                </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="icon-wrapper">
+                        <i class="custom-icon-dana">
+                            <span class="fix-editor">&nbsp;</span>
+                        </i>
+                    </div>
+                    <h4>
+                        <a href="https://www.linkedin.com/in/dana-deming-jr/">Dana Deming, Jr.</a>
+                    </h4>
+                    <p>
+                        You're the life of the party - but what do you celebrate, where, when, and how?
+                    </p>
+                    </div>
+                </div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="icon-wrapper">
+                        <i class="custom-icon-amy">
+                            <span class="fix-editor">&nbsp;</span>
+                        </i>
+                    </div>
+                    <h4>
+                        <a href="https://www.linkedin.com/in/amy-thompson9/">Amy Thompson</a>
+                    </h4>
+                    <p>
+                        You only live once - and you have a unique perspective. How do you remember these event that changed the world, and how did these events change your world?
+                    </p>
+                    </div>
+                </div>
+        </div>
+        
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.Birthdate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Birthdate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Birthdate, "", new { @class = "text-danger" })
+            </div>
+            @*<div class="form-group">
+                    @Html.LabelFor(model => model.Birthdate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Birthdate, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Birthdate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RegisterUserID, "RegisterUserID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("RegisterUserID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.RegisterUserID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.RelationshipsID, "RelationshipsID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("RelationshipsID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.RelationshipsID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CareerID, "CareerID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("CareerID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CareerID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CelebrationID, "CelebrationID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("CelebrationID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CelebrationID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HobbyID, "HobbyID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("HobbyID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.HobbyID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MemoryID, "MemoryID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("MemoryID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MemoryID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.WorldEventID, "WorldEventID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("WorldEventID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.WorldEventID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EventID, "EventID", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("EventID", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.EventID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>*@
+}
+
+@*<div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <link href="~/Content/aboutCSS.css" rel="stylesheet" />
+    <link href="~/Content/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+}
+
+    @*<footer>
+        <p>&copy; @DateTime.Now.Year - Stemma</p>
+    </footer>*@
 
 <div id="navaay" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -36,6 +239,22 @@
         </div>
     </div>
 </div>
-<footer>
-    <p>&copy; @DateTime.Now.Year - Stemma</p>
-</footer>
+
+<div id="navaay" class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
