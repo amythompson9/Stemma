@@ -3,9 +3,11 @@
 @{
     ViewBag.Title = "World Events Profile Questions";
 }
+<link href="~/Content/Family-RelationshipStyle.css" rel="stylesheet" />
 
-<h2>World Events</h2>
-
+<div class="PageHeader">
+    <h2>World Events</h2>
+</div>
 
 @using (Html.BeginForm()) 
 {
@@ -179,7 +181,7 @@
     </div>
 }
 
-<div>
+<div class="Profile">
    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
 </div>
 
@@ -187,7 +189,7 @@
     @Scripts.Render("~/bundles/jqueryval")
 }
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div id="navaay" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -210,7 +212,7 @@
         </div>
     </div>
 </div>
-<div class="navbar navbar-inverse navbar-fixed-bottom">
+<div id="navaay" class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

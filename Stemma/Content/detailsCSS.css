@@ -1,22 +1,71 @@
-﻿.rowDetails .thumbnail{
-    height: 400px;
-    padding:15px;
-    text-align: left;
+﻿@import url('fonawesomecss.css');
+@import url('LeafStyles.css');
+
+body, html {
+    background-image: url('../Content/Images/pexels-photo-365638.jpeg');
+    margin: 0px;
+    background-size: cover;
+
+}
+.detailsHeading {
+    padding: 0 30px 0 30px;
+    font-size: 120%;
+    margin-top: 30px;
+    color: rgba(50,0,55,.9);
+    font-weight: bold;
+
+}
+
+.detailsHeading h1{
+    font-size: 130%;
+    margin-bottom: -15px;
+}
+
+.rowDetails{
+    padding-bottom: 140px;
+}
+
+    .rowDetails .thumbnail {
+        height: 350px;
+        /*fixed height remains even when you shrink the screen. button covers text.*/
+        padding: 15px;
+        text-align: left;
+        background-color: rgb(36, 79, 25); /*rgba(23, 156, 46, 0.7);*/
+        color: lightgray; /*rgb(232, 255, 136);*/ /*rgb(80,73,62);*/
+        border: none;
+        /*border-width: 13px 20px 13px 0;
+        border-color: transparent rgb(50,0,55) transparent transparent;*/
+        box-shadow: 4px 4px 8px rgba(17,0,50,.6);
+        /*those border things copied from holly's timeline style*/
+        /*margin: 0, -20px, 10px, -20px;*/
+    }
+
+.resultBox{
+    margin: 0, -20px, 10px, -20px;
+    /* blah, why can't i make the boxes closer together?*/
 }
 .thumbnail h4 {
     font-weight:bold;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .thumbnail ul {
     padding: 15px;
         font-size: 19px;
-
+        list-style-type: none;
 }
 
-.thumbnail ul li:before {
-  content: "BOO!";
+.thumbnail li{
+    margin-bottom: 10px;
 }
+
+/*.thumbnail ul li:before {
+      content: "\f299";
+}*/
+
+/*.fa-envira:before {
+    content: "\f299";
+}*/
 
 /*i'd love to make that bullet point a leaf!*/
 /*just stick it where you've written BOO!*/
@@ -24,10 +73,15 @@
 p {
     font-size: 19px;
 }
-.btn {
+
+/*this next stuff was already on the page*/
+/*.btn {
     margin-left: 200px;
     padding-bottom: 3px;
-}
+    border: 2px;
+    border-color: 
+}*/
+
 .EntryButton {
     position: absolute;
     bottom: 35px;
@@ -35,3 +89,24 @@ p {
     /*background-color: green;*/
 }
 
+/*you copied this from registerstyle.css*/
+.btn {
+    padding: 13px 25px;
+    border: 1px;
+    border-color: lightgray;
+    color: lightgray;
+    /*display: inline-block;*/
+    background-color: green;
+    font-family: 'lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    border-radius: 24px;
+}
+
+    .btn:hover {
+        -webkit-transition: 0.1s ease-in;
+        -o-transition: 0.1s ease-in;
+        transition: 0.1s ease-in;
+        background: lightgray;
+    }

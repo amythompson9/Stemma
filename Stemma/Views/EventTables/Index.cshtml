@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<Stemma.Models.EventTable>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Your TimeLine";
 }
 <script src="https://static.filestackapi.com/v3/filestack.js"></script>
 <script src="~/Scripts/fileUploader.js"></script>
 
-<h2>Index</h2>
+<h2>Your Stemma Timeline</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -31,9 +31,9 @@
 
 
 
-                    @Html.ActionLink("Edit", "Edit", new { id = item.EventID }) |
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.EventID }) |*@
                     @*@Html.ActionLink("Details", "Details", new { id = item.EventID }) |*@
-                    @Html.ActionLink("Delete", "Delete", new { id = item.EventID })
+                    @*@Html.ActionLink("Delete", "Delete", new { id = item.EventID })*@
                 </div>
             </li>
         }
@@ -76,7 +76,7 @@
 }*@
 
 @*</table>*@
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div id="navaay"class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -99,7 +99,7 @@
         </div>
     </div>
 </div>
-<div class="navbar navbar-inverse navbar-fixed-bottom">
+<div id="navaay"class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

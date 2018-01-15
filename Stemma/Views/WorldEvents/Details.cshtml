@@ -1,28 +1,32 @@
 ﻿@model Stemma.Models.WorldEvent
 <link href="~/Content/detailsCSS.css" rel="stylesheet" />
+<link href="~/Content/LeafStyles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 @{
     ViewBag.Title = "Suggestions for World Events Stems";
 }
 
-<h2>World Events</h2>
+<div class="detailsHeading">
+    <h1>World Events</h1>
+    <h3>Based on your answers, here are some ideas to add to your Stemma:</h3>
+</div>
 
 <div>
-    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
-    <hr />
     <div class="rowDetails">
         @if (Model.September11 == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You remember September 11, 2001. Do you...</h4>
                     <ul>
-                        <li><i class="fa fa-envira" style="font-size:15px"></i>
+                        <li class="fa fa-envira">
                             remember where you were when you heard the news.
                         </li>
-                        <li>
+                        <li class="fa fa-envira">
                             have tribute to someone or something you lost on September 11, 2001.
                         </li>
-                        <li>
+                        <li class="fa fa-envira">
                             remember how things changed after 9-11.
                         </li>
                     </ul>
@@ -36,18 +40,23 @@
         }
         @if (Model.MoonLanding == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
-                    <h4>You remember the Apollo 11 moon landings. Post about...</h4>
-                    <p>
-                        the Space Race.
-                    </p>
-                    <p>
-                        watching the Moon Landing.
-                    </p>
-                    <p>
-                        the way things changed after the Moon Landing.
-                    </p>
+                    <h4>You remember the Apollo 11 Moon Landing. Post about...</h4>
+                    <ul>
+
+                        <li class="fa fa-envira">
+                            the Space Race. &nbsp;&nbsp;
+                        </li>
+
+                        <li class="fa fa-envira">
+                            watching the Moon Landing.
+                        </li>
+                        @*you needed the extra spaces because the two lines were showing on one row. *@
+                        <li class="fa fa-envira">
+                            the way things changed after the Moon Landing.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -58,15 +67,17 @@
         }
         @if (Model.NixonResigns == true)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You remember when Richard Nixon resigned. Post about...</h4>
-                    <p>
-                        where you were when you heard that President Nixon resigned.
-                    </p>
-                    <p>
-                        the atmosphere leading up to his resignation.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            where you were when you heard that President Nixon resigned.
+                        </li>
+                        <li class="fa fa-envira">
+                            the atmosphere leading up to his resignation.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -80,12 +91,14 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the death of Elvis Presley. Do you...</h4>
-                    <p>
-                        remember when you learned that Elvis Presley had died.
-                    </p>
-                    <p>
-                        have audio or video clip of your favorite Elvis song.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            remember when you learned that Elvis Presley had died.
+                        </li>
+                        <li class="fa fa-envira">
+                            have an audio or video clip of your favorite Elvis song.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -99,9 +112,12 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember when the Challenger Space Shuttle exploded. Make a post about...</h4>
-                    <p>
-                        how you learned about this event.
-                    </p>
+
+                    <ul>
+                        <li class="fa fa-envira">
+                            how you learned about this event.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -115,15 +131,17 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the events of World War II. Do you...</h4>
-                    <p>
-                        have memories of the end of World War II.
-                    </p>
-                    <p>
-                        know how your life changed because of or after the War.
-                    </p>
-                    <p>
-                        know someone who served in the Armed Forces.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have memories of the end of World War II.
+                        </li>
+                        <li class="fa fa-envira">
+                            know how your life changed because of or after the War.
+                        </li>
+                        <li class="fa fa-envira">
+                            know someone who served in the Armed Forces.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -136,13 +154,16 @@
         {
             <div class="col-md-4">
                 <div class="thumbnail">
-                    <h4>You remember the assassinated of John Kennedy. Post about...</h4>
-                    <p>
-                        where you were when you learned that President Kennedy had been assassinated.
-                    </p>
-                    <p>
-                        the reaction to this event accross the nation.
-                    </p>
+                    <h4>You remember the assassination of John Kennedy. Post about...</h4>
+
+                    <ul>
+                        <li class="fa fa-envira">
+                            where you were when you learned that President Kennedy had been assassinated.
+                        </li>
+                        <li class="fa fa-envira">
+                            the reaction to this event accross the nation.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -156,15 +177,17 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember an important election. Post about...</h4>
-                    <p>
-                        the event leading up to the election.
-                    </p>
-                    <p>
-                        why this was an important election.
-                    </p>
-                    <p>
-                        the effects of the outcome.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            the event leading up to the election.
+                        </li>
+                        <li class="fa fa-envira">
+                            why this was an important election.
+                        </li>
+                        <li class="fa fa-envira">
+                            the effects of the outcome.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -178,12 +201,15 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the assassination of Martin Luther King Jr. Do you remember...</h4>
-                    <p>
-                        where you were when you learned that he had been assassinated.
-                    </p>
-                    <p>
-                        how it affected the country.
-                    </p>
+
+                    <ul>
+                        <li class="fa fa-envira">
+                            where you were when you learned that he had been assassinated.
+                        </li>
+                        <li class="fa fa-envira">
+                            how it affected the country.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -197,12 +223,14 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember Y2K. Did you...</h4>
-                    <p>
-                        party like it was 1999.
-                    </p>
-                    <p>
-                        take steps to prevent the "Y2K" computer disaster.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            party like it was 1999.
+                        </li>
+                        <li class="fa fa-envira">
+                            take steps to prevent the "Y2K" computer disaster.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -216,12 +244,14 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the Berlin Wall. Make a post for...</h4>
-                    <p>
-                        where you were when you learned the Berlin Wall was torn down.
-                    </p>
-                    <p>
-                        life during the Cold War.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            where you were when you learned the Berlin Wall was torn down.
+                        </li>
+                        <li class="fa fa-envira">
+                            life during the Cold War.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -235,12 +265,14 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the OJ Simpson car chase. Do you...</h4>
-                    <p>
-                        know where you were when you heard about it.
-                    </p>
-                    <p>
-                        remember the verdict.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            know where you were when you heard about it.
+                        </li>
+                        <li class="fa fa-envira">
+                            remember the verdict.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -254,12 +286,15 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>You remember the Prohibition Era. Do you have stories...</h4>
-                    <p>
-                        of Prohibition, and its end.
-                    </p>
-                    <p>
-                        about your first legal drink after Prohibition ended.
-                    </p>
+
+                    <ul>
+                        <li class="fa fa-envira">
+                            of Prohibition, and its end.
+                        </li>
+                        <li class="fa fa-envira">
+                            about your first legal drink after Prohibition ended.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -273,18 +308,20 @@
             <div class="col-md-4">
                 <div class="thumbnail">
                     <h4>We missed something that was important to you. Post about...</h4>
-                    <p>
-                        any other memories of world events.
-                    </p>
-                    <p>
-                        the last episode of Seinfeld.
-                    </p>
-                    <p>
-                        life during the Vietnam War.
-                    </p>
-                    <p>
-                        wardrobe malfunctions.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            any other memories of world events.
+                        </li>
+                        <li class="fa fa-envira">
+                            the last episode of Seinfeld.
+                        </li>
+                        <li class="fa fa-envira">
+                            life during the Vietnam War.
+                        </li>
+                        <li class="fa fa-envira">
+                            wardrobe malfunctions.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -292,28 +329,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <h4>
-                        @Html.ActionLink("Change Your Suggestions", "Edit", new { id = Model.WorldEventID })
-                    </h4>
-                    <h4>
-                    @*I'd love to insert that leaf here!!*@
-                    </h4>
-                    <h4>
-                        @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
-                    </h4>
-                </div>
-            </div>
         }
-
-
+        <div class="col-md-4 resultBox">
+            <div class="thumbnail">
+                <h4>
+                    @Html.ActionLink("Change Your Suggestions", "Edit", new { id = Model.WorldEventID })
+                </h4>
+                <h4>
+                    @Html.ActionLink("Return To Your Profile", "Create", "UserProfiles")
+                </h4>
+            </div>
+        </div>
     </div>
 </div>
 
 
-
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div id="navaay" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -336,7 +367,7 @@
         </div>
     </div>
 </div>
-<div class="navbar navbar-inverse navbar-fixed-bottom">
+<div id="navaay"class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
