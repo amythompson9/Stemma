@@ -1,7 +1,6 @@
 ﻿div .hidden{
     display:none;
     
-    
 }
 input, select, textarea {
     text-align: center;
@@ -3000,7 +2999,7 @@ hr {
 /* Hoshi */
 .input--hoshi {
 	overflow: hidden;
-	max-width: none;
+	max-width: 500px;
 	width: 100%;
 	font-family: 'lato', sans-serif;
 }

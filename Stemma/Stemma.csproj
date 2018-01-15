@@ -310,6 +310,7 @@
     <Content Include="Content\fontawesome\css\font-awesome.min.css" />
     <Content Include="Content\fontawesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\IMGPlaceholder.jpg" />
+    <Content Include="Content\Images\bigleafpicture.jpeg" />
     <Content Include="Content\Images\pexels-photo-365638.jpeg" />
     <Content Include="Content\LeafStyles.css" />
     <Content Include="Content\LoginStyle.css" />
@@ -443,11 +444,11 @@
     <Content Include="Views\Careers\Details.cshtml" />
     <Content Include="Views\Careers\Edit.cshtml" />
     <Content Include="Views\Careers\Index.cshtml" />
-    <Content Include="Views\Celebrations\Create.cshtml" />
-    <Content Include="Views\Celebrations\Delete.cshtml" />
-    <Content Include="Views\Celebrations\Details.cshtml" />
-    <Content Include="Views\Celebrations\Edit.cshtml" />
-    <Content Include="Views\Celebrations\Index.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Create.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Delete.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Details.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Edit.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Index.cshtml" />
     <Content Include="Views\HobbyTables\Create.cshtml" />
     <Content Include="Views\HobbyTables\Delete.cshtml" />
     <Content Include="Views\HobbyTables\Details.cshtml" />
