@@ -305,6 +305,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\detailsCSS.css" />
+    <Content Include="Content\EventStyle.css" />
     <Content Include="Content\fonawesomecss.css" />
     <Content Include="Content\fontawesome\css\font-awesome.css" />
     <Content Include="Content\fontawesome\css\font-awesome.min.css" />
@@ -312,10 +313,12 @@
     <Content Include="Content\Images\Devions-60-photo-365638.jpg" />
     <Content Include="Content\Family-RelationshipStyle.css" />
     <Content Include="Content\Images\IMGPlaceholder.jpg" />
+    <Content Include="Content\Images\bigleafpicture.jpeg" />
     <Content Include="Content\Images\pexels-photo-365638.jpeg" />
     <Content Include="Content\navbar.css" />
     <Content Include="Content\Images\testing-365638.jpg" />
     <Content Include="Content\LeafStyles.css" />
+    <Content Include="Content\LoginStyle.css" />
     <Content Include="Content\RegisterStyle.css" />
     <Content Include="Content\UserProfileCreate.css" />
     <Content Include="favicon.ico" />
@@ -328,6 +331,7 @@
       <DependentUpon>StemmaModel.edmx</DependentUpon>
       <LastGenOutput>StemmaModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\StemmaModel.edmx.sql" />
     <Content Include="Models\StemmaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>StemmaModel.edmx</DependentUpon>
@@ -446,11 +450,11 @@
     <Content Include="Views\Careers\Details.cshtml" />
     <Content Include="Views\Careers\Edit.cshtml" />
     <Content Include="Views\Careers\Index.cshtml" />
-    <Content Include="Views\Celebrations\Create.cshtml" />
-    <Content Include="Views\Celebrations\Delete.cshtml" />
-    <Content Include="Views\Celebrations\Details.cshtml" />
-    <Content Include="Views\Celebrations\Edit.cshtml" />
-    <Content Include="Views\Celebrations\Index.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Create.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Delete.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Details.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Edit.cshtml" />
+    <Content Include="Views\EventTables\Celebrations\Index.cshtml" />
     <Content Include="Views\HobbyTables\Create.cshtml" />
     <Content Include="Views\HobbyTables\Delete.cshtml" />
     <Content Include="Views\HobbyTables\Details.cshtml" />
