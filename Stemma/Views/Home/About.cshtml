@@ -22,13 +22,14 @@
                 <span class="icon-bar"></span>
             </button>
             @Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            @Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })*@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Timeline","Index","EventTables")</li>
                 <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
-                <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>
+                @*<li>@Html.ActionLink("FAQ", "Contact", "Home")</li>*@
+                @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
                 <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
             </ul>

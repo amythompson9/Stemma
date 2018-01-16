@@ -1,25 +1,29 @@
 ﻿@model Stemma.Models.Celebration
 <link href="~/Content/detailsCSS.css" rel="stylesheet" />
+<link href="~/Content/LeafStyles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 @{
     ViewBag.Title = "Suggestions for Celebration Stems";
 }
 
-<h2>Celebrations & Holidays</h2>
+<div class="detailsHeading">
+    <h1>Celebrations & Holidays</h1>
+    <h3>Based on your answers, here are some ideas to add to your Stemma:</h3>
+</div>
+
 <div>
-    <h4>Based on your answers, here are some ideas to add to your Stemma:</h4>
-    <hr />
     <div class="rowDetails">
-
         @if (Model.HolidayRecently == true)
-
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You've recently celebrated a holiday.</h4>
-                    <p>
-                        Post a picture.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            Post a picture.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -31,20 +35,22 @@
 
 
         @if (Model.PartyRecently == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You recently attended a party.</h4>
-                    <p>
-                        Who did you go with?
-                    </p>
-                    <p>
-                        Was the food any good?
-                    </p>
-                    <p>
-                        Was it for another orgnaization or company?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            Who did you go with?
+                        </li>
+                        <li class="fa fa-envira">
+                            Was the food any good?
+                        </li>
+                        <li class="fa fa-envira">
+                            Was it for another orgnaization or company?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -55,19 +61,21 @@
         }
 
         @if (Model.MilestoneRecently == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You recently celebrated a milestone. Talk about...</h4>
-                    <p>
-                        how hard it was to accomplish.
-                    </p>
-                    <p>
-                        the lessons you learned along the way.
-                    </p>
-                    <p>
-                        what you would do differently.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            how hard it was to accomplish.
+                        </li>
+                        <li class="fa fa-envira">
+                            the lessons you learned along the way.
+                        </li>
+                        <li class="fa fa-envira">
+                            what you would do differently.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -78,22 +86,24 @@
         }
 
         @if (Model.CelebrateChristmas == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You celebrate Christmas. Do you...</h4>
-                    <p>
-                        have any Christmas traditions?
-                    </p>
-                    <p>
-                        have a favorite Christmas cookie?
-                    </p>
-                    <p>
-                        have a favorite gift you've ever received?
-                    </p>
-                    <p>
-                        have a gift-giving story?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have any Christmas traditions?
+                        </li>
+                        <li class="fa fa-envira">
+                            have a favorite Christmas cookie?
+                        </li>
+                        <li class="fa fa-envira">
+                            have a favorite gift you've ever received?
+                        </li>
+                        <li class="fa fa-envira">
+                            have a gift-giving story?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -104,23 +114,25 @@
         }
 
         @if (Model.CelebrateNYE == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate New Year's Eve. Do you...</h4>
-                    <p>
-                        always watch the ball drop?
-                    </p>
-                    <p>
-                        go out for a special dinner?
-                    </p>
-                    <p>
-                        have any NYE stories of a night gone wrong?
-                    </p>
-                    <p>
-                        dance the night away?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            always watch the ball drop?
+                        </li>
+                        <li class="fa fa-envira">
+                            go out for a special dinner?
+                        </li>
+                        <li class="fa fa-envira">
+                            have any NYE stories of a night gone wrong?
+                        </li>
+                        <li class="fa fa-envira">
+                            dance the night away?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -131,19 +143,21 @@
         }
 
         @if (Model.CelebrateThanksgiving == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
                     <h4>You celebrate Thanksgiving. What...</h4>
-                    <p>
-                        is your traditional meal?
-                    </p>
-                    <p>
-                        about a time things didn't go as planned?
-                    </p>
-                    <p>
-                        was the best Thanksgiving?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            is your traditional meal?
+                        </li>
+                        <li class="fa fa-envira">
+                            about a time things didn't go as planned?
+                        </li>
+                        <li class="fa fa-envira">
+                            was the best Thanksgiving?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -154,20 +168,22 @@
         }
 
         @if (Model.CelebrateValentine == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Valentine's Day. Do you...</h4>
-                    <p>
-                        go out to a special dinner?
-                    </p>
-                    <p>
-                        celebrate in a unique way?
-                    </p>
-                    <p>
-                        have a memory of the best Valentine's Day?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            go out to a special dinner?
+                        </li>
+                        <li class="fa fa-envira">
+                            celebrate in a unique way?
+                        </li>
+                        <li class="fa fa-envira">
+                            have a memory of the best Valentine's Day?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -178,20 +194,22 @@
         }
 
         @if (Model.CelebrateEaster == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Easter. Do you...</h4>
-                    <p>
-                        color Easter eggs?
-                    </p>
-                    <p>
-                        have any special traditions?
-                    </p>
-                    <p>
-                        have a special Easter dinner?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            color Easter eggs?
+                        </li>
+                        <li class="fa fa-envira">
+                            have any special traditions?
+                        </li>
+                        <li class="fa fa-envira">
+                            have a special Easter dinner?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -202,20 +220,22 @@
         }
 
         @if (Model.CelebrateIndependenceDay == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Independence Day. Do you...</h4>
-                    <p>
-                        go to Independence Day parades?
-                    </p>
-                    <p>
-                        like fireworks?
-                    </p>
-                    <p>
-                        barbeque?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            go to Independence Day parades?
+                        </li>
+                        <li class="fa fa-envira">
+                            like fireworks? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                        <li class="fa fa-envira">
+                            barbeque?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -226,26 +246,28 @@
         }
 
         @if (Model.CelebrateHalloween == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Halloween. What was...</h4>
-                    <p>
-                        your best costume?
-                    </p>
-                    <p>
-                        scariest Halloween moment?
-                    </p>
-                    <p>
-                        the best party you went to?
-                    </p>
-                    <p>
-                        the worst costume you ever wore?
-                    </p>
-                    <p>
-                        your trick-or-treat tradition?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your best costume?
+                        </li>
+                        <li class="fa fa-envira">
+                            scariest Halloween moment?
+                        </li>
+                        <li class="fa fa-envira">
+                            the best party you went to?
+                        </li>
+                        <li class="fa fa-envira">
+                            the worst costume you ever wore?
+                        </li>
+                        <li class="fa fa-envira">
+                            your trick-or-treat tradition?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -256,14 +278,16 @@
         }
 
         @if (Model.CelebrateMemorialDay == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Memorial Day. Do you...</h4>
-                    <p>
-                        have someone you would like to make a tribute to?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have someone you would like to make a tribute to?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -274,17 +298,19 @@
         }
 
         @if (Model.CelebrateLaborDay == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Labor Day. Do you...</h4>
-                    <p>
-                        have a story from a barbeque?
-                    </p>
-                    <p>
-                        like to take a trip out of town?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have a story from a barbeque?
+                        </li>
+                        <li class="fa fa-envira">
+                            like to take a trip out of town?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -295,17 +321,19 @@
         }
 
         @if (Model.CelebrateMothersDay == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Mother's Day. Do you...</h4>
-                    <p>
-                        have a tradition with your mom?
-                    </p>
-                    <p>
-                        have a memory of your mom to share?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have a tradition with your mom?
+                        </li>
+                        <li class="fa fa-envira">
+                            have a memory of your mom to share?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -317,17 +345,19 @@
         }
 
         @if (Model.CelebrateFathersDay == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Father's Day. Do you...</h4>
-                    <p>
-                        have a tradition with your dad?
-                    </p>
-                    <p>
-                        have a memory of your dad to share?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have a tradition with your dad?
+                        </li>
+                        <li class="fa fa-envira">
+                            have a memory of your dad to share?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -340,17 +370,19 @@
 
 
         @if (Model.CelebrateChaunakah == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Chaunakah. Do you...</h4>
-                    <p>
-                        have a special Chaunakah memory?
-                    </p>
-                    <p>
-                        have any unique Chaunakah traditions?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have a special Chaunakah memory?
+                        </li>
+                        <li class="fa fa-envira">
+                            have any unique Chaunakah traditions?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -361,20 +393,22 @@
         }
 
         @if (Model.CelebratePassover == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Passover. What is...</h4>
-                    <p>
-                        your favorite part of a Passover Seder?
-                    </p>
-                    <p>
-                        a cherished Passover memory?
-                    </p>
-                    <p>
-                        a unique Passover tradition?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your favorite part of a Passover Seder?
+                        </li>
+                        <li class="fa fa-envira">
+                            a cherished Passover memory?
+                        </li>
+                        <li class="fa fa-envira">
+                            a unique Passover tradition?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -385,17 +419,19 @@
         }
 
         @if (Model.CelebrateRoshHashanah == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Rosh Hashanah. What are..</h4>
-                    <p>
-                        your unique traditions?
-                    </p>
-                    <p>
-                        your favorite memories of Rosh Hashanah?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your unique traditions?
+                        </li>
+                        <li class="fa fa-envira">
+                            your favorite memories of Rosh Hashanah?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -406,14 +442,16 @@
         }
 
         @if (Model.CelerateYomKippur == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Yom Kippur. Do you...</h4>
-                    <p>
-                        have any unique traditions?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have any unique traditions?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -424,20 +462,22 @@
         }
 
         @if (Model.CelebrateRamadan == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Ramadan. Do you...</h4>
-                    <p>
-                        have memories of fasting during Ramadan?
-                    </p>
-                    <p>
-                        celebrate the end of Ramadan?
-                    </p>
-                    <p>
-                        have memories of an Eid al-Adha feast?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have memories of fasting during Ramadan?
+                        </li>
+                        <li class="fa fa-envira">
+                            celebrate the end of Ramadan?
+                        </li>
+                        <li class="fa fa-envira">
+                            have memories of an Eid al-Adha feast?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -448,17 +488,19 @@
         }
 
         @if (Model.CelebrateEID == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Eid al-Adha. What is...</h4>
-                    <p>
-                        your favorite tradition?
-                    </p>
-                    <p>
-                        the part you most look forward to?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your favorite tradition?
+                        </li>
+                        <li class="fa fa-envira">
+                            the part you most look forward to?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -469,20 +511,22 @@
         }
 
         @if (Model.CelebrateSTPat == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate St. Patrick's Day. Do you...</h4>
-                    <p>
-                        attend a St. Patrick's Day parade?
-                    </p>
-                    <p>
-                        have any yearly traditions?
-                    </p>
-                    <p>
-                        meet your friends at a favorite bar?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            attend a St. Patrick's Day parade?
+                        </li>
+                        <li class="fa fa-envira">
+                            have any yearly traditions?
+                        </li>
+                        <li class="fa fa-envira">
+                            meet your friends at a favorite bar?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -493,26 +537,28 @@
         }
 
         @if (Model.CelebrateBirthdays == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate birthdays. Do you...</h4>
-                    <p>
-                        remember the best present you ever received?
-                    </p>
-                    <p>
-                        always throw a party?
-                    </p>
-                    <p>
-                        have advice to give to younger self?
-                    </p>
-                    <p>
-                        take a trip?
-                    </p>
-                    <p>
-                        have something to add to a bucket list?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            remember the best present you ever received?
+                        </li>
+                        <li class="fa fa-envira">
+                            always throw a party?
+                        </li>
+                        <li class="fa fa-envira">
+                            have advice to give to younger self?
+                        </li>
+                        <li class="fa fa-envira">
+                            take a trip?
+                        </li>
+                        <li class="fa fa-envira">
+                            have something to add to a bucket list?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -523,17 +569,19 @@
         }
 
         @if (Model.CelebrateChineseNewYear == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Chinese New Year. Do you...</h4>
-                    <p>
-                        have any special traditions?
-                    </p>
-                    <p>
-                        have a favorite food?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            have any special traditions?
+                        </li>
+                        <li class="fa fa-envira">
+                            have a favorite food?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -544,14 +592,16 @@
         }
 
         @if (Model.CelebrateQuinceanera == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You have celebrated a Quinceañera. Make an event for...</h4>
-                    <p>
-                        your or a loved one's Quinceañera.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your or a loved one's Quinceañera.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -562,14 +612,16 @@
         }
 
         @if (Model.CelebrateBarBatMitzvah == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You have celebrated a Bar/Bat Mitzvah. Make an event for...</h4>
-                    <p>
-                        your or a loved one's Bar or Bat Mitzvah.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            your or a loved one's Bar or Bat Mitzvah.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -580,20 +632,22 @@
         }
 
         @if (Model.CelebrateDayOfTheDead == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Dia de los Muertos. Do you...</h4>
-                    <p>
-                        commemorate those who have passed?
-                    </p>
-                    <p>
-                        have any unique traditions?
-                    </p>
-                    <p>
-                        look forward to any special foods?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            commemorate those who have passed?
+                        </li>
+                        <li class="fa fa-envira">
+                            have any unique traditions?
+                        </li>
+                        <li class="fa fa-envira">
+                            look forward to any special foods?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -604,14 +658,16 @@
         }
 
         @if (Model.CelebrateVeteransDay == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Verteran's Day. Why not...</h4>
-                    <p>
-                        post a tribute to or memory of a veteran.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            post a tribute to or memory of a veteran.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -623,14 +679,16 @@
         }
 
         @if (Model.CelebrateCincoDeMayo == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>You celebrate Cinco De Mayo. What is...</h4>
-                    <p>
-                        one of your traditions?
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            one of your traditions?
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -641,14 +699,16 @@
         }
 
         @if (Model.AnythingElse == true)
-        {
-            <div class="col-md-4">
+            {
+            <div class="col-md-4 resultBox">
                 <div class="thumbnail">
 
                     <h4>There's a celebration we may have missed.</h4>
-                    <p>
-                        Make a post about an important celebration in your life.
-                    </p>
+                    <ul>
+                        <li class="fa fa-envira">
+                            Make a post about an important celebration in your life.
+                        </li>
+                    </ul>
                     <div class="EntryButton">
                         <a href='@Url.Action("Create", "EventTables")'>
                             <input type='button' value='Make An Entry' class="btn btn-default" />
@@ -657,13 +717,18 @@
                 </div>
             </div>
         }
-
+        <div class="col-md-4 resultBox">
+            <div class="thumbnail">
+                <h4>
+                    @Html.ActionLink("Update Your Celebrations & Holidays", "Edit", new { id = Model.CelebrationID })
+                </h4>
+                <h4>
+                    @Html.ActionLink("Return to Your Profile", "Index")
+                </h4>
+            </div>
+        </div>
     </div>
 </div>
-    <p>
-        @Html.ActionLink("Update Your Celebrations & Holidays", "Edit", new { id = Model.CelebrationID }) |
-        @Html.ActionLink("Return to Your Profile", "Index")
-    </p>
 
 <div id="navaay"class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -673,37 +738,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            @*@Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-            @Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Stemma", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @*@Html.ActionLink("Timeline", "Index", "EventTables", new { area = "" }, new { @class = "navbar-brand" })*@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Timeline", "Index", "EventTables")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                    @*<li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Get Started", "Contact", "Home")</li>*@
                 <li>@Html.ActionLink("Profile", "Create", "UserProfiles")</li>
                 <li>@Html.ActionLink("Create Event", "Create", "EventTables")</li>
             </ul>
             @Html.Partial("_LoginPartial")
-        </div>
-    </div>
-</div>
-
-<div id="navaay"class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("FAQ", "Contact", "Home")</li>
-            </ul>
-
         </div>
     </div>
 </div>

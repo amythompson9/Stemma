@@ -4,470 +4,466 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="STEMMAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="__MigrationHistory">
-          <Key>
-            <PropertyRef Name="MigrationId" />
-            <PropertyRef Name="ContextKey" />
-          </Key>
-          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
-          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
-          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
-          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetRoles">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetUserClaims">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="ClaimType" Type="nvarchar(max)" />
-          <Property Name="ClaimValue" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="AspNetUserLogins">
-          <Key>
-            <PropertyRef Name="LoginProvider" />
-            <PropertyRef Name="ProviderKey" />
-            <PropertyRef Name="UserId" />
-          </Key>
-          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetUserRoles">
-          <Key>
-            <PropertyRef Name="UserId" />
-            <PropertyRef Name="RoleId" />
-          </Key>
-          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetUsers">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="Email" Type="nvarchar" MaxLength="256" />
-          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
-          <Property Name="PasswordHash" Type="nvarchar(max)" />
-          <Property Name="SecurityStamp" Type="nvarchar(max)" />
-          <Property Name="PhoneNumber" Type="nvarchar(max)" />
-          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
-          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
-          <Property Name="LockoutEndDateUtc" Type="datetime" />
-          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
-          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
-          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Career">
-          <Key>
-            <PropertyRef Name="CareerID" />
-          </Key>
-          <Property Name="CareerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AttendedCollege" Type="bit" />
-          <Property Name="Graduations" Type="bit" />
-          <Property Name="HaveJob" Type="bit" />
-          <Property Name="HadJob" Type="bit" />
-          <Property Name="Accomplishments" Type="bit" />
-          <Property Name="FirstDayOfSchool" Type="bit" />
-          <Property Name="ArmedForces" Type="bit" />
-          <Property Name="Volunteer" Type="bit" />
-          <Property Name="Legacies" Type="bit" />
-          <Property Name="TechSchool" Type="bit" />
-          <Property Name="LicensesCertifications" Type="bit" />
-          <Property Name="FirstJob" Type="bit" />
-          <Property Name="WorstJob" Type="bit" />
-          <Property Name="AnythingElse" Type="bit" />
-        </EntityType>
-        <EntityType Name="Celebration">
-          <Key>
-            <PropertyRef Name="CelebrationID" />
-          </Key>
-          <Property Name="CelebrationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="HolidayRecently" Type="bit" />
-          <Property Name="PartyRecently" Type="bit" />
-          <Property Name="MilestoneRecently" Type="bit" />
-          <Property Name="CelebrateChristmas" Type="bit" />
-          <Property Name="CelebrateNYE" Type="bit" />
-          <Property Name="CelebrateThanksgiving" Type="bit" />
-          <Property Name="CelebrateValentine" Type="bit" />
-          <Property Name="CelebrateEaster" Type="bit" />
-          <Property Name="CelebrateIndependenceDay" Type="bit" />
-          <Property Name="CelebrateHalloween" Type="bit" />
-          <Property Name="CelebrateMemorialDay" Type="bit" />
-          <Property Name="CelebrateLaborDay" Type="bit" />
-          <Property Name="CelebrateMothersDay" Type="bit" />
-          <Property Name="CelebrateFathersDay" Type="bit" />
-          <Property Name="CelebrateChaunakah" Type="bit" />
-          <Property Name="CelebratePassover" Type="bit" />
-          <Property Name="CelebrateRoshHashanah" Type="bit" />
-          <Property Name="CelerateYomKippur" Type="bit" />
-          <Property Name="CelebrateRamadan" Type="bit" />
-          <Property Name="CelebrateEID" Type="bit" />
-          <Property Name="CelebrateSTPat" Type="bit" />
-          <Property Name="CelebrateBirthdays" Type="bit" />
-          <Property Name="CelebrateChineseNewYear" Type="bit" />
-          <Property Name="CelebrateQuinceanera" Type="bit" />
-          <Property Name="CelebrateBarBatMitzvah" Type="bit" />
-          <Property Name="CelebrateDayOfTheDead" Type="bit" />
-          <Property Name="CelebrateVeteransDay" Type="bit" />
-          <Property Name="CelebrateCincoDeMayo" Type="bit" />
-          <Property Name="AnythingElse" Type="bit" />
-        </EntityType>
-        <EntityType Name="EventTable">
-          <Key>
-            <PropertyRef Name="EventID" />
-          </Key>
-          <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="DateCreated" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
-          <Property Name="EventTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="EventDay" Type="int" />
-          <Property Name="EventMonth" Type="nvarchar" MaxLength="12" />
-          <Property Name="EventYear" Type="int" Nullable="false" />
-          <Property Name="PeopleInvolved" Type="nvarchar" MaxLength="300" />
-          <Property Name="EventCaption" Type="nvarchar" MaxLength="750" />
-          <Property Name="UploadMedia" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="HobbyTable">
-          <Key>
-            <PropertyRef Name="HobbyID" />
-          </Key>
-          <Property Name="HobbyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="PlaySports" Type="bit" />
-          <Property Name="InAShow" Type="bit" />
-          <Property Name="Travel" Type="bit" />
-          <Property Name="OutdoorPerson" Type="bit" />
-          <Property Name="TravelAbroad" Type="bit" />
-          <Property Name="Passions" Type="bit" />
-          <Property Name="Talents" Type="bit" />
-          <Property Name="Trophies" Type="bit" />
-          <Property Name="Exercise" Type="bit" />
-          <Property Name="FamilyVacation" Type="bit" />
-          <Property Name="ChildhoodVacation" Type="bit" />
-          <Property Name="AnythingElse" Type="bit" />
-        </EntityType>
-        <EntityType Name="Media">
-          <Key>
-            <PropertyRef Name="MediaID" />
-          </Key>
-          <Property Name="MediaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FilePath" Type="nvarchar(max)" />
-          <Property Name="EventID" Type="int" />
-        </EntityType>
-        <EntityType Name="Memories">
-          <Key>
-            <PropertyRef Name="MemoryID" />
-          </Key>
-          <Property Name="MemoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BrokenBones" Type="bit" />
-          <Property Name="OwnHome" Type="bit" />
-          <Property Name="DriversLicense" Type="bit" />
-          <Property Name="FirstTooth" Type="bit" />
-          <Property Name="PersonalNickName" Type="bit" />
-          <Property Name="FamilyNickName" Type="bit" />
-          <Property Name="RideBike" Type="bit" />
-          <Property Name="CommitCrime" Type="bit" />
-          <Property Name="BigMove" Type="bit" />
-          <Property Name="Vote" Type="bit" />
-          <Property Name="FamilyTraditions" Type="bit" />
-          <Property Name="EmbarrassingMoment" Type="bit" />
-          <Property Name="ProudestMoments" Type="bit" />
-          <Property Name="ChildhoodCamp" Type="bit" />
-          <Property Name="MemorializeSomeone" Type="bit" />
-          <Property Name="Concerts" Type="bit" />
-          <Property Name="FamilyPet" Type="bit" />
-          <Property Name="CurrentPet" Type="bit" />
-          <Property Name="HSDance" Type="bit" />
-          <Property Name="AnythingElse" Type="bit" />
-        </EntityType>
-        <EntityType Name="RegisterUser">
-          <Key>
-            <PropertyRef Name="RegisterUserID" />
-          </Key>
-          <Property Name="RegisterUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="LoginID" Type="int" Nullable="false" />
-          <Property Name="Email" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Relationship">
-          <Key>
-            <PropertyRef Name="RelationshipsID" />
-          </Key>
-          <Property Name="RelationshipsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CurrentlyMarried" Type="bit" />
-          <Property Name="InARelationship" Type="bit" />
-          <Property Name="PreviousRomance" Type="bit" />
-          <Property Name="HaveChildren" Type="bit" />
-          <Property Name="HaveGrandchildren" Type="bit" />
-          <Property Name="OtherYoungsters" Type="bit" />
-          <Property Name="HaveParents" Type="bit" />
-          <Property Name="HaveGrandparents" Type="bit" />
-          <Property Name="OtherAdults" Type="bit" />
-          <Property Name="HaveSiblings" Type="bit" />
-          <Property Name="OtherCloseRelatives" Type="bit" />
-          <Property Name="GoodFriendships" Type="bit" />
-          <Property Name="EverythingElse" Type="bit" />
-        </EntityType>
-        <EntityType Name="UserProfile">
-          <Key>
-            <PropertyRef Name="UserProfileID" />
-          </Key>
-          <Property Name="UserProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Birthdate" Type="datetime" Nullable="false" />
-          <Property Name="RelationshipsID" Type="int" Nullable="false" />
-          <Property Name="CareerID" Type="int" Nullable="false" />
-          <Property Name="CelebrationID" Type="int" Nullable="false" />
-          <Property Name="HobbyID" Type="int" Nullable="false" />
-          <Property Name="MemoryID" Type="int" Nullable="false" />
-          <Property Name="WorldEventID" Type="int" Nullable="false" />
-          <Property Name="EventID" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="WorldEvents">
-          <Key>
-            <PropertyRef Name="WorldEventID" />
-          </Key>
-          <Property Name="WorldEventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="September11" Type="bit" />
-          <Property Name="MoonLanding" Type="bit" />
-          <Property Name="NixonResigns" Type="bit" />
-          <Property Name="ElvisDies" Type="bit" />
-          <Property Name="ChallengerExplodes" Type="bit" />
-          <Property Name="WorldWar2Ends" Type="bit" />
-          <Property Name="KennedyDies" Type="bit" />
-          <Property Name="NotableElection" Type="bit" />
-          <Property Name="MLKAssassination" Type="bit" />
-          <Property Name="Y2K" Type="bit" />
-          <Property Name="BerlinWall" Type="bit" />
-          <Property Name="OJSimpsonCarChase" Type="bit" />
-          <Property Name="EndOfProhibition" Type="bit" />
-          <Property Name="VietnamWar" Type="bit" />
-          <Property Name="AnythingElse" Type="bit" />
-        </EntityType>
-        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetUsers">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserClaims">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetUsers">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserLogins">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
-          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetRoles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserRoles">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
-          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetUsers">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserRoles">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Media_EventTable">
-          <End Role="EventTable" Type="Self.EventTable" Multiplicity="0..1" />
-          <End Role="Media" Type="Self.Media" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EventTable">
-              <PropertyRef Name="EventID" />
-            </Principal>
-            <Dependent Role="Media">
-              <PropertyRef Name="EventID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserProfile_Career">
-          <End Role="Career" Type="Self.Career" Multiplicity="1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Career">
-              <PropertyRef Name="CareerID" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="CareerID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserProfile_Celebration">
-          <End Role="Celebration" Type="Self.Celebration" Multiplicity="1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Celebration">
-              <PropertyRef Name="CelebrationID" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="CelebrationID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserProfile_EventTable">
-          <End Role="EventTable" Type="Self.EventTable" Multiplicity="1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EventTable">
-              <PropertyRef Name="EventID" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="EventID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserProfile_HobbyTable">
-          <End Role="HobbyTable" Type="Self.HobbyTable" Multiplicity="1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="HobbyTable">
-              <PropertyRef Name="HobbyID" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="HobbyID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserProfile_Memories">
-          <End Role="Memories" Type="Self.Memories" Multiplicity="1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Memories">
-              <PropertyRef Name="MemoryID" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="MemoryID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserProfile_Relationship">
-          <End Role="Relationship" Type="Self.Relationship" Multiplicity="1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Relationship">
-              <PropertyRef Name="RelationshipsID" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="RelationshipsID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserProfile_WorldEvents">
-          <End Role="WorldEvents" Type="Self.WorldEvents" Multiplicity="1" />
-          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="WorldEvents">
-              <PropertyRef Name="WorldEventID" />
-            </Principal>
-            <Dependent Role="UserProfile">
-              <PropertyRef Name="WorldEventID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="STEMMAModelStoreContainer">
-          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Career" EntityType="Self.Career" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Celebration" EntityType="Self.Celebration" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="EventTable" EntityType="Self.EventTable" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="HobbyTable" EntityType="Self.HobbyTable" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Media" EntityType="Self.Media" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Memories" EntityType="Self.Memories" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="RegisterUser" EntityType="Self.RegisterUser" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Relationship" EntityType="Self.Relationship" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="WorldEvents" EntityType="Self.WorldEvents" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
-            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
-            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Media_EventTable" Association="Self.FK_Media_EventTable">
-            <End Role="EventTable" EntitySet="EventTable" />
-            <End Role="Media" EntitySet="Media" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserProfile_Career" Association="Self.FK_UserProfile_Career">
-            <End Role="Career" EntitySet="Career" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserProfile_Celebration" Association="Self.FK_UserProfile_Celebration">
-            <End Role="Celebration" EntitySet="Celebration" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserProfile_EventTable" Association="Self.FK_UserProfile_EventTable">
-            <End Role="EventTable" EntitySet="EventTable" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserProfile_HobbyTable" Association="Self.FK_UserProfile_HobbyTable">
-            <End Role="HobbyTable" EntitySet="HobbyTable" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserProfile_Memories" Association="Self.FK_UserProfile_Memories">
-            <End Role="Memories" EntitySet="Memories" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserProfile_Relationship" Association="Self.FK_UserProfile_Relationship">
-            <End Role="Relationship" EntitySet="Relationship" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserProfile_WorldEvents" Association="Self.FK_UserProfile_WorldEvents">
-            <End Role="WorldEvents" EntitySet="WorldEvents" />
-            <End Role="UserProfile" EntitySet="UserProfile" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema></edmx:StorageModels>
+    <Schema Namespace="STEMMAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="STEMMAModelStoreContainer">
+    <EntitySet Name="Careers" EntityType="STEMMAModel.Store.Careers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Celebrations" EntityType="STEMMAModel.Store.Celebrations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HobbyTables" EntityType="STEMMAModel.Store.HobbyTables" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Media" EntityType="STEMMAModel.Store.Media" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Memories" EntityType="STEMMAModel.Store.Memories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WorldEvents" EntityType="STEMMAModel.Store.WorldEvents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Relationships" EntityType="STEMMAModel.Store.Relationships" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EventTables" EntityType="STEMMAModel.Store.EventTables" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserProfiles" EntityType="STEMMAModel.Store.UserProfiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="C__MigrationHistory" EntityType="STEMMAModel.Store.C__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetRoles" EntityType="STEMMAModel.Store.AspNetRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserClaims" EntityType="STEMMAModel.Store.AspNetUserClaims" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserLogins" EntityType="STEMMAModel.Store.AspNetUserLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUsers" EntityType="STEMMAModel.Store.AspNetUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RegisterUsers" EntityType="STEMMAModel.Store.RegisterUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AspNetUserRoles" EntityType="STEMMAModel.Store.AspNetUserRoles" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Media_EventTable" Association="STEMMAModel.Store.FK_Media_EventTable">
+      <End Role="EventTable" EntitySet="EventTables" />
+      <End Role="Medium" EntitySet="Media" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_Career" Association="STEMMAModel.Store.FK_UserProfile_Career">
+      <End Role="Career" EntitySet="Careers" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_Celebration" Association="STEMMAModel.Store.FK_UserProfile_Celebration">
+      <End Role="Celebration" EntitySet="Celebrations" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_EventTable" Association="STEMMAModel.Store.FK_UserProfile_EventTable">
+      <End Role="EventTable" EntitySet="EventTables" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_HobbyTable" Association="STEMMAModel.Store.FK_UserProfile_HobbyTable">
+      <End Role="HobbyTable" EntitySet="HobbyTables" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_Memories" Association="STEMMAModel.Store.FK_UserProfile_Memories">
+      <End Role="Memory" EntitySet="Memories" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_Relationship" Association="STEMMAModel.Store.FK_UserProfile_Relationship">
+      <End Role="Relationship" EntitySet="Relationships" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProfile_WorldEvents" Association="STEMMAModel.Store.FK_UserProfile_WorldEvents">
+      <End Role="WorldEvent" EntitySet="WorldEvents" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="STEMMAModel.Store.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="STEMMAModel.Store.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetRole" Association="STEMMAModel.Store.FK_AspNetUserRoles_AspNetRole">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserRoles_AspNetUser" Association="STEMMAModel.Store.FK_AspNetUserRoles_AspNetUser">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Careers">
+    <Key>
+      <PropertyRef Name="CareerID" />
+    </Key>
+    <Property Name="CareerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttendedCollege" Type="bit" Nullable="true" />
+    <Property Name="Graduations" Type="bit" Nullable="true" />
+    <Property Name="HaveJob" Type="bit" Nullable="true" />
+    <Property Name="HadJob" Type="bit" Nullable="true" />
+    <Property Name="Accomplishments" Type="bit" Nullable="true" />
+    <Property Name="FirstDayOfSchool" Type="bit" Nullable="true" />
+    <Property Name="ArmedForces" Type="bit" Nullable="true" />
+    <Property Name="Volunteer" Type="bit" Nullable="true" />
+    <Property Name="Legacies" Type="bit" Nullable="true" />
+    <Property Name="TechSchool" Type="bit" Nullable="true" />
+    <Property Name="LicensesCertifications" Type="bit" Nullable="true" />
+    <Property Name="FirstJob" Type="bit" Nullable="true" />
+    <Property Name="WorstJob" Type="bit" Nullable="true" />
+    <Property Name="AnythingElse" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Celebrations">
+    <Key>
+      <PropertyRef Name="CelebrationID" />
+    </Key>
+    <Property Name="CelebrationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HolidayRecently" Type="bit" Nullable="true" />
+    <Property Name="PartyRecently" Type="bit" Nullable="true" />
+    <Property Name="MilestoneRecently" Type="bit" Nullable="true" />
+    <Property Name="CelebrateChristmas" Type="bit" Nullable="true" />
+    <Property Name="CelebrateNYE" Type="bit" Nullable="true" />
+    <Property Name="CelebrateThanksgiving" Type="bit" Nullable="true" />
+    <Property Name="CelebrateValentine" Type="bit" Nullable="true" />
+    <Property Name="CelebrateEaster" Type="bit" Nullable="true" />
+    <Property Name="CelebrateIndependenceDay" Type="bit" Nullable="true" />
+    <Property Name="CelebrateHalloween" Type="bit" Nullable="true" />
+    <Property Name="CelebrateMemorialDay" Type="bit" Nullable="true" />
+    <Property Name="CelebrateLaborDay" Type="bit" Nullable="true" />
+    <Property Name="CelebrateMothersDay" Type="bit" Nullable="true" />
+    <Property Name="CelebrateFathersDay" Type="bit" Nullable="true" />
+    <Property Name="CelebrateChaunakah" Type="bit" Nullable="true" />
+    <Property Name="CelebratePassover" Type="bit" Nullable="true" />
+    <Property Name="CelebrateRoshHashanah" Type="bit" Nullable="true" />
+    <Property Name="CelerateYomKippur" Type="bit" Nullable="true" />
+    <Property Name="CelebrateRamadan" Type="bit" Nullable="true" />
+    <Property Name="CelebrateEID" Type="bit" Nullable="true" />
+    <Property Name="CelebrateSTPat" Type="bit" Nullable="true" />
+    <Property Name="CelebrateBirthdays" Type="bit" Nullable="true" />
+    <Property Name="CelebrateChineseNewYear" Type="bit" Nullable="true" />
+    <Property Name="CelebrateQuinceanera" Type="bit" Nullable="true" />
+    <Property Name="CelebrateBarBatMitzvah" Type="bit" Nullable="true" />
+    <Property Name="CelebrateDayOfTheDead" Type="bit" Nullable="true" />
+    <Property Name="CelebrateVeteransDay" Type="bit" Nullable="true" />
+    <Property Name="CelebrateCincoDeMayo" Type="bit" Nullable="true" />
+    <Property Name="AnythingElse" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="HobbyTables">
+    <Key>
+      <PropertyRef Name="HobbyID" />
+    </Key>
+    <Property Name="HobbyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlaySports" Type="bit" Nullable="true" />
+    <Property Name="InAShow" Type="bit" Nullable="true" />
+    <Property Name="Travel" Type="bit" Nullable="true" />
+    <Property Name="OutdoorPerson" Type="bit" Nullable="true" />
+    <Property Name="TravelAbroad" Type="bit" Nullable="true" />
+    <Property Name="Passions" Type="bit" Nullable="true" />
+    <Property Name="Talents" Type="bit" Nullable="true" />
+    <Property Name="Trophies" Type="bit" Nullable="true" />
+    <Property Name="Exercise" Type="bit" Nullable="true" />
+    <Property Name="FamilyVacation" Type="bit" Nullable="true" />
+    <Property Name="ChildhoodVacation" Type="bit" Nullable="true" />
+    <Property Name="AnythingElse" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Media">
+    <Key>
+      <PropertyRef Name="MediaID" />
+    </Key>
+    <Property Name="MediaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FilePath" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="EventID" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Memories">
+    <Key>
+      <PropertyRef Name="MemoryID" />
+    </Key>
+    <Property Name="MemoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrokenBones" Type="bit" Nullable="true" />
+    <Property Name="OwnHome" Type="bit" Nullable="true" />
+    <Property Name="DriversLicense" Type="bit" Nullable="true" />
+    <Property Name="FirstTooth" Type="bit" Nullable="true" />
+    <Property Name="PersonalNickName" Type="bit" Nullable="true" />
+    <Property Name="FamilyNickName" Type="bit" Nullable="true" />
+    <Property Name="RideBike" Type="bit" Nullable="true" />
+    <Property Name="CommitCrime" Type="bit" Nullable="true" />
+    <Property Name="BigMove" Type="bit" Nullable="true" />
+    <Property Name="Vote" Type="bit" Nullable="true" />
+    <Property Name="FamilyTraditions" Type="bit" Nullable="true" />
+    <Property Name="EmbarrassingMoment" Type="bit" Nullable="true" />
+    <Property Name="ProudestMoments" Type="bit" Nullable="true" />
+    <Property Name="ChildhoodCamp" Type="bit" Nullable="true" />
+    <Property Name="MemorializeSomeone" Type="bit" Nullable="true" />
+    <Property Name="Concerts" Type="bit" Nullable="true" />
+    <Property Name="FamilyPet" Type="bit" Nullable="true" />
+    <Property Name="CurrentPet" Type="bit" Nullable="true" />
+    <Property Name="HSDance" Type="bit" Nullable="true" />
+    <Property Name="AnythingElse" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="WorldEvents">
+    <Key>
+      <PropertyRef Name="WorldEventID" />
+    </Key>
+    <Property Name="WorldEventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="September11" Type="bit" Nullable="true" />
+    <Property Name="MoonLanding" Type="bit" Nullable="true" />
+    <Property Name="NixonResigns" Type="bit" Nullable="true" />
+    <Property Name="ElvisDies" Type="bit" Nullable="true" />
+    <Property Name="ChallengerExplodes" Type="bit" Nullable="true" />
+    <Property Name="WorldWar2Ends" Type="bit" Nullable="true" />
+    <Property Name="KennedyDies" Type="bit" Nullable="true" />
+    <Property Name="NotableElection" Type="bit" Nullable="true" />
+    <Property Name="MLKAssassination" Type="bit" Nullable="true" />
+    <Property Name="Y2K" Type="bit" Nullable="true" />
+    <Property Name="BerlinWall" Type="bit" Nullable="true" />
+    <Property Name="OJSimpsonCarChase" Type="bit" Nullable="true" />
+    <Property Name="EndOfProhibition" Type="bit" Nullable="true" />
+    <Property Name="AnythingElse" Type="bit" Nullable="true" />
+    <Property Name="VietnamWar" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Relationships">
+    <Key>
+      <PropertyRef Name="RelationshipsID" />
+    </Key>
+    <Property Name="RelationshipsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrentlyMarried" Type="bit" Nullable="true" />
+    <Property Name="InARelationship" Type="bit" Nullable="true" />
+    <Property Name="PreviousRomance" Type="bit" Nullable="true" />
+    <Property Name="HaveChildren" Type="bit" Nullable="true" />
+    <Property Name="HaveGrandchildren" Type="bit" Nullable="true" />
+    <Property Name="OtherYoungsters" Type="bit" Nullable="true" />
+    <Property Name="HaveParents" Type="bit" Nullable="true" />
+    <Property Name="HaveGrandparents" Type="bit" Nullable="true" />
+    <Property Name="OtherAdults" Type="bit" Nullable="true" />
+    <Property Name="HaveSiblings" Type="bit" Nullable="true" />
+    <Property Name="OtherCloseRelatives" Type="bit" Nullable="true" />
+    <Property Name="GoodFriendships" Type="bit" Nullable="true" />
+    <Property Name="EverythingElse" Type="bit" Nullable="true" />
+  </EntityType>
+  <EntityType Name="EventTables">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateCreated" Type="binary" StoreGeneratedPattern="Computed" Nullable="false" MaxLength="8" />
+    <Property Name="EventTitle" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="EventDay" Type="int" Nullable="true" />
+    <Property Name="EventMonth" Type="nvarchar" Nullable="true" MaxLength="12" />
+    <Property Name="EventYear" Type="int" Nullable="false" />
+    <Property Name="PeopleInvolved" Type="nvarchar" Nullable="true" MaxLength="300" />
+    <Property Name="EventCaption" Type="nvarchar" Nullable="true" MaxLength="750" />
+    <Property Name="UploadMedia" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="UserProfiles">
+    <Key>
+      <PropertyRef Name="UserProfileID" />
+    </Key>
+    <Property Name="UserProfileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Birthdate" Type="datetime" Nullable="false" />
+    <Property Name="RelationshipsID" Type="int" Nullable="false" />
+    <Property Name="CareerID" Type="int" Nullable="false" />
+    <Property Name="CelebrationID" Type="int" Nullable="false" />
+    <Property Name="HobbyID" Type="int" Nullable="false" />
+    <Property Name="MemoryID" Type="int" Nullable="false" />
+    <Property Name="WorldEventID" Type="int" Nullable="false" />
+    <Property Name="EventID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="ContextKey" Type="nvarchar" Nullable="false" MaxLength="300" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ClaimType" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="ProviderKey" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="UserId" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="Email" Type="nvarchar" Nullable="true" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" Nullable="true" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="RegisterUsers">
+    <Key>
+      <PropertyRef Name="RegisterUserID" />
+    </Key>
+    <Property Name="RegisterUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginID" Type="int" Nullable="false" />
+    <Property Name="Email" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="AspNetRoles_Id" />
+      <PropertyRef Name="AspNetUsers_Id" />
+    </Key>
+    <Property Name="AspNetRoles_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="AspNetUsers_Id" Type="nvarchar" Nullable="false" MaxLength="128" />
+  </EntityType>
+  <Association Name="FK_Media_EventTable">
+    <End Role="EventTable" Type="STEMMAModel.Store.EventTables" Multiplicity="0..1" />
+    <End Role="Medium" Type="STEMMAModel.Store.Media" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventTable">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="Medium">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_Career">
+    <End Role="Career" Type="STEMMAModel.Store.Careers" Multiplicity="1" />
+    <End Role="UserProfile" Type="STEMMAModel.Store.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Career">
+        <PropertyRef Name="CareerID" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="CareerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_Celebration">
+    <End Role="Celebration" Type="STEMMAModel.Store.Celebrations" Multiplicity="1" />
+    <End Role="UserProfile" Type="STEMMAModel.Store.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Celebration">
+        <PropertyRef Name="CelebrationID" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="CelebrationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_EventTable">
+    <End Role="EventTable" Type="STEMMAModel.Store.EventTables" Multiplicity="1" />
+    <End Role="UserProfile" Type="STEMMAModel.Store.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EventTable">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_HobbyTable">
+    <End Role="HobbyTable" Type="STEMMAModel.Store.HobbyTables" Multiplicity="1" />
+    <End Role="UserProfile" Type="STEMMAModel.Store.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HobbyTable">
+        <PropertyRef Name="HobbyID" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="HobbyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_Memories">
+    <End Role="Memory" Type="STEMMAModel.Store.Memories" Multiplicity="1" />
+    <End Role="UserProfile" Type="STEMMAModel.Store.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Memory">
+        <PropertyRef Name="MemoryID" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="MemoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_Relationship">
+    <End Role="Relationship" Type="STEMMAModel.Store.Relationships" Multiplicity="1" />
+    <End Role="UserProfile" Type="STEMMAModel.Store.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Relationship">
+        <PropertyRef Name="RelationshipsID" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="RelationshipsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProfile_WorldEvents">
+    <End Role="WorldEvent" Type="STEMMAModel.Store.WorldEvents" Multiplicity="1" />
+    <End Role="UserProfile" Type="STEMMAModel.Store.UserProfiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WorldEvent">
+        <PropertyRef Name="WorldEventID" />
+      </Principal>
+      <Dependent Role="UserProfile">
+        <PropertyRef Name="WorldEventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUser" Type="STEMMAModel.Store.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaim" Type="STEMMAModel.Store.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUser" Type="STEMMAModel.Store.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogin" Type="STEMMAModel.Store.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetRole">
+    <End Role="AspNetRole" Type="STEMMAModel.Store.AspNetRoles" Multiplicity="1" />
+    <End Role="AspNetUserRoles" Type="STEMMAModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRole">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetRoles_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserRoles_AspNetUser">
+    <End Role="AspNetUserRoles" Type="STEMMAModel.Store.AspNetUserRoles" Multiplicity="*" />
+    <End Role="AspNetUser" Type="STEMMAModel.Store.AspNetUsers" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="AspNetUsers_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="STEMMAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -922,267 +918,266 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="STEMMAModelStoreContainer" CdmEntityContainer="STEMMAEntities">
-          <EntitySetMapping Name="Careers">
-            <EntityTypeMapping TypeName="STEMMAModel.Career">
-              <MappingFragment StoreEntitySet="Career">
-                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
-                <ScalarProperty Name="CareerID" ColumnName="CareerID" />
-                <ScalarProperty Name="AttendedCollege" ColumnName="AttendedCollege" />
-                <ScalarProperty Name="Graduations" ColumnName="Graduations" />
-                <ScalarProperty Name="HaveJob" ColumnName="HaveJob" />
-                <ScalarProperty Name="HadJob" ColumnName="HadJob" />
-                <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
-                <ScalarProperty Name="FirstDayOfSchool" ColumnName="FirstDayOfSchool" />
-                <ScalarProperty Name="ArmedForces" ColumnName="ArmedForces" />
-                <ScalarProperty Name="Volunteer" ColumnName="Volunteer" />
-                <ScalarProperty Name="Legacies" ColumnName="Legacies" />
-                <ScalarProperty Name="TechSchool" ColumnName="TechSchool" />
-                <ScalarProperty Name="LicensesCertifications" ColumnName="LicensesCertifications" />
-                <ScalarProperty Name="FirstJob" ColumnName="FirstJob" />
-                <ScalarProperty Name="WorstJob" ColumnName="WorstJob" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Celebrations">
-            <EntityTypeMapping TypeName="STEMMAModel.Celebration">
-              <MappingFragment StoreEntitySet="Celebration">
-                <ScalarProperty Name="CelebrationID" ColumnName="CelebrationID" />
-                <ScalarProperty Name="HolidayRecently" ColumnName="HolidayRecently" />
-                <ScalarProperty Name="PartyRecently" ColumnName="PartyRecently" />
-                <ScalarProperty Name="MilestoneRecently" ColumnName="MilestoneRecently" />
-                <ScalarProperty Name="CelebrateChristmas" ColumnName="CelebrateChristmas" />
-                <ScalarProperty Name="CelebrateNYE" ColumnName="CelebrateNYE" />
-                <ScalarProperty Name="CelebrateThanksgiving" ColumnName="CelebrateThanksgiving" />
-                <ScalarProperty Name="CelebrateValentine" ColumnName="CelebrateValentine" />
-                <ScalarProperty Name="CelebrateEaster" ColumnName="CelebrateEaster" />
-                <ScalarProperty Name="CelebrateIndependenceDay" ColumnName="CelebrateIndependenceDay" />
-                <ScalarProperty Name="CelebrateHalloween" ColumnName="CelebrateHalloween" />
-                <ScalarProperty Name="CelebrateMemorialDay" ColumnName="CelebrateMemorialDay" />
-                <ScalarProperty Name="CelebrateLaborDay" ColumnName="CelebrateLaborDay" />
-                <ScalarProperty Name="CelebrateMothersDay" ColumnName="CelebrateMothersDay" />
-                <ScalarProperty Name="CelebrateFathersDay" ColumnName="CelebrateFathersDay" />
-                <ScalarProperty Name="CelebrateChaunakah" ColumnName="CelebrateChaunakah" />
-                <ScalarProperty Name="CelebratePassover" ColumnName="CelebratePassover" />
-                <ScalarProperty Name="CelebrateRoshHashanah" ColumnName="CelebrateRoshHashanah" />
-                <ScalarProperty Name="CelerateYomKippur" ColumnName="CelerateYomKippur" />
-                <ScalarProperty Name="CelebrateRamadan" ColumnName="CelebrateRamadan" />
-                <ScalarProperty Name="CelebrateEID" ColumnName="CelebrateEID" />
-                <ScalarProperty Name="CelebrateSTPat" ColumnName="CelebrateSTPat" />
-                <ScalarProperty Name="CelebrateBirthdays" ColumnName="CelebrateBirthdays" />
-                <ScalarProperty Name="CelebrateChineseNewYear" ColumnName="CelebrateChineseNewYear" />
-                <ScalarProperty Name="CelebrateQuinceanera" ColumnName="CelebrateQuinceanera" />
-                <ScalarProperty Name="CelebrateBarBatMitzvah" ColumnName="CelebrateBarBatMitzvah" />
-                <ScalarProperty Name="CelebrateDayOfTheDead" ColumnName="CelebrateDayOfTheDead" />
-                <ScalarProperty Name="CelebrateVeteransDay" ColumnName="CelebrateVeteransDay" />
-                <ScalarProperty Name="CelebrateCincoDeMayo" ColumnName="CelebrateCincoDeMayo" />
-                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="HobbyTables">
-            <EntityTypeMapping TypeName="STEMMAModel.HobbyTable">
-              <MappingFragment StoreEntitySet="HobbyTable">
-                <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
-                <ScalarProperty Name="PlaySports" ColumnName="PlaySports" />
-                <ScalarProperty Name="InAShow" ColumnName="InAShow" />
-                <ScalarProperty Name="Travel" ColumnName="Travel" />
-                <ScalarProperty Name="OutdoorPerson" ColumnName="OutdoorPerson" />
-                <ScalarProperty Name="TravelAbroad" ColumnName="TravelAbroad" />
-                <ScalarProperty Name="Passions" ColumnName="Passions" />
-                <ScalarProperty Name="Talents" ColumnName="Talents" />
-                <ScalarProperty Name="Trophies" ColumnName="Trophies" />
-                <ScalarProperty Name="Exercise" ColumnName="Exercise" />
-                <ScalarProperty Name="FamilyVacation" ColumnName="FamilyVacation" />
-                <ScalarProperty Name="ChildhoodVacation" ColumnName="ChildhoodVacation" />
-                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Media">
-            <EntityTypeMapping TypeName="STEMMAModel.Medium">
-              <MappingFragment StoreEntitySet="Media">
-                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
-                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
-                <ScalarProperty Name="EventID" ColumnName="EventID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Memories">
-            <EntityTypeMapping TypeName="STEMMAModel.Memory">
-              <MappingFragment StoreEntitySet="Memories">
-                <ScalarProperty Name="MemoryID" ColumnName="MemoryID" />
-                <ScalarProperty Name="BrokenBones" ColumnName="BrokenBones" />
-                <ScalarProperty Name="OwnHome" ColumnName="OwnHome" />
-                <ScalarProperty Name="DriversLicense" ColumnName="DriversLicense" />
-                <ScalarProperty Name="FirstTooth" ColumnName="FirstTooth" />
-                <ScalarProperty Name="PersonalNickName" ColumnName="PersonalNickName" />
-                <ScalarProperty Name="FamilyNickName" ColumnName="FamilyNickName" />
-                <ScalarProperty Name="RideBike" ColumnName="RideBike" />
-                <ScalarProperty Name="CommitCrime" ColumnName="CommitCrime" />
-                <ScalarProperty Name="BigMove" ColumnName="BigMove" />
-                <ScalarProperty Name="Vote" ColumnName="Vote" />
-                <ScalarProperty Name="FamilyTraditions" ColumnName="FamilyTraditions" />
-                <ScalarProperty Name="EmbarrassingMoment" ColumnName="EmbarrassingMoment" />
-                <ScalarProperty Name="ProudestMoments" ColumnName="ProudestMoments" />
-                <ScalarProperty Name="ChildhoodCamp" ColumnName="ChildhoodCamp" />
-                <ScalarProperty Name="MemorializeSomeone" ColumnName="MemorializeSomeone" />
-                <ScalarProperty Name="Concerts" ColumnName="Concerts" />
-                <ScalarProperty Name="FamilyPet" ColumnName="FamilyPet" />
-                <ScalarProperty Name="CurrentPet" ColumnName="CurrentPet" />
-                <ScalarProperty Name="HSDance" ColumnName="HSDance" />
-                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="WorldEvents">
-            <EntityTypeMapping TypeName="STEMMAModel.WorldEvent">
-              <MappingFragment StoreEntitySet="WorldEvents">
-                <ScalarProperty Name="VietnamWar" ColumnName="VietnamWar" />
-                <ScalarProperty Name="WorldEventID" ColumnName="WorldEventID" />
-                <ScalarProperty Name="September11" ColumnName="September11" />
-                <ScalarProperty Name="MoonLanding" ColumnName="MoonLanding" />
-                <ScalarProperty Name="NixonResigns" ColumnName="NixonResigns" />
-                <ScalarProperty Name="ElvisDies" ColumnName="ElvisDies" />
-                <ScalarProperty Name="ChallengerExplodes" ColumnName="ChallengerExplodes" />
-                <ScalarProperty Name="WorldWar2Ends" ColumnName="WorldWar2Ends" />
-                <ScalarProperty Name="KennedyDies" ColumnName="KennedyDies" />
-                <ScalarProperty Name="NotableElection" ColumnName="NotableElection" />
-                <ScalarProperty Name="MLKAssassination" ColumnName="MLKAssassination" />
-                <ScalarProperty Name="Y2K" ColumnName="Y2K" />
-                <ScalarProperty Name="BerlinWall" ColumnName="BerlinWall" />
-                <ScalarProperty Name="OJSimpsonCarChase" ColumnName="OJSimpsonCarChase" />
-                <ScalarProperty Name="EndOfProhibition" ColumnName="EndOfProhibition" />
-                <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Relationships">
-            <EntityTypeMapping TypeName="STEMMAModel.Relationship">
-              <MappingFragment StoreEntitySet="Relationship">
-                <ScalarProperty Name="EverythingElse" ColumnName="EverythingElse" />
-                <ScalarProperty Name="GoodFriendships" ColumnName="GoodFriendships" />
-                <ScalarProperty Name="OtherCloseRelatives" ColumnName="OtherCloseRelatives" />
-                <ScalarProperty Name="HaveSiblings" ColumnName="HaveSiblings" />
-                <ScalarProperty Name="OtherAdults" ColumnName="OtherAdults" />
-                <ScalarProperty Name="HaveGrandparents" ColumnName="HaveGrandparents" />
-                <ScalarProperty Name="HaveParents" ColumnName="HaveParents" />
-                <ScalarProperty Name="OtherYoungsters" ColumnName="OtherYoungsters" />
-                <ScalarProperty Name="HaveGrandchildren" ColumnName="HaveGrandchildren" />
-                <ScalarProperty Name="HaveChildren" ColumnName="HaveChildren" />
-                <ScalarProperty Name="PreviousRomance" ColumnName="PreviousRomance" />
-                <ScalarProperty Name="InARelationship" ColumnName="InARelationship" />
-                <ScalarProperty Name="CurrentlyMarried" ColumnName="CurrentlyMarried" />
-                <ScalarProperty Name="RelationshipsID" ColumnName="RelationshipsID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EventTables">
-            <EntityTypeMapping TypeName="STEMMAModel.EventTable">
-              <MappingFragment StoreEntitySet="EventTable">
-                <ScalarProperty Name="UploadMedia" ColumnName="UploadMedia" />
-                <ScalarProperty Name="EventCaption" ColumnName="EventCaption" />
-                <ScalarProperty Name="PeopleInvolved" ColumnName="PeopleInvolved" />
-                <ScalarProperty Name="EventYear" ColumnName="EventYear" />
-                <ScalarProperty Name="EventMonth" ColumnName="EventMonth" />
-                <ScalarProperty Name="EventDay" ColumnName="EventDay" />
-                <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
-                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="EventID" ColumnName="EventID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UserProfiles">
-            <EntityTypeMapping TypeName="STEMMAModel.UserProfile">
-              <MappingFragment StoreEntitySet="UserProfile">
-                <ScalarProperty Name="EventID" ColumnName="EventID" />
-                <ScalarProperty Name="WorldEventID" ColumnName="WorldEventID" />
-                <ScalarProperty Name="MemoryID" ColumnName="MemoryID" />
-                <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
-                <ScalarProperty Name="CelebrationID" ColumnName="CelebrationID" />
-                <ScalarProperty Name="CareerID" ColumnName="CareerID" />
-                <ScalarProperty Name="RelationshipsID" ColumnName="RelationshipsID" />
-                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
-                <ScalarProperty Name="UserProfileID" ColumnName="UserProfileID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="C__MigrationHistory">
-            <EntityTypeMapping TypeName="STEMMAModel.C__MigrationHistory">
-              <MappingFragment StoreEntitySet="__MigrationHistory">
-                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
-                <ScalarProperty Name="Model" ColumnName="Model" />
-                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
-                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AspNetRoles">
-            <EntityTypeMapping TypeName="STEMMAModel.AspNetRole">
-              <MappingFragment StoreEntitySet="AspNetRoles">
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AspNetUserClaims">
-            <EntityTypeMapping TypeName="STEMMAModel.AspNetUserClaim">
-              <MappingFragment StoreEntitySet="AspNetUserClaims">
-                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
-                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AspNetUserLogins">
-            <EntityTypeMapping TypeName="STEMMAModel.AspNetUserLogin">
-              <MappingFragment StoreEntitySet="AspNetUserLogins">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
-                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AspNetUsers">
-            <EntityTypeMapping TypeName="STEMMAModel.AspNetUser">
-              <MappingFragment StoreEntitySet="AspNetUsers">
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
-                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
-                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
-                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
-                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
-                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
-                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
-                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="RegisterUsers">
-            <EntityTypeMapping TypeName="STEMMAModel.RegisterUser">
-              <MappingFragment StoreEntitySet="RegisterUser">
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
-                <ScalarProperty Name="RegisterUserID" ColumnName="RegisterUserID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <AssociationSetMapping Name="AspNetUserRoles" TypeName="STEMMAModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
-            <EndProperty Name="AspNetUser">
-              <ScalarProperty Name="Id" ColumnName="UserId" />
-            </EndProperty>
-            <EndProperty Name="AspNetRole">
-              <ScalarProperty Name="Id" ColumnName="RoleId" />
-            </EndProperty>
-          </AssociationSetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="STEMMAModelStoreContainer" CdmEntityContainer="STEMMAEntities">
+    <EntitySetMapping Name="Careers">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.Career)">
+        <MappingFragment StoreEntitySet="Careers">
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="AttendedCollege" ColumnName="AttendedCollege" />
+          <ScalarProperty Name="Graduations" ColumnName="Graduations" />
+          <ScalarProperty Name="HaveJob" ColumnName="HaveJob" />
+          <ScalarProperty Name="HadJob" ColumnName="HadJob" />
+          <ScalarProperty Name="Accomplishments" ColumnName="Accomplishments" />
+          <ScalarProperty Name="FirstDayOfSchool" ColumnName="FirstDayOfSchool" />
+          <ScalarProperty Name="ArmedForces" ColumnName="ArmedForces" />
+          <ScalarProperty Name="Volunteer" ColumnName="Volunteer" />
+          <ScalarProperty Name="Legacies" ColumnName="Legacies" />
+          <ScalarProperty Name="TechSchool" ColumnName="TechSchool" />
+          <ScalarProperty Name="LicensesCertifications" ColumnName="LicensesCertifications" />
+          <ScalarProperty Name="FirstJob" ColumnName="FirstJob" />
+          <ScalarProperty Name="WorstJob" ColumnName="WorstJob" />
+          <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Celebrations">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.Celebration)">
+        <MappingFragment StoreEntitySet="Celebrations">
+          <ScalarProperty Name="CelebrationID" ColumnName="CelebrationID" />
+          <ScalarProperty Name="HolidayRecently" ColumnName="HolidayRecently" />
+          <ScalarProperty Name="PartyRecently" ColumnName="PartyRecently" />
+          <ScalarProperty Name="MilestoneRecently" ColumnName="MilestoneRecently" />
+          <ScalarProperty Name="CelebrateChristmas" ColumnName="CelebrateChristmas" />
+          <ScalarProperty Name="CelebrateNYE" ColumnName="CelebrateNYE" />
+          <ScalarProperty Name="CelebrateThanksgiving" ColumnName="CelebrateThanksgiving" />
+          <ScalarProperty Name="CelebrateValentine" ColumnName="CelebrateValentine" />
+          <ScalarProperty Name="CelebrateEaster" ColumnName="CelebrateEaster" />
+          <ScalarProperty Name="CelebrateIndependenceDay" ColumnName="CelebrateIndependenceDay" />
+          <ScalarProperty Name="CelebrateHalloween" ColumnName="CelebrateHalloween" />
+          <ScalarProperty Name="CelebrateMemorialDay" ColumnName="CelebrateMemorialDay" />
+          <ScalarProperty Name="CelebrateLaborDay" ColumnName="CelebrateLaborDay" />
+          <ScalarProperty Name="CelebrateMothersDay" ColumnName="CelebrateMothersDay" />
+          <ScalarProperty Name="CelebrateFathersDay" ColumnName="CelebrateFathersDay" />
+          <ScalarProperty Name="CelebrateChaunakah" ColumnName="CelebrateChaunakah" />
+          <ScalarProperty Name="CelebratePassover" ColumnName="CelebratePassover" />
+          <ScalarProperty Name="CelebrateRoshHashanah" ColumnName="CelebrateRoshHashanah" />
+          <ScalarProperty Name="CelerateYomKippur" ColumnName="CelerateYomKippur" />
+          <ScalarProperty Name="CelebrateRamadan" ColumnName="CelebrateRamadan" />
+          <ScalarProperty Name="CelebrateEID" ColumnName="CelebrateEID" />
+          <ScalarProperty Name="CelebrateSTPat" ColumnName="CelebrateSTPat" />
+          <ScalarProperty Name="CelebrateBirthdays" ColumnName="CelebrateBirthdays" />
+          <ScalarProperty Name="CelebrateChineseNewYear" ColumnName="CelebrateChineseNewYear" />
+          <ScalarProperty Name="CelebrateQuinceanera" ColumnName="CelebrateQuinceanera" />
+          <ScalarProperty Name="CelebrateBarBatMitzvah" ColumnName="CelebrateBarBatMitzvah" />
+          <ScalarProperty Name="CelebrateDayOfTheDead" ColumnName="CelebrateDayOfTheDead" />
+          <ScalarProperty Name="CelebrateVeteransDay" ColumnName="CelebrateVeteransDay" />
+          <ScalarProperty Name="CelebrateCincoDeMayo" ColumnName="CelebrateCincoDeMayo" />
+          <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HobbyTables">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.HobbyTable)">
+        <MappingFragment StoreEntitySet="HobbyTables">
+          <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
+          <ScalarProperty Name="PlaySports" ColumnName="PlaySports" />
+          <ScalarProperty Name="InAShow" ColumnName="InAShow" />
+          <ScalarProperty Name="Travel" ColumnName="Travel" />
+          <ScalarProperty Name="OutdoorPerson" ColumnName="OutdoorPerson" />
+          <ScalarProperty Name="TravelAbroad" ColumnName="TravelAbroad" />
+          <ScalarProperty Name="Passions" ColumnName="Passions" />
+          <ScalarProperty Name="Talents" ColumnName="Talents" />
+          <ScalarProperty Name="Trophies" ColumnName="Trophies" />
+          <ScalarProperty Name="Exercise" ColumnName="Exercise" />
+          <ScalarProperty Name="FamilyVacation" ColumnName="FamilyVacation" />
+          <ScalarProperty Name="ChildhoodVacation" ColumnName="ChildhoodVacation" />
+          <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Media">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.Medium)">
+        <MappingFragment StoreEntitySet="Media">
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Memories">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.Memory)">
+        <MappingFragment StoreEntitySet="Memories">
+          <ScalarProperty Name="MemoryID" ColumnName="MemoryID" />
+          <ScalarProperty Name="BrokenBones" ColumnName="BrokenBones" />
+          <ScalarProperty Name="OwnHome" ColumnName="OwnHome" />
+          <ScalarProperty Name="DriversLicense" ColumnName="DriversLicense" />
+          <ScalarProperty Name="FirstTooth" ColumnName="FirstTooth" />
+          <ScalarProperty Name="PersonalNickName" ColumnName="PersonalNickName" />
+          <ScalarProperty Name="FamilyNickName" ColumnName="FamilyNickName" />
+          <ScalarProperty Name="RideBike" ColumnName="RideBike" />
+          <ScalarProperty Name="CommitCrime" ColumnName="CommitCrime" />
+          <ScalarProperty Name="BigMove" ColumnName="BigMove" />
+          <ScalarProperty Name="Vote" ColumnName="Vote" />
+          <ScalarProperty Name="FamilyTraditions" ColumnName="FamilyTraditions" />
+          <ScalarProperty Name="EmbarrassingMoment" ColumnName="EmbarrassingMoment" />
+          <ScalarProperty Name="ProudestMoments" ColumnName="ProudestMoments" />
+          <ScalarProperty Name="ChildhoodCamp" ColumnName="ChildhoodCamp" />
+          <ScalarProperty Name="MemorializeSomeone" ColumnName="MemorializeSomeone" />
+          <ScalarProperty Name="Concerts" ColumnName="Concerts" />
+          <ScalarProperty Name="FamilyPet" ColumnName="FamilyPet" />
+          <ScalarProperty Name="CurrentPet" ColumnName="CurrentPet" />
+          <ScalarProperty Name="HSDance" ColumnName="HSDance" />
+          <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorldEvents">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.WorldEvent)">
+        <MappingFragment StoreEntitySet="WorldEvents">
+          <ScalarProperty Name="WorldEventID" ColumnName="WorldEventID" />
+          <ScalarProperty Name="September11" ColumnName="September11" />
+          <ScalarProperty Name="MoonLanding" ColumnName="MoonLanding" />
+          <ScalarProperty Name="NixonResigns" ColumnName="NixonResigns" />
+          <ScalarProperty Name="ElvisDies" ColumnName="ElvisDies" />
+          <ScalarProperty Name="ChallengerExplodes" ColumnName="ChallengerExplodes" />
+          <ScalarProperty Name="WorldWar2Ends" ColumnName="WorldWar2Ends" />
+          <ScalarProperty Name="KennedyDies" ColumnName="KennedyDies" />
+          <ScalarProperty Name="NotableElection" ColumnName="NotableElection" />
+          <ScalarProperty Name="MLKAssassination" ColumnName="MLKAssassination" />
+          <ScalarProperty Name="Y2K" ColumnName="Y2K" />
+          <ScalarProperty Name="BerlinWall" ColumnName="BerlinWall" />
+          <ScalarProperty Name="OJSimpsonCarChase" ColumnName="OJSimpsonCarChase" />
+          <ScalarProperty Name="EndOfProhibition" ColumnName="EndOfProhibition" />
+          <ScalarProperty Name="AnythingElse" ColumnName="AnythingElse" />
+          <ScalarProperty Name="VietnamWar" ColumnName="VietnamWar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Relationships">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.Relationship)">
+        <MappingFragment StoreEntitySet="Relationships">
+          <ScalarProperty Name="RelationshipsID" ColumnName="RelationshipsID" />
+          <ScalarProperty Name="CurrentlyMarried" ColumnName="CurrentlyMarried" />
+          <ScalarProperty Name="InARelationship" ColumnName="InARelationship" />
+          <ScalarProperty Name="PreviousRomance" ColumnName="PreviousRomance" />
+          <ScalarProperty Name="HaveChildren" ColumnName="HaveChildren" />
+          <ScalarProperty Name="HaveGrandchildren" ColumnName="HaveGrandchildren" />
+          <ScalarProperty Name="OtherYoungsters" ColumnName="OtherYoungsters" />
+          <ScalarProperty Name="HaveParents" ColumnName="HaveParents" />
+          <ScalarProperty Name="HaveGrandparents" ColumnName="HaveGrandparents" />
+          <ScalarProperty Name="OtherAdults" ColumnName="OtherAdults" />
+          <ScalarProperty Name="HaveSiblings" ColumnName="HaveSiblings" />
+          <ScalarProperty Name="OtherCloseRelatives" ColumnName="OtherCloseRelatives" />
+          <ScalarProperty Name="GoodFriendships" ColumnName="GoodFriendships" />
+          <ScalarProperty Name="EverythingElse" ColumnName="EverythingElse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventTables">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.EventTable)">
+        <MappingFragment StoreEntitySet="EventTables">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
+          <ScalarProperty Name="EventDay" ColumnName="EventDay" />
+          <ScalarProperty Name="EventMonth" ColumnName="EventMonth" />
+          <ScalarProperty Name="EventYear" ColumnName="EventYear" />
+          <ScalarProperty Name="PeopleInvolved" ColumnName="PeopleInvolved" />
+          <ScalarProperty Name="EventCaption" ColumnName="EventCaption" />
+          <ScalarProperty Name="UploadMedia" ColumnName="UploadMedia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.UserProfile)">
+        <MappingFragment StoreEntitySet="UserProfiles">
+          <ScalarProperty Name="UserProfileID" ColumnName="UserProfileID" />
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+          <ScalarProperty Name="RelationshipsID" ColumnName="RelationshipsID" />
+          <ScalarProperty Name="CareerID" ColumnName="CareerID" />
+          <ScalarProperty Name="CelebrationID" ColumnName="CelebrationID" />
+          <ScalarProperty Name="HobbyID" ColumnName="HobbyID" />
+          <ScalarProperty Name="MemoryID" ColumnName="MemoryID" />
+          <ScalarProperty Name="WorldEventID" ColumnName="WorldEventID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.C__MigrationHistory)">
+        <MappingFragment StoreEntitySet="C__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.AspNetRole)">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.AspNetUserClaim)">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.AspNetUserLogin)">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.AspNetUser)">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegisterUsers">
+      <EntityTypeMapping TypeName="IsTypeOf(STEMMAModel.RegisterUser)">
+        <MappingFragment StoreEntitySet="RegisterUsers">
+          <ScalarProperty Name="RegisterUserID" ColumnName="RegisterUserID" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="STEMMAModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="AspNetRoles_Id" />
+      </EndProperty>
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="AspNetUsers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -1196,7 +1191,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
