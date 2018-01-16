@@ -1,0 +1,491 @@
+﻿@model IEnumerable<Stemma.Models.Celebration>
+
+@{
+    ViewBag.Title = "Celebrations Profile";
+}
+
+<h2>Things You Celebrate</h2>
+
+@*logic is added. text needs to be updated.*@
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">*@
+
+@foreach (var item in Model)
+{
+    @*<tr>*@
+    @*<td>
+            @Html.DisplayFor(modelItem => item.HolidayRecently)
+        </td>*@
+if (item.HolidayRecently == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.PartyRecently)
+        </td>*@
+if (item.PartyRecently == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.MilestoneRecently)
+        </td>*@
+if (item.MilestoneRecently == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateChristmas)
+        </td>*@
+if (item.CelebrateChristmas == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateNYE)
+        </td>*@
+if (item.CelebrateNYE == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateThanksgiving)
+        </td>*@
+if (item.CelebrateThanksgiving == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateValentine)
+        </td>*@
+if (item.CelebrateValentine == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateEaster)
+        </td>*@
+if (item.CelebrateEaster == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateIndependenceDay)
+        </td>*@
+if (item.CelebrateIndependenceDay == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateHalloween)
+        </td>*@
+if (item.CelebrateHalloween == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateMemorialDay)
+        </td>*@
+if (item.CelebrateMemorialDay == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateLaborDay)
+        </td>*@
+if (item.CelebrateLaborDay == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateMothersDay)
+        </td>*@
+if (item.CelebrateMothersDay == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateFathersDay)
+        </td>*@
+if (item.CelebrateFathersDay == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateChaunakah)
+        </td>*@
+if (item.CelebrateChaunakah == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebratePassover)
+        </td>*@
+if (item.CelebratePassover == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateRoshHashanah)
+        </td>*@
+if (item.CelebrateRoshHashanah == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelerateYomKippur)
+        </td>*@
+if (item.CelerateYomKippur == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateRamadan)
+        </td>*@
+if (item.CelebrateRamadan == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateEID)
+        </td>*@
+if (item.CelebrateEID == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateSTPat)
+        </td>*@
+if (item.CelebrateSTPat == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateBirthdays)
+        </td>*@
+if (item.CelebrateBirthdays == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateChineseNewYear)
+        </td>*@
+if (item.CelebrateChineseNewYear == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateQuinceanera)
+        </td>*@
+if (item.CelebrateQuinceanera == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateBarBatMitzvah)
+        </td>*@
+if (item.CelebrateBarBatMitzvah == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateDayOfTheDead)
+        </td>*@
+if (item.CelebrateDayOfTheDead == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateVeteransDay)
+        </td>*@
+if (item.CelebrateVeteransDay == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.CelebrateCincoDeMayo)
+        </td>*@
+if (item.CelebrateCincoDeMayo == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    @*<td>
+            @Html.DisplayFor(modelItem => item.AnythingElse)
+        </td>*@
+if (item.AnythingElse == true)
+{
+    <p>
+        You remember when humans landed on the moon.
+    </p>
+}
+else
+{
+    <p>
+        You do not remember when humans landed on the moon.
+    </p>
+}
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = item.CelebrationID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.CelebrationID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CelebrationID })
+    </p>
+    @*</tr>*@
+}
+
+@*</table>*@
