@@ -6,23 +6,28 @@
     margin-top: 10px;
 }
 .box {
-    color:  rgba(128,15,60, 0.5);
+    color:  rgba(128,15,60, 0.8);
     text-align: justify;
-    background-color: rgba(230,230,230, 0.5);
+    background-color: rgba(230,230,230, 0.8);
     border: 1px solid rgb(118, 15, 30);
     box-shadow: 5px 5px 70px rgb(128,15,60);
-    background: linear-gradient( rgba(255,255, 255,.4), rgba(255, 255,255,.4), rgba(255, 255, 255,.4));
-    margin: 20px;
-    padding: 20px;
+    background: linear-gradient( rgba(255,255, 255,.6), rgba(255, 255,255,.6), rgba(255, 255, 255,.6));
+    margin: 15px;
+    padding: 15px;
     height: 450px;
     border-radius:4%;
+}
+.myBtn {
 }
 .box h4 {
     text-align: center;
 }
 .box p {
     text-align: justify;
+    font-size: 14px;
+    padding-bottom: 15px;
 }
+
 .box i {
     display: block;
     margin-left: auto;
@@ -43,13 +48,12 @@
     width: 200px;
     margin-bottom: 20px;
     margin-left: 100px;
-    margin-top: 5px;    
-}
-.custom-icon-stacey:hover {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%,rgba(0, 0, 0, 0.1) 0%), url('Images/staceyspikes.jpg');
+    margin-top: 5px;
 }
 .custom-icon-gabrielle {
-    background-image: url('Images/staceyspikes.jpg');
+    background-image: url('Images/gablookssomber.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 100%;
     border: 3px solid rgb(118, 15, 30);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
@@ -64,9 +68,6 @@
     margin-bottom: 20px;
     margin-left: 100px;
     margin-top: 5px;
-}
-.custom-icon-gabrielle:hover {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%,rgba(0, 0, 0, 0.1) 0%), url('Images/staceyspikes.jpg');
 }
 .custom-icon-devion {
     background-image: url('Images/devionfothergill.jpg');
@@ -85,9 +86,6 @@
     margin-left: 100px;
     margin-top: 5px;
 }
-.custom-icon-devion:hover {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%,rgba(0, 0, 0, 0.1) 0%), url('Images/devionfothergill.jpg');
-}
 .custom-icon-holly {
     background-image: url('Images/hollylittle.jpg');
     border-radius: 100%;
@@ -104,9 +102,6 @@
     margin-bottom: 20px;
     margin-left: 100px;
     margin-top: 5px;
-}
-.custom-icon-holly:hover {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%,rgba(0, 0, 0, 0.1) 0%), url('Images/hollylittle.jpg');
 }
 .custom-icon-dana {
     background-image: url('Images/danademing.jpg');
@@ -125,9 +120,6 @@
     margin-left: 100px;
     margin-top: 5px;
 }
-.custom-icon-dana:hover {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%,rgba(0, 0, 0, 0.1) 0%), url('Images/danademing.jpg');
-}
 .custom-icon-amy {
     background-image: url('Images/amythompson.jpg');
     border-radius: 100%;
@@ -144,9 +136,6 @@
     margin-bottom: 20px;
     margin-left: 100px;
     margin-top: 5px;
-}
-.custom-icon-amy:hover {
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%,rgba(0, 0, 0, 0.1) 0%), url('Images/amythompson.jpg');
 }
 .fix-editor {
   display: none;
