@@ -49,11 +49,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -457,11 +457,11 @@
     <Content Include="Views\Careers\Details.cshtml" />
     <Content Include="Views\Careers\Edit.cshtml" />
     <Content Include="Views\Careers\Index.cshtml" />
-    <Content Include="Views\EventTables\Celebrations\Create.cshtml" />
-    <Content Include="Views\EventTables\Celebrations\Delete.cshtml" />
-    <Content Include="Views\EventTables\Celebrations\Details.cshtml" />
-    <Content Include="Views\EventTables\Celebrations\Edit.cshtml" />
-    <Content Include="Views\EventTables\Celebrations\Index.cshtml" />
+    <Content Include="Views\Celebrations\Create.cshtml" />
+    <Content Include="Views\Celebrations\Delete.cshtml" />
+    <Content Include="Views\Celebrations\Details.cshtml" />
+    <Content Include="Views\Celebrations\Edit.cshtml" />
+    <Content Include="Views\Celebrations\Index.cshtml" />
     <Content Include="Views\HobbyTables\Create.cshtml" />
     <Content Include="Views\HobbyTables\Delete.cshtml" />
     <Content Include="Views\HobbyTables\Details.cshtml" />
@@ -497,6 +497,7 @@
     <Content Include="Views\EventTables\Details.cshtml" />
     <Content Include="Views\EventTables\Edit.cshtml" />
     <Content Include="Views\EventTables\Index.cshtml" />
+    <Content Include="Views\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
