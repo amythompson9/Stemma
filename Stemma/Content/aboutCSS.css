@@ -1,0 +1,208 @@
+﻿body {
+    /*background-image: url('Images/pexels-photo-365638.jpeg');*/
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%,rgba(200,200,175,0.2) 0%), url('Images/pexels-photo-365638.jpeg');
+    background-size:cover;
+    background-repeat: repeat;
+    margin-top: 10px;
+}
+.box {
+    color:  rgba(128,15,60, 0.8);
+    text-align: justify;
+    background-color: rgba(230,230,230, 0.8);
+    border: 1px solid rgb(118, 15, 30);
+    box-shadow: 5px 5px 70px rgb(128,15,60);
+    background: linear-gradient( rgba(255,255, 255,.6), rgba(255, 255,255,.6), rgba(255, 255, 255,.6));
+    margin: 15px;
+    padding: 15px;
+    height: 450px;
+    border-radius:4%;
+}
+.myBtn {
+}
+.box h4 {
+    text-align: center;
+}
+.box p {
+    text-align: justify;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.box i {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.custom-icon-stacey {
+    background-image: url('Images/staceyspikes.jpg');
+    border-radius: 100%;
+    border: 3px solid rgb(118, 15, 30);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    color: #fff;
+    display: table-cell;
+    font-size: large;
+    height: 200px;
+    padding-top: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+.custom-icon-gabrielle {
+    background-image: url('Images/gablookssomber.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    border: 3px solid rgb(118, 15, 30);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    color: #fff;
+    display: table-cell;
+    font-size: large;
+    height: 200px;
+    padding-top: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+.custom-icon-devion {
+    background-image: url('Images/devionfothergill.jpg');
+    border-radius: 100%;
+    border: 3px solid rgb(118, 15, 30);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    color: #fff;
+    display: table-cell;
+    font-size: large;
+    height: 200px;
+    padding-top: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+.custom-icon-holly {
+    background-image: url('Images/hollylittle.jpg');
+    border-radius: 100%;
+    border: 3px solid rgb(118, 15, 30);;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    color: #fff;
+    display: table-cell;
+    font-size: large;
+    height: 200px;
+    padding-top: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+.custom-icon-dana {
+    background-image: url('Images/danademing.jpg');
+    border-radius: 100%;
+    border: 3px solid rgb(118, 15, 30);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    color: #fff;
+    display: table-cell;
+    font-size: large;
+    height: 200px;
+    padding-top: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+.custom-icon-amy {
+    background-image: url('Images/amythompson.jpg');
+    border-radius: 100%;
+    border: 3px solid rgb(118, 15, 30);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+    color: #fff;
+    display: table-cell;
+    font-size: large;
+    height: 200px;
+    padding-top: 30px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-top: 5px;
+}
+.fix-editor {
+  display: none;
+}
+p {
+    color: rgb(80,73,62);
+    text-align: justify;
+    font-size: 20px;
+    margin: 20px;
+}
+h4 {
+    color: rgb(80,73,62);
+    text-align: left;
+    font-size: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+h2 {
+    color: rgb(88,15,60);
+    text-align: left;
+    font-size: 50px;
+    margin-top:50px;
+    margin-left: 50px;
+}
+a {
+    text-align: justify;
+    color: rgb(88,15,60);
+}
+a:hover {
+    text-align: center;
+    color: rgb(88,15,60);
+}
+.CategoryRow1 {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.CategoryRow2 {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.jumbotron {
+    max-height: 60vh;
+    font-family: Roboto;
+    color:  rgb(128,15,60);
+    text-align: center;
+    background-color: rgb(230,230,230);
+    border: 1px solid rgb(118, 15, 30);
+    box-shadow: 5px 5px 70px rgb(128,15,60);
+    background: linear-gradient( rgba(195, 255, 5,.8), rgba(255, 255, 255,.8), rgba(255, 215, 105,.6));
+    margin-top: 75px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+.jumbotron h2 {
+    line-height: .6;
+    padding:4vh 0;
+    font-family: Allura;
+    font-size: 15rem;
+    color: rgb(88,15,60);
+    text-shadow: 1px 1px 1px rgba(225,255,125,.6);
+}
+.jumbotron p {
+    padding-left: 80px;
+    padding-right: 40px;
+    margin: 0;
+    line-height: 1.5;
+    color: rgb(80,73,62);
+    font-size: 28px;
+    font-weight: 500;
+}
