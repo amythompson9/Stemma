@@ -457,6 +457,11 @@
     <Content Include="Views\Careers\Details.cshtml" />
     <Content Include="Views\Careers\Edit.cshtml" />
     <Content Include="Views\Careers\Index.cshtml" />
+    <Content Include="Views\Celebrations\Create.cshtml" />
+    <Content Include="Views\Celebrations\Delete.cshtml" />
+    <Content Include="Views\Celebrations\Details.cshtml" />
+    <Content Include="Views\Celebrations\Edit.cshtml" />
+    <Content Include="Views\Celebrations\Index.cshtml" />
     <Content Include="Views\EventTables\Celebrations\Create.cshtml" />
     <Content Include="Views\EventTables\Celebrations\Delete.cshtml" />
     <Content Include="Views\EventTables\Celebrations\Details.cshtml" />
